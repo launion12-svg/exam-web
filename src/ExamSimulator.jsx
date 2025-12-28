@@ -449,6 +449,266 @@ const ExamSimulator = () => {
       correct: 1,
       explanation: "LUKS (Linux Unified Key Setup) es el estándar de cifrado de discos en Linux.",
     },
+
+    // =========================
+    // NUEVAS DE UT1 (CAMPUS)
+    // =========================
+    {
+      id: 51,
+      unit: "UT1",
+      question: "¿Qué diferencia principal existe entre software de sistema y software de aplicación?",
+      options: [
+        "El de sistema es siempre de pago y el de aplicación siempre libre",
+        "El de sistema solo corre en contenedores, el de aplicación en hardware",
+        "El de sistema se distribuye sin controladores, el de aplicación los incluye",
+        "El de sistema gestiona hardware y recursos, el de aplicación resuelve tareas concretas",
+      ],
+      correct: 3,
+      explanation:
+        "El software de sistema (p. ej., sistema operativo) administra hardware, memoria, procesos y recursos. El software de aplicación está orientado a tareas concretas del usuario (navegar, escribir, editar, etc.).",
+    },
+    {
+      id: 52,
+      unit: "UT1",
+      question: "¿Qué afirmación es correcta sobre buses en el sistema?",
+      options: [
+        "Los buses solo transportan señales de control, no datos",
+        "No hay riesgos de seguridad asociados a los buses",
+        "El bus de direcciones es irrelevante para la memoria",
+        "El ancho del bus de datos condiciona la cantidad de información transferida por ciclo",
+      ],
+      correct: 3,
+      explanation:
+        "El bus de datos transporta la información. Si es de 32/64 bits, puede transferir esa cantidad por ciclo, afectando al rendimiento. El bus de direcciones es clave para direccionar posiciones de memoria.",
+    },
+    {
+      id: 53,
+      unit: "UT1",
+      question: "¿Qué define mejor a un microkernel?",
+      options: [
+        "Todos los servicios integrados en modo kernel",
+        "Núcleo diseñado solo para tiempo real duro",
+        "Mínimo código en modo kernel y servicios en espacio de usuario",
+        "Núcleo híbrido con controladores gráficos dedicados",
+      ],
+      correct: 2,
+      explanation:
+        "Un microkernel deja en modo kernel solo lo esencial (planificación, comunicación básica) y mueve servicios como drivers o sistema de archivos a espacio de usuario, mejorando aislamiento y estabilidad.",
+    },
+    {
+      id: 54,
+      unit: "UT1",
+      question: "¿Qué ventaja clave aportan las memorias caché L1/L2/L3?",
+      options: [
+        "Evitan la necesidad de buses de datos",
+        "Sustituyen completamente a la RAM del sistema",
+        "Permiten ejecutar instrucciones en orden estricto",
+        "Reducen la latencia al acercar datos frecuentes a la CPU",
+      ],
+      correct: 3,
+      explanation:
+        "La caché guarda datos/instrucciones usados con frecuencia cerca de la CPU, reduciendo la latencia frente a RAM y mejorando el rendimiento.",
+    },
+    {
+      id: 55,
+      unit: "UT1",
+      question: "¿Cuál es una limitación clásica de la arquitectura Von Neumann?",
+      options: [
+        "Incompatibilidad con sistemas operativos modernos",
+        "Cuello de botella por compartir bus entre datos e instrucciones",
+        "Falta de soporte para memoria caché",
+        "Imposibilidad de ejecutar código en paralelo",
+      ],
+      correct: 1,
+      explanation:
+        "En Von Neumann, instrucciones y datos comparten bus/memoria, generando el ‘cuello de botella’: la CPU no puede traer datos e instrucciones simultáneamente con la misma facilidad.",
+    },
+    {
+      id: 56,
+      unit: "UT1",
+      question: "¿Qué describe mejor la virtualización completa?",
+      options: [
+        "Contenedores que comparten el mismo kernel",
+        "Invitados conscientes que cooperan con el hipervisor",
+        "Ejecución directa sobre hardware sin capa de control",
+        "Emulación total del hardware para invitados sin modificaciones",
+      ],
+      correct: 3,
+      explanation:
+        "La virtualización completa permite ejecutar SO invitados sin modificarlos, porque el hipervisor proporciona una abstracción/virtualización del hardware (desde la perspectiva del invitado).",
+    },
+    {
+      id: 57,
+      unit: "UT1",
+      question: "En la jerarquía de memoria, ¿qué elemento ofrece el acceso más rápido?",
+      options: ["Memoria virtual", "Registros de la CPU", "Memoria RAM", "Almacenamiento secundario"],
+      correct: 1,
+      explanation:
+        "Los registros están dentro de la CPU y son el nivel más rápido. Después vienen cachés (L1/L2/L3), RAM y por último el almacenamiento (SSD/HDD).",
+    },
+    {
+      id: 58,
+      unit: "UT1",
+      question: "¿Qué práctica es esencial en ciberseguridad según esta UT?",
+      options: [
+        "Ejecutar todo el software con privilegios de kernel",
+        "Usar siempre arquitectura Harvard en equipos de escritorio",
+        "Deshabilitar la memoria virtual para evitar swaps",
+        "Conocer la interacción hardware–software para detectar y mitigar vulnerabilidades",
+      ],
+      correct: 3,
+      explanation:
+        "Muchas vulnerabilidades nacen en la frontera hardware-software (memoria, CPU, aislamiento, permisos). Entender esa interacción ayuda a detectar riesgos y aplicar mitigaciones reales.",
+    },
+    {
+      id: 59,
+      unit: "UT1",
+      question: "¿Qué elemento de la estructura funcional corresponde a la fase de “entrada”?",
+      options: [
+        "Captura de datos por periféricos como teclado o sensores",
+        "Presentación de resultados en pantalla",
+        "Transformación de datos por la ALU",
+        "Almacenamiento permanente en SSD",
+      ],
+      correct: 0,
+      explanation:
+        "La fase de entrada es la captura de datos desde el exterior mediante periféricos de entrada (teclado, ratón, sensores, etc.).",
+    },
+    {
+      id: 60,
+      unit: "UT1",
+      question: "¿Qué describe mejor el propósito global de un sistema informático según esta UT?",
+      options: [
+        "Integrar hardware y software para transformar datos en información útil",
+        "Sustituir completamente la intervención humana en cualquier proceso",
+        "Ejecutar exclusivamente aplicaciones de usuario sin gestionar recursos",
+        "Funcionar sin dependencia del hardware subyacente",
+      ],
+      correct: 0,
+      explanation:
+        "Un sistema informático integra hardware + software para procesar datos y obtener información útil. No elimina siempre al humano, y depende del hardware y de la gestión de recursos.",
+    },
+    {
+      id: 61,
+      unit: "UT1",
+      question: "¿Qué afirmación es correcta sobre multitarea en sistemas operativos?",
+      options: [
+        "Requiere hardware de múltiples procesadores",
+        "Permite ejecutar múltiples procesos compartiendo tiempo de CPU",
+        "Obliga a que los procesos se ejecuten de forma estrictamente secuencial",
+        "Es exclusiva de sistemas propietarios",
+      ],
+      correct: 1,
+      explanation:
+        "La multitarea reparte tiempo de CPU entre procesos mediante planificación (context switching). Puede existir con un solo procesador: alterna tan rápido que parece simultáneo.",
+    },
+    {
+      id: 62,
+      unit: "UT1",
+      question: "¿Qué caracteriza a una GUI frente a una CLI?",
+      options: [
+        "Menor consumo de recursos que la línea de comandos",
+        "Uso de elementos gráficos (ventanas, iconos, menús) para interactuar",
+        "Incompatibilidad con herramientas de administración",
+        "Ejecución exclusiva en servidores sin gráficos",
+      ],
+      correct: 1,
+      explanation:
+        "GUI usa elementos gráficos (ventanas, iconos, menús). La CLI se basa en texto y suele consumir menos recursos, pero requiere conocer comandos.",
+    },
+    {
+      id: 63,
+      unit: "UT1",
+      question: "¿Cuál es la función principal de la CPU en un sistema informático?",
+      options: [
+        "Emitir señal de vídeo a los monitores externos",
+        "Servir como interfaz directa entre usuario y aplicaciones",
+        "Proporcionar almacenamiento no volátil a largo plazo",
+        "Ejecutar instrucciones y coordinar operaciones internas",
+      ],
+      correct: 3,
+      explanation:
+        "La CPU ejecuta instrucciones, coordina el funcionamiento del sistema y realiza operaciones aritméticas y lógicas (ALU) junto con la unidad de control.",
+    },
+    {
+      id: 64,
+      unit: "UT1",
+      question: "¿Qué es un snapshot en el contexto de máquinas virtuales?",
+      options: [
+        "Captura del estado completo de la VM en un instante",
+        "Copia incremental del kernel del host",
+        "Clon físico del disco sin memoria",
+        "Imagen ISO del sistema operativo invitado",
+      ],
+      correct: 0,
+      explanation:
+        "Un snapshot captura el estado de una VM en un punto en el tiempo (disco y, a menudo, memoria/config). Permite volver atrás rápidamente tras pruebas o cambios.",
+    },
+    {
+      id: 65,
+      unit: "UT1",
+      question: "¿Qué diferencia clave existe entre sistemas propietarios y de código abierto?",
+      options: [
+        "Mayor rendimiento garantizado en el software propietario",
+        "Acceso al código fuente y libertad de modificación en el software libre",
+        "Imposibilidad de uso comercial en software libre",
+        "Ausencia de licencias en ambos modelos",
+      ],
+      correct: 1,
+      explanation:
+        "El código abierto permite acceso al código fuente y su modificación según licencia. El propietario suele ser cerrado. El uso comercial puede existir en ambos, y ambos tienen licencias (con condiciones distintas).",
+    },
+    {
+      id: 66,
+      unit: "UT1",
+      question: "¿Qué ventaja aporta el multiprocesador/multinúcleo?",
+      options: [
+        "Impide la multitarea expropiativa",
+        "Ejecución paralela de tareas para mejorar rendimiento",
+        "Elimina el cambio de contexto entre procesos",
+        "Sustituye la necesidad de memoria caché",
+      ],
+      correct: 1,
+      explanation:
+        "Varios núcleos permiten ejecutar tareas en paralelo, mejorando rendimiento en cargas concurrentes. No elimina el cambio de contexto ni sustituye la caché.",
+    },
+    {
+      id: 67,
+      unit: "UT1",
+      question: "¿Qué componente del sistema operativo gestiona en modo privilegiado los recursos del sistema?",
+      options: ["Editor de texto", "Capa de usuario", "Kernel", "Shell"],
+      correct: 2,
+      explanation:
+        "El kernel se ejecuta en modo privilegiado y gestiona CPU, memoria, dispositivos y seguridad. La shell y aplicaciones suelen ir en modo usuario.",
+    },
+    {
+      id: 68,
+      unit: "UT1",
+      question: "¿Qué caracteriza a un kernel monolítico moderno como Linux?",
+      options: [
+        "Exclusivo para dispositivos móviles",
+        "Núcleo único con posibilidad de cargar módulos",
+        "Ausencia de controladores en el núcleo",
+        "Separación total de servicios en espacio de usuario",
+      ],
+      correct: 1,
+      explanation:
+        "Linux es monolítico (muchos servicios en modo kernel) pero modular: puede cargar módulos (drivers) dinámicamente sin reiniciar.",
+    },
+    {
+      id: 69,
+      unit: "UT1",
+      question: "¿Cuál es una medida de seguridad vinculada a la gestión de memoria?",
+      options: [
+        "Desactivar la protección por hardware (MMU)",
+        "Ejecutar datos en cualquier segmento",
+        "Exponer las tablas de páginas a los usuarios",
+        "ASLR para aleatorizar ubicaciones en memoria",
+      ],
+      correct: 3,
+      explanation:
+        "ASLR aleatoriza direcciones (stack/heap/librerías), dificultando exploits que dependen de direcciones predecibles (por ejemplo, buffer overflows).",
+    },
   ];
 
   // =========================
@@ -661,7 +921,7 @@ const ExamSimulator = () => {
     if (currentQuestion > 0) setCurrentQuestion(currentQuestion - 1);
   };
 
-  const finalizeNow = async (reason = "manual") => {
+  const finalizeNow = async () => {
     if (showResults) return;
     setShowResults(true);
     setConfirmFinishOpen(false);
@@ -671,13 +931,12 @@ const ExamSimulator = () => {
   const tryFinishExam = () => {
     if (showResults) return;
 
-    // Si hay blancos, abre confirmación
     if (details.blanks > 0) {
       setConfirmFinishOpen(true);
       return;
     }
 
-    finalizeNow("manual");
+    finalizeNow();
   };
 
   const restartExam = () => {
@@ -721,7 +980,7 @@ const ExamSimulator = () => {
   useEffect(() => {
     if (!examStarted || showResults) return;
     if (timeLeft === 0) {
-      finalizeNow("timeout");
+      finalizeNow();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timeLeft, examStarted, showResults]);
@@ -825,13 +1084,9 @@ const ExamSimulator = () => {
             </span>
 
             <div className="flex items-center gap-3">
-              <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full font-semibold text-sm">
-                {studentName}
-              </span>
+              <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full font-semibold text-sm">{studentName}</span>
 
-              <span className="px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full font-semibold">
-                {question.unit}
-              </span>
+              <span className="px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full font-semibold">{question.unit}</span>
 
               <span
                 className={`px-4 py-2 rounded-full font-bold ${
@@ -851,7 +1106,6 @@ const ExamSimulator = () => {
             />
           </div>
 
-          {/* mini resumen */}
           <div className="mt-3 text-sm text-gray-600">
             Respondidas: <span className="font-semibold">{details.answered}</span> · En blanco:{" "}
             <span className="font-semibold">{details.blanks}</span>
@@ -869,7 +1123,6 @@ const ExamSimulator = () => {
               let bgColor = "bg-gray-50 hover:bg-gray-100";
               let borderColor = "border-gray-300";
 
-              // MODO EXAMEN: no mostramos correcto/incorrecto aquí
               if (isSelected) {
                 bgColor = "bg-indigo-50";
                 borderColor = "border-indigo-500";
@@ -926,8 +1179,8 @@ const ExamSimulator = () => {
             <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-lg">
               <h3 className="text-2xl font-bold text-gray-800 mb-2">Tienes preguntas en blanco</h3>
               <p className="text-gray-700 mb-4">
-                Te quedan <span className="font-semibold">{details.blanks}</span> pregunta(s) sin responder.
-                ¿Quieres terminar igualmente?
+                Te quedan <span className="font-semibold">{details.blanks}</span> pregunta(s) sin responder. ¿Quieres terminar
+                igualmente?
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3">
@@ -939,7 +1192,7 @@ const ExamSimulator = () => {
                 </button>
 
                 <button
-                  onClick={() => finalizeNow("manual_confirmed")}
+                  onClick={finalizeNow}
                   className="flex-1 px-5 py-3 bg-green-500 text-white rounded-lg font-semibold hover:bg-green-600 transition-colors"
                 >
                   Continuar y finalizar
@@ -990,18 +1243,12 @@ const ExamSimulator = () => {
             {/* Estado envío automático */}
             <div className="mt-4">
               {sendingResult && (
-                <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg text-blue-700">
-                  Enviando resultado...
-                </div>
+                <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg text-blue-700">Enviando resultado...</div>
               )}
               {resultSent && (
-                <div className="p-3 bg-green-50 border border-green-200 rounded-lg text-green-700">
-                  ✅ Resultado enviado
-                </div>
+                <div className="p-3 bg-green-50 border border-green-200 rounded-lg text-green-700">✅ Resultado enviado</div>
               )}
-              {sendError && (
-                <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-red-700">{sendError}</div>
-              )}
+              {sendError && <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-red-700">{sendError}</div>}
             </div>
 
             {/* LISTA: SOLO FALLADAS O NO RESPONDIDAS */}
