@@ -261,7 +261,7 @@ const ExamSimulator = () => {
         "1102"
       ],
       correct: 0,
-      explanation: "El evento 4624 registra inicios de sesión exitosos en Windows."
+      explanation: "El evento 4624 registra inicios de sesión exitoso en Windows."
     },
     {
       id: 21,
@@ -669,7 +669,7 @@ const ExamSimulator = () => {
   const shuffleOptions = (question) => {
     const indices = [0, 1, 2, 3];
     const shuffledIndices = shuffleArray(indices);
-    
+
     return {
       ...question,
       options: shuffledIndices.map(i => question.options[i]),
@@ -679,20 +679,21 @@ const ExamSimulator = () => {
 
   // Estado para las preguntas seleccionadas y mezcladas
   const [questions, setQuestions] = useState([]);
-  
+
   // Inicializar examen
   useEffect(() => {
     initializeExam();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const initializeExam = () => {
     // Seleccionar 30 preguntas aleatorias del banco total
     const shuffled = shuffleArray(allQuestions);
     const selected = shuffled.slice(0, 30);
-    
+
     // Mezclar las opciones de cada pregunta
     const questionsWithShuffledOptions = selected.map(q => shuffleOptions(q));
-    
+
     setQuestions(questionsWithShuffledOptions);
   };
 
@@ -700,6 +701,12 @@ const ExamSimulator = () => {
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [showResults, setShowResults] = useState(false);
   const [showExplanation, setShowExplanation] = useState(false);
+
+  // Formspree (Nivel 1)
+  const [studentName, setStudentName] = useState("");
+  const [sendingResult, setSendingResult] = useState(false);
+  const [resultSent, setResultSent] = useState(false);
+  const [sendError, setSendError] = useState("");
 
   const handleAnswer = (questionId, answerIndex) => {
     if (!showResults) {
@@ -744,6 +751,13 @@ const ExamSimulator = () => {
     setSelectedAnswers({});
     setShowResults(false);
     setShowExplanation(false);
+
+    // reset envío
+    setStudentName("");
+    setSendingResult(false);
+    setResultSent(false);
+    setSendError("");
+
     initializeExam(); // Reinicializar con nuevas preguntas aleatorias
   };
 
@@ -761,6 +775,55 @@ const ExamSimulator = () => {
   const isCorrect = selectedAnswers[question.id] === question.correct;
   const score = calculateScore();
   const percentage = ((score / questions.length) * 100).toFixed(1);
+
+  const sendResultToFormspree = async () => {
+    setSendError("");
+    setResultSent(false);
+
+    const name = studentName.trim();
+    if (!name) {
+      setSendError("Escribe tu nombre o apodo antes de enviar.");
+      return;
+    }
+
+    setSendingResult(true);
+
+    try {
+      const units = questions.reduce((acc, q) => {
+        acc[q.unit] = (acc[q.unit] || 0) + 1;
+        return acc;
+      }, {});
+
+      const payload = {
+        studentName: name,
+        percentage: Number(percentage),
+        correct: score,
+        total: questions.length,
+        timestamp: new Date().toISOString(),
+        units,
+      };
+
+      const res = await fetch("https://formspree.io/f/myzdldkp", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        const text = await res.text().catch(() => "");
+        throw new Error(text || `HTTP ${res.status}`);
+      }
+
+      setResultSent(true);
+    } catch (err) {
+      setSendError("No se pudo enviar. Inténtalo de nuevo.");
+    } finally {
+      setSendingResult(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
@@ -782,7 +845,7 @@ const ExamSimulator = () => {
             </span>
           </div>
           <div className="mt-4 bg-gray-200 rounded-full h-3">
-            <div 
+            <div
               className="bg-indigo-600 h-3 rounded-full transition-all duration-300"
               style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
             />
@@ -799,7 +862,7 @@ const ExamSimulator = () => {
             {question.options.map((option, index) => {
               const isSelected = selectedAnswers[question.id] === index;
               const isCorrectAnswer = index === question.correct;
-              
+
               let bgColor = 'bg-gray-50 hover:bg-gray-100';
               let borderColor = 'border-gray-300';
               let icon = null;
@@ -887,6 +950,7 @@ const ExamSimulator = () => {
             <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">
               Resultados del Examen
             </h2>
+
             <div className="text-center mb-6">
               <div className={`text-6xl font-bold mb-2 ${percentage >= 50 ? 'text-green-600' : 'text-red-600'}`}>
                 {percentage}%
@@ -896,18 +960,45 @@ const ExamSimulator = () => {
               </div>
               <div className="mt-4 text-lg">
                 {percentage >= 90 ? '🌟 ¡Excelente!' :
-                 percentage >= 70 ? '👏 ¡Muy bien!' :
-                 percentage >= 50 ? '👍 Aprobado' :
-                 '📚 Sigue estudiando'}
+                  percentage >= 70 ? '👏 ¡Muy bien!' :
+                    percentage >= 50 ? '👍 Aprobado' :
+                      '📚 Sigue estudiando'}
               </div>
             </div>
-            <button
-              onClick={restartExam}
-              className="w-full px-6 py-4 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors flex items-center justify-center gap-2"
-            >
-              <RotateCcw className="w-5 h-5" />
-              Reintentar Examen
-            </button>
+
+            {/* Enviar resultado (Formspree) */}
+            <div className="mt-6 space-y-3">
+              <input
+                value={studentName}
+                onChange={(e) => setStudentName(e.target.value)}
+                placeholder="Tu nombre o apodo"
+                className="w-full p-3 border-2 border-gray-300 rounded-lg"
+              />
+
+              <button
+                onClick={sendResultToFormspree}
+                disabled={sendingResult || resultSent}
+                className="w-full px-6 py-4 bg-blue-600 text-white rounded-lg font-semibold disabled:opacity-50"
+              >
+                {resultSent ? "✅ Resultado enviado" : (sendingResult ? "Enviando..." : "Enviar resultado")}
+              </button>
+
+              {sendError && (
+                <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-red-700">
+                  {sendError}
+                </div>
+              )}
+            </div>
+
+            <div className="mt-4">
+              <button
+                onClick={restartExam}
+                className="w-full px-6 py-4 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors flex items-center justify-center gap-2"
+              >
+                <RotateCcw className="w-5 h-5" />
+                Reintentar Examen
+              </button>
+            </div>
           </div>
         )}
       </div>
