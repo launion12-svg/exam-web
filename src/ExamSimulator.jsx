@@ -274,7 +274,8 @@ const ExamSimulator = () => {
       question: "¿Qué tipo de virtualización comparte el kernel del host?",
       options: ["Virtualización completa", "Paravirtualización", "Contenedores", "Hipervisor tipo 1"],
       correct: 2,
-      explanation: "Los contenedores (como Docker) ejecutan aplicaciones aisladas compartiendo el mismo kernel del sistema anfitrión.",
+      explanation:
+        "Los contenedores (como Docker) ejecutan aplicaciones aisladas compartiendo el mismo kernel del sistema anfitrión.",
     },
     {
       id: 33,
@@ -334,9 +335,15 @@ const ExamSimulator = () => {
       id: 39,
       unit: "UT5",
       question: "¿Qué es LDAP?",
-      options: ["Un protocolo de red", "Un protocolo para acceder a servicios de directorio", "Un sistema de archivos", "Un tipo de RAID"],
+      options: [
+        "Un protocolo de red",
+        "Un protocolo para acceder a servicios de directorio",
+        "Un sistema de archivos",
+        "Un tipo de RAID",
+      ],
       correct: 1,
-      explanation: "LDAP (Lightweight Directory Access Protocol) es el protocolo estándar para acceder a directorios como Active Directory.",
+      explanation:
+        "LDAP (Lightweight Directory Access Protocol) es el protocolo estándar para acceder a directorios como Active Directory.",
     },
     {
       id: 40,
@@ -489,7 +496,10 @@ const ExamSimulator = () => {
 
   // Nombre + modo corrección
   const [studentName, setStudentName] = useState("");
-  const [blankCountsAsWrong, setBlankCountsAsWrong] = useState(false); // si está OFF: en blanco NO penaliza
+  const [blankCountsAsWrong, setBlankCountsAsWrong] = useState(false); // OFF: blancos no penalizan
+
+  // Modal confirmación
+  const [confirmFinishOpen, setConfirmFinishOpen] = useState(false);
 
   // Formspree
   const [sendingResult, setSendingResult] = useState(false);
@@ -528,16 +538,12 @@ const ExamSimulator = () => {
 
     const blanks = total - answered;
 
-    // Fallos según modo
     const wrong = blankCountsAsWrong ? total - correct : answered - correct;
 
-    // Penalización: 1 incorrecta por cada 3 fallos
     const penaltyQuestions = Math.floor(wrong / 3);
 
-    // Aciertos netos (mínimo 0)
     const netCorrect = Math.max(0, correct - penaltyQuestions);
 
-    // Nota sobre 10
     const pointsPerQuestion = 10 / total;
     const grade10 = Number((netCorrect * pointsPerQuestion).toFixed(2));
 
@@ -557,6 +563,27 @@ const ExamSimulator = () => {
   };
 
   const details = getScoreDetails();
+
+  // =========================
+  // LISTA FINAL: SOLO LAS QUE FALLÓ O DEJÓ EN BLANCO
+  // =========================
+  const mistakesAndBlanks = useMemo(() => {
+    return questions
+      .map((q) => {
+        const chosen = selectedAnswers[q.id];
+        const isBlank = chosen === undefined;
+        const isWrong = chosen !== undefined && chosen !== q.correct;
+
+        return {
+          ...q,
+          chosen,
+          isBlank,
+          isWrong,
+          shouldShow: isWrong || isBlank,
+        };
+      })
+      .filter((x) => x.shouldShow);
+  }, [questions, selectedAnswers]);
 
   // =========================
   // ENVÍO A FORMSPREE
@@ -634,10 +661,23 @@ const ExamSimulator = () => {
     if (currentQuestion > 0) setCurrentQuestion(currentQuestion - 1);
   };
 
-  const finishExam = async (reason = "manual") => {
+  const finalizeNow = async (reason = "manual") => {
     if (showResults) return;
     setShowResults(true);
+    setConfirmFinishOpen(false);
     await sendResultToFormspree();
+  };
+
+  const tryFinishExam = () => {
+    if (showResults) return;
+
+    // Si hay blancos, abre confirmación
+    if (details.blanks > 0) {
+      setConfirmFinishOpen(true);
+      return;
+    }
+
+    finalizeNow("manual");
   };
 
   const restartExam = () => {
@@ -645,6 +685,7 @@ const ExamSimulator = () => {
     setCurrentQuestion(0);
     setSelectedAnswers({});
     setShowResults(false);
+    setConfirmFinishOpen(false);
 
     setTimeLeft(EXAM_DURATION_SECONDS);
 
@@ -653,6 +694,12 @@ const ExamSimulator = () => {
     setSendError("");
 
     initializeExam();
+  };
+
+  const goToFirstBlank = () => {
+    const idx = questions.findIndex((q) => selectedAnswers[q.id] === undefined);
+    if (idx >= 0) setCurrentQuestion(idx);
+    setConfirmFinishOpen(false);
   };
 
   // =========================
@@ -674,37 +721,10 @@ const ExamSimulator = () => {
   useEffect(() => {
     if (!examStarted || showResults) return;
     if (timeLeft === 0) {
-      finishExam("timeout");
+      finalizeNow("timeout");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timeLeft, examStarted, showResults]);
-
-  // =========================
-  // LISTA FINAL: SOLO LAS QUE FALLÓ O DEJÓ EN BLANCO
-  // (sin modo "repaso" extra)
-  // =========================
-  const mistakesAndBlanks = useMemo(() => {
-    return questions
-      .map((q) => {
-        const chosen = selectedAnswers[q.id];
-        const isBlank = chosen === undefined;
-        const isWrong = chosen !== undefined && chosen !== q.correct;
-
-        // En el final SIEMPRE mostramos:
-        // - Las falladas
-        // - Y las no respondidas (para estudiar)
-        const shouldShow = isWrong || isBlank;
-
-        return {
-          ...q,
-          chosen,
-          isBlank,
-          isWrong,
-          shouldShow,
-        };
-      })
-      .filter((x) => x.shouldShow);
-  }, [questions, selectedAnswers]);
 
   // =========================
   // RENDER: guard
@@ -830,6 +850,12 @@ const ExamSimulator = () => {
               style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
             />
           </div>
+
+          {/* mini resumen */}
+          <div className="mt-3 text-sm text-gray-600">
+            Respondidas: <span className="font-semibold">{details.answered}</span> · En blanco:{" "}
+            <span className="font-semibold">{details.blanks}</span>
+          </div>
         </div>
 
         {/* Question Card */}
@@ -876,7 +902,7 @@ const ExamSimulator = () => {
 
           {currentQuestion === questions.length - 1 ? (
             <button
-              onClick={() => finishExam("manual")}
+              onClick={tryFinishExam}
               disabled={!isAnswered || showResults}
               className="px-6 py-3 bg-green-500 text-white rounded-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-green-600 transition-colors"
               title={!isAnswered ? "Responde la última pregunta para finalizar" : "Finalizar y enviar"}
@@ -893,6 +919,46 @@ const ExamSimulator = () => {
             </button>
           )}
         </div>
+
+        {/* MODAL CONFIRMACIÓN SI HAY BLANCOS */}
+        {confirmFinishOpen && (
+          <div className="fixed inset-0 bg-black/40 flex items-center justify-center p-4 z-50">
+            <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-lg">
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">Tienes preguntas en blanco</h3>
+              <p className="text-gray-700 mb-4">
+                Te quedan <span className="font-semibold">{details.blanks}</span> pregunta(s) sin responder.
+                ¿Quieres terminar igualmente?
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3">
+                <button
+                  onClick={goToFirstBlank}
+                  className="flex-1 px-5 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+                >
+                  Volver y responder
+                </button>
+
+                <button
+                  onClick={() => finalizeNow("manual_confirmed")}
+                  className="flex-1 px-5 py-3 bg-green-500 text-white rounded-lg font-semibold hover:bg-green-600 transition-colors"
+                >
+                  Continuar y finalizar
+                </button>
+
+                <button
+                  onClick={() => setConfirmFinishOpen(false)}
+                  className="flex-1 px-5 py-3 bg-gray-200 text-gray-800 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
+                >
+                  Cancelar
+                </button>
+              </div>
+
+              <div className="text-sm text-gray-500 mt-3">
+                Nota: aunque “en blanco no penalice”, al final te mostraremos esas preguntas para que las estudies.
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* RESULTS + LISTA DE FALLOS/BLANCOS */}
         {showResults && (
@@ -949,8 +1015,7 @@ const ExamSimulator = () => {
               ) : (
                 <div className="space-y-4">
                   {mistakesAndBlanks.map((q) => {
-                    const yourText =
-                      q.chosen === undefined ? "No respondida" : q.options[q.chosen];
+                    const yourText = q.chosen === undefined ? "No respondida" : q.options[q.chosen];
                     const correctText = q.options[q.correct];
 
                     return (
