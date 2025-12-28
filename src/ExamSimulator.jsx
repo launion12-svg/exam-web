@@ -1432,6 +1432,286 @@ const ExamSimulator = () => {
       correct: 3,
       explanation: "Bash (Bourne Again SHell) es el intérprete de comandos por defecto en casi todas las distribuciones Linux. Es una mejora del shell original de Unix (sh).",
     },
+    {
+      id: 116,
+      subject: "ISO",
+      unit: "UT4",
+      question: "¿Qué evento indica fallos de inicio de sesión en Windows?",
+      options: [
+        "5156",
+        "1000",
+        "4625",
+        "7036"
+      ],
+      correct: 2,
+      explanation: "El ID de evento 4625 se genera en el Visor de Eventos de Windows cada vez que una cuenta no logra iniciar sesión, ya sea por contraseña incorrecta o usuario inexistente.",
+    },
+    {
+      id: 117,
+      subject: "ISO",
+      unit: "UT4",
+      question: "¿Qué comando de Windows permite listar permisos NTFS?",
+      options: [
+        "chmod",
+        "icacls",
+        "passwd",
+        "chage"
+      ],
+      correct: 1,
+      explanation: "icacls es la utilidad de línea de comandos en Windows que permite mostrar, modificar y hacer copias de seguridad de las listas de control de acceso (ACL) de archivos y carpetas.",
+    },
+    {
+      id: 118,
+      subject: "ISO",
+      unit: "UT4",
+      question: "¿Qué sistema de cifrado de volúmenes es propio de Linux?",
+      options: [
+        "LUKS2",
+        "NTFS",
+        "BitLocker",
+        "RAID5"
+      ],
+      correct: 0,
+      explanation: "LUKS (Linux Unified Key Setup) es el estándar para el cifrado de discos en Linux, permitiendo gestionar múltiples claves y asegurar que los datos no sean accesibles si el disco es extraído.",
+    },
+    {
+      id: 119,
+      subject: "ISO",
+      unit: "UT4",
+      question: "¿Qué ventaja ofrece RAID1?",
+      options: [
+        "Rendimiento peor que un único disco",
+        "Ahorro total de espacio",
+        "Mayor riesgo de pérdida de datos",
+        "Continuidad del servicio si falla un disco"
+      ],
+      correct: 3,
+      explanation: "RAID1, también llamado 'espejo' (mirroring), duplica los datos en dos discos. Si uno falla, el sistema sigue funcionando con el otro sin pérdida de información ni interrupción del servicio.",
+    },
+    {
+      id: 120,
+      subject: "ISO",
+      unit: "UT4",
+      question: "¿Qué herramienta de Linux detecta rootkits?",
+      options: [
+        "sysmon",
+        "icacls",
+        "AppLocker",
+        "rkhunter"
+      ],
+      correct: 3,
+      explanation: "rkhunter (Rootkit Hunter) es una herramienta de seguridad que escanea el sistema en busca de rootkits, backdoors y exploits locales comparando firmas y buscando archivos sospechosos.",
+    },
+    {
+      id: 121,
+      subject: "ISO",
+      unit: "UT4",
+      question: "¿Qué política de contraseñas es más recomendable?",
+      options: [
+        "Uso exclusivo de caracteres especiales",
+        "Contraseñas iguales para todos",
+        "Longitud mínima de 16 caracteres o passphrase",
+        "Caducidad mensual obligatoria"
+      ],
+      correct: 2,
+      explanation: "La seguridad moderna prioriza la longitud (passphrases) sobre la complejidad extrema o la rotación frecuente, ya que las frases largas son más difíciles de hackear por fuerza bruta y fáciles de recordar.",
+    },
+    {
+      id: 122,
+      subject: "ISO",
+      unit: "UT4",
+      question: "¿Qué sistema de archivos ofrece integridad end-to-end?",
+      options: [
+        "FAT32",
+        "ReFS",
+        "EXT2",
+        "ZFS con RAIDZ"
+      ],
+      correct: 3,
+      explanation: "ZFS utiliza sumas de verificación (checksums) en todo el camino del dato (end-to-end). Si detecta que un dato se ha corrompido en el disco, lo repara automáticamente usando la paridad de RAIDZ.",
+    },
+    {
+      id: 123,
+      subject: "ISO",
+      unit: "UT4",
+      question: "¿Qué estrategia de actualizaciones minimiza riesgos?",
+      options: [
+        "Instalar todo directamente en producción",
+        "Despliegue en anillos (piloto, preproducción, producción)",
+        "Ignorar parches de seguridad",
+        "Esperar años antes de actualizar"
+      ],
+      correct: 1,
+      explanation: "El despliegue por anillos permite probar las actualizaciones en un grupo reducido (piloto) y en un entorno controlado (preproducción) antes de lanzarlas a toda la empresa, evitando que un parche defectuoso detenga la actividad global.",
+    },
+    {
+      id: 124,
+      subject: "ISO",
+      unit: "UT4",
+      question: "¿Qué herramienta centraliza logs en grandes entornos?",
+      options: [
+        "ELK Stack",
+        "Paint",
+        "Excel",
+        "Notepad"
+      ],
+      correct: 0,
+      explanation: "ELK Stack (Elasticsearch, Logstash y Kibana) es una plataforma que permite recolectar logs de miles de fuentes, procesarlos y visualizarlos en paneles gráficos en tiempo real.",
+    },
+    {
+      id: 125,
+      subject: "ISO",
+      unit: "UT4",
+      question: "¿Qué riesgo presenta RAID5 con discos grandes?",
+      options: [
+        "Falta total de rendimiento",
+        "No permite lecturas concurrentes",
+        "Se pierde la mitad del espacio",
+        "Error de lectura irrecuperable (URE) en reconstrucción"
+      ],
+      correct: 3,
+      explanation: "Debido al largo tiempo que tarda en reconstruirse un RAID 5 con discos de gran capacidad, existe una alta probabilidad estadística de encontrar un Error de Lectura Irrecuperable (URE) en los discos restantes, lo que causaría la pérdida total de los datos.",
+    },
+    {
+      id: 126,
+      subject: "ISO",
+      unit: "UT4",
+      question: "¿Cuál es el objetivo principal de la seguridad local?",
+      options: [
+        "Instalar aplicaciones rápidamente",
+        "Garantizar la confidencialidad, integridad, disponibilidad y trazabilidad",
+        "Mejorar el rendimiento del hardware",
+        "Reducir el consumo energético"
+      ],
+      correct: 1,
+      explanation: "La seguridad local busca proteger la tríada CID (Confidencialidad, Integridad, Disponibilidad) y asegurar la Trazabilidad (saber quién hizo qué y cuándo) mediante el control de accesos y logs.",
+    },
+    {
+      id: 127,
+      subject: "ISO",
+      unit: "UT4",
+      question: "¿Cuál es el primer paso ante una infección?",
+      options: [
+        "Aislar el sistema afectado",
+        "Ignorar el incidente",
+        "Cambiar de hardware",
+        "Formatear directamente"
+      ],
+      correct: 0,
+      explanation: "El aislamiento (desconectar de la red y apagar conexiones inalámbricas) es vital para evitar que el malware se propague a otros equipos de la red (movimiento lateral).",
+    },
+    {
+      id: 128,
+      subject: "ISO",
+      unit: "UT4",
+      question: "¿Qué significan las siglas RPO en tolerancia a fallos?",
+      options: [
+        "Random Protection Option",
+        "Recovery Protocol Order",
+        "Recovery Point Objective",
+        "Remote Protection Output"
+      ],
+      correct: 2,
+      explanation: "El RPO (Objetivo de Punto de Recuperación) determina la cantidad máxima de datos que una organización puede permitirse perder, midiendo el tiempo transcurrido desde la última copia de seguridad hasta el fallo.",
+    },
+    {
+      id: 129,
+      subject: "ISO",
+      unit: "UT4",
+      question: "¿Qué nivel de RAID combina espejos y striping?",
+      options: [
+        "RAID10",
+        "RAID0",
+        "RAID5",
+        "RAID6"
+      ],
+      correct: 0,
+      explanation: "RAID 10 es un 'nivel anidado' que combina la redundancia del espejo (RAID 1) con la velocidad del striping o seccionamiento (RAID 0), ofreciendo lo mejor de ambos mundos.",
+    },
+    {
+      id: 130,
+      subject: "ISO",
+      unit: "UT4",
+      question: "¿Qué herramienta aplica políticas de contraseña en Linux?",
+      options: [
+        "Group Policy Objects (GPO)",
+        "PAM (pwquality, faillock)",
+        "BIOS",
+        "DHCP"
+      ],
+      correct: 1,
+      explanation: "PAM (Pluggable Authentication Modules) es el sistema flexible que usa Linux para la autenticación. Módulos como 'pwquality' fuerzan la complejidad de la clave y 'faillock' bloquea la cuenta tras varios fallos.",
+    },
+    {
+      id: 131,
+      subject: "ISO",
+      unit: "UT4",
+      question: "¿Qué solución antimalware es nativa de Windows?",
+      options: [
+        "Snort",
+        "Falco",
+        "ClamAV",
+        "Microsoft Defender"
+      ],
+      correct: 3,
+      explanation: "Microsoft Defender (antiguamente Windows Defender) es el software antivirus y antimalware integrado por defecto en Windows, ofreciendo protección en tiempo real y análisis de archivos.",
+    },
+    {
+      id: 132,
+      subject: "ISO",
+      unit: "UT4",
+      question: "¿Qué tipo de copia facilita restauración rápida pero ocupa más espacio?",
+      options: [
+        "Parcial",
+        "Diferencial",
+        "Completa",
+        "Incremental"
+      ],
+      correct: 2,
+      explanation: "La copia completa (Full Backup) guarda todos los archivos del sistema. Es la más rápida de restaurar porque solo necesitas un archivo/soporte, pero es la que más almacenamiento consume.",
+    },
+    {
+      id: 133,
+      subject: "ISO",
+      unit: "UT4",
+      question: "¿Qué estrategia de copias de seguridad garantiza resiliencia?",
+      options: [
+        "Copia mensual sin verificación",
+        "3-2-1 (tres copias, dos soportes, una offsite)",
+        "Almacenar solo en la nube sin clave",
+        "Guardar en un solo disco externo"
+      ],
+      correct: 1,
+      explanation: "La estrategia 3-2-1 (3 copias en 2 soportes diferentes y 1 fuera del sitio) garantiza que los datos sobrevivan a fallos de hardware, errores humanos e incluso catástrofes físicas en el local.",
+    },
+    {
+      id: 134,
+      subject: "ISO",
+      unit: "UT4",
+      question: "¿Qué nivel de RAID no ofrece redundancia?",
+      options: [
+        "RAID5",
+        "RAID0",
+        "RAID1",
+        "RAID6"
+      ],
+      correct: 1,
+      explanation: "El RAID 0 realiza un seccionamiento (striping) de los datos entre los discos para ganar velocidad, pero si un solo disco falla, se pierde toda la información del conjunto.",
+    },
+    {
+      id: 135,
+      subject: "ISO",
+      unit: "UT4",
+      question: "¿Qué práctica reduce la superficie de ataque?",
+      options: [
+        "Principio de mínimo privilegio (PoLP)",
+        "Permisos globales para Everyone",
+        "Uso de cuentas con privilegios elevados",
+        "Desactivar auditorías"
+      ],
+      correct: 0,
+      explanation: "El Principio de Mínimo Privilegio (PoLP) dicta que cada usuario o proceso debe tener solo los permisos estrictamente necesarios para su función, limitando el daño potencial en caso de un ataque.",
+    },
   ];
 
   // =========================
