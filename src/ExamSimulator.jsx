@@ -1,5 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { CheckCircle, XCircle, RotateCcw, BookOpen } from "lucide-react";
+import { RotateCcw, BookOpen } from "lucide-react";
+
+const EXAM_DURATION_SECONDS = 60 * 60; // 60 minutos
 
 const ExamSimulator = () => {
   const allQuestions = [
@@ -76,7 +78,8 @@ const ExamSimulator = () => {
       question: "¿Qué comando permite ver los usuarios del dominio en Linux con SSSD?",
       options: ["ls -l", "getent passwd", "cat /etc/passwd", "whoami"],
       correct: 1,
-      explanation: "getent passwd consulta la base de datos de usuarios, incluyendo los del dominio cuando está configurado SSSD.",
+      explanation:
+        "getent passwd consulta la base de datos de usuarios, incluyendo los del dominio cuando está configurado SSSD.",
     },
     {
       id: 9,
@@ -282,9 +285,15 @@ const ExamSimulator = () => {
       id: 34,
       unit: "UT2",
       question: "¿Qué es un snapshot en virtualización?",
-      options: ["Una copia de seguridad completa", "Captura del estado de una VM en un momento dado", "Una partición del disco", "Un tipo de RAID"],
+      options: [
+        "Una copia de seguridad completa",
+        "Captura del estado de una VM en un momento dado",
+        "Una partición del disco",
+        "Un tipo de RAID",
+      ],
       correct: 1,
-      explanation: "Un snapshot captura el estado completo de una máquina virtual (memoria, disco, configuración) en un momento específico.",
+      explanation:
+        "Un snapshot captura el estado completo de una máquina virtual (memoria, disco, configuración) en un momento específico.",
     },
     {
       id: 35,
@@ -444,7 +453,9 @@ const ExamSimulator = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [showResults, setShowResults] = useState(false);
-  const [showExplanation, setShowExplanation] = useState(false);
+
+  // Timer
+  const [timeLeft, setTimeLeft] = useState(EXAM_DURATION_SECONDS);
 
   // Formspree (Nivel 1)
   const [studentName, setStudentName] = useState("");
@@ -470,25 +481,19 @@ const ExamSimulator = () => {
 
   const handleAnswer = (questionId, answerIndex) => {
     if (!showResults) {
-      setSelectedAnswers({
-        ...selectedAnswers,
+      setSelectedAnswers((prev) => ({
+        ...prev,
         [questionId]: answerIndex,
-      });
+      }));
     }
   };
 
   const nextQuestion = () => {
-    if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion(currentQuestion + 1);
-      setShowExplanation(false);
-    }
+    if (currentQuestion < questions.length - 1) setCurrentQuestion(currentQuestion + 1);
   };
 
   const prevQuestion = () => {
-    if (currentQuestion > 0) {
-      setCurrentQuestion(currentQuestion - 1);
-      setShowExplanation(false);
-    }
+    if (currentQuestion > 0) setCurrentQuestion(currentQuestion - 1);
   };
 
   const calculateScore = () => {
@@ -499,32 +504,13 @@ const ExamSimulator = () => {
     return correct;
   };
 
-  const restartExam = () => {
-    setExamStarted(false);
-
-    setCurrentQuestion(0);
-    setSelectedAnswers({});
-    setShowResults(false);
-    setShowExplanation(false);
-
-    setSendingResult(false);
-    setResultSent(false);
-    setSendError("");
-    setReviewOnlyWrong(true);
-
-    initializeExam();
+  const formatTime = (seconds) => {
+    const s = Math.max(0, seconds);
+    const mm = String(Math.floor(s / 60)).padStart(2, "0");
+    const ss = String(s % 60).padStart(2, "0");
+    return `${mm}:${ss}`;
   };
 
-  // Guard: preguntas cargadas
-  if (questions.length === 0) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
-        <div className="text-2xl text-gray-600">Cargando examen...</div>
-      </div>
-    );
-  }
-
-  // Cálculos
   const score = calculateScore();
   const percentage = ((score / questions.length) * 100).toFixed(1);
 
@@ -552,15 +538,14 @@ const ExamSimulator = () => {
         correct: score,
         total: questions.length,
         timestamp: new Date().toISOString(),
+        timeUsedSeconds: EXAM_DURATION_SECONDS - timeLeft,
+        timeLeftSeconds: timeLeft,
         units,
       };
 
       const res = await fetch("https://formspree.io/f/myzdldkp", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(payload),
       });
 
@@ -577,13 +562,63 @@ const ExamSimulator = () => {
     }
   };
 
-  const finishExam = async () => {
+  const finishExam = async (reason = "manual") => {
+    if (showResults) return; // evita dobles finales
     setShowResults(true);
-    setShowExplanation(true);
-    await sendResultToFormspree(); // envío automático al finalizar
+    await sendResultToFormspree();
+    // reason está por si luego quieres mostrar “Tiempo agotado” etc.
+    // (ahora mismo no lo mostramos para mantenerlo limpio)
   };
 
-  // Pantalla de inicio (nombre antes de empezar)
+  // Timer: solo corre cuando el examen ha empezado y no ha terminado
+  useEffect(() => {
+    if (!examStarted || showResults) return;
+
+    const interval = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev <= 1) return 0;
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [examStarted, showResults]);
+
+  // Auto-finalizar cuando llega a 0
+  useEffect(() => {
+    if (!examStarted || showResults) return;
+    if (timeLeft === 0) {
+      finishExam("timeout");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [timeLeft, examStarted, showResults]);
+
+  const restartExam = () => {
+    setExamStarted(false);
+    setCurrentQuestion(0);
+    setSelectedAnswers({});
+    setShowResults(false);
+
+    setTimeLeft(EXAM_DURATION_SECONDS);
+
+    setSendingResult(false);
+    setResultSent(false);
+    setSendError("");
+    setReviewOnlyWrong(true);
+
+    initializeExam();
+  };
+
+  // Guard: preguntas cargadas
+  if (questions.length === 0) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+        <div className="text-2xl text-gray-600">Cargando examen...</div>
+      </div>
+    );
+  }
+
+  // Pantalla de inicio
   if (!examStarted) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4 flex items-center justify-center">
@@ -593,7 +628,9 @@ const ExamSimulator = () => {
             <h1 className="text-3xl font-bold text-gray-800">Examen - Implantación de Sistemas Operativos</h1>
           </div>
 
-          <p className="text-gray-600 mb-6">Introduce tu nombre o apodo para empezar.</p>
+          <p className="text-gray-600 mb-6">
+            Duración: <span className="font-semibold">60 minutos</span>. No se muestran soluciones hasta el final.
+          </p>
 
           <input
             value={studentName}
@@ -613,16 +650,15 @@ const ExamSimulator = () => {
                 return;
               }
               setSendError("");
+              setResultSent(false);
+              setSendingResult(false);
+              setTimeLeft(EXAM_DURATION_SECONDS);
               setExamStarted(true);
             }}
             className="w-full px-6 py-4 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
           >
             Empezar examen
           </button>
-
-          <div className="mt-4 text-sm text-gray-500">
-            * Al finalizar, el resultado se enviará automáticamente.
-          </div>
         </div>
       </div>
     );
@@ -630,7 +666,6 @@ const ExamSimulator = () => {
 
   const question = questions[currentQuestion];
   const isAnswered = selectedAnswers[question.id] !== undefined;
-  const isCorrect = selectedAnswers[question.id] === question.correct;
 
   const reviewList = useMemo(() => {
     return questions
@@ -653,15 +688,28 @@ const ExamSimulator = () => {
             <h1 className="text-3xl font-bold text-gray-800">Examen - Implantación de Sistemas Operativos</h1>
           </div>
 
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center flex-wrap gap-3">
             <span className="text-lg text-gray-600">
               Pregunta {currentQuestion + 1} de {questions.length}
             </span>
+
             <div className="flex items-center gap-3">
               <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full font-semibold text-sm">
                 {studentName}
               </span>
-              <span className="px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full font-semibold">{question.unit}</span>
+
+              <span className="px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full font-semibold">
+                {question.unit}
+              </span>
+
+              <span
+                className={`px-4 py-2 rounded-full font-bold ${
+                  timeLeft <= 5 * 60 ? "bg-red-100 text-red-700" : "bg-green-100 text-green-700"
+                }`}
+                title="Tiempo restante"
+              >
+                ⏱️ {formatTime(timeLeft)}
+              </span>
             </div>
           </div>
 
@@ -680,23 +728,12 @@ const ExamSimulator = () => {
           <div className="space-y-4">
             {question.options.map((option, index) => {
               const isSelected = selectedAnswers[question.id] === index;
-              const isCorrectAnswer = index === question.correct;
 
               let bgColor = "bg-gray-50 hover:bg-gray-100";
               let borderColor = "border-gray-300";
-              let icon = null;
 
-              if (showResults || (isAnswered && showExplanation)) {
-                if (isCorrectAnswer) {
-                  bgColor = "bg-green-50";
-                  borderColor = "border-green-500";
-                  icon = <CheckCircle className="w-6 h-6 text-green-600" />;
-                } else if (isSelected && !isCorrectAnswer) {
-                  bgColor = "bg-red-50";
-                  borderColor = "border-red-500";
-                  icon = <XCircle className="w-6 h-6 text-red-600" />;
-                }
-              } else if (isSelected) {
+              // MODO EXAMEN: no mostramos correcto/incorrecto aquí
+              if (isSelected) {
                 bgColor = "bg-indigo-50";
                 borderColor = "border-indigo-500";
               }
@@ -706,28 +743,14 @@ const ExamSimulator = () => {
                   key={index}
                   onClick={() => handleAnswer(question.id, index)}
                   disabled={showResults}
-                  className={`w-full p-4 rounded-lg border-2 ${bgColor} ${borderColor} text-left transition-all duration-200 flex items-center justify-between ${
-                    !showResults && "hover:shadow-md"
-                  }`}
+                  className={`w-full p-4 rounded-lg border-2 ${bgColor} ${borderColor} text-left transition-all duration-200 flex items-center justify-between hover:shadow-md`}
                 >
                   <span className="text-lg text-gray-800">{option}</span>
-                  {icon}
+                  {isSelected ? <span className="font-bold text-indigo-700">Seleccionada</span> : null}
                 </button>
               );
             })}
           </div>
-
-          {/* Explanation */}
-          {isAnswered && showExplanation && (
-            <div
-              className={`mt-6 p-4 rounded-lg ${
-                isCorrect ? "bg-green-50 border-2 border-green-200" : "bg-blue-50 border-2 border-blue-200"
-              }`}
-            >
-              <h3 className="font-semibold text-lg mb-2 text-gray-800">{isCorrect ? "✓ ¡Correcto!" : "Explicación:"}</h3>
-              <p className="text-gray-700">{question.explanation}</p>
-            </div>
-          )}
         </div>
 
         {/* Navigation */}
@@ -740,19 +763,12 @@ const ExamSimulator = () => {
             ← Anterior
           </button>
 
-          {isAnswered && !showExplanation && !showResults && (
+          {currentQuestion === questions.length - 1 ? (
             <button
-              onClick={() => setShowExplanation(true)}
-              className="px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-600 transition-colors"
-            >
-              Ver Explicación
-            </button>
-          )}
-
-          {currentQuestion === questions.length - 1 && isAnswered ? (
-            <button
-              onClick={finishExam}
-              className="px-6 py-3 bg-green-500 text-white rounded-lg font-semibold hover:bg-green-600 transition-colors"
+              onClick={() => finishExam("manual")}
+              disabled={!isAnswered || showResults}
+              className="px-6 py-3 bg-green-500 text-white rounded-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-green-600 transition-colors"
+              title={!isAnswered ? "Responde la última pregunta para finalizar" : "Finalizar y enviar"}
             >
               Finalizar Examen
             </button>
@@ -780,20 +796,35 @@ const ExamSimulator = () => {
                 {score} de {questions.length} correctas
               </div>
               <div className="mt-4 text-lg">
-                {percentage >= 90 ? "🌟 ¡Excelente!" : percentage >= 70 ? "👏 ¡Muy bien!" : percentage >= 50 ? "👍 Aprobado" : "📚 Sigue estudiando"}
+                {percentage >= 90
+                  ? "🌟 ¡Excelente!"
+                  : percentage >= 70
+                  ? "👏 ¡Muy bien!"
+                  : percentage >= 50
+                  ? "👍 Aprobado"
+                  : "📚 Sigue estudiando"}
               </div>
               <div className="mt-2 text-sm text-gray-500">Alumno: {studentName}</div>
+              <div className="mt-1 text-sm text-gray-500">
+                Tiempo usado: {formatTime(EXAM_DURATION_SECONDS - timeLeft)} / 60:00
+              </div>
             </div>
 
             {/* Estado envío automático */}
             <div className="mt-4">
               {sendingResult && (
-                <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg text-blue-700">Enviando resultado...</div>
+                <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg text-blue-700">
+                  Enviando resultado...
+                </div>
               )}
               {resultSent && (
-                <div className="p-3 bg-green-50 border border-green-200 rounded-lg text-green-700">✅ Resultado enviado</div>
+                <div className="p-3 bg-green-50 border border-green-200 rounded-lg text-green-700">
+                  ✅ Resultado enviado
+                </div>
               )}
-              {sendError && <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-red-700">{sendError}</div>}
+              {sendError && (
+                <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-red-700">{sendError}</div>
+              )}
             </div>
 
             {/* Repaso */}
@@ -820,8 +851,14 @@ const ExamSimulator = () => {
                         <div className="font-semibold text-gray-800">
                           {q.id}. {q.question}
                         </div>
-                        {q.isWrong ? <span className="text-red-700 font-bold">✗</span> : <span className="text-green-700 font-bold">✓</span>}
+                        {q.isWrong ? (
+                          <span className="text-red-700 font-bold">✗</span>
+                        ) : (
+                          <span className="text-green-700 font-bold">✓</span>
+                        )}
                       </div>
+
+                      <div className="mt-2 text-sm text-gray-500">Unidad: {q.unit}</div>
 
                       <div className="mt-3 text-gray-700 space-y-1">
                         <div>
