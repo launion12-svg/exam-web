@@ -1152,6 +1152,286 @@ const ExamSimulator = () => {
       correct: 2,
       explanation: "efibootmgr es una aplicación de espacio de usuario para modificar la NVRAM de Intel Extensible Firmware Interface (EFI), permitiendo crear, borrar o cambiar el orden de las entradas de arranque.",
     },
+    {
+      id: 96,
+      subject: "ISO",
+      unit: "UT3",
+      question: "¿Cuál de estas herramientas de recuperación pertenece a Linux?",
+      options: [
+        "Restaurar sistema",
+        "Restaurar imagen",
+        "Punto de restauración",
+        "initramfs"
+      ],
+      correct: 3,
+      explanation: "initramfs (Initial RAM File System) es un sistema de archivos temporal que Linux utiliza durante el arranque para cargar drivers necesarios y montar la partición raíz, permitiendo acceder a herramientas de rescate si el arranque falla.",
+    },
+    {
+      id: 97,
+      subject: "ISO",
+      unit: "UT3",
+      question: "¿Qué comando de Linux se usa para desmontar una unidad manualmente?",
+      options: [
+        "umount",
+        "detach",
+        "eject",
+        "unmount"
+      ],
+      correct: 0,
+      explanation: "El comando correcto es 'umount' (sin la 'n'). Se utiliza para desprender un sistema de archivos montado de la jerarquía de directorios de Linux.",
+    },
+    {
+      id: 98,
+      subject: "ISO",
+      unit: "UT3",
+      question: "¿Qué formato de archivo corresponde a un instalador típico en Windows?",
+      options: [
+        ".sh",
+        ".rpm",
+        ".exe / .msi",
+        ".deb"
+      ],
+      correct: 2,
+      explanation: "En Windows, los archivos .exe son ejecutables directos y los .msi (Microsoft Installer) son paquetes de instalación que utilizan el servicio Windows Installer.",
+    },
+    {
+      id: 99,
+      subject: "ISO",
+      unit: "UT3",
+      question: "¿Qué herramienta de Windows permite crear puntos de restauración del sistema?",
+      options: [
+        "Panel de control > Sistema > Protección del sistema",
+        "Configuración > Aplicaciones",
+        "Administrador de discos",
+        "Administrador de tareas"
+      ],
+      correct: 0,
+      explanation: "La opción 'Protección del sistema' dentro de las propiedades del sistema es la que permite configurar el espacio para restaurar y crear los puntos de restauración de forma manual.",
+    },
+    {
+      id: 100,
+      subject: "ISO",
+      unit: "UT3",
+      question: "¿Qué comando en Linux permite configurar el idioma del sistema?",
+      options: [
+        "localectl",
+        "timedatectl",
+        "setlocale",
+        "langctl"
+      ],
+      correct: 0,
+      explanation: "El comando 'localectl' se utiliza para consultar y cambiar la configuración regional (idioma) y la disposición del teclado en el sistema.",
+    },
+    {
+      id: 101,
+      subject: "ISO",
+      unit: "UT3",
+      question: "¿Qué gestor de paquetes se utiliza en CentOS/RHEL?",
+      options: [
+        "snap",
+        "apt",
+        "pacman",
+        "yum"
+      ],
+      correct: 3,
+      explanation: "YUM (Yellowdog Updater, Modified) es el gestor tradicional para distribuciones basadas en Red Hat como CentOS. En versiones modernas ha sido sucedido por DNF, aunque son compatibles.",
+    },
+    {
+      id: 102,
+      subject: "ISO",
+      unit: "UT3",
+      question: "¿En qué sección de Configuración de Windows se cambia el fondo de pantalla?",
+      options: [
+        "Personalización > Fondo",
+        "Sistema > Pantalla",
+        "Aplicaciones > Escritorio",
+        "Red > Pantalla"
+      ],
+      correct: 0,
+      explanation: "Dentro del menú de Configuración de Windows, el apartado 'Personalización' agrupa todos los ajustes estéticos como el fondo, los colores, la pantalla de bloqueo y los temas.",
+    },
+    {
+      id: 103,
+      subject: "ISO",
+      unit: "UT3",
+      question: "¿Qué comando en Windows muestra la configuración de red?",
+      options: [
+        "netshow",
+        "ifconfig",
+        "sysinfo",
+        "ipconfig"
+      ],
+      correct: 3,
+      explanation: "El comando 'ipconfig' muestra los valores de configuración de red TCP/IP actuales, como la dirección IP, la máscara de subred y la puerta de enlace predeterminada.",
+    },
+    {
+      id: 104,
+      subject: "ISO",
+      unit: "UT3",
+      question: "¿Qué herramienta gráfica de Windows se usa para administrar particiones y discos?",
+      options: [
+        "CMD",
+        "Administrador de tareas",
+        "BIOS",
+        "Administrador de discos (diskmgmt.msc)"
+      ],
+      correct: 3,
+      explanation: "El Administrador de discos es la herramienta gráfica de Windows que permite crear, formatear, reducir, extender y eliminar particiones en las unidades de almacenamiento.",
+    },
+    {
+      id: 105,
+      subject: "ISO",
+      unit: "UT3",
+      question: "¿Qué extensión corresponde a un script clásico de MS-DOS o Windows?",
+      options: [
+        ".sh",
+        ".ps1",
+        ".exe",
+        ".bat"
+      ],
+      correct: 3,
+      explanation: "La extensión .bat (batch) identifica a los archivos de procesamiento por lotes que contienen una serie de comandos de consola que se ejecutan secuencialmente en MS-DOS y Windows.",
+    },
+    {
+      id: 106,
+      subject: "ISO",
+      unit: "UT3",
+      question: "¿Qué comando en Debian/Ubuntu actualiza el sistema?",
+      options: [
+        "sudo dnf update",
+        "sudo apt update && sudo apt upgrade",
+        "sudo yum update",
+        "update-manager"
+      ],
+      correct: 1,
+      explanation: "En Debian/Ubuntu, 'apt update' descarga la información de los paquetes nuevos y 'apt upgrade' instala las versiones más recientes de los programas ya instalados.",
+    },
+    {
+      id: 107,
+      subject: "ISO",
+      unit: "UT3",
+      question: "¿Qué herramienta de Linux permite hacer instantáneas del sistema para recuperación?",
+      options: [
+        "SnapshotCtl",
+        "BackupTool",
+        "Deja Dup",
+        "Timeshift"
+      ],
+      correct: 3,
+      explanation: "Timeshift es una herramienta que crea instantáneas (snapshots) del sistema utilizando rsync o Btrfs, permitiendo restaurar el equipo a un estado anterior si algo falla tras una actualización.",
+    },
+    {
+      id: 108,
+      subject: "ISO",
+      unit: "UT3",
+      question: "¿Qué explorador de archivos es el predeterminado en GNOME (Ubuntu)?",
+      options: [
+        "Thunar",
+        "Dolphin",
+        "Nautilus (GNOME Files)",
+        "Caja"
+      ],
+      correct: 2,
+      explanation: "Nautilus (ahora llamado oficialmente Archivos) es el gestor de archivos oficial del entorno GNOME. Es conocido por su diseño limpio y su integración con el sistema.",
+    },
+    {
+      id: 109,
+      subject: "ISO",
+      unit: "UT3",
+      question: "¿Qué combinación de teclas abre directamente la ventana de Configuración en Windows 10/11?",
+      options: [
+        "Win + I",
+        "Ctrl + Alt + Supr",
+        "Alt + F4",
+        "Win + R"
+      ],
+      correct: 0,
+      explanation: "El atajo 'Win + I' (de Settings/Información) abre instantáneamente el panel de Configuración moderna de Windows. Es mucho más rápido que navegar por el menú Inicio.",
+    },
+    {
+      id: 110,
+      subject: "ISO",
+      unit: "UT3",
+      question: "¿Qué programa de Linux permite programar copias de seguridad de datos personales de forma sencilla y gráfica?",
+      options: [
+        "Timeshift",
+        "Backupctl",
+        "Deja Dup",
+        "Clonezilla"
+      ],
+      correct: 2,
+      explanation: "Deja Dup (también llamado simplemente 'Copias de seguridad' en GNOME) es una herramienta sencilla que permite programar respaldos de carpetas personales, con soporte para cifrado y almacenamiento en la nube.",
+    },
+    {
+      id: 111,
+      subject: "ISO",
+      unit: "UT3",
+      question: "¿Qué herramienta de Linux garantiza la ejecución de tareas si el equipo estuvo apagado en la hora prevista?",
+      options: [
+        "taskschd",
+        "anacron",
+        "systemctl",
+        "cron"
+      ],
+      correct: 1,
+      explanation: "A diferencia de cron, anacron no asume que la máquina está encendida continuamente. Si una tarea programada se pierde porque el PC estaba apagado, anacron la ejecuta en cuanto el sistema arranca de nuevo.",
+    },
+    {
+      id: 112,
+      subject: "ISO",
+      unit: "UT3",
+      question: "¿Qué herramienta de Linux se utiliza para configurar la zona horaria desde la terminal?",
+      options: [
+        "dateconfig",
+        "timedatectl",
+        "localectl",
+        "sysctl"
+      ],
+      correct: 1,
+      explanation: "El comando 'timedatectl' permite consultar y cambiar la hora del sistema, la fecha y la zona horaria (timezone), además de activar la sincronización automática por red (NTP).",
+    },
+    {
+      id: 113,
+      subject: "ISO",
+      unit: "UT3",
+      question: "¿Qué comando en Linux se usa para mostrar procesos en tiempo real?",
+      options: [
+        "ps",
+        "procstat",
+        "top",
+        "jobs"
+      ],
+      correct: 2,
+      explanation: "El comando 'top' muestra una lista dinámica y en tiempo real de los procesos que se están ejecutando, permitiendo ver el consumo de CPU y memoria de cada uno.",
+    },
+    {
+      id: 114,
+      subject: "ISO",
+      unit: "UT3",
+      question: "¿Qué entorno de escritorio en Linux se caracteriza por ser minimalista y usar extensiones para personalizar la interfaz?",
+      options: [
+        "Cinnamon",
+        "GNOME",
+        "KDE Plasma",
+        "XFCE"
+      ],
+      correct: 1,
+      explanation: "GNOME apuesta por una interfaz limpia y minimalista (Shell). Para añadir funcionalidades extra o cambiar su comportamiento, los usuarios instalan 'GNOME Extensions'.",
+    },
+    {
+      id: 115,
+      subject: "ISO",
+      unit: "UT3",
+      question: "¿Qué shell es el estándar en la mayoría de distribuciones Linux?",
+      options: [
+        "cmd",
+        "zsh",
+        "PowerShell",
+        "bash"
+      ],
+      correct: 3,
+      explanation: "Bash (Bourne Again SHell) es el intérprete de comandos por defecto en casi todas las distribuciones Linux. Es una mejora del shell original de Unix (sh).",
+    },
   ];
 
   // =========================
