@@ -1992,6 +1992,286 @@ const ExamSimulator = () => {
       correct: 1,
       explanation: "Kerberos utiliza un sistema de tickets emitidos por un Centro de Distribución de Claves (KDC). Esto permite que el usuario demuestre quién es ante los servicios de la red sin necesidad de enviar su contraseña real a través del cable.",
     },
+    {
+      id: 156,
+      subject: "ISO",
+      unit: "UT6",
+      question: "¿Qué sistema de archivos combina gestor de volúmenes y sistema de archivos?",
+      options: [
+        "ZFS",
+        "NTFS",
+        "Ext4",
+        "FAT32"
+      ],
+      correct: 0,
+      explanation: "ZFS (Zettabyte File System) es un sistema de archivos avanzado que integra un gestor de volúmenes lógicos, lo que permite gestionar discos duros, crear RAIDs por software y asegurar la integridad de los datos en un solo nivel.",
+    },
+    {
+      id: 157,
+      subject: "ISO",
+      unit: "UT6",
+      question: "¿Qué directorio en Linux suele emplearse para montajes temporales?",
+      options: [
+        "/mnt",
+        "/opt",
+        "/etc",
+        "/usr"
+      ],
+      correct: 0,
+      explanation: "/mnt (Mount) es el directorio estándar destinado a puntos de montaje temporales para dispositivos de almacenamiento o recursos de red, según el estándar FHS (Filesystem Hierarchy Standard).",
+    },
+    {
+      id: 158,
+      subject: "ISO",
+      unit: "UT6",
+      question: "¿Qué herramienta de Linux se utiliza para gestionar particiones en discos grandes con GPT?",
+      options: [
+        "gdisk",
+        "defrag",
+        "diskpart",
+        "mountvol"
+      ],
+      correct: 0,
+      explanation: "gdisk (GPT fdisk) es la herramienta de línea de comandos diseñada específicamente para gestionar particiones en discos que utilizan la tabla de particiones GUID (GPT), superando las limitaciones del comando fdisk tradicional.",
+    },
+    {
+      id: 159,
+      subject: "ISO",
+      unit: "UT6",
+      question: "¿Qué comando de Windows verifica y repara la imagen del sistema?",
+      options: [
+        "chkdsk",
+        "fdisk",
+        "mountvol",
+        "dism"
+      ],
+      correct: 3,
+      explanation: "DISM (Deployment Image Servicing and Management) es una herramienta avanzada que se utiliza para reparar, preparar y dar mantenimiento a las imágenes de Windows, permitiendo corregir archivos dañados comparándolos con una fuente oficial.",
+    },
+    {
+      id: 160,
+      subject: "ISO",
+      unit: "UT6",
+      question: "¿Qué comando desmonta un sistema de archivos en Linux?",
+      options: [
+        "mount",
+        "lsblk",
+        "umount",
+        "chmod"
+      ],
+      correct: 2,
+      explanation: "El comando umount (unmount) se utiliza para liberar un dispositivo que ha sido previamente montado en el árbol de directorios. Es importante notar que no lleva la 'n' después de la 'u'.",
+    },
+    {
+      id: 161,
+      subject: "ISO",
+      unit: "UT6",
+      question: "¿Qué sistema de archivos de Microsoft está diseñado para alta capacidad y resiliencia?",
+      options: [
+        "ReFS",
+        "FAT16",
+        "Ext3",
+        "ZFS"
+      ],
+      correct: 0,
+      explanation: "ReFS (Resilient File System) es el sistema de archivos de nueva generación de Microsoft. Está diseñado para maximizar la disponibilidad de los datos, manejar grandes volúmenes y corregir errores de corrupción automáticamente.",
+    },
+    {
+      id: 162,
+      subject: "ISO",
+      unit: "UT6",
+      question: "¿Qué herramienta de Linux está especializada en reparar sistemas de archivos XFS?",
+      options: [
+        "fsck.fat",
+        "fsck.ext4",
+        "sfc",
+        "xfs_repair"
+      ],
+      correct: 3,
+      explanation: "A diferencia de otros sistemas de archivos que usan la familia de comandos fsck, XFS cuenta con su propia herramienta dedicada llamada xfs_repair para verificar y corregir errores de consistencia.",
+    },
+    {
+      id: 163,
+      subject: "ISO",
+      unit: "UT6",
+      question: "¿Qué esquema de particionado permite hasta 128 particiones primarias?",
+      options: [
+        "FAT32",
+        "BIOS",
+        "GPT",
+        "MBR"
+      ],
+      correct: 2,
+      explanation: "GPT (GUID Partition Table) es el estándar moderno que sustituye a MBR. Permite crear hasta 128 particiones por disco y gestionar volúmenes de más de 2 TB.",
+    },
+    {
+      id: 164,
+      subject: "ISO",
+      unit: "UT6",
+      question: "¿Qué herramienta de Windows permite verificar y reparar sistemas de archivos?",
+      options: [
+        "chkdsk",
+        "fsck",
+        "badblocks",
+        "smartctl"
+      ],
+      correct: 0,
+      explanation: "chkdsk (Check Disk) es la utilidad de Windows que verifica la integridad del sistema de archivos (NTFS, FAT32) y puede reparar errores lógicos y detectar sectores físicos defectuosos.",
+    },
+    {
+      id: 165,
+      subject: "ISO",
+      unit: "UT6",
+      question: "¿Cuál es el sistema de archivos por defecto en la mayoría de distribuciones Linux modernas?",
+      options: [
+        "HFS+",
+        "Ext4",
+        "NTFS",
+        "FAT32"
+      ],
+      correct: 1,
+      explanation: "Ext4 (Fourth Extended Filesystem) es el estándar actual en el mundo Linux. Soporta volúmenes de hasta 1 Exabyte, archivos de hasta 16 Terabytes y utiliza 'journaling' para evitar la pérdida de datos ante apagones.",
+    },
+    {
+      id: 166,
+      subject: "ISO",
+      unit: "UT6",
+      question: "¿Qué herramienta de Linux se usa para reparar sistemas de archivos ext4?",
+      options: [
+        "chkdsk",
+        "dism",
+        "e2fsck",
+        "sfc"
+      ],
+      correct: 2,
+      explanation: "e2fsck (ext2/ext3/ext4 file system check) es la herramienta específica para verificar y reparar la familia de sistemas de archivos ext. Es una versión especializada del comando genérico fsck.",
+    },
+    {
+      id: 167,
+      subject: "ISO",
+      unit: "UT6",
+      question: "¿Qué archivo de configuración en Linux gestiona los montajes automáticos?",
+      options: [
+        "/etc/hosts",
+        "/etc/fstab",
+        "/etc/passwd",
+        "/etc/resolv.conf"
+      ],
+      correct: 1,
+      explanation: "El archivo /etc/fstab (File System Table) contiene la información necesaria para montar automáticamente las particiones del disco, unidades de red y otros sistemas de archivos durante el arranque del sistema.",
+    },
+    {
+      id: 168,
+      subject: "ISO",
+      unit: "UT6",
+      question: "¿Qué comando en Linux muestra la estructura de bloques de dispositivos?",
+      options: [
+        "lsblk",
+        "diskpart",
+        "defrag",
+        "fsck"
+      ],
+      correct: 0,
+      explanation: "El comando lsblk (List Block Devices) muestra una lista de todos los dispositivos de almacenamiento disponibles, sus particiones y sus puntos de montaje en una estructura de árbol muy fácil de leer.",
+    },
+    {
+      id: 169,
+      subject: "ISO",
+      unit: "UT6",
+      question: "¿Qué comando de Windows se usa para gestionar particiones desde línea de comandos?",
+      options: [
+        "blkid",
+        "parted",
+        "fdisk",
+        "diskpart"
+      ],
+      correct: 3,
+      explanation: "diskpart es el intérprete de comandos de Windows para administrar discos, particiones y volúmenes. Permite realizar tareas avanzadas como crear RAIDs, extender volúmenes o convertir discos entre MBR y GPT.",
+    },
+    {
+      id: 170,
+      subject: "ISO",
+      unit: "UT6",
+      question: "¿Qué componente mantiene el registro de los bloques ocupados y disponibles?",
+      options: [
+        "La memoria virtual",
+        "El journal del sistema",
+        "El registro de procesos",
+        "La tabla de asignación de archivos"
+      ],
+      correct: 3,
+      explanation: "La tabla de asignación de archivos (como la FAT en sistemas antiguos o la MFT en NTFS) es el índice donde el sistema operativo consulta qué bloques del disco están libres y cuáles pertenecen a cada archivo.",
+    },
+    {
+      id: 171,
+      subject: "ISO",
+      unit: "UT6",
+      question: "¿Qué es un sistema de archivos?",
+      options: [
+        "Una tabla de procesos en ejecución",
+        "Una memoria caché de la CPU",
+        "Un controlador de dispositivo de red",
+        "Una estructura que organiza y gestiona datos en dispositivos de almacenamiento"
+      ],
+      correct: 3,
+      explanation: "Un sistema de archivos es el componente del sistema operativo encargado de administrar el espacio en disco, permitiendo la creación, borrado, lectura y organización de los datos en archivos y directorios.",
+    },
+    {
+      id: 172,
+      subject: "ISO",
+      unit: "UT6",
+      question: "¿Qué característica distingue a NTFS frente a FAT32?",
+      options: [
+        "Soporte para compresión, cifrado y cuotas",
+        "Limitación de archivos a 4 GB",
+        "Compatibilidad universal con todos los sistemas",
+        "Falta de journaling"
+      ],
+      correct: 0,
+      explanation: "NTFS es un sistema mucho más avanzado que ofrece características de seguridad y gestión ausentes en FAT32, como permisos ACL, cifrado (EFS), compresión nativa y cuotas de disco para usuarios.",
+    },
+    {
+      id: 173,
+      subject: "ISO",
+      unit: "UT6",
+      question: "¿Qué opción de montaje en Linux fuerza el acceso en solo lectura?",
+      options: [
+        "user",
+        "exec",
+        "rw",
+        "ro"
+      ],
+      correct: 3,
+      explanation: "La opción 'ro' (read-only) le indica al kernel que el sistema de archivos debe montarse sin permisos de escritura, impidiendo cualquier modificación en los datos.",
+    },
+    {
+      id: 174,
+      subject: "ISO",
+      unit: "UT6",
+      question: "¿Qué error típico se produce cuando un disco presenta áreas físicas dañadas?",
+      options: [
+        "Journal dañado",
+        "Sector defectuoso",
+        "Fragmentación alta",
+        "Inodo corrupto"
+      ],
+      correct: 1,
+      explanation: "Un sector defectuoso (bad sector) es una pequeña parte del disco duro que ha sufrido un daño físico o magnético y ya no es capaz de retener o leer datos de forma fiable.",
+    },
+    {
+      id: 175,
+      subject: "ISO",
+      unit: "UT6",
+      question: "¿Qué tecnología de discos permite predecir fallos inminentes?",
+      options: [
+        "RAID 0",
+        "SMART",
+        "BIOS",
+        "UEFI"
+      ],
+      correct: 1,
+      explanation: "S.M.A.R.T. (Self-Monitoring, Analysis and Reporting Technology) es un sistema de monitorización incorporado en los discos duros que supervisa indicadores de fiabilidad como la temperatura o sectores reasignados.",
+    },
   ];
 
   // =========================
@@ -2325,6 +2605,7 @@ const ExamSimulator = () => {
             <div className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg text-yellow-800 mb-4">
               Aún no hay preguntas cargadas para <span className="font-semibold">{selectedSubjectName}</span>.
               <br />
+              Pásame las preguntas y las metemos igual que hemos hecho con UT1.
             </div>
           )}
 
