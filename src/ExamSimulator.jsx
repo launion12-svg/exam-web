@@ -1712,6 +1712,286 @@ const ExamSimulator = () => {
       correct: 0,
       explanation: "El Principio de Mínimo Privilegio (PoLP) dicta que cada usuario o proceso debe tener solo los permisos estrictamente necesarios para su función, limitando el daño potencial en caso de un ataque.",
     },
+    {
+      id: 136,
+      subject: "ISO",
+      unit: "UT5",
+      question: "¿Qué rol garantiza coherencia en operaciones críticas de AD?",
+      options: [
+        "SPN",
+        "FSMO",
+        "SYSVOL",
+        "OU"
+      ],
+      correct: 1,
+      explanation: "Los roles FSMO (Flexible Single Master Operations) son funciones específicas asignadas a controladores de dominio para evitar conflictos en tareas que no pueden realizarse de forma multimaestro, como cambios en el esquema o nombres de dominio.",
+    },
+    {
+      id: 137,
+      subject: "ISO",
+      unit: "UT5",
+      question: "¿Qué recurso compartido contiene GPOs y scripts en los DC?",
+      options: [
+        "/etc/passwd",
+        "SYSVOL",
+        "SPN",
+        "NETLOGON"
+      ],
+      correct: 1,
+      explanation: "SYSVOL es una carpeta compartida en todos los controladores de dominio (DC) que replica las directivas de grupo (GPOs) y scripts de inicio para que estén disponibles en toda la red.",
+    },
+    {
+      id: 138,
+      subject: "ISO",
+      unit: "UT5",
+      question: "¿Qué protocolo es considerado legado frente a Kerberos?",
+      options: [
+        "SSH",
+        "FTP",
+        "SMBv2",
+        "NTLM"
+      ],
+      correct: 3,
+      explanation: "NTLM (NT LAN Manager) es un protocolo de autenticación antiguo que se considera vulnerable a ataques de 'Pass-the-Hash'. Ha sido sustituido por Kerberos como protocolo principal en Active Directory.",
+    },
+    {
+      id: 139,
+      subject: "ISO",
+      unit: "UT5",
+      question: "¿Qué comando en Windows verifica el estado de un DC?",
+      options: [
+        "nslookup",
+        "dcdiag",
+        "ipconfig",
+        "ping"
+      ],
+      correct: 1,
+      explanation: "dcdiag (Domain Controller Diagnostic) es una herramienta de línea de comandos que analiza el estado de un controlador de dominio y reporta fallos en la conectividad, replicación, DNS y permisos.",
+    },
+    {
+      id: 140,
+      subject: "ISO",
+      unit: "UT5",
+      question: "¿Qué modelo de red se basa en servidores que ofrecen servicios y clientes que los consumen?",
+      options: [
+        "Cliente-servidor",
+        "Mesh",
+        "Punto a punto",
+        "Peer-to-peer"
+      ],
+      correct: 0,
+      explanation: "El modelo cliente-servidor centraliza los recursos y servicios en equipos especializados (servidores), los cuales atienden las peticiones de los equipos de los usuarios (clientes).",
+    },
+    {
+      id: 141,
+      subject: "ISO",
+      unit: "UT5",
+      question: "¿Qué atributo permite coherencia de identidades POSIX en AD?",
+      options: [
+        "SPN",
+        "RFC2307",
+        "NetBIOS",
+        "SIDHistory"
+      ],
+      correct: 1,
+      explanation: "El esquema RFC 2307 permite que Active Directory almacene atributos de estilo UNIX (como UID, GID y rutas de home), permitiendo que equipos Linux se autentiquen contra el AD de forma nativa.",
+    },
+    {
+      id: 142,
+      subject: "ISO",
+      unit: "UT5",
+      question: "¿Qué servicio resuelve nombres de dominio en direcciones IP?",
+      options: [
+        "FTP",
+        "DNS",
+        "DHCP",
+        "SMTP"
+      ],
+      correct: 1,
+      explanation: "El DNS (Domain Name System) actúa como la 'agenda telefónica' de Internet y de las redes locales, traduciendo nombres fáciles de recordar (como google.com) en direcciones IP numéricas que las máquinas entienden.",
+    },
+    {
+      id: 143,
+      subject: "ISO",
+      unit: "UT5",
+      question: "¿Qué protocolo estándar permite consultar y modificar servicios de directorio?",
+      options: [
+        "FTP",
+        "SNMP",
+        "LDAP",
+        "HTTP"
+      ],
+      correct: 2,
+      explanation: "LDAP (Lightweight Directory Access Protocol) es el protocolo estándar de la industria que permite la comunicación, consulta y edición de la base de datos de un servicio de directorio como Active Directory u OpenLDAP.",
+    },
+    {
+      id: 144,
+      subject: "ISO",
+      unit: "UT5",
+      question: "¿Qué servicio Linux puede actuar como controlador de dominio compatible con Windows?",
+      options: [
+        "Bind",
+        "Apache",
+        "Samba AD DC",
+        "MySQL"
+      ],
+      correct: 2,
+      explanation: "Samba (específicamente a partir de la versión 4) puede configurarse como un Active Directory Domain Controller (AD DC), permitiendo gestionar usuarios, grupos y GPOs de Windows desde un servidor Linux.",
+    },
+    {
+      id: 145,
+      subject: "ISO",
+      unit: "UT5",
+      question: "¿Qué tipo de controladores de dominio son recomendados en sedes remotas?",
+      options: [
+        "DNS esclavo",
+        "RODC (Read Only Domain Controller)",
+        "PDC clásico",
+        "DHCP secundario"
+      ],
+      correct: 1,
+      explanation: "Un RODC (Controlador de Dominio de Solo Lectura) almacena una copia de la base de datos de AD pero no permite realizar cambios locales y no guarda contraseñas de forma predeterminada, minimizando riesgos si el servidor es robado.",
+    },
+    {
+      id: 146,
+      subject: "ISO",
+      unit: "UT5",
+      question: "¿Qué protocolo asigna direcciones IP dinámicamente?",
+      options: [
+        "DHCP",
+        "LDAP",
+        "DNS",
+        "NTP"
+      ],
+      correct: 0,
+      explanation: "El protocolo DHCP (Dynamic Host Configuration Protocol) permite que un servidor asigne automáticamente direcciones IP, máscaras de subred y puertas de enlace a los dispositivos que se conectan a la red.",
+    },
+    {
+      id: 147,
+      subject: "ISO",
+      unit: "UT5",
+      question: "¿Qué herramienta Linux integra autenticación con AD?",
+      options: [
+        "sudo",
+        "grep",
+        "cron",
+        "SSSD"
+      ],
+      correct: 3,
+      explanation: "SSSD (System Security Services Daemon) es el servicio moderno en Linux que permite conectar el sistema con fuentes de identidad remotas como Active Directory o LDAP, gestionando también el almacenamiento en caché para inicios de sesión offline.",
+    },
+    {
+      id: 148,
+      subject: "ISO",
+      unit: "UT5",
+      question: "¿Qué elemento centraliza la autenticación y administración en un dominio?",
+      options: [
+        "Proxy",
+        "Router",
+        "Servidor de archivos",
+        "Controlador de dominio"
+      ],
+      correct: 3,
+      explanation: "El Controlador de Dominio (DC) es el servidor que responde a las peticiones de autenticación y verifica a los usuarios. Centraliza la base de datos de Active Directory, permitiendo gestionar toda la red desde un solo punto.",
+    },
+    {
+      id: 149,
+      subject: "ISO",
+      unit: "UT5",
+      question: "¿Qué protocolo utiliza Active Directory para autenticación principal?",
+      options: [
+        "NTLM",
+        "Kerberos",
+        "TACACS+",
+        "RADIUS"
+      ],
+      correct: 1,
+      explanation: "Kerberos es el protocolo de autenticación por defecto en Active Directory desde Windows 2000. Utiliza tickets y criptografía de clave simétrica para proporcionar una autenticación segura y evitar el envío de contraseñas por la red.",
+    },
+    {
+      id: 150,
+      subject: "ISO",
+      unit: "UT5",
+      question: "¿Qué mecanismo aplica configuraciones a usuarios y equipos en AD?",
+      options: [
+        "GPO (Group Policy Object)",
+        "Firewall local",
+        "PAM",
+        "Cron"
+      ],
+      correct: 0,
+      explanation: "Las GPO (Directivas de Grupo) permiten a los administradores definir configuraciones de seguridad, instalar software y restringir acciones tanto para usuarios como para equipos de forma centralizada en todo el dominio.",
+    },
+    {
+      id: 151,
+      subject: "ISO",
+      unit: "UT5",
+      question: "¿Qué protocolo asegura sincronización de tiempo en un dominio?",
+      options: [
+        "NTP",
+        "POP3",
+        "SMTP",
+        "DHCP"
+      ],
+      correct: 0,
+      explanation: "NTP (Network Time Protocol) es esencial en un dominio de Active Directory para que todos los equipos tengan la misma hora, requisito indispensable para la validación de tickets de Kerberos.",
+    },
+    {
+      id: 152,
+      subject: "ISO",
+      unit: "UT5",
+      question: "¿Qué unidad lógica organiza objetos dentro de un dominio?",
+      options: [
+        "Subred",
+        "Grupo de trabajo",
+        "OU (Organizational Unit)",
+        "VLAN"
+      ],
+      correct: 2,
+      explanation: "Las Unidades Organizativas (OU) son contenedores dentro de un dominio donde se pueden colocar usuarios, grupos y equipos para facilitar la administración y la aplicación de GPOs.",
+    },
+    {
+      id: 153,
+      subject: "ISO",
+      unit: "UT5",
+      question: "¿Qué diferencia clave hay entre dominio y grupo de trabajo?",
+      options: [
+        "Necesidad de switches gestionables",
+        "Uso exclusivo de Linux",
+        "Uso de VLANs",
+        "Centralización de autenticación"
+      ],
+      correct: 3,
+      explanation: "En un dominio, la autenticación está centralizada en un servidor (Controlador de Dominio), mientras que en un Grupo de Trabajo cada equipo gestiona sus propios usuarios y contraseñas de forma local.",
+    },
+    {
+      id: 154,
+      subject: "ISO",
+      unit: "UT5",
+      question: "¿Qué orden de aplicación siguen las GPO?",
+      options: [
+        "Herencia aleatoria",
+        "OU primero",
+        "Dominio primero",
+        "LSDOU (Local, Sitio, Dominio, OU)"
+      ],
+      correct: 3,
+      explanation: "El orden de aplicación es Local, Sitio, Dominio y Unidades Organizativas (LSDOU). Las políticas aplicadas al final (OU) tienen prioridad sobre las aplicadas al principio si existe un conflicto.",
+    },
+    {
+      id: 155,
+      subject: "ISO",
+      unit: "UT5",
+      question: "¿Qué protocolo evita envío de contraseñas en claro usando tickets?",
+      options: [
+        "Telnet",
+        "Kerberos",
+        "FTP",
+        "HTTP"
+      ],
+      correct: 1,
+      explanation: "Kerberos utiliza un sistema de tickets emitidos por un Centro de Distribución de Claves (KDC). Esto permite que el usuario demuestre quién es ante los servicios de la red sin necesidad de enviar su contraseña real a través del cable.",
+    },
   ];
 
   // =========================
