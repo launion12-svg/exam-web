@@ -788,6 +788,370 @@ const ExamSimulator = () => {
       explanation:
         "ASLR aleatoriza direcciones (stack/heap/librerías), dificultando exploits que dependen de direcciones predecibles (por ejemplo, desbordamientos de buffer).",
     },
+    {
+      id: 70,
+      subject: "ISO",
+      unit: "UT1",
+      question: "¿Cuál es la función principal de la CPU en un sistema informático?",
+      options: [
+        "Servir como interfaz directa entre usuario y aplicaciones",
+        "Ejecutar instrucciones y coordinar operaciones internas",
+        "Proporcionar almacenamiento no volátil a largo plazo",
+        "Emitir señal de vídeo a los monitores externos"
+      ],
+      correct: 1,
+      explanation: "La CPU (Unidad Central de Procesamiento) es el 'cerebro' del ordenador; se encarga de procesar los datos mediante la ejecución de instrucciones de los programas.",
+    },
+    {
+      id: 71,
+      subject: "ISO",
+      unit: "UT1",
+      question: "¿Qué diferencia principal existe entre software de sistema y software de aplicación?",
+      options: [
+        "El de sistema gestiona hardware y recursos, el de aplicación resuelve tareas concretas",
+        "El de sistema solo corre en contenedores, el de aplicación en hardware",
+        "El de sistema es siempre de pago y el de aplicación siempre libre",
+        "El de sistema se distribuye sin controladores, el de aplicación los incluye"
+      ],
+      correct: 0,
+      explanation: "El software de sistema (como el SO) actúa de intermediario con el hardware, mientras que el de aplicación (como Office o un navegador) está diseñado para que el usuario realice tareas específicas.",
+    },
+    {
+      id: 72,
+      subject: "ISO",
+      unit: "UT1",
+      question: "¿Qué caracteriza a un kernel monolítico moderno como Linux?",
+      options: [
+        "Núcleo único con posibilidad de cargar módulos",
+        "Ausencia de controladores en el núcleo",
+        "Separación total de servicios en espacio de usuario",
+        "Exclusivo para dispositivos móviles"
+      ],
+      correct: 0,
+      explanation: "Aunque es monolítico (todo el SO corre en espacio de núcleo), Linux es 'moderno' porque permite cargar y descargar módulos (como drivers) dinámicamente sin reiniciar.",
+    },
+    {
+      id: 73,
+      subject: "ISO",
+      unit: "UT1",
+      question: "¿Qué afirmación es correcta sobre buses en el sistema?",
+      options: [
+        "El ancho del bus de datos condiciona la cantidad de información transferida por ciclo",
+        "El bus de direcciones es irrelevante para la memoria",
+        "Los buses solo transportan señales de control, no datos",
+        "No hay riesgos de seguridad asociados a los buses"
+      ],
+      correct: 0,
+      explanation: "El ancho del bus de datos (medido en bits) determina cuántos datos se pueden enviar simultáneamente al procesador en cada pulso de reloj.",
+    },
+    {
+      id: 74,
+      subject: "ISO",
+      unit: "UT1",
+      question: "¿Qué componente del sistema operativo gestiona en modo privilegiado los recursos del sistema?",
+      options: [
+        "Editor de texto",
+        "Shell",
+        "Capa de usuario",
+        "Kernel"
+      ],
+      correct: 3,
+      explanation: "El Kernel (núcleo) es el único que opera en el 'Anillo 0' o modo privilegiado, lo que le permite controlar directamente el hardware y la memoria de forma segura.",
+    },
+    {
+      id: 75,
+      subject: "ISO",
+      unit: "UT1",
+      question: "¿Qué interfaz permite automatizar tareas mediante comandos y scripts?",
+      options: [
+        "CLI (Command Line Interface)",
+        "GUI (Graphical User Interface)",
+        "Pantalla táctil",
+        "Controladores de dispositivo"
+      ],
+      correct: 0,
+      explanation: "La CLI es ideal para la automatización ya que permite encadenar comandos en archivos de texto (scripts) que el sistema puede ejecutar sin intervención humana.",
+    },
+    {
+      id: 76,
+      subject: "ISO",
+      unit: "UT2",
+      question: "¿Qué práctica inicial es fundamental antes de modificar particiones?",
+      options: [
+        "Deshabilitar Secure Boot",
+        "Realizar un backup verificado",
+        "Cambiar BIOS a CSM",
+        "Formatear directamente"
+      ],
+      correct: 1,
+      explanation: "Antes de cualquier operación que altere la tabla de particiones o el sistema de archivos, es crítico tener una copia de seguridad para evitar la pérdida irreversible de datos.",
+    },
+    {
+      id: 77,
+      subject: "ISO",
+      unit: "UT2",
+      question: "¿Qué requisito de firmware es indispensable para instalar Windows 11?",
+      options: [
+        "BIOS Legacy",
+        "TPM 1.2",
+        "TPM 2.0 y Secure Boot habilitado",
+        "CSM activo"
+      ],
+      correct: 2,
+      explanation: "Microsoft exige obligatoriamente un chip de seguridad TPM 2.0 y que el sistema arranque en modo UEFI con Secure Boot (Arranque Seguro) activo para instalar Windows 11.",
+    },vvvv
+    {
+      id: 78,
+      subject: "ISO",
+      unit: "UT2",
+      question: "¿Qué herramienta de Microsoft permite despliegues masivos de Windows?",
+      options: [
+        "MECM/SCCM",
+        "MAAS",
+        "Satellite",
+        "Cobbler"
+      ],
+      correct: 0,
+      explanation: "MECM (Microsoft Endpoint Configuration Manager), antes conocido como SCCM, es la solución estándar de Microsoft para gestionar y desplegar sistemas operativos en grandes redes corporativas.",
+    },
+    {
+      id: 79,
+      subject: "ISO",
+      unit: "UT2",
+      question: "¿Qué comando de Windows permite editar el gestor de arranque BCD?",
+      options: [
+        "gdisk",
+        "efibootmgr",
+        "bcdedit",
+        "pnputil"
+      ],
+      correct: 2,
+      explanation: "bcdedit es la herramienta de consola que permite modificar los datos de la configuración de arranque (BCD), sustituyendo al antiguo archivo boot.ini.",
+    },
+    {
+      id: 80,
+      subject: "ISO",
+      unit: "UT2",
+      question: "¿Qué utilidad Linux permite convertir un disco MBR a GPT?",
+      options: [
+        "Boot-Repair",
+        "Timeshift",
+        "gdisk",
+        "Rufus"
+      ],
+      correct: 2,
+      explanation: "gdisk (GPT fdisk) es la herramienta de consola en Linux diseñada específicamente para trabajar con tablas GPT, permitiendo convertir discos MBR a GPT de forma segura.",
+    },
+    {
+      id: 81,
+      subject: "ISO",
+      unit: "UT2",
+      question: "¿Qué herramienta se recomienda para recuperación de discos dañados?",
+      options: [
+        "ddrescue",
+        "efibootmgr",
+        "pnputil",
+        "Disk Management"
+      ],
+      correct: 0,
+      explanation: "ddrescue es una herramienta de Linux capaz de copiar datos de un disco con sectores defectuosos, intentando leer primero las partes sanas y reintentando las dañadas de forma inteligente.",
+    },
+    {
+      id: 82,
+      subject: "ISO",
+      unit: "UT2",
+      question: "¿Qué utilidad permite reconstruir cargadores de arranque dañados?",
+      options: [
+        "ddrescue",
+        "gdisk",
+        "Boot-Repair",
+        "bcdedit"
+      ],
+      correct: 2,
+      explanation: "Boot-Repair es una herramienta automatizada (muy usada en Linux) diseñada para reinstalar o reparar el cargador de arranque GRUB de forma sencilla cuando el sistema no inicia.",
+    },
+    {
+      id: 83,
+      subject: "ISO",
+      unit: "UT2",
+      question: "¿Qué herramienta de clonación permite multicast y compresión?",
+      options: [
+        "Boot-Repair",
+        "dd",
+        "pnputil",
+        "Clonezilla"
+      ],
+      correct: 3,
+      explanation: "Clonezilla es una herramienta de código abierto que permite crear imágenes de disco comprimidas y enviarlas a múltiples ordenadores a la vez mediante multicast (Clonezilla SE).",
+    },
+    {
+      id: 84,
+      subject: "ISO",
+      unit: "UT2",
+      question: "¿Qué sistema de archivos de Microsoft ofrece resiliencia con Storage Spaces?",
+      options: [
+        "ext4",
+        "ReFS",
+        "XFS",
+        "Btrfs"
+      ],
+      correct: 1,
+      explanation: "ReFS (Resilient File System) es el sistema de archivos de Microsoft diseñado para maximizar la disponibilidad de los datos y la integridad mediante el uso de flujos de integridad y la integración con Storage Spaces.",
+    },v
+    {
+      id: 85,
+      subject: "ISO",
+      unit: "UT2",
+      question: "¿Qué gestor de arranque destaca por su simplicidad en sistemas UEFI?",
+      options: [
+        "GRUB2",
+        "rEFInd",
+        "LILO",
+        "systemd-boot"
+      ],
+      correct: 3,
+      explanation: "systemd-boot (antes llamado gummiboot) es un gestor de arranque muy simple y ligero que solo funciona en sistemas UEFI, leyendo archivos de configuración sencillos sin necesidad de scripts complejos.",
+    },
+    {
+      id: 86,
+      subject: "ISO",
+      unit: "UT2",
+      question: "¿Qué utilidad de Windows permite gestionar controladores firmados?",
+      options: [
+        "lsblk",
+        "efibootmgr",
+        "pnputil",
+        "dd"
+      ],
+      correct: 2,
+      explanation: "pnputil (PnP Utility) es una herramienta de línea de comandos en Windows que permite a los administradores agregar, eliminar y enumerar paquetes de controladores (drivers) en el almacén de controladores del sistema.",
+    },
+    {
+      id: 87,
+      subject: "ISO",
+      unit: "UT2",
+      question: "¿Qué herramienta crea USB multi-ISO de forma sencilla?",
+      options: [
+        "Rufus",
+        "Ventoy",
+        "ddrescue",
+        "GParted"
+      ],
+      correct: 1,
+      explanation: "Ventoy permite copiar varios archivos ISO a un USB y elegir cuál arrancar mediante un menú, sin necesidad de formatear el USB cada vez que se quiere cambiar de sistema.",
+    },
+    {
+      id: 88,
+      subject: "ISO",
+      unit: "UT2",
+      question: "¿Qué mecanismo protege claves y mide arranque en equipos modernos?",
+      options: [
+        "BIOS Legacy",
+        "MSR",
+        "GOP",
+        "TPM 2.0"
+      ],
+      correct: 3,
+      explanation: "El TPM (Trusted Platform Module) es un chip dedicado que almacena claves criptográficas de forma segura y realiza mediciones de la integridad del sistema durante el arranque para asegurar que no ha sido alterado.",
+    },
+    {
+      id: 89,
+      subject: "ISO",
+      unit: "UT2",
+      question: "¿Qué tamaño recomendado debe tener la partición ESP en sistemas UEFI?",
+      options: [
+        "300–512 MB en FAT32",
+        "50 MB en NTFS",
+        "1 MB en RAW",
+        "2 GB en ext4"
+      ],
+      correct: 0,
+      explanation: "La partición ESP (EFI System Partition) debe estar formateada en FAT32. Se recomiendan entre 300 y 512 MB para asegurar espacio suficiente para varios cargadores de arranque y actualizaciones de firmware.",
+    },
+    {
+      id: 90,
+      subject: "ISO",
+      unit: "UT2",
+      question: "¿Qué sistema de archivos es más adecuado para snapshots y rollback en Linux?",
+      options: [
+        "Btrfs",
+        "NTFS",
+        "ext2",
+        "FAT32"
+      ],
+      correct: 0,
+      explanation: "Btrfs es un sistema de archivos de 'copia en escritura' (CoW) que permite crear instantáneas (snapshots) casi instantáneas y volver a estados anteriores (rollback) de forma sencilla.",
+    },
+    {
+      id: 91,
+      subject: "ISO",
+      unit: "UT2",
+      question: "¿Qué regla de copias de seguridad garantiza redundancia e inmutabilidad?",
+      options: [
+        "2-2-0",
+        "5-5-5",
+        "1-1-1",
+        "3-2-1"
+      ],
+      correct: 3,
+      explanation: "La regla 3-2-1 consiste en tener 3 copias de los datos, en 2 soportes diferentes y 1 de ellas fuera de línea (off-site) para evitar pérdidas totales.",
+    },
+    {
+      id: 92,
+      subject: "ISO",
+      unit: "UT2",
+      question: "¿Qué práctica mejora la resiliencia en RAID propietario no detectado?",
+      options: [
+        "Usar siempre fakeraid",
+        "Desactivar TRIM en SSD",
+        "Usar AHCI/NVMe y RAID por software (mdadm/ZFS)",
+        "Mantener CSM activo"
+      ],
+      correct: 2,
+      explanation: "El RAID por software (como mdadm en Linux o ZFS) es más resiliente porque no depende de una controladora física específica; si la placa base muere, los datos se pueden recuperar en cualquier otro equipo.",
+    },
+    {
+      id: 93,
+      subject: "ISO",
+      unit: "UT2",
+      question: "¿Qué herramienta en Linux recompila módulos tras actualizar el kernel?",
+      options: [
+        "diskpart",
+        "Boot-Repair",
+        "DKMS",
+        "bcdedit"
+      ],
+      correct: 2,
+      explanation: "DKMS (Dynamic Kernel Module Support) permite que los módulos del kernel (drivers) se recompilen automáticamente cada vez que se instala una nueva versión del núcleo, manteniendo el hardware funcional.",
+    },
+    {
+      id: 94,
+      subject: "ISO",
+      unit: "UT2",
+      question: "¿Qué herramienta gestiona snapshots en Linux basados en Btrfs?",
+      options: [
+        "bcdedit",
+        "diskpart",
+        "Snapper",
+        "Boot-Repair"
+      ],
+      correct: 2,
+      explanation: "Snapper es la herramienta de gestión de instantáneas para Btrfs que permite crear, comparar y revertir snapshots del sistema de forma automática o manual.",
+    },
+    {
+      id: 95,
+      subject: "ISO",
+      unit: "UT2",
+      question: "¿Qué herramienta permite gestionar entradas de arranque UEFI en Linux?",
+      options: [
+        "diskpart",
+        "Boot-Repair",
+        "efibootmgr",
+        "mkfs"
+      ],
+      correct: 2,
+      explanation: "efibootmgr es una aplicación de espacio de usuario para modificar la NVRAM de Intel Extensible Firmware Interface (EFI), permitiendo crear, borrar o cambiar el orden de las entradas de arranque.",
+    },
   ];
 
   // =========================
