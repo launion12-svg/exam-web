@@ -2552,6 +2552,286 @@ const ExamSimulator = () => {
       correct: 2,
       explanation: "El objetivo de la auditoría es verificar si los controles de seguridad (como backups, firewalls o políticas de contraseñas) existen, se aplican correctamente y son efectivos para proteger los activos de la organización.",
     },
+    {
+      id: 196,
+      subject: "ISO",
+      unit: "UT8",
+      question: "¿Qué comando en Linux permite instalar Apache?",
+      options: [
+        "sudo apt install apache2",
+        "netstat -tulnp",
+        "yum remove apache2",
+        "systemctl status apache2"
+      ],
+      correct: 0,
+      explanation: "En distribuciones basadas en Debian/Ubuntu, el gestor de paquetes 'apt' se utiliza con el comando 'install' para descargar e instalar el servidor web Apache2 desde los repositorios oficiales.",
+    },
+    {
+      id: 197,
+      subject: "ISO",
+      unit: "UT8",
+      question: "¿Qué servicio de transferencia de archivos no cifra de manera nativa sus comunicaciones?",
+      options: [
+        "SCP",
+        "SFTP",
+        "FTP",
+        "FTPS"
+      ],
+      correct: 2,
+      explanation: "FTP (File Transfer Protocol) es un protocolo antiguo que envía tanto las credenciales como los datos en texto plano, lo que permite que cualquiera que intercepte el tráfico pueda leer la información. Sus versiones seguras son SFTP y FTPS.",
+    },
+    {
+      id: 198,
+      subject: "ISO",
+      unit: "UT8",
+      question: "¿Qué herramienta se usa en Linux para configurar firewalls de forma sencilla?",
+      options: [
+        "cron",
+        "UFW",
+        "netstat",
+        "curl"
+      ],
+      correct: 1,
+      explanation: "UFW (Uncomplicated Firewall) es una interfaz simplificada para gestionar iptables. Su objetivo es facilitar la configuración del firewall mediante comandos intuitivos como 'allow' o 'deny'.",
+    },
+    {
+      id: 199,
+      subject: "ISO",
+      unit: "UT8",
+      question: "¿Qué práctica de seguridad se recomienda al usar contenedores?",
+      options: [
+        "Usar siempre root para evitar errores",
+        "Compartir volúmenes sin restricción",
+        "Ejecutar procesos con usuarios sin privilegios root",
+        "Evitar la actualización de imágenes"
+      ],
+      correct: 2,
+      explanation: "Por seguridad (principio de mínimo privilegio), los procesos dentro de un contenedor no deben ejecutarse como root. De esta forma, si el contenedor es vulnerado, el atacante tendrá más difícil 'escapar' al sistema operativo anfitrión.",
+    },
+    {
+      id: 200,
+      subject: "ISO",
+      unit: "UT8",
+      question: "¿Qué herramienta permite automatizar despliegues declarativos de infraestructura?",
+      options: [
+        "Bash",
+        "Terraform",
+        "Git",
+        "Docker"
+      ],
+      correct: 1,
+      explanation: "Terraform es una herramienta de 'Infraestructura como Código' (IaC) que permite definir mediante archivos de configuración (declarativos) cómo debe ser el entorno, encargándose de crear y gestionar los recursos automáticamente.",
+    },
+    {
+      id: 201,
+      subject: "ISO",
+      unit: "UT8",
+      question: "¿Qué arquitectura clásica se utiliza habitualmente en sistemas cliente-servidor?",
+      options: [
+        "Arquitectura híbrida de cinco capas",
+        "Monolítica de una sola capa",
+        "Arquitectura mesh",
+        "Tres capas: presentación, lógica de negocio y datos"
+      ],
+      correct: 3,
+      explanation: "La arquitectura de tres capas es el estándar en sistemas cliente-servidor. Divide la aplicación en: Capa de Presentación (interfaz), Capa de Negocio (procesamiento) y Capa de Datos (almacenamiento), permitiendo que cada una escale o cambie de forma independiente.",
+    },
+    {
+      id: 202,
+      subject: "ISO",
+      unit: "UT8",
+      question: "¿Qué herramienta permite simular usuarios concurrentes en pruebas de carga?",
+      options: [
+        "Grafana",
+        "Prometheus",
+        "JMeter",
+        "ELK"
+      ],
+      correct: 2,
+      explanation: "Apache JMeter es una herramienta de código abierto diseñada para realizar pruebas de carga y medir el rendimiento. Permite simular una carga pesada sobre un servidor, grupo de servidores o red para probar su resistencia.",
+    },
+    {
+      id: 203,
+      subject: "ISO",
+      unit: "UT8",
+      question: "¿Qué comando en Linux permite verificar el estado de un servicio?",
+      options: [
+        "cd",
+        "ls -l",
+        "systemctl status",
+        "pwd"
+      ],
+      correct: 2,
+      explanation: "El comando 'systemctl status' seguido del nombre del servicio permite ver si este está activo (running), desactivado (dead) o si ha tenido errores recientemente, mostrando además las últimas líneas de su log.",
+    },
+    {
+      id: 204,
+      subject: "ISO",
+      unit: "UT8",
+      question: "¿Qué concepto implica gestionar infraestructura mediante código reproducible?",
+      options: [
+        "Gestión manual de servicios",
+        "Infrastructure as Code (IaC)",
+        "Ejecución en local",
+        "Virtualización ligera"
+      ],
+      correct: 1,
+      explanation: "Infrastructure as Code (IaC) es la práctica de gestionar y aprovisionar centros de datos a través de archivos de definición legibles por máquina, en lugar de configuraciones físicas de hardware o herramientas de configuración interactiva.",
+    },
+    {
+      id: 205,
+      subject: "ISO",
+      unit: "UT8",
+      question: "¿Qué herramienta se utiliza para centralizar logs en múltiples servidores?",
+      options: [
+        "Zabbix",
+        "Nessus",
+        "top",
+        "ELK Stack"
+      ],
+      correct: 3,
+      explanation: "El ELK Stack (Elasticsearch, Logstash y Kibana) es una solución completa para recolectar (Logstash), buscar y analizar (Elasticsearch) y visualizar (Kibana) logs de múltiples fuentes en tiempo real.",
+    },
+    {
+      id: 206,
+      subject: "ISO",
+      unit: "UT8",
+      question: "¿Qué gestor de servicios se utiliza en Linux para configurar arranques automáticos?",
+      options: [
+        "init.d",
+        "rc.local",
+        "systemd",
+        "Upstart"
+      ],
+      correct: 2,
+      explanation: "systemd es el sistema de inicio y gestión de servicios estándar en la mayoría de distribuciones Linux modernas. Utiliza el comando 'systemctl enable' para configurar que un servicio arranque automáticamente al iniciar el sistema.",
+    },
+    {
+      id: 207,
+      subject: "ISO",
+      unit: "UT8",
+      question: "¿Qué protocolo asegura las comunicaciones entre cliente y servidor?",
+      options: [
+        "ARP",
+        "HTTP sin cifrado",
+        "TLS",
+        "FTP"
+      ],
+      correct: 2,
+      explanation: "TLS (Transport Layer Security) es el protocolo criptográfico que proporciona comunicaciones seguras por red. Es el sucesor de SSL y es el encargado de que el protocolo HTTP se convierta en HTTPS mediante el uso de certificados digitales.",
+    },
+    {
+      id: 208,
+      subject: "ISO",
+      unit: "UT8",
+      question: "¿Qué servicio proporciona acceso web en un entorno cliente-servidor?",
+      options: [
+        "Apache o Nginx",
+        "FTP",
+        "Redis",
+        "MySQL"
+      ],
+      correct: 0,
+      explanation: "Apache y Nginx son servidores web. Su función es recibir las peticiones HTTP/HTTPS de los clientes (navegadores) y entregarles el contenido correspondiente (archivos HTML, imágenes, código JS, etc.).",
+    },
+    {
+      id: 209,
+      subject: "ISO",
+      unit: "UT8",
+      question: "¿Qué motor de base de datos destaca por su robustez y soporte ACID avanzado?",
+      options: [
+        "MariaDB",
+        "MySQL",
+        "PostgreSQL",
+        "SQLite"
+      ],
+      correct: 2,
+      explanation: "PostgreSQL es un sistema de gestión de bases de datos relacionales orientado a objetos. Es famoso por su estricto cumplimiento de ACID (Atomicidad, Consistencia, Aislamiento y Durabilidad) y su capacidad para manejar cargas de datos complejas.",
+    },
+    {
+      id: 210,
+      subject: "ISO",
+      unit: "UT8",
+      question: "¿Qué es lo primero que debe realizarse antes de implantar un servicio cliente-servidor?",
+      options: [
+        "Análisis de requisitos y dependencias",
+        "Configuración de firewalls",
+        "Pruebas de rendimiento",
+        "Instalación de Apache"
+      ],
+      correct: 0,
+      explanation: "Antes de cualquier instalación, es vital identificar los requisitos de hardware, software y las dependencias (librerías, versiones de kernel, otros servicios) para asegurar que el entorno sea compatible y estable.",
+    },
+    {
+      id: 211,
+      subject: "ISO",
+      unit: "UT8",
+      question: "¿Qué archivo de configuración en MySQL permite ajustar parámetros críticos?",
+      options: [
+        "postgresql.conf",
+        "nginx.conf",
+        "my.cnf",
+        "httpd.conf"
+      ],
+      correct: 2,
+      explanation: "El archivo 'my.cnf' (en Linux) o 'my.ini' (en Windows) es el archivo de configuración principal de MySQL/MariaDB. En él se definen parámetros como el puerto, el tamaño del buffer, los límites de memoria y la ubicación de los datos.",
+    },
+    {
+      id: 212,
+      subject: "ISO",
+      unit: "UT8",
+      question: "¿Qué comando en Linux muestra la memoria disponible en el sistema?",
+      options: [
+        "df -h",
+        "free -h",
+        "cat /etc/os-release",
+        "ls"
+      ],
+      correct: 1,
+      explanation: "El comando 'free' muestra la cantidad total de memoria física (RAM) y de intercambio (SWAP) usada y libre. El parámetro '-h' (human-readable) convierte los valores a GB o MB para facilitar su lectura.",
+    },
+    {
+      id: 213,
+      subject: "ISO",
+      unit: "UT8",
+      question: "¿Qué comando de PowerShell permite registrar un nuevo servicio en Windows?",
+      options: [
+        "New-Service",
+        "sc query",
+        "Get-Service",
+        "Set-Service"
+      ],
+      correct: 0,
+      explanation: "El cmdlet 'New-Service' crea una nueva entrada para un servicio de Windows en el registro y en la base de datos de servicios, permitiendo especificar el nombre, la ruta del ejecutable y el tipo de inicio.",
+    },
+    {
+      id: 214,
+      subject: "ISO",
+      unit: "UT8",
+      question: "¿Qué comando en Linux muestra información sobre la CPU?",
+      options: [
+        "top",
+        "lscpu",
+        "df -h",
+        "free -h"
+      ],
+      correct: 1,
+      explanation: "El comando 'lscpu' recoge información de la arquitectura de la CPU, como el número de núcleos, hilos, sockets, modelo de procesador, y las cachés L1, L2 y L3.",
+    },
+    {
+      id: 215,
+      subject: "ISO",
+      unit: "UT8",
+      question: "¿Qué comando en Windows abre un puerto en el firewall?",
+      options: [
+        "ipconfig /all",
+        "net start",
+        "netsh advfirewall firewall add rule",
+        "ping"
+      ],
+      correct: 2,
+      explanation: "El comando 'netsh advfirewall' es la herramienta de línea de comandos potente para gestionar el Firewall de Windows. Permite crear reglas de entrada y salida para permitir o bloquear puertos y programas específicos.",
+    },
   ];
 
   // =========================
