@@ -2325,7 +2325,6 @@ const ExamSimulator = () => {
             <div className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg text-yellow-800 mb-4">
               Aún no hay preguntas cargadas para <span className="font-semibold">{selectedSubjectName}</span>.
               <br />
-              Pásame las preguntas y las metemos igual que hemos hecho con UT1.
             </div>
           )}
 
