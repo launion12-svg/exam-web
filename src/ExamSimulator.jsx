@@ -3,13 +3,24 @@ import { RotateCcw, BookOpen } from "lucide-react";
 
 const EXAM_DURATION_SECONDS = 60 * 60; // 60 minutos
 
+const SUBJECTS = {
+  ISO: "Implantación de Sistemas Operativos",
+  REDES: "Planificación y Administración de Redes",
+  IPE1: "Itinerario Personal para la Empleabilidad I",
+};
+
 const ExamSimulator = () => {
   // =========================
   // BANCO DE PREGUNTAS
+  // Cada pregunta lleva: subject
   // =========================
   const allQuestions = [
+    // =========================
+    // ISO (lo que ya tenías)
+    // =========================
     {
       id: 1,
+      subject: "ISO",
       unit: "UT1",
       question: "¿Cuál es la principal diferencia entre la arquitectura Von Neumann y Harvard?",
       options: [
@@ -24,6 +35,7 @@ const ExamSimulator = () => {
     },
     {
       id: 2,
+      subject: "ISO",
       unit: "UT1",
       question: "¿Qué tipo de kernel ejecuta todos los servicios en modo privilegiado?",
       options: ["Microkernel", "Kernel híbrido", "Kernel monolítico", "Kernel distribuido"],
@@ -33,6 +45,7 @@ const ExamSimulator = () => {
     },
     {
       id: 3,
+      subject: "ISO",
       unit: "UT1",
       question: "¿Qué función NO es básica de un sistema operativo?",
       options: ["Gestión de procesos", "Gestión de memoria", "Diseño de hardware", "Gestión de archivos"],
@@ -42,6 +55,7 @@ const ExamSimulator = () => {
     },
     {
       id: 4,
+      subject: "ISO",
       unit: "UT2",
       question: "¿Qué esquema de particionado soporta discos mayores de 2 TB?",
       options: ["MBR", "GPT", "FAT32", "BIOS"],
@@ -51,6 +65,7 @@ const ExamSimulator = () => {
     },
     {
       id: 5,
+      subject: "ISO",
       unit: "UT2",
       question: "¿Qué componente es esencial para el arranque UEFI en GPT?",
       options: ["MBR", "ESP (EFI System Partition)", "Partición extendida", "Sector de arranque"],
@@ -60,6 +75,7 @@ const ExamSimulator = () => {
     },
     {
       id: 6,
+      subject: "ISO",
       unit: "UT2",
       question: "¿Qué herramienta se usa para clonar discos en Linux?",
       options: ["CHKDSK", "Clonezilla", "DISM", "diskpart"],
@@ -68,6 +84,7 @@ const ExamSimulator = () => {
     },
     {
       id: 7,
+      subject: "ISO",
       unit: "UT3",
       question: "¿Qué archivo en Linux configura los montajes automáticos al inicio?",
       options: ["/etc/hosts", "/etc/fstab", "/etc/passwd", "/etc/network"],
@@ -77,6 +94,7 @@ const ExamSimulator = () => {
     },
     {
       id: 8,
+      subject: "ISO",
       unit: "UT3",
       question: "¿Qué comando permite ver los usuarios del dominio en Linux con SSSD?",
       options: ["ls -l", "getent passwd", "cat /etc/passwd", "whoami"],
@@ -86,6 +104,7 @@ const ExamSimulator = () => {
     },
     {
       id: 9,
+      subject: "ISO",
       unit: "UT3",
       question: "¿Qué protocolo se usa para compartir archivos entre Linux y Windows?",
       options: ["FTP", "HTTP", "SMB/Samba", "SMTP"],
@@ -94,6 +113,7 @@ const ExamSimulator = () => {
     },
     {
       id: 10,
+      subject: "ISO",
       unit: "UT4",
       question: "¿Qué nivel de RAID proporciona redundancia con un solo disco de fallo tolerado?",
       options: ["RAID 0", "RAID 1", "RAID 5", "RAID 10"],
@@ -102,6 +122,7 @@ const ExamSimulator = () => {
     },
     {
       id: 11,
+      subject: "ISO",
       unit: "UT4",
       question: "¿Qué tecnología cifra volúmenes completos en Windows?",
       options: ["LUKS", "BitLocker", "AES", "TLS"],
@@ -110,6 +131,7 @@ const ExamSimulator = () => {
     },
     {
       id: 12,
+      subject: "ISO",
       unit: "UT4",
       question: "¿Qué estrategia de backup es recomendada como mínimo?",
       options: ["1-1-1", "2-2-1", "3-2-1", "4-3-2"],
@@ -118,6 +140,7 @@ const ExamSimulator = () => {
     },
     {
       id: 13,
+      subject: "ISO",
       unit: "UT5",
       question: "¿Qué protocolo se usa para autenticación en Active Directory?",
       options: ["NTLM únicamente", "Kerberos", "RADIUS", "TACACS+"],
@@ -126,6 +149,7 @@ const ExamSimulator = () => {
     },
     {
       id: 14,
+      subject: "ISO",
       unit: "UT5",
       question: "¿Qué son las GPO en Windows?",
       options: ["Grupos de usuarios", "Políticas de grupo", "Particiones GPT", "Protocolos de red"],
@@ -134,6 +158,7 @@ const ExamSimulator = () => {
     },
     {
       id: 15,
+      subject: "ISO",
       unit: "UT5",
       question: "¿Qué registros DNS son esenciales para localizar controladores de dominio?",
       options: ["A", "MX", "SRV", "CNAME"],
@@ -142,6 +167,7 @@ const ExamSimulator = () => {
     },
     {
       id: 16,
+      subject: "ISO",
       unit: "UT6",
       question: "¿Qué sistema de archivos de Linux soporta snapshots nativamente?",
       options: ["ext4", "FAT32", "Btrfs", "NTFS"],
@@ -150,6 +176,7 @@ const ExamSimulator = () => {
     },
     {
       id: 17,
+      subject: "ISO",
       unit: "UT6",
       question: "¿Cuál es el tamaño máximo de archivo en FAT32?",
       options: ["2 GB", "4 GB", "16 TB", "Sin límite"],
@@ -158,6 +185,7 @@ const ExamSimulator = () => {
     },
     {
       id: 18,
+      subject: "ISO",
       unit: "UT6",
       question: "¿Qué comando verifica y repara sistemas de archivos en Linux?",
       options: ["CHKDSK", "fsck", "format", "defrag"],
@@ -166,6 +194,7 @@ const ExamSimulator = () => {
     },
     {
       id: 19,
+      subject: "ISO",
       unit: "UT7",
       question: "¿Qué modelo de control de accesos asigna permisos a roles?",
       options: ["DAC", "MAC", "RBAC", "ACL"],
@@ -174,6 +203,7 @@ const ExamSimulator = () => {
     },
     {
       id: 20,
+      subject: "ISO",
       unit: "UT7",
       question: "¿Qué ID de evento en Windows indica un inicio de sesión exitoso?",
       options: ["4624", "4625", "4672", "1102"],
@@ -182,6 +212,7 @@ const ExamSimulator = () => {
     },
     {
       id: 21,
+      subject: "ISO",
       unit: "UT7",
       question: "¿Qué herramienta centraliza logs en tiempo real?",
       options: ["Notepad", "Excel", "Wazuh/Graylog", "Word"],
@@ -190,6 +221,7 @@ const ExamSimulator = () => {
     },
     {
       id: 22,
+      subject: "ISO",
       unit: "UT8",
       question: "¿Qué servidor web es conocido por su alto rendimiento como proxy inverso?",
       options: ["Apache", "Nginx", "IIS", "Tomcat"],
@@ -198,6 +230,7 @@ const ExamSimulator = () => {
     },
     {
       id: 23,
+      subject: "ISO",
       unit: "UT8",
       question: "¿Qué protocolo cifra las comunicaciones HTTP?",
       options: ["FTP", "TLS/SSL", "SMTP", "DHCP"],
@@ -206,6 +239,7 @@ const ExamSimulator = () => {
     },
     {
       id: 24,
+      subject: "ISO",
       unit: "UT8",
       question: "¿Qué herramienta automatiza el despliegue mediante playbooks?",
       options: ["Docker", "Ansible", "Git", "Jenkins"],
@@ -214,6 +248,7 @@ const ExamSimulator = () => {
     },
     {
       id: 25,
+      subject: "ISO",
       unit: "UT2",
       question: "¿Qué tecnología verifica la integridad del arranque en UEFI?",
       options: ["Legacy Boot", "Secure Boot", "Fast Boot", "Safe Mode"],
@@ -222,6 +257,7 @@ const ExamSimulator = () => {
     },
     {
       id: 26,
+      subject: "ISO",
       unit: "UT3",
       question: "¿Qué herramienta gestiona servicios en Linux moderno?",
       options: ["init.d", "systemd", "service", "cron"],
@@ -230,6 +266,7 @@ const ExamSimulator = () => {
     },
     {
       id: 27,
+      subject: "ISO",
       unit: "UT4",
       question: "¿Qué comando muestra el estado SMART de un disco en Linux?",
       options: ["df -h", "smartctl", "fdisk", "mount"],
@@ -238,6 +275,7 @@ const ExamSimulator = () => {
     },
     {
       id: 28,
+      subject: "ISO",
       unit: "UT5",
       question: "¿Qué unidad organizativa contiene objetos en Active Directory?",
       options: ["Carpeta", "OU (Organizational Unit)", "Directorio", "Partición"],
@@ -246,6 +284,7 @@ const ExamSimulator = () => {
     },
     {
       id: 29,
+      subject: "ISO",
       unit: "UT6",
       question: "¿Qué sistema de archivos incluye checksums end-to-end?",
       options: ["FAT32", "ext4", "ZFS", "NTFS"],
@@ -254,6 +293,7 @@ const ExamSimulator = () => {
     },
     {
       id: 30,
+      subject: "ISO",
       unit: "UT7",
       question: "¿Qué normativa española regula la seguridad en sistemas de información pública?",
       options: ["GDPR", "ISO 27001", "ENS", "PCI-DSS"],
@@ -262,6 +302,7 @@ const ExamSimulator = () => {
     },
     {
       id: 31,
+      subject: "ISO",
       unit: "UT1",
       question: "¿Qué componente de la CPU realiza operaciones matemáticas y lógicas?",
       options: ["Unidad de Control", "ALU (Unidad Aritmético-Lógica)", "Registros", "Caché"],
@@ -270,6 +311,7 @@ const ExamSimulator = () => {
     },
     {
       id: 32,
+      subject: "ISO",
       unit: "UT1",
       question: "¿Qué tipo de virtualización comparte el kernel del host?",
       options: ["Virtualización completa", "Paravirtualización", "Contenedores", "Hipervisor tipo 1"],
@@ -279,6 +321,7 @@ const ExamSimulator = () => {
     },
     {
       id: 33,
+      subject: "ISO",
       unit: "UT2",
       question: "¿Qué comando en Linux crea una partición GPT?",
       options: ["fdisk", "gdisk", "format", "mkfs"],
@@ -287,6 +330,7 @@ const ExamSimulator = () => {
     },
     {
       id: 34,
+      subject: "ISO",
       unit: "UT2",
       question: "¿Qué es un snapshot en virtualización?",
       options: [
@@ -301,6 +345,7 @@ const ExamSimulator = () => {
     },
     {
       id: 35,
+      subject: "ISO",
       unit: "UT3",
       question: "¿Qué comando en Linux muestra los sistemas de archivos montados?",
       options: ["ls -la", "mount", "df -h", "cat /etc/fstab"],
@@ -309,6 +354,7 @@ const ExamSimulator = () => {
     },
     {
       id: 36,
+      subject: "ISO",
       unit: "UT3",
       question: "¿Qué protocolo usa NFS para compartir archivos?",
       options: ["SMB", "FTP", "NFS (Network File System)", "HTTP"],
@@ -317,6 +363,7 @@ const ExamSimulator = () => {
     },
     {
       id: 37,
+      subject: "ISO",
       unit: "UT4",
       question: "¿Qué nivel de RAID NO proporciona redundancia?",
       options: ["RAID 0", "RAID 1", "RAID 5", "RAID 6"],
@@ -325,6 +372,7 @@ const ExamSimulator = () => {
     },
     {
       id: 38,
+      subject: "ISO",
       unit: "UT4",
       question: "¿Qué comando verifica la integridad de archivos del sistema en Windows?",
       options: ["CHKDSK", "SFC /scannow", "DISM", "diskpart"],
@@ -333,6 +381,7 @@ const ExamSimulator = () => {
     },
     {
       id: 39,
+      subject: "ISO",
       unit: "UT5",
       question: "¿Qué es LDAP?",
       options: [
@@ -347,6 +396,7 @@ const ExamSimulator = () => {
     },
     {
       id: 40,
+      subject: "ISO",
       unit: "UT5",
       question: "¿Qué puerto usa por defecto LDAP?",
       options: ["80", "389", "443", "3389"],
@@ -355,6 +405,7 @@ const ExamSimulator = () => {
     },
     {
       id: 41,
+      subject: "ISO",
       unit: "UT6",
       question: "¿Qué sistema de archivos tiene mejor rendimiento con archivos grandes?",
       options: ["FAT32", "ext4", "XFS", "Btrfs"],
@@ -363,6 +414,7 @@ const ExamSimulator = () => {
     },
     {
       id: 42,
+      subject: "ISO",
       unit: "UT6",
       question: "¿Qué es el journaling en sistemas de archivos?",
       options: [
@@ -376,6 +428,7 @@ const ExamSimulator = () => {
     },
     {
       id: 43,
+      subject: "ISO",
       unit: "UT7",
       question: "¿Qué comando en Linux permite ejecutar comandos como otro usuario?",
       options: ["su", "sudo", "chmod", "chown"],
@@ -384,6 +437,7 @@ const ExamSimulator = () => {
     },
     {
       id: 44,
+      subject: "ISO",
       unit: "UT7",
       question: "¿Qué significa el principio de mínimo privilegio?",
       options: [
@@ -398,6 +452,7 @@ const ExamSimulator = () => {
     },
     {
       id: 45,
+      subject: "ISO",
       unit: "UT8",
       question: "¿Qué motor de base de datos es de código abierto y fork de MySQL?",
       options: ["Oracle", "SQL Server", "MariaDB", "DB2"],
@@ -406,6 +461,7 @@ const ExamSimulator = () => {
     },
     {
       id: 46,
+      subject: "ISO",
       unit: "UT8",
       question: "¿Qué herramienta de automatización usa playbooks en YAML?",
       options: ["Puppet", "Chef", "Ansible", "Salt"],
@@ -414,6 +470,7 @@ const ExamSimulator = () => {
     },
     {
       id: 47,
+      subject: "ISO",
       unit: "UT1",
       question: "¿Qué tipo de interfaz es más eficiente en recursos?",
       options: ["GUI", "CLI", "Táctil", "Por voz"],
@@ -422,6 +479,7 @@ const ExamSimulator = () => {
     },
     {
       id: 48,
+      subject: "ISO",
       unit: "UT2",
       question: "¿Qué es TPM?",
       options: [
@@ -435,6 +493,7 @@ const ExamSimulator = () => {
     },
     {
       id: 49,
+      subject: "ISO",
       unit: "UT3",
       question: "¿Qué archivo configura usuarios en Linux?",
       options: ["/etc/shadow", "/etc/passwd", "/etc/group", "/etc/hosts"],
@@ -443,6 +502,7 @@ const ExamSimulator = () => {
     },
     {
       id: 50,
+      subject: "ISO",
       unit: "UT4",
       question: "¿Qué es LUKS en Linux?",
       options: ["Un gestor de paquetes", "Sistema de cifrado de discos", "Un tipo de RAID", "Un sistema de archivos"],
@@ -451,10 +511,11 @@ const ExamSimulator = () => {
     },
 
     // =========================
-    // NUEVAS DE UT1 (CAMPUS)
+    // NUEVAS ISO UT1 (CAMPUS)
     // =========================
     {
       id: 51,
+      subject: "ISO",
       unit: "UT1",
       question: "¿Qué diferencia principal existe entre software de sistema y software de aplicación?",
       options: [
@@ -469,6 +530,7 @@ const ExamSimulator = () => {
     },
     {
       id: 52,
+      subject: "ISO",
       unit: "UT1",
       question: "¿Qué afirmación es correcta sobre buses en el sistema?",
       options: [
@@ -483,6 +545,7 @@ const ExamSimulator = () => {
     },
     {
       id: 53,
+      subject: "ISO",
       unit: "UT1",
       question: "¿Qué define mejor a un microkernel?",
       options: [
@@ -497,6 +560,7 @@ const ExamSimulator = () => {
     },
     {
       id: 54,
+      subject: "ISO",
       unit: "UT1",
       question: "¿Qué ventaja clave aportan las memorias caché L1/L2/L3?",
       options: [
@@ -511,6 +575,7 @@ const ExamSimulator = () => {
     },
     {
       id: 55,
+      subject: "ISO",
       unit: "UT1",
       question: "¿Cuál es una limitación clásica de la arquitectura Von Neumann?",
       options: [
@@ -525,6 +590,7 @@ const ExamSimulator = () => {
     },
     {
       id: 56,
+      subject: "ISO",
       unit: "UT1",
       question: "¿Qué describe mejor la virtualización completa?",
       options: [
@@ -535,10 +601,11 @@ const ExamSimulator = () => {
       ],
       correct: 3,
       explanation:
-        "La virtualización completa permite ejecutar SO invitados sin modificarlos, porque el hipervisor proporciona una abstracción/virtualización del hardware (desde la perspectiva del invitado).",
+        "La virtualización completa permite ejecutar SO invitados sin modificarlos, porque el hipervisor proporciona una abstracción/virtualización del hardware desde la perspectiva del invitado.",
     },
     {
       id: 57,
+      subject: "ISO",
       unit: "UT1",
       question: "En la jerarquía de memoria, ¿qué elemento ofrece el acceso más rápido?",
       options: ["Memoria virtual", "Registros de la CPU", "Memoria RAM", "Almacenamiento secundario"],
@@ -548,6 +615,7 @@ const ExamSimulator = () => {
     },
     {
       id: 58,
+      subject: "ISO",
       unit: "UT1",
       question: "¿Qué práctica es esencial en ciberseguridad según esta UT?",
       options: [
@@ -562,6 +630,7 @@ const ExamSimulator = () => {
     },
     {
       id: 59,
+      subject: "ISO",
       unit: "UT1",
       question: "¿Qué elemento de la estructura funcional corresponde a la fase de “entrada”?",
       options: [
@@ -576,6 +645,7 @@ const ExamSimulator = () => {
     },
     {
       id: 60,
+      subject: "ISO",
       unit: "UT1",
       question: "¿Qué describe mejor el propósito global de un sistema informático según esta UT?",
       options: [
@@ -590,6 +660,7 @@ const ExamSimulator = () => {
     },
     {
       id: 61,
+      subject: "ISO",
       unit: "UT1",
       question: "¿Qué afirmación es correcta sobre multitarea en sistemas operativos?",
       options: [
@@ -600,10 +671,11 @@ const ExamSimulator = () => {
       ],
       correct: 1,
       explanation:
-        "La multitarea reparte tiempo de CPU entre procesos mediante planificación (context switching). Puede existir con un solo procesador: alterna tan rápido que parece simultáneo.",
+        "La multitarea reparte tiempo de CPU entre procesos mediante planificación (cambio de contexto). Puede existir con un solo procesador: alterna tan rápido que parece simultáneo.",
     },
     {
       id: 62,
+      subject: "ISO",
       unit: "UT1",
       question: "¿Qué caracteriza a una GUI frente a una CLI?",
       options: [
@@ -618,6 +690,7 @@ const ExamSimulator = () => {
     },
     {
       id: 63,
+      subject: "ISO",
       unit: "UT1",
       question: "¿Cuál es la función principal de la CPU en un sistema informático?",
       options: [
@@ -628,10 +701,11 @@ const ExamSimulator = () => {
       ],
       correct: 3,
       explanation:
-        "La CPU ejecuta instrucciones, coordina el funcionamiento del sistema y realiza operaciones aritméticas y lógicas (ALU) junto con la unidad de control.",
+        "La CPU ejecuta instrucciones, coordina el funcionamiento del sistema y realiza operaciones aritméticas y lógicas junto con la unidad de control.",
     },
     {
       id: 64,
+      subject: "ISO",
       unit: "UT1",
       question: "¿Qué es un snapshot en el contexto de máquinas virtuales?",
       options: [
@@ -642,10 +716,11 @@ const ExamSimulator = () => {
       ],
       correct: 0,
       explanation:
-        "Un snapshot captura el estado de una VM en un punto en el tiempo (disco y, a menudo, memoria/config). Permite volver atrás rápidamente tras pruebas o cambios.",
+        "Un snapshot captura el estado de una VM en un punto del tiempo (disco y, a menudo, memoria/config). Permite volver atrás rápidamente tras pruebas o cambios.",
     },
     {
       id: 65,
+      subject: "ISO",
       unit: "UT1",
       question: "¿Qué diferencia clave existe entre sistemas propietarios y de código abierto?",
       options: [
@@ -656,10 +731,11 @@ const ExamSimulator = () => {
       ],
       correct: 1,
       explanation:
-        "El código abierto permite acceso al código fuente y su modificación según licencia. El propietario suele ser cerrado. El uso comercial puede existir en ambos, y ambos tienen licencias (con condiciones distintas).",
+        "El código abierto permite acceso al código fuente y su modificación según licencia. El software propietario suele ser cerrado. Ambos tienen licencias, con condiciones distintas.",
     },
     {
       id: 66,
+      subject: "ISO",
       unit: "UT1",
       question: "¿Qué ventaja aporta el multiprocesador/multinúcleo?",
       options: [
@@ -674,6 +750,7 @@ const ExamSimulator = () => {
     },
     {
       id: 67,
+      subject: "ISO",
       unit: "UT1",
       question: "¿Qué componente del sistema operativo gestiona en modo privilegiado los recursos del sistema?",
       options: ["Editor de texto", "Capa de usuario", "Kernel", "Shell"],
@@ -683,6 +760,7 @@ const ExamSimulator = () => {
     },
     {
       id: 68,
+      subject: "ISO",
       unit: "UT1",
       question: "¿Qué caracteriza a un kernel monolítico moderno como Linux?",
       options: [
@@ -697,6 +775,7 @@ const ExamSimulator = () => {
     },
     {
       id: 69,
+      subject: "ISO",
       unit: "UT1",
       question: "¿Cuál es una medida de seguridad vinculada a la gestión de memoria?",
       options: [
@@ -707,7 +786,7 @@ const ExamSimulator = () => {
       ],
       correct: 3,
       explanation:
-        "ASLR aleatoriza direcciones (stack/heap/librerías), dificultando exploits que dependen de direcciones predecibles (por ejemplo, buffer overflows).",
+        "ASLR aleatoriza direcciones (stack/heap/librerías), dificultando exploits que dependen de direcciones predecibles (por ejemplo, desbordamientos de buffer).",
     },
   ];
 
@@ -737,7 +816,7 @@ const ExamSimulator = () => {
   const formatTime = (seconds) => {
     const s = Math.max(0, seconds);
     const mm = String(Math.floor(s / 60)).padStart(2, "0");
-    const ss = String(s % 60).padStart(2, "0");
+    const ss = String(s % 60)).padStart(2, "0");
     return `${mm}:${ss}`;
   };
 
@@ -754,8 +833,11 @@ const ExamSimulator = () => {
   // Timer
   const [timeLeft, setTimeLeft] = useState(EXAM_DURATION_SECONDS);
 
-  // Nombre + modo corrección
+  // Nombre + asignatura
   const [studentName, setStudentName] = useState("");
+  const [selectedSubject, setSelectedSubject] = useState("ISO");
+
+  // Corrección
   const [blankCountsAsWrong, setBlankCountsAsWrong] = useState(false); // OFF: blancos no penalizan
 
   // Modal confirmación
@@ -766,16 +848,27 @@ const ExamSimulator = () => {
   const [resultSent, setResultSent] = useState(false);
   const [sendError, setSendError] = useState("");
 
+  // Pool disponible por asignatura (para habilitar/deshabilitar)
+  const availableCounts = useMemo(() => {
+    const counts = { ISO: 0, REDES: 0, IPE1: 0 };
+    allQuestions.forEach((q) => {
+      if (counts[q.subject] !== undefined) counts[q.subject] += 1;
+    });
+    return counts;
+  }, [allQuestions]);
+
+  const selectedSubjectName = SUBJECTS[selectedSubject] || "Examen";
+
   // =========================
-  // INICIALIZACIÓN
+  // INICIALIZACIÓN (no arranca examen aquí, solo prepara estado)
   // =========================
   useEffect(() => {
-    initializeExam();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // No hacemos initializeExam aquí, porque depende de la asignatura seleccionada
   }, []);
 
-  const initializeExam = () => {
-    const shuffled = shuffleArray(allQuestions);
+  const initializeExam = (subjectKey) => {
+    const pool = allQuestions.filter((q) => q.subject === subjectKey);
+    const shuffled = shuffleArray(pool);
     const selected = shuffled.slice(0, 30);
     const questionsWithShuffledOptions = selected.map((q) => shuffleOptions(q));
     setQuestions(questionsWithShuffledOptions);
@@ -804,10 +897,10 @@ const ExamSimulator = () => {
 
     const netCorrect = Math.max(0, correct - penaltyQuestions);
 
-    const pointsPerQuestion = 10 / total;
+    const pointsPerQuestion = total > 0 ? 10 / total : 0;
     const grade10 = Number((netCorrect * pointsPerQuestion).toFixed(2));
 
-    const percentage = Number(((netCorrect / total) * 100).toFixed(1));
+    const percentage = total > 0 ? Number(((netCorrect / total) * 100).toFixed(1)) : 0;
 
     return {
       total,
@@ -868,6 +961,8 @@ const ExamSimulator = () => {
 
       const payload = {
         studentName: name,
+        subject: selectedSubjectName,
+        subjectKey: selectedSubject,
         mode: blankCountsAsWrong ? "blancos_penalizan" : "blancos_no_penalizan",
         grade10: details.grade10,
         percentage: details.percentage,
@@ -952,7 +1047,7 @@ const ExamSimulator = () => {
     setResultSent(false);
     setSendError("");
 
-    initializeExam();
+    setQuestions([]);
   };
 
   const goToFirstBlank = () => {
@@ -986,38 +1081,49 @@ const ExamSimulator = () => {
   }, [timeLeft, examStarted, showResults]);
 
   // =========================
-  // RENDER: guard
-  // =========================
-  if (questions.length === 0) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
-        <div className="text-2xl text-gray-600">Cargando examen...</div>
-      </div>
-    );
-  }
-
-  // =========================
   // RENDER: pantalla inicio
   // =========================
   if (!examStarted) {
+    const subjectHasQuestions = (availableCounts[selectedSubject] || 0) > 0;
+
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4 flex items-center justify-center">
         <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-xl">
           <div className="flex items-center gap-3 mb-3">
             <BookOpen className="w-8 h-8 text-indigo-600" />
-            <h1 className="text-3xl font-bold text-gray-800">Examen - Implantación de Sistemas Operativos</h1>
+            <h1 className="text-3xl font-bold text-gray-800">Simulador de Exámenes</h1>
           </div>
 
           <p className="text-gray-600 mb-6">
             Duración: <span className="font-semibold">60 minutos</span>. No se muestran soluciones hasta el final.
           </p>
 
+          <label className="block text-sm font-semibold text-gray-700 mb-2">Nombre o apodo</label>
           <input
             value={studentName}
             onChange={(e) => setStudentName(e.target.value)}
-            placeholder="Nombre o apodo"
+            placeholder="Ej: Sergio, LaUnion12..."
             className="w-full p-3 border-2 border-gray-300 rounded-lg mb-4"
           />
+
+          <label className="block text-sm font-semibold text-gray-700 mb-2">Asignatura</label>
+          <select
+            value={selectedSubject}
+            onChange={(e) => setSelectedSubject(e.target.value)}
+            className="w-full p-3 border-2 border-gray-300 rounded-lg mb-4 bg-white"
+          >
+            <option value="ISO">{SUBJECTS.ISO} ({availableCounts.ISO} preguntas)</option>
+            <option value="REDES">{SUBJECTS.REDES} ({availableCounts.REDES} preguntas)</option>
+            <option value="IPE1">{SUBJECTS.IPE1} ({availableCounts.IPE1} preguntas)</option>
+          </select>
+
+          {!subjectHasQuestions && (
+            <div className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg text-yellow-800 mb-4">
+              Aún no hay preguntas cargadas para <span className="font-semibold">{selectedSubjectName}</span>.
+              <br />
+              Pásame las preguntas y las metemos igual que hemos hecho con UT1.
+            </div>
+          )}
 
           <div className="mb-4 p-4 bg-gray-50 border rounded-lg">
             <div className="font-semibold text-gray-800 mb-2">Modo de corrección</div>
@@ -1047,15 +1153,46 @@ const ExamSimulator = () => {
                 setSendError("Escribe tu nombre o apodo para empezar.");
                 return;
               }
+              if (!subjectHasQuestions) {
+                setSendError("Esa asignatura aún no tiene preguntas cargadas.");
+                return;
+              }
+
               setSendError("");
               setResultSent(false);
               setSendingResult(false);
+
               setTimeLeft(EXAM_DURATION_SECONDS);
+              setSelectedAnswers({});
+              setCurrentQuestion(0);
+              setShowResults(false);
+              setConfirmFinishOpen(false);
+
+              initializeExam(selectedSubject);
               setExamStarted(true);
             }}
-            className="w-full px-6 py-4 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+            disabled={!subjectHasQuestions}
+            className="w-full px-6 py-4 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Empezar examen
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // Guard por si algo raro: si no hay preguntas cargadas, volvemos a inicio
+  if (questions.length === 0) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4 flex items-center justify-center">
+        <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-xl">
+          <div className="text-xl font-semibold text-gray-800 mb-2">No hay preguntas para esta asignatura</div>
+          <div className="text-gray-600 mb-6">Vuelve al inicio y selecciona otra asignatura.</div>
+          <button
+            onClick={restartExam}
+            className="w-full px-6 py-4 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+          >
+            Volver al inicio
           </button>
         </div>
       </div>
@@ -1075,7 +1212,7 @@ const ExamSimulator = () => {
         <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
           <div className="flex items-center gap-3 mb-2">
             <BookOpen className="w-8 h-8 text-indigo-600" />
-            <h1 className="text-3xl font-bold text-gray-800">Examen - Implantación de Sistemas Operativos</h1>
+            <h1 className="text-3xl font-bold text-gray-800">{selectedSubjectName}</h1>
           </div>
 
           <div className="flex justify-between items-center flex-wrap gap-3">
@@ -1228,13 +1365,12 @@ const ExamSimulator = () => {
               </div>
 
               <div className="mt-2 text-gray-600">
-                Penalización: -{details.penaltyQuestions} aciertos · Aciertos netos: {details.netCorrect} · ({details.percentage}
-                %)
+                Penalización: -{details.penaltyQuestions} aciertos · Aciertos netos: {details.netCorrect} · ({details.percentage}%)
               </div>
 
               <div className="mt-2 text-sm text-gray-500">
-                Modo: {blankCountsAsWrong ? "Blancos penalizan" : "Blancos NO penalizan"} · Tiempo usado:{" "}
-                {formatTime(EXAM_DURATION_SECONDS - timeLeft)} / 60:00
+                Asignatura: {selectedSubjectName} · Modo: {blankCountsAsWrong ? "Blancos penalizan" : "Blancos NO penalizan"} ·
+                Tiempo usado: {formatTime(EXAM_DURATION_SECONDS - timeLeft)} / 60:00
               </div>
 
               <div className="mt-2 text-sm text-gray-500">Alumno: {studentName}</div>
@@ -1279,7 +1415,9 @@ const ExamSimulator = () => {
                           )}
                         </div>
 
-                        <div className="mt-2 text-sm text-gray-500">Unidad: {q.unit}</div>
+                        <div className="mt-2 text-sm text-gray-500">
+                          Asignatura: {selectedSubjectName} · Unidad: {q.unit}
+                        </div>
 
                         <div className="mt-3 text-gray-700 space-y-1">
                           <div>
@@ -1309,7 +1447,7 @@ const ExamSimulator = () => {
                 className="w-full px-6 py-4 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors flex items-center justify-center gap-2"
               >
                 <RotateCcw className="w-5 h-5" />
-                Reintentar Examen
+                Volver al inicio
               </button>
             </div>
           </div>
