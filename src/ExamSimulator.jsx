@@ -4,6 +4,9 @@ import { RotateCcw, BookOpen } from "lucide-react";
 const EXAM_DURATION_SECONDS = 60 * 60; // 60 minutos
 
 const ExamSimulator = () => {
+  // =========================
+  // BANCO DE PREGUNTAS
+  // =========================
   const allQuestions = [
     {
       id: 1,
@@ -355,7 +358,12 @@ const ExamSimulator = () => {
       id: 42,
       unit: "UT6",
       question: "¿Qué es el journaling en sistemas de archivos?",
-      options: ["Un tipo de compresión", "Registro de transacciones para recuperación", "Una forma de cifrado", "Un método de desfragmentación"],
+      options: [
+        "Un tipo de compresión",
+        "Registro de transacciones para recuperación",
+        "Una forma de cifrado",
+        "Un método de desfragmentación",
+      ],
       correct: 1,
       explanation: "El journaling registra las transacciones antes de aplicarlas, facilitando la recuperación ante fallos.",
     },
@@ -371,9 +379,15 @@ const ExamSimulator = () => {
       id: 44,
       unit: "UT7",
       question: "¿Qué significa el principio de mínimo privilegio?",
-      options: ["Dar todos los permisos a todos", "Otorgar solo los permisos necesarios para cada tarea", "No dar ningún permiso", "Cambiar permisos constantemente"],
+      options: [
+        "Dar todos los permisos a todos",
+        "Otorgar solo los permisos necesarios para cada tarea",
+        "No dar ningún permiso",
+        "Cambiar permisos constantemente",
+      ],
       correct: 1,
-      explanation: "El principio de mínimo privilegio establece que cada usuario debe tener solo los permisos mínimos necesarios para su trabajo.",
+      explanation:
+        "El principio de mínimo privilegio establece que cada usuario debe tener solo los permisos mínimos necesarios para su trabajo.",
     },
     {
       id: 45,
@@ -403,7 +417,12 @@ const ExamSimulator = () => {
       id: 48,
       unit: "UT2",
       question: "¿Qué es TPM?",
-      options: ["Un tipo de partición", "Módulo de plataforma de confianza para criptografía", "Un sistema de archivos", "Un protocolo de red"],
+      options: [
+        "Un tipo de partición",
+        "Módulo de plataforma de confianza para criptografía",
+        "Un sistema de archivos",
+        "Un protocolo de red",
+      ],
       correct: 1,
       explanation: "TPM (Trusted Platform Module) es un chip criptográfico para almacenar claves y asegurar el arranque.",
     },
@@ -425,7 +444,9 @@ const ExamSimulator = () => {
     },
   ];
 
-  // Mezclar array
+  // =========================
+  // UTILIDADES
+  // =========================
   const shuffleArray = (array) => {
     const newArray = [...array];
     for (let i = newArray.length - 1; i > 0; i--) {
@@ -435,7 +456,6 @@ const ExamSimulator = () => {
     return newArray;
   };
 
-  // Mezclar opciones de pregunta
   const shuffleOptions = (question) => {
     const indices = [0, 1, 2, 3];
     const shuffledIndices = shuffleArray(indices);
@@ -447,6 +467,16 @@ const ExamSimulator = () => {
     };
   };
 
+  const formatTime = (seconds) => {
+    const s = Math.max(0, seconds);
+    const mm = String(Math.floor(s / 60)).padStart(2, "0");
+    const ss = String(s % 60).padStart(2, "0");
+    return `${mm}:${ss}`;
+  };
+
+  // =========================
+  // ESTADO
+  // =========================
   const [questions, setQuestions] = useState([]);
   const [examStarted, setExamStarted] = useState(false);
 
@@ -457,16 +487,18 @@ const ExamSimulator = () => {
   // Timer
   const [timeLeft, setTimeLeft] = useState(EXAM_DURATION_SECONDS);
 
-  // Formspree (Nivel 1)
+  // Nombre + modo corrección
   const [studentName, setStudentName] = useState("");
+  const [blankCountsAsWrong, setBlankCountsAsWrong] = useState(false); // si está OFF: en blanco NO penaliza
+
+  // Formspree
   const [sendingResult, setSendingResult] = useState(false);
   const [resultSent, setResultSent] = useState(false);
   const [sendError, setSendError] = useState("");
 
-  // Repaso
-  const [reviewOnlyWrong, setReviewOnlyWrong] = useState(true);
-
-  // Inicializar examen
+  // =========================
+  // INICIALIZACIÓN
+  // =========================
   useEffect(() => {
     initializeExam();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -479,41 +511,56 @@ const ExamSimulator = () => {
     setQuestions(questionsWithShuffledOptions);
   };
 
-  const handleAnswer = (questionId, answerIndex) => {
-    if (!showResults) {
-      setSelectedAnswers((prev) => ({
-        ...prev,
-        [questionId]: answerIndex,
-      }));
-    }
-  };
+  // =========================
+  // CÁLCULO NOTA (penalización 1/3 fallos)
+  // =========================
+  const getScoreDetails = () => {
+    const total = questions.length;
 
-  const nextQuestion = () => {
-    if (currentQuestion < questions.length - 1) setCurrentQuestion(currentQuestion + 1);
-  };
-
-  const prevQuestion = () => {
-    if (currentQuestion > 0) setCurrentQuestion(currentQuestion - 1);
-  };
-
-  const calculateScore = () => {
     let correct = 0;
+    let answered = 0;
+
     questions.forEach((q) => {
-      if (selectedAnswers[q.id] === q.correct) correct++;
+      const a = selectedAnswers[q.id];
+      if (a !== undefined) answered++;
+      if (a === q.correct) correct++;
     });
-    return correct;
+
+    const blanks = total - answered;
+
+    // Fallos según modo
+    const wrong = blankCountsAsWrong ? total - correct : answered - correct;
+
+    // Penalización: 1 incorrecta por cada 3 fallos
+    const penaltyQuestions = Math.floor(wrong / 3);
+
+    // Aciertos netos (mínimo 0)
+    const netCorrect = Math.max(0, correct - penaltyQuestions);
+
+    // Nota sobre 10
+    const pointsPerQuestion = 10 / total;
+    const grade10 = Number((netCorrect * pointsPerQuestion).toFixed(2));
+
+    const percentage = Number(((netCorrect / total) * 100).toFixed(1));
+
+    return {
+      total,
+      answered,
+      blanks,
+      correct,
+      wrong,
+      penaltyQuestions,
+      netCorrect,
+      grade10,
+      percentage,
+    };
   };
 
-  const formatTime = (seconds) => {
-    const s = Math.max(0, seconds);
-    const mm = String(Math.floor(s / 60)).padStart(2, "0");
-    const ss = String(s % 60).padStart(2, "0");
-    return `${mm}:${ss}`;
-  };
+  const details = getScoreDetails();
 
-  const score = calculateScore();
-  const percentage = ((score / questions.length) * 100).toFixed(1);
-
+  // =========================
+  // ENVÍO A FORMSPREE
+  // =========================
   const sendResultToFormspree = async () => {
     if (sendingResult || resultSent) return;
 
@@ -534,9 +581,15 @@ const ExamSimulator = () => {
 
       const payload = {
         studentName: name,
-        percentage: Number(percentage),
-        correct: score,
-        total: questions.length,
+        mode: blankCountsAsWrong ? "blancos_penalizan" : "blancos_no_penalizan",
+        grade10: details.grade10,
+        percentage: details.percentage,
+        correct: details.correct,
+        wrong: details.wrong,
+        blanks: details.blanks,
+        penaltyQuestions: details.penaltyQuestions,
+        netCorrect: details.netCorrect,
+        total: details.total,
         timestamp: new Date().toISOString(),
         timeUsedSeconds: EXAM_DURATION_SECONDS - timeLeft,
         timeLeftSeconds: timeLeft,
@@ -562,15 +615,49 @@ const ExamSimulator = () => {
     }
   };
 
-  const finishExam = async (reason = "manual") => {
-    if (showResults) return; // evita dobles finales
-    setShowResults(true);
-    await sendResultToFormspree();
-    // reason está por si luego quieres mostrar “Tiempo agotado” etc.
-    // (ahora mismo no lo mostramos para mantenerlo limpio)
+  // =========================
+  // ACCIONES
+  // =========================
+  const handleAnswer = (questionId, answerIndex) => {
+    if (showResults) return;
+    setSelectedAnswers((prev) => ({
+      ...prev,
+      [questionId]: answerIndex,
+    }));
   };
 
-  // Timer: solo corre cuando el examen ha empezado y no ha terminado
+  const nextQuestion = () => {
+    if (currentQuestion < questions.length - 1) setCurrentQuestion(currentQuestion + 1);
+  };
+
+  const prevQuestion = () => {
+    if (currentQuestion > 0) setCurrentQuestion(currentQuestion - 1);
+  };
+
+  const finishExam = async (reason = "manual") => {
+    if (showResults) return;
+    setShowResults(true);
+    await sendResultToFormspree();
+  };
+
+  const restartExam = () => {
+    setExamStarted(false);
+    setCurrentQuestion(0);
+    setSelectedAnswers({});
+    setShowResults(false);
+
+    setTimeLeft(EXAM_DURATION_SECONDS);
+
+    setSendingResult(false);
+    setResultSent(false);
+    setSendError("");
+
+    initializeExam();
+  };
+
+  // =========================
+  // TIMER
+  // =========================
   useEffect(() => {
     if (!examStarted || showResults) return;
 
@@ -584,7 +671,6 @@ const ExamSimulator = () => {
     return () => clearInterval(interval);
   }, [examStarted, showResults]);
 
-  // Auto-finalizar cuando llega a 0
   useEffect(() => {
     if (!examStarted || showResults) return;
     if (timeLeft === 0) {
@@ -593,23 +679,36 @@ const ExamSimulator = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timeLeft, examStarted, showResults]);
 
-  const restartExam = () => {
-    setExamStarted(false);
-    setCurrentQuestion(0);
-    setSelectedAnswers({});
-    setShowResults(false);
+  // =========================
+  // LISTA FINAL: SOLO LAS QUE FALLÓ O DEJÓ EN BLANCO
+  // (sin modo "repaso" extra)
+  // =========================
+  const mistakesAndBlanks = useMemo(() => {
+    return questions
+      .map((q) => {
+        const chosen = selectedAnswers[q.id];
+        const isBlank = chosen === undefined;
+        const isWrong = chosen !== undefined && chosen !== q.correct;
 
-    setTimeLeft(EXAM_DURATION_SECONDS);
+        // En el final SIEMPRE mostramos:
+        // - Las falladas
+        // - Y las no respondidas (para estudiar)
+        const shouldShow = isWrong || isBlank;
 
-    setSendingResult(false);
-    setResultSent(false);
-    setSendError("");
-    setReviewOnlyWrong(true);
+        return {
+          ...q,
+          chosen,
+          isBlank,
+          isWrong,
+          shouldShow,
+        };
+      })
+      .filter((x) => x.shouldShow);
+  }, [questions, selectedAnswers]);
 
-    initializeExam();
-  };
-
-  // Guard: preguntas cargadas
+  // =========================
+  // RENDER: guard
+  // =========================
   if (questions.length === 0) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
@@ -618,7 +717,9 @@ const ExamSimulator = () => {
     );
   }
 
-  // Pantalla de inicio
+  // =========================
+  // RENDER: pantalla inicio
+  // =========================
   if (!examStarted) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4 flex items-center justify-center">
@@ -638,6 +739,24 @@ const ExamSimulator = () => {
             placeholder="Nombre o apodo"
             className="w-full p-3 border-2 border-gray-300 rounded-lg mb-4"
           />
+
+          <div className="mb-4 p-4 bg-gray-50 border rounded-lg">
+            <div className="font-semibold text-gray-800 mb-2">Modo de corrección</div>
+
+            <label className="flex items-center gap-2 text-gray-700">
+              <input
+                type="checkbox"
+                checked={blankCountsAsWrong}
+                onChange={(e) => setBlankCountsAsWrong(e.target.checked)}
+              />
+              Contar preguntas en blanco como fallo (penaliza)
+            </label>
+
+            <div className="text-sm text-gray-500 mt-2">
+              Si está desactivado, las preguntas en blanco no cuentan como fallo ni penalizan (pero al final igualmente te las
+              mostraré para estudiar).
+            </div>
+          </div>
 
           {sendError && (
             <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-red-700 mb-4">{sendError}</div>
@@ -664,19 +783,11 @@ const ExamSimulator = () => {
     );
   }
 
+  // =========================
+  // RENDER: examen
+  // =========================
   const question = questions[currentQuestion];
   const isAnswered = selectedAnswers[question.id] !== undefined;
-
-  const reviewList = useMemo(() => {
-    return questions
-      .map((q) => {
-        const chosen = selectedAnswers[q.id];
-        const correct = q.correct;
-        const isWrong = chosen !== correct;
-        return { ...q, chosen, isWrong };
-      })
-      .filter((q) => (reviewOnlyWrong ? q.isWrong : true));
-  }, [questions, selectedAnswers, reviewOnlyWrong]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
@@ -783,31 +894,31 @@ const ExamSimulator = () => {
           )}
         </div>
 
-        {/* Results Summary + Repaso */}
+        {/* RESULTS + LISTA DE FALLOS/BLANCOS */}
         {showResults && (
           <div className="bg-white rounded-lg shadow-lg p-8">
             <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">Resultados del Examen</h2>
 
             <div className="text-center mb-6">
-              <div className={`text-6xl font-bold mb-2 ${percentage >= 50 ? "text-green-600" : "text-red-600"}`}>
-                {percentage}%
+              <div className={`text-6xl font-bold mb-2 ${details.grade10 >= 5 ? "text-green-600" : "text-red-600"}`}>
+                {details.grade10}/10
               </div>
-              <div className="text-2xl text-gray-700">
-                {score} de {questions.length} correctas
+
+              <div className="text-xl text-gray-700">
+                Aciertos: {details.correct} · Fallos: {details.wrong} · Blancos: {details.blanks}
               </div>
-              <div className="mt-4 text-lg">
-                {percentage >= 90
-                  ? "🌟 ¡Excelente!"
-                  : percentage >= 70
-                  ? "👏 ¡Muy bien!"
-                  : percentage >= 50
-                  ? "👍 Aprobado"
-                  : "📚 Sigue estudiando"}
+
+              <div className="mt-2 text-gray-600">
+                Penalización: -{details.penaltyQuestions} aciertos · Aciertos netos: {details.netCorrect} · ({details.percentage}
+                %)
               </div>
+
+              <div className="mt-2 text-sm text-gray-500">
+                Modo: {blankCountsAsWrong ? "Blancos penalizan" : "Blancos NO penalizan"} · Tiempo usado:{" "}
+                {formatTime(EXAM_DURATION_SECONDS - timeLeft)} / 60:00
+              </div>
+
               <div className="mt-2 text-sm text-gray-500">Alumno: {studentName}</div>
-              <div className="mt-1 text-sm text-gray-500">
-                Tiempo usado: {formatTime(EXAM_DURATION_SECONDS - timeLeft)} / 60:00
-              </div>
             </div>
 
             {/* Estado envío automático */}
@@ -827,56 +938,55 @@ const ExamSimulator = () => {
               )}
             </div>
 
-            {/* Repaso */}
+            {/* LISTA: SOLO FALLADAS O NO RESPONDIDAS */}
             <div className="mt-8">
-              <div className="flex items-center justify-between gap-3 mb-4">
-                <h3 className="text-2xl font-bold text-gray-800">Repaso</h3>
-                <button
-                  onClick={() => setReviewOnlyWrong((v) => !v)}
-                  className="px-4 py-2 rounded-lg font-semibold bg-gray-200 hover:bg-gray-300"
-                >
-                  {reviewOnlyWrong ? "Ver todas" : "Ver solo falladas"}
-                </button>
-              </div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Tus fallos y preguntas en blanco</h3>
 
-              {reviewList.length === 0 ? (
+              {mistakesAndBlanks.length === 0 ? (
                 <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-700">
-                  ✅ No tienes fallos. ¡Perfecto!
+                  ✅ ¡Perfecto! No has fallado ninguna y no has dejado ninguna en blanco.
                 </div>
               ) : (
                 <div className="space-y-4">
-                  {reviewList.map((q) => (
-                    <div key={q.id} className="p-4 border rounded-lg bg-gray-50">
-                      <div className="flex items-start justify-between gap-3">
-                        <div className="font-semibold text-gray-800">
-                          {q.id}. {q.question}
-                        </div>
-                        {q.isWrong ? (
-                          <span className="text-red-700 font-bold">✗</span>
-                        ) : (
-                          <span className="text-green-700 font-bold">✓</span>
-                        )}
-                      </div>
+                  {mistakesAndBlanks.map((q) => {
+                    const yourText =
+                      q.chosen === undefined ? "No respondida" : q.options[q.chosen];
+                    const correctText = q.options[q.correct];
 
-                      <div className="mt-2 text-sm text-gray-500">Unidad: {q.unit}</div>
+                    return (
+                      <div key={q.id} className="p-4 border rounded-lg bg-gray-50">
+                        <div className="flex items-start justify-between gap-3">
+                          <div className="font-semibold text-gray-800">
+                            {q.id}. {q.question}
+                          </div>
 
-                      <div className="mt-3 text-gray-700 space-y-1">
-                        <div>
-                          <span className="font-semibold">Tu respuesta: </span>
-                          {q.chosen !== undefined ? q.options[q.chosen] : "No respondida"}
+                          {q.isBlank ? (
+                            <span className="text-yellow-700 font-bold">BLANCO</span>
+                          ) : (
+                            <span className="text-red-700 font-bold">✗</span>
+                          )}
                         </div>
-                        <div>
-                          <span className="font-semibold">Correcta: </span>
-                          {q.options[q.correct]}
+
+                        <div className="mt-2 text-sm text-gray-500">Unidad: {q.unit}</div>
+
+                        <div className="mt-3 text-gray-700 space-y-1">
+                          <div>
+                            <span className="font-semibold">Tu respuesta: </span>
+                            {yourText}
+                          </div>
+                          <div>
+                            <span className="font-semibold">Correcta: </span>
+                            {correctText}
+                          </div>
+                        </div>
+
+                        <div className="mt-3 p-3 bg-white border rounded-lg text-gray-700">
+                          <span className="font-semibold">Explicación: </span>
+                          {q.explanation}
                         </div>
                       </div>
-
-                      <div className="mt-3 p-3 bg-white border rounded-lg text-gray-700">
-                        <span className="font-semibold">Explicación: </span>
-                        {q.explanation}
-                      </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               )}
             </div>
