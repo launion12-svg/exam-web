@@ -899,7 +899,7 @@ const ExamSimulator = () => {
       ],
       correct: 2,
       explanation: "Microsoft exige obligatoriamente un chip de seguridad TPM 2.0 y que el sistema arranque en modo UEFI con Secure Boot (Arranque Seguro) activo para instalar Windows 11.",
-    },vvvv
+    },
     {
       id: 78,
       subject: "ISO",
@@ -997,7 +997,7 @@ const ExamSimulator = () => {
       ],
       correct: 1,
       explanation: "ReFS (Resilient File System) es el sistema de archivos de Microsoft diseñado para maximizar la disponibilidad de los datos y la integridad mediante el uso de flujos de integridad y la integración con Storage Spaces.",
-    },v
+    },
     {
       id: 85,
       subject: "ISO",
