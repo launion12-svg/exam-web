@@ -2272,6 +2272,286 @@ const ExamSimulator = () => {
       correct: 1,
       explanation: "S.M.A.R.T. (Self-Monitoring, Analysis and Reporting Technology) es un sistema de monitorización incorporado en los discos duros que supervisa indicadores de fiabilidad como la temperatura o sectores reasignados.",
     },
+    {
+      id: 176,
+      subject: "ISO",
+      unit: "UT7",
+      question: "¿Qué herramienta de Linux permite auditar eventos de seguridad de alto valor?",
+      options: [
+        "auditd",
+        "systemctl",
+        "iptables",
+        "cron"
+      ],
+      correct: 0,
+      explanation: "auditd es el componente de usuario del Sistema de Auditoría de Linux. Se encarga de escribir en disco los registros de auditoría que permiten rastrear acciones como accesos a archivos, cambios en permisos o ejecuciones de programas por parte de los usuarios.",
+    },
+    {
+      id: 177,
+      subject: "ISO",
+      unit: "UT7",
+      question: "¿Qué comando de Linux muestra el estado de sincronización horaria?",
+      options: [
+        "ls -l",
+        "df -h",
+        "timedatectl status",
+        "ps aux"
+      ],
+      correct: 2,
+      explanation: "timedatectl status muestra la hora local, la hora universal (UTC) y, lo más importante, si el servicio de sincronización de red (NTP) está activo y sincronizado.",
+    },
+    {
+      id: 178,
+      subject: "ISO",
+      unit: "UT7",
+      question: "¿Qué cuentas requieren protección especial con PAM y MFA?",
+      options: [
+        "Cuentas de invitado",
+        "Usuarios estándar",
+        "Cuentas privilegiadas",
+        "Cuentas bloqueadas"
+      ],
+      correct: 2,
+      explanation: "Las cuentas privilegiadas (administradores, root, etc.) tienen acceso total al sistema, por lo que requieren capas adicionales de seguridad como PAM para controlar cuándo se usan y MFA para verificar la identidad del usuario.",
+    },
+    {
+      id: 179,
+      subject: "ISO",
+      unit: "UT7",
+      question: "¿Qué medida asegura la integridad de un archivo de evidencia?",
+      options: [
+        "Copiarlo en otro directorio",
+        "Renombrar el archivo",
+        "Hash criptográfico",
+        "Cambiar permisos de lectura"
+      ],
+      correct: 2,
+      explanation: "El hash criptográfico genera una 'huella digital' única del contenido del archivo. Si un solo bit del archivo cambia, el hash será completamente distinto, permitiendo verificar su integridad.",
+    },
+    {
+      id: 180,
+      subject: "ISO",
+      unit: "UT7",
+      question: "¿Qué estándar internacional se complementa con ENS para auditorías mixtas?",
+      options: [
+        "ISO/IEC 27001",
+        "ITIL",
+        "ISO 14001",
+        "NIST 800-53"
+      ],
+      correct: 0,
+      explanation: "La norma ISO/IEC 27001 es el estándar internacional para los Sistemas de Gestión de Seguridad de la Información (SGSI). Al ser muy similar en controles al ENS, muchas empresas realizan auditorías mixtas para obtener ambas certificaciones simultáneamente.",
+    },
+    {
+      id: 181,
+      subject: "ISO",
+      unit: "UT7",
+      question: "¿Qué evento de Windows corresponde a un inicio de sesión correcto?",
+      options: [
+        "4624",
+        "1102",
+        "4625",
+        "4688"
+      ],
+      correct: 0,
+      explanation: "El ID de evento 4624 se genera cuando una cuenta de usuario inicia sesión correctamente en la máquina local o de forma remota. Es fundamental para auditar quién accede al sistema y cuándo.",
+    },
+    {
+      id: 182,
+      subject: "ISO",
+      unit: "UT7",
+      question: "¿Qué marco normativo español regula la seguridad en sistemas de información?",
+      options: [
+        "GDPR",
+        "PCI-DSS",
+        "ENS (Esquema Nacional de Seguridad)",
+        "COBIT"
+      ],
+      correct: 2,
+      explanation: "El ENS (Esquema Nacional de Seguridad), regulado por el Real Decreto 311/2022, establece los principios básicos y requisitos mínimos para garantizar la seguridad de la información en la Administración Pública española y sus colaboradores.",
+    },
+    {
+      id: 183,
+      subject: "ISO",
+      unit: "UT7",
+      question: "¿Qué norma internacional define el Sistema de Gestión de Seguridad de la Información (SGSI)?",
+      options: [
+        "ISO/IEC 27001",
+        "ITIL",
+        "CIS Controls",
+        "ISO 9001"
+      ],
+      correct: 0,
+      explanation: "La ISO/IEC 27001 es el estándar internacional que describe los requisitos para establecer, implementar, mantener y mejorar continuamente un SGSI, basándose en la gestión de riesgos.",
+    },
+    {
+      id: 184,
+      subject: "ISO",
+      unit: "UT7",
+      question: "¿Qué comando de Windows permite exportar registros de eventos de seguridad?",
+      options: [
+        "netstat",
+        "ping",
+        "ipconfig",
+        "wevtutil epl"
+      ],
+      correct: 3,
+      explanation: "wevtutil (Windows Events Command Line Utility) permite gestionar los registros de eventos. El parámetro 'epl' (export-log) se usa para exportar y guardar eventos en un archivo de registro externo (.evtx).",
+    },
+    {
+      id: 185,
+      subject: "ISO",
+      unit: "UT7",
+      question: "¿Qué fase de la respuesta a incidentes incluye la erradicación de la causa raíz?",
+      options: [
+        "Post-mortem",
+        "Contención y erradicación",
+        "Preparación",
+        "Recuperación"
+      ],
+      correct: 1,
+      explanation: "La fase de Contención, Erradicación y Recuperación busca primero limitar el daño (contención) y después eliminar la causa del problema (erradicación), como borrar malware o cerrar cuentas vulneradas.",
+    },
+    {
+      id: 186,
+      subject: "ISO",
+      unit: "UT7",
+      question: "¿Qué solución open source de SIEM se basa en OSSEC?",
+      options: [
+        "Splunk",
+        "Graylog",
+        "Wazuh",
+        "Nagios"
+      ],
+      correct: 2,
+      explanation: "Wazuh es una plataforma de seguridad de código abierto que nació como un fork de OSSEC. Combina funciones de HIDS (detección de intrusos en host), monitorización de integridad de archivos y análisis de logs.",
+    },
+    {
+      id: 187,
+      subject: "ISO",
+      unit: "UT7",
+      question: "¿Qué plataforma de gestión de logs destaca por búsquedas y dashboards personalizados?",
+      options: [
+        "Metasploit",
+        "Graylog",
+        "Wireshark",
+        "Nessus"
+      ],
+      correct: 1,
+      explanation: "Graylog es una potente herramienta de gestión de registros que permite recolectar, indexar y analizar grandes volúmenes de datos. Destaca por su motor de búsqueda rápido y la facilidad para crear paneles visuales (dashboards).",
+    },
+    {
+      id: 188,
+      subject: "ISO",
+      unit: "UT7",
+      question: "¿Qué documento recoge hallazgos, evidencias, riesgos y recomendaciones?",
+      options: [
+        "Informe de auditoría",
+        "Inventario de hardware",
+        "Acuerdo de nivel de servicio",
+        "Manual de usuario"
+      ],
+      correct: 0,
+      explanation: "El informe de auditoría es el resultado final del proceso de revisión. Su objetivo es comunicar formalmente las debilidades encontradas (hallazgos), las pruebas que las respaldan (evidencias) y cómo solucionarlas.",
+    },
+    {
+      id: 189,
+      subject: "ISO",
+      unit: "UT7",
+      question: "¿Qué principio se aplica en RBAC para reducir riesgos?",
+      options: [
+        "Mínimo privilegio",
+        "Uso compartido de credenciales",
+        "Máxima disponibilidad",
+        "Redundancia de hardware"
+      ],
+      correct: 0,
+      explanation: "El principio de mínimo privilegio (Principle of Least Privilege) establece que un usuario debe tener solo los permisos estrictamente necesarios para realizar su trabajo, ni más ni menos, minimizando el impacto en caso de un error o ataque.",
+    },
+    {
+      id: 190,
+      subject: "ISO",
+      unit: "UT7",
+      question: "¿Qué herramienta de Windows permite gestionar políticas de auditoría detalladas desde la línea de comandos?",
+      options: [
+        "auditpol",
+        "net use",
+        "msconfig",
+        "gpupdate"
+      ],
+      correct: 0,
+      explanation: "auditpol es la utilidad de línea de comandos que permite mostrar y configurar las políticas de auditoría del sistema, ofreciendo un control mucho más granular que las directivas de grupo básicas.",
+    },
+    {
+      id: 191,
+      subject: "ISO",
+      unit: "UT7",
+      question: "¿Qué modelo de control de accesos se basa en roles y jerarquías?",
+      options: [
+        "ABAC",
+        "MAC",
+        "RBAC",
+        "DAC"
+      ],
+      correct: 2,
+      explanation: "RBAC (Role-Based Access Control) asigna permisos a roles específicos en lugar de a usuarios individuales. Estos roles pueden organizarse de forma jerárquica, permitiendo que un rol superior herede automáticamente los permisos de los roles inferiores.",
+    },
+    {
+      id: 192,
+      subject: "ISO",
+      unit: "UT7",
+      question: "¿Qué técnica protege cuentas privilegiadas mediante concesión temporal de permisos?",
+      options: [
+        "Desfragmentación de disco",
+        "Just-In-Time (JIT)",
+        "Copia de seguridad incremental",
+        "Multiplexación de procesos"
+      ],
+      correct: 1,
+      explanation: "El acceso Just-In-Time (JIT) permite que los usuarios tengan privilegios elevados solo durante un tiempo limitado y para una tarea específica, reduciendo el riesgo de que una cuenta comprometida cause daños permanentes.",
+    },
+    {
+      id: 193,
+      subject: "ISO",
+      unit: "UT7",
+      question: "¿Qué herramienta Linux muestra los últimos accesos fallidos por SSH?",
+      options: [
+        "free -m",
+        "journalctl -u ssh",
+        "uname -a",
+        "ps aux"
+      ],
+      correct: 1,
+      explanation: "journalctl es la herramienta para consultar los logs de systemd. Al añadir '-u ssh' filtramos específicamente los eventos del servicio Secure Shell, donde se registran los intentos de conexión fallidos.",
+    },
+    {
+      id: 194,
+      subject: "ISO",
+      unit: "UT7",
+      question: "¿Qué medida organizativa evita la acumulación excesiva de permisos?",
+      options: [
+        "Deshabilitar el firewall",
+        "Formateo de discos",
+        "Compartir contraseñas",
+        "Recertificación periódica"
+      ],
+      correct: 3,
+      explanation: "La recertificación periódica de accesos consiste en revisar cada cierto tiempo si los usuarios aún necesitan los permisos que tienen asignados, eliminando aquellos que ya no sean necesarios para sus funciones actuales.",
+    },
+    {
+      id: 195,
+      subject: "ISO",
+      unit: "UT7",
+      question: "¿Cuál es el objetivo principal de una auditoría de sistemas?",
+      options: [
+        "Eliminar virus informáticos",
+        "Acelerar el rendimiento del hardware",
+        "Evaluar la eficacia de los controles técnicos y organizativos",
+        "Reducir el coste de licencias de software"
+      ],
+      correct: 2,
+      explanation: "El objetivo de la auditoría es verificar si los controles de seguridad (como backups, firewalls o políticas de contraseñas) existen, se aplican correctamente y son efectivos para proteger los activos de la organización.",
+    },
   ];
 
   // =========================
