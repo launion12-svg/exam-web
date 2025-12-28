@@ -1102,7 +1102,7 @@ const ExamSimulator = () => {
           <input
             value={studentName}
             onChange={(e) => setStudentName(e.target.value)}
-            placeholder="Ej: Sergio, LaUnion12..."
+            placeholder="Ej: Antonio, Maria..."
             className="w-full p-3 border-2 border-gray-300 rounded-lg mb-4"
           />
 
