@@ -3968,7 +3968,290 @@ const ExamSimulator = () => {
       options: ["dumpall", "mysqldump", "pgdump", "mysqlimport"],
       correct: 1,
       explanation: "mysqldump es la herramienta estándar para generar volcados lógicos de bases de datos MySQL en formato SQL[cite: 604, 606].",
-    }
+    },
+    /* --- REDES UT1: MATERIAL OFICIAL CAMPUS --- */
+
+    {
+      id: 332,
+      subject: "REDES",
+      unit: "UT1",
+      question: "¿Qué dispositivo interconecta distintas redes y gestiona tablas de enrutamiento?",
+      options: [
+        "Router",
+        "Hub",
+        "Switch",
+        "Firewall"
+      ],
+      correct: 0,
+      explanation: "El Router es el dispositivo de capa 3 encargado de interconectar diferentes redes y dirigir el tráfico entre ellas mediante el uso de tablas de enrutamiento.",
+    },
+    {
+      id: 333,
+      subject: "REDES",
+      unit: "UT1",
+      question: "¿Qué capa del modelo OSI se encarga del cifrado y la compresión de datos?",
+      options: [
+        "Capa de sesión",
+        "Capa de aplicación",
+        "Capa de transporte",
+        "Capa de presentación"
+      ],
+      correct: 3,
+      explanation: "La Capa de presentación (Capa 6) asegura que la información enviada por la capa de aplicación de un sistema pueda ser leída por la capa de aplicación de otro, encargándose del formato, cifrado y compresión de los datos.",
+    },
+    {
+      id: 334,
+      subject: "REDES",
+      unit: "UT1",
+      question: "¿Cuál es la principal utilidad de Wireshark?",
+      options: [
+        "Asignación de direcciones IP",
+        "Creación de VLANs",
+        "Captura y análisis de tráfico de red",
+        "Filtrado de tráfico perimetral"
+      ],
+      correct: 2,
+      explanation: "Wireshark es un analizador de protocolos de red que permite capturar y examinar el tráfico que circula por una interfaz de red en tiempo real, facilitando la resolución de problemas y el estudio de protocolos.",
+    },
+    {
+      id: 335,
+      subject: "REDES",
+      unit: "UT1",
+      question: "¿Cuál fue la primera red que sentó las bases de Internet?",
+      options: [
+        "Token Ring",
+        "WiFi",
+        "ARPANET",
+        "Ethernet"
+      ],
+      correct: 2,
+      explanation: "ARPANET fue la red pionera creada por el Departamento de Defensa de EE. UU. en los años 60, siendo la primera en utilizar la conmutación de paquetes, tecnología base de la Internet moderna.",
+    },
+    {
+      id: 336,
+      subject: "REDES",
+      unit: "UT1",
+      question: "¿Qué topología fue la primera usada en Ethernet y es vulnerable a fallos en el cable troncal?",
+      options: [
+        "Estrella",
+        "Bus",
+        "Anillo",
+        "Malla"
+      ],
+      correct: 1,
+      explanation: "La topología en bus utiliza un único cable central (troncal) al que se conectan todos los nodos; si este cable principal se corta o falla, la señal no puede propagarse y toda la red deja de funcionar.",
+    },
+    {
+      id: 337,
+      subject: "REDES",
+      unit: "UT1",
+      question: "¿Qué es una red de datos?",
+      options: [
+        "Un tipo de software de ofimática",
+        "Un servidor de bases de datos",
+        "Un conjunto de dispositivos interconectados para compartir información",
+        "Un sistema de almacenamiento local"
+      ],
+      correct: 2,
+      explanation: "Una red de datos se define como un conjunto de equipos y dispositivos informáticos conectados entre sí mediante medios físicos o inalámbricos para el intercambio de información y recursos.",
+    },
+    {
+      id: 338,
+      subject: "REDES",
+      unit: "UT1",
+      question: "¿Qué medio de transmisión inalámbrico requiere visión directa y es vulnerable a obstáculos?",
+      options: [
+        "Par trenzado",
+        "LiFi",
+        "Microondas",
+        "Fibra óptica"
+      ],
+      correct: 2,
+      explanation: "Las microondas terrestres utilizan antenas parabólicas que deben estar perfectamente alineadas (visión directa); cualquier obstáculo físico como edificios o montañas bloquea la señal.",
+    },
+    {
+      id: 339,
+      subject: "REDES",
+      unit: "UT1",
+      question: "¿Qué protocolo garantiza entrega ordenada y fiable de los datos?",
+      options: [
+        "UDP",
+        "ICMP",
+        "TCP",
+        "HTTP"
+      ],
+      correct: 2,
+      explanation: "TCP (Transmission Control Protocol) es un protocolo orientado a conexión que garantiza que los datos lleguen a su destino sin errores, en el orden correcto y sin duplicados mediante el uso de confirmaciones (ACKs).",
+    },
+    {
+      id: 340,
+      subject: "REDES",
+      unit: "UT1",
+      question: "¿Qué comando permite verificar conectividad y latencia entre dos nodos?",
+      options: [
+        "netstat",
+        "ping",
+        "arp",
+        "traceroute"
+      ],
+      correct: 1,
+      explanation: "El comando ping utiliza el protocolo ICMP para enviar paquetes de solicitud de eco a un destino y medir el tiempo que tarda en recibir la respuesta (latencia), verificando así la conectividad básica.",
+    },
+    {
+      id: 341,
+      subject: "REDES",
+      unit: "UT1",
+      question: "¿Qué comando permite ver la ruta que sigue un paquete hasta su destino?",
+      options: [
+        "arp",
+        "ping",
+        "dig",
+        "traceroute"
+      ],
+      correct: 3,
+      explanation: "El comando traceroute (o tracert en Windows) muestra cada uno de los saltos (routers) por los que pasa un paquete desde el origen hasta el host de destino, informando también del tiempo de respuesta en cada nodo.",
+    },
+    {
+      id: 342,
+      subject: "REDES",
+      unit: "UT1",
+      question: "¿Qué dispositivo de red opera en la capa 2 del modelo OSI?",
+      options: [
+        "Router",
+        "Firewall",
+        "Switch",
+        "Hub"
+      ],
+      correct: 2,
+      explanation: "El Switch es un dispositivo de la capa de Enlace de Datos (Capa 2) que utiliza las direcciones MAC para reenviar tramas de datos únicamente al puerto donde se encuentra el destinatario.",
+    },
+    {
+      id: 343,
+      subject: "REDES",
+      unit: "UT1",
+      question: "¿Qué protocolo traduce nombres de dominio en direcciones IP?",
+      options: [
+        "DNS",
+        "SNMP",
+        "DHCP",
+        "SMTP"
+      ],
+      correct: 0,
+      explanation: "El DNS (Domain Name System) es el protocolo encargado de resolver nombres legibles (como google.com) en las direcciones IP numéricas necesarias para que los equipos se comuniquen entre sí.",
+    },
+    {
+      id: 344,
+      subject: "REDES",
+      unit: "UT1",
+      question: "¿Qué medio de transmisión ofrece mayor ancho de banda y resistencia a interferencias?",
+      options: [
+        "Par trenzado",
+        "Coaxial",
+        "Microondas",
+        "Fibra óptica"
+      ],
+      correct: 3,
+      explanation: "La fibra óptica utiliza pulsos de luz para transmitir datos, lo que le permite alcanzar anchos de banda muy superiores a los medios de cobre y ser totalmente inmune a las interferencias electromagnéticas.",
+    },
+    {
+      id: 345,
+      subject: "REDES",
+      unit: "UT1",
+      question: "¿Qué topología de red depende de un nodo central?",
+      options: [
+        "Estrella",
+        "Anillo",
+        "Malla",
+        "Bus"
+      ],
+      correct: 0,
+      explanation: "En la topología en estrella, todos los dispositivos se conectan individualmente a un nodo central (como un switch o hub), el cual se encarga de gestionar y distribuir el tráfico.",
+    },
+    {
+      id: 346,
+      subject: "REDES",
+      unit: "UT1",
+      question: "¿Qué modelo conceptual organiza la comunicación en siete capas?",
+      options: [
+        "Modelo híbrido",
+        "Modelo Ethernet",
+        "Modelo OSI",
+        "Modelo TCP/IP"
+      ],
+      correct: 2,
+      explanation: "El modelo OSI (Open Systems Interconnection) divide el proceso de comunicación en siete capas bien definidas: Física, Enlace, Red, Transporte, Sesión, Presentación y Aplicación.",
+    },
+    {
+      id: 347,
+      subject: "REDES",
+      unit: "UT1",
+      question: "¿Qué protocolo de red se usa para monitorizar dispositivos como routers e impresoras?",
+      options: [
+        "SNMP",
+        "HTTP",
+        "SMTP",
+        "ARP"
+      ],
+      correct: 0,
+      explanation: "SNMP (Simple Network Management Protocol) permite a los administradores supervisar el estado, el rendimiento y configurar de forma remota diversos dispositivos en la red.",
+    },
+    {
+      id: 348,
+      subject: "REDES",
+      unit: "UT1",
+      question: "¿Qué protocolo se utiliza para asignar direcciones IP automáticamente?",
+      options: [
+        "DNS",
+        "FTP",
+        "DHCP",
+        "ICMP"
+      ],
+      correct: 2,
+      explanation: "El protocolo DHCP (Dynamic Host Configuration Protocol) permite que los dispositivos obtengan automáticamente una dirección IP y otros parámetros de red (como la máscara o la puerta de enlace) al conectarse.",
+    },
+    {
+      id: 349,
+      subject: "REDES",
+      unit: "UT1",
+      question: "¿Qué protocolo es usado para enviar correo electrónico?",
+      options: [
+        "HTTP",
+        "DNS",
+        "FTP",
+        "SMTP"
+      ],
+      correct: 3,
+      explanation: "El protocolo SMTP (Simple Mail Transfer Protocol) es el estándar utilizado para el intercambio de mensajes de correo electrónico entre servidores y para el envío desde el cliente al servidor.",
+    },
+    {
+      id: 350,
+      subject: "REDES",
+      unit: "UT1",
+      question: "¿Cuál de los siguientes es un ataque de red basado en inundar peticiones para saturar un servicio?",
+      options: [
+        "ARP Spoofing",
+        "DDoS",
+        "Phishing",
+        "Sniffing"
+      ],
+      correct: 1,
+      explanation: "El ataque DDoS (Distributed Denial of Service) consiste en utilizar una red de equipos infectados para enviar un volumen masivo de tráfico hacia un servidor, agotando sus recursos y dejando el servicio inaccesible para los usuarios legítimos.",
+    },
+    {
+      id: 351,
+      subject: "REDES",
+      unit: "UT1",
+      question: "¿Cuál es la principal diferencia entre IPv4 e IPv6?",
+      options: [
+        "El número de bits de dirección",
+        "La velocidad de transmisión",
+        "El tipo de cable usado",
+        "El uso de WiFi obligatorio"
+      ],
+      correct: 0,
+      explanation: "IPv4 utiliza direcciones de 32 bits (unos 4.300 millones de direcciones), mientras que IPv6 utiliza 128 bits, permitiendo un espacio de direcciones prácticamente infinito para conectar todos los dispositivos actuales.",
+    },
+    
   ];
 
   // =========================
