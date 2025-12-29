@@ -3113,10 +3113,21 @@ const ExamSimulator = () => {
 
   // Pool disponible por asignatura (para habilitar/deshabilitar)
   const availableCounts = useMemo(() => {
-    const counts = { ISO: 0, REDES: 0, IPE1: 0 };
-    allQuestions.forEach((q) => {
-      if (counts[q.subject] !== undefined) counts[q.subject] += 1;
+    // 1. Creamos un objeto vacío
+    const counts = {};
+    
+    // 2. Lo inicializamos automáticamente con las asignaturas que existen en SUBJECTS
+    Object.keys(SUBJECTS).forEach(key => {
+      counts[key] = 0;
     });
+
+    // 3. Contamos todas las preguntas que haya en el banco
+    allQuestions.forEach((q) => {
+      if (counts[q.subject] !== undefined) {
+        counts[q.subject] += 1;
+      }
+    });
+    
     return counts;
   }, [allQuestions]);
 
