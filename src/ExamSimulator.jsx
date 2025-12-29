@@ -3370,15 +3370,17 @@ const ExamSimulator = () => {
           />
 
           <label className="block text-sm font-semibold text-gray-700 mb-2">Asignatura</label>
-          <select
-            value={selectedSubject}
-            onChange={(e) => setSelectedSubject(e.target.value)}
-            className="w-full p-3 border-2 border-gray-300 rounded-lg mb-4 bg-white"
-          >
-            <option value="ISO">{SUBJECTS.ISO} ({availableCounts.ISO} preguntas)</option>
-            <option value="REDES">{SUBJECTS.REDES} ({availableCounts.REDES} preguntas)</option>
-            <option value="IPE1">{SUBJECTS.IPE1} ({availableCounts.IPE1} preguntas)</option>
-          </select>
+<select
+  value={selectedSubject}
+  onChange={(e) => setSelectedSubject(e.target.value)}
+  className="w-full p-3 border-2 border-gray-300 rounded-lg mb-4 bg-white"
+>
+  {Object.entries(SUBJECTS).map(([key, name]) => (
+    <option key={key} value={key}>
+      {name} ({availableCounts[key] || 0} preguntas)
+    </option>
+  ))}
+</select>
 
           {!subjectHasQuestions && (
             <div className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg text-yellow-800 mb-4">
