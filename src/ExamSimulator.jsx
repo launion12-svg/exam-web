@@ -4251,7 +4251,286 @@ const ExamSimulator = () => {
       correct: 0,
       explanation: "IPv4 utiliza direcciones de 32 bits (unos 4.300 millones de direcciones), mientras que IPv6 utiliza 128 bits, permitiendo un espacio de direcciones prácticamente infinito para conectar todos los dispositivos actuales.",
     },
-    
+    {
+      id: 352,
+      subject: "REDES",
+      unit: "UT2",
+      question: "¿Qué modo de autenticación se utiliza en WPA2/WPA3-Enterprise?",
+      options: [
+        "Contraseña simple",
+        "Portal cautivo",
+        "802.1X con RADIUS",
+        "SSID oculto"
+      ],
+      correct: 2,
+      explanation: "El modo Enterprise utiliza el estándar 802.1X para que cada usuario se autentique con sus propias credenciales contra un servidor central (normalmente RADIUS), a diferencia del modo Personal que usa una clave compartida (PSK).",
+    },
+    {
+      id: 353,
+      subject: "REDES",
+      unit: "UT2",
+      question: "¿Cuál es la longitud máxima de un enlace horizontal de cobre según TIA/EIA-568?",
+      options: [
+        "150 metros",
+        "100 metros",
+        "75 metros",
+        "50 metros"
+      ],
+      correct: 1,
+      explanation: "El estándar TIA/EIA-568 establece que la distancia máxima para el cableado horizontal es de 100 metros, repartidos normalmente en 90 metros de cable rígido (canal) y un máximo de 10 metros para los latiguillos (patch cords).",
+    },
+    {
+      id: 354,
+      subject: "REDES",
+      unit: "UT2",
+      question: "¿Qué dispositivo termina el cableado horizontal en un rack?",
+      options: [
+        "Patch panel",
+        "Switch",
+        "Router",
+        "Access Point"
+      ],
+      correct: 0,
+      explanation: "El Patch Panel (panel de parcheo) es el elemento pasivo donde terminan los cables rígidos que vienen de las rosetas de las paredes. Permite organizar las conexiones antes de puentearlas hacia los equipos activos como el switch.",
+    },
+    {
+      id: 355,
+      subject: "REDES",
+      unit: "UT2",
+      question: "¿Qué medio físico es más adecuado para largas distancias en campus?",
+      options: [
+        "Fibra multimodo",
+        "Par trenzado Cat 5e",
+        "Cable coaxial",
+        "Fibra monomodo"
+      ],
+      correct: 3,
+      explanation: "La fibra monomodo (Single-mode) tiene un núcleo mucho más delgado que permite que la luz viaje en un solo rayo, eliminando la dispersión y permitiendo alcanzar distancias de kilómetros, ideal para conectar edificios en un campus.",
+    },
+    {
+      id: 356,
+      subject: "REDES",
+      unit: "UT2",
+      question: "¿Qué protocolo permite agrupar interfaces en Linux o Windows?",
+      options: [
+        "FTP",
+        "LACP",
+        "HTTP",
+        "SNMP"
+      ],
+      correct: 1,
+      explanation: "LACP (Link Aggregation Control Protocol) es el estándar (IEEE 802.3ad) que permite agrupar varios puertos físicos en un único enlace lógico para aumentar el ancho de banda y proporcionar tolerancia a fallos.",
+    },
+    {
+      id: 357,
+      subject: "REDES",
+      unit: "UT2",
+      question: "¿Qué indica un enlace negociado a 100 Mbps half-duplex en lugar de 1 Gbps full?",
+      options: [
+        "Velocidad degradada",
+        "Configuración correcta",
+        "DHCP deshabilitado",
+        "IP duplicada"
+      ],
+      correct: 0,
+      explanation: "Un enlace que negocia a 100 Mbps half-duplex cuando debería ser Gigabit indica una degradación, causada frecuentemente por un cable de mala calidad (solo 4 hilos en lugar de 8), un puerto dañado o interferencias.",
+    },
+    {
+      id: 358,
+      subject: "REDES",
+      unit: "UT2",
+      question: "¿Qué función cumple el NIC Teaming?",
+      options: [
+        "Mejorar DNS",
+        "Reducir latencia",
+        "Evitar interferencias",
+        "Agregar ancho de banda y redundancia"
+      ],
+      correct: 3,
+      explanation: "El NIC Teaming es una tecnología que permite agrupar varias tarjetas de red físicas (NICs) en un solo equipo para que funcionen como una interfaz lógica única, aumentando el ancho de banda total y ofreciendo tolerancia a fallos si una tarjeta falla.",
+    },
+    {
+      id: 359,
+      subject: "REDES",
+      unit: "UT2",
+      question: "¿Qué documento o sistema centraliza información de activos y registros en grandes empresas?",
+      options: [
+        "DHCP",
+        "NAT",
+        "VLAN",
+        "CMDB"
+      ],
+      correct: 3,
+      explanation: "La CMDB (Configuration Management Database) es una base de datos que contiene toda la información relevante sobre los componentes de hardware y software (activos) de una organización y las relaciones entre ellos.",
+    },
+    {
+      id: 360,
+      subject: "REDES",
+      unit: "UT2",
+      question: "¿Qué protocolo evita bucles en redes conmutadas?",
+      options: [
+        "Spanning Tree Protocol (STP)",
+        "DHCP",
+        "OSPF",
+        "RIP"
+      ],
+      correct: 0,
+      explanation: "STP (Spanning Tree Protocol) detecta la existencia de bucles físicos en la red (redundancia) y bloquea lógicamente los puertos necesarios para mantener una única ruta activa, evitando tormentas de difusión.",
+    },
+    {
+      id: 361,
+      subject: "REDES",
+      unit: "UT2",
+      question: "¿Qué comando en Windows muestra la configuración completa de red?",
+      options: [
+        "nslookup",
+        "ipconfig /all",
+        "ping",
+        "tracert"
+      ],
+      correct: 1,
+      explanation: "El comando 'ipconfig /all' muestra información detallada de todos los adaptadores de red, incluyendo la dirección MAC, servidores DNS, estado del DHCP y el tiempo de concesión de la IP.",
+    },
+    {
+      id: 362,
+      subject: "REDES",
+      unit: "UT2",
+      question: "¿Qué protocolo de seguridad inalámbrica se considera más robusto actualmente?",
+      options: [
+        "WPA2",
+        "WPA",
+        "WPA3",
+        "WEP"
+      ],
+      correct: 2,
+      explanation: "WPA3 es el estándar más reciente y robusto; introduce mejoras críticas como el cifrado individualizado de datos y una mayor protección contra ataques de fuerza bruta (SAE).",
+    },
+    {
+      id: 363,
+      subject: "REDES",
+      unit: "UT2",
+      question: "¿Qué herramienta comprueba la resolución de nombres?",
+      options: [
+        "ethtool",
+        "nslookup",
+        "ping",
+        "ipconfig"
+      ],
+      correct: 1,
+      explanation: "nslookup (Name System Lookup) es una herramienta de línea de comandos utilizada para consultar servidores DNS y verificar que un nombre de dominio se traduce correctamente a una dirección IP.",
+    },
+    {
+      id: 364,
+      subject: "REDES",
+      unit: "UT2",
+      question: "¿Qué comando Linux permite añadir una dirección IP?",
+      options: [
+        "route -n",
+        "ip addr add",
+        "ifconfig -a",
+        "netstat -rn"
+      ],
+      correct: 1,
+      explanation: "El comando 'ip addr add' es parte de la suite iproute2 en Linux y se utiliza para asignar una dirección IP y su máscara a una interfaz de red específica de forma inmediata.",
+    },
+    {
+      id: 365,
+      subject: "REDES",
+      unit: "UT2",
+      question: "¿Qué estándar Wi-Fi introdujo el uso de OFDMA?",
+      options: [
+        "802.11ax (Wi-Fi 6)",
+        "802.11n (Wi-Fi 4)",
+        "802.11g",
+        "802.11ac (Wi-Fi 5)"
+      ],
+      correct: 0,
+      explanation: "El estándar 802.11ax (Wi-Fi 6) introdujo OFDMA, una tecnología que permite dividir los canales en subcanales más pequeños para transmitir datos a múltiples dispositivos simultáneamente, mejorando drásticamente la eficiencia en redes congestionadas.",
+    },
+    {
+      id: 366,
+      subject: "REDES",
+      unit: "UT2",
+      question: "¿Qué dirección indica fallo en el servidor DHCP?",
+      options: [
+        "255.255.255.255",
+        "169.254.x.x",
+        "127.0.0.1",
+        "192.168.0.1"
+      ],
+      correct: 1,
+      explanation: "Cuando un dispositivo no recibe respuesta de un servidor DHCP, se autoasigna una dirección IP en el rango 169.254.0.0/16 mediante un proceso llamado APIPA (Automatic Private IP Addressing).",
+    },
+    {
+      id: 367,
+      subject: "REDES",
+      unit: "UT2",
+      question: "¿Qué estándar define el etiquetado en infraestructuras de red?",
+      options: [
+        "IEEE 802.3",
+        "EN 50173",
+        "ISO/IEC 11801",
+        "TIA/EIA-606-B"
+      ],
+      correct: 3,
+      explanation: "El estándar TIA/EIA-606-B establece las directrices para el etiquetado e identificación de todos los componentes de la infraestructura (cables, armarios, tomas y espacios), facilitando el mantenimiento y la resolución de problemas.",
+    },
+    {
+      id: 368,
+      subject: "REDES",
+      unit: "UT2",
+      question: "¿Qué error ocurre al asignar manualmente dos direcciones iguales?",
+      options: [
+        "Timeout",
+        "Fragmentación",
+        "Conflicto de IP",
+        "Bucle de red"
+      ],
+      correct: 2,
+      explanation: "Un conflicto de IP sucede cuando dos dispositivos en la misma red intentan usar la misma dirección lógica. Esto provoca inestabilidad y pérdida de conectividad en ambos equipos, ya que el router no sabe a cuál enviar los paquetes.",
+    },
+    {
+      id: 369,
+      subject: "REDES",
+      unit: "UT2",
+      question: "¿Qué herramienta certifica instalaciones de cobre y fibra?",
+      options: [
+        "Analizador Wireshark",
+        "Multímetro",
+        "Probador básico",
+        "Certificador Fluke"
+      ],
+      correct: 3,
+      explanation: "Un certificador (como los de la marca Fluke) realiza pruebas exhaustivas siguiendo normativas internacionales para garantizar que el cable cumple con los estándares de velocidad y calidad, generando un informe oficial de validez.",
+    },
+    {
+      id: 370,
+      subject: "REDES",
+      unit: "UT2",
+      question: "¿Qué norma internacional regula el cableado estructurado en Europa?",
+      options: [
+        "ISO/IEC 11801",
+        "EN 50173",
+        "ANSI/TIA/EIA-568",
+        "IEEE 802.11"
+      ],
+      correct: 1,
+      explanation: "La norma EN 50173 es el estándar europeo para el cableado estructurado, basado en la norma internacional ISO/IEC 11801, y define los requisitos de rendimiento para redes en edificios comerciales.",
+    },
+    {
+      id: 371,
+      subject: "REDES",
+      unit: "UT2",
+      question: "¿Qué protocolo asigna direcciones IP dinámicamente?",
+      options: [
+        "DNS",
+        "DHCP",
+        "ARP",
+        "NAT"
+      ],
+      correct: 1,
+      explanation: "El protocolo DHCP (Dynamic Host Configuration Protocol) es el encargado de asignar de forma automática y dinámica direcciones IP a los clientes de una red, junto con otros parámetros como la máscara y la puerta de enlace.",
+    },
   ];
 
   // =========================
