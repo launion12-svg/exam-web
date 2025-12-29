@@ -7,6 +7,7 @@ const SUBJECTS = {
   ISO: "Implantación de Sistemas Operativos",
   REDES: "Planificación y Administración de Redes",
   IPE1: "Itinerario Personal para la Empleabilidad I",
+  BBDD: "Bases de Datos", // <--- Añadimos esta línea
 };
 
 const ExamSimulator = () => {
