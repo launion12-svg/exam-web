@@ -4531,6 +4531,286 @@ const ExamSimulator = () => {
       correct: 1,
       explanation: "El protocolo DHCP (Dynamic Host Configuration Protocol) es el encargado de asignar de forma automática y dinámica direcciones IP a los clientes de una red, junto con otros parámetros como la máscara y la puerta de enlace.",
     },
+    {
+      id: 372,
+      subject: "REDES",
+      unit: "UT3",
+      question: "¿Qué protocolo de autenticación de usuarios puede usarse en switches?",
+      options: [
+        "FTP",
+        "802.1X",
+        "ARP",
+        "RIP"
+      ],
+      correct: 1,
+      explanation: "El estándar IEEE 802.1X permite el control de acceso a la red basado en puertos. Cuando un dispositivo se conecta al switch, este solicita credenciales antes de permitir el paso de tráfico de datos.",
+    },
+    {
+      id: 373,
+      subject: "REDES",
+      unit: "UT3",
+      question: "¿Qué mejora aporta RSTP frente a STP?",
+      options: [
+        "Elimina la necesidad de VLANs",
+        "Menor tiempo de convergencia",
+        "Mayor número de VLANs",
+        "Soporte de IPv6"
+      ],
+      correct: 1,
+      explanation: "RSTP (Rapid Spanning Tree Protocol - 802.1w) es una evolución del STP tradicional que reduce drásticamente el tiempo de convergencia (el tiempo que tarda la red en volver a ser estable tras un fallo) de 30-50 segundos a apenas 1 o 2 segundos.",
+    },
+    {
+      id: 374,
+      subject: "REDES",
+      unit: "UT3",
+      question: "¿Qué técnica protege el plano de control del switch frente a ataques?",
+      options: [
+        "EtherChannel",
+        "Control Plane Policing (CoPP)",
+        "VLANs",
+        "ACLs"
+      ],
+      correct: 1,
+      explanation: "Control Plane Policing (CoPP) es una técnica que permite filtrar y limitar el tráfico destinado a la CPU del switch, evitando que ataques de denegación de servicio (DoS) saturen el cerebro del dispositivo.",
+    },
+    {
+      id: 375,
+      subject: "REDES",
+      unit: "UT3",
+      question: "¿Qué comando guarda la configuración en memoria de arranque en Cisco?",
+      options: [
+        "show startup-config",
+        "write erase",
+        "copy running-config startup-config",
+        "reload"
+      ],
+      correct: 2,
+      explanation: "El comando 'copy running-config startup-config' copia la configuración que se está ejecutando en la RAM hacia la memoria NVRAM, asegurando que los cambios se mantengan tras un reinicio.",
+    },
+    {
+      id: 376,
+      subject: "REDES",
+      unit: "UT3",
+      question: "¿Qué diferencia principal existe entre un switch gestionable y uno no gestionable?",
+      options: [
+        "El gestionable no tiene interfaz de administración",
+        "El no gestionable soporta VLANs",
+        "El no gestionable ofrece CLI",
+        "El gestionable permite configurar, monitorizar y aplicar políticas de red"
+      ],
+      correct: 3,
+      explanation: "Un switch gestionable ofrece control total sobre el tráfico a través de una interfaz (CLI o Web), permitiendo crear VLANs, configurar la seguridad de puertos y monitorizar el rendimiento, mientras que el no gestionable es 'Plug-and-Play' sin opciones de configuración.",
+    },
+    {
+      id: 377,
+      subject: "REDES",
+      unit: "UT3",
+      question: "¿Qué tecnología permite unir varios enlaces físicos en uno lógico?",
+      options: [
+        "DHCP Snooping",
+        "ARP",
+        "RIP",
+        "LACP/EtherChannel"
+      ],
+      correct: 3,
+      explanation: "LACP (estándar) o EtherChannel (Cisco) permiten agrupar múltiples enlaces físicos de Ethernet para que funcionen como una única conexión lógica, aumentando el ancho de banda y ofreciendo redundancia.",
+    },
+    {
+      id: 378,
+      subject: "REDES",
+      unit: "UT3",
+      question: "¿Qué herramienta permite capturar tráfico mediante un puerto espejo?",
+      options: [
+        "FTP",
+        "SMTP",
+        "SPAN",
+        "DNS"
+      ],
+      correct: 2,
+      explanation: "SPAN (Switched Port Analyzer), también conocido como Port Mirroring, es una función de los switches que copia el tráfico de uno o varios puertos hacia otro puerto específico para que pueda ser analizado por un sniffer como Wireshark.",
+    },
+    {
+      id: 379,
+      subject: "REDES",
+      unit: "UT3",
+      question: "¿Qué significa AAA en administración de red?",
+      options: [
+        "Acceso Anónimo Autorizado",
+        "Ancho de banda, Autonomía y Adaptación",
+        "Autenticación, Autorización y Accounting",
+        "Administración Avanzada Automática"
+      ],
+      correct: 2,
+      explanation: "El modelo AAA define los tres procesos de seguridad: Autenticación (quién eres), Autorización (qué puedes hacer) y Accounting (qué has hecho, registro de actividad).",
+    },
+    {
+      id: 380,
+      subject: "REDES",
+      unit: "UT3",
+      question: "¿Qué protocolo protege contra ataques de ARP spoofing?",
+      options: [
+        "FTP",
+        "RIP",
+        "SNMP",
+        "Dynamic ARP Inspection (DAI)"
+      ],
+      correct: 3,
+      explanation: "Dynamic ARP Inspection (DAI) es una función de seguridad que valida los paquetes ARP en la red, descartando aquellos que intentan suplantar identidades mediante asociaciones IP-MAC falsas.",
+    },
+    {
+      id: 381,
+      subject: "REDES",
+      unit: "UT3",
+      question: "¿Qué comando muestra la tabla de direcciones MAC en un switch Cisco?",
+      options: [
+        "show ip interface brief",
+        "show logging",
+        "show mac address-table",
+        "show arp"
+      ],
+      correct: 2,
+      explanation: "El comando 'show mac address-table' visualiza la tabla CAM (Content Addressable Memory) del switch, que asocia cada dirección MAC aprendida con su correspondiente puerto físico y VLAN.",
+    },
+    {
+      id: 382,
+      subject: "REDES",
+      unit: "UT3",
+      question: "¿Cuál es el método más seguro de acceso remoto a un switch?",
+      options: [
+        "SSH",
+        "Acceso sin contraseña",
+        "HTTP sin cifrar",
+        "Telnet"
+      ],
+      correct: 0,
+      explanation: "SSH (Secure Shell) utiliza cifrado para proteger la comunicación entre el administrador y el dispositivo, evitando que las contraseñas o comandos sean interceptados en texto plano.",
+    },
+    {
+      id: 383,
+      subject: "REDES",
+      unit: "UT3",
+      question: "¿Qué comando de Cisco muestra la configuración activa en un switch?",
+      options: [
+        "show startup-config",
+        "show version",
+        "show running-config",
+        "show vlan brief"
+      ],
+      correct: 2,
+      explanation: "El comando 'show running-config' muestra la configuración que reside actualmente en la memoria RAM y que está controlando el funcionamiento del switch en ese instante.",
+    },
+    {
+      id: 384,
+      subject: "REDES",
+      unit: "UT3",
+      question: "¿Qué comando muestra el estado de las interfaces en un switch Cisco?",
+      options: [
+        "show vlan brief",
+        "show interfaces status",
+        "show memory",
+        "show users"
+      ],
+      correct: 1,
+      explanation: "El comando 'show interfaces status' proporciona una tabla resumida que muestra si cada puerto está conectado, su VLAN, el modo de duplicidad (duplex), la velocidad y el tipo de medio.",
+    },
+    {
+      id: 385,
+      subject: "REDES",
+      unit: "UT3",
+      question: "¿Cuál es la finalidad de las VLANs en un switch?",
+      options: [
+        "Evitar el uso de protocolos",
+        "Sustituir al direccionamiento IP",
+        "Segmentar lógicamente la red en dominios independientes",
+        "Aumentar la velocidad física del puerto"
+      ],
+      correct: 2,
+      explanation: "Las VLANs (Virtual LAN) permiten dividir un switch físico en varias redes lógicas separadas, mejorando la seguridad, el rendimiento y reduciendo el tráfico de difusión (broadcast).",
+    },
+    {
+      id: 386,
+      subject: "REDES",
+      unit: "UT3",
+      question: "¿Qué función cumple el Port Security?",
+      options: [
+        "Permitir más VLANs",
+        "Aumentar el ancho de banda",
+        "Desactivar el STP",
+        "Limitar el número de direcciones MAC por puerto"
+      ],
+      correct: 3,
+      explanation: "Port Security es una característica de los switches que permite restringir la entrada a un puerto específico basándose en las direcciones MAC de los dispositivos, permitiendo solo un número determinado o direcciones específicas.",
+    },
+    {
+      id: 387,
+      subject: "REDES",
+      unit: "UT3",
+      question: "¿Qué comando permite verificar el estado del protocolo STP en Cisco?",
+      options: [
+        "show running-config",
+        "show vlan brief",
+        "show spanning-tree",
+        "show ip route"
+      ],
+      correct: 2,
+      explanation: "El comando 'show spanning-tree' muestra información detallada sobre el estado del protocolo Spanning Tree, incluyendo el Bridge ID, el Root Bridge y el estado de cada puerto (Blocking, Forwarding, etc.).",
+    },
+    {
+      id: 388,
+      subject: "REDES",
+      unit: "UT3",
+      question: "¿Qué práctica es fundamental antes de actualizar el firmware de un switch?",
+      options: [
+        "Deshabilitar todos los puertos",
+        "Borrar las VLANs existentes",
+        "Realizar copia de seguridad de la configuración",
+        "Desactivar el STP"
+      ],
+      correct: 2,
+      explanation: "Realizar un backup de la configuración actual es crítico, ya que una actualización de firmware puede fallar o resetear los parámetros a valores de fábrica, provocando una caída total del servicio si no se puede restaurar.",
+    },
+    {
+      id: 389,
+      subject: "REDES",
+      unit: "UT3",
+      question: "¿Qué medida de seguridad bloquea servidores DHCP falsos?",
+      options: [
+        "DHCP Snooping",
+        "QoS",
+        "ARP Inspection",
+        "NAT"
+      ],
+      correct: 0,
+      explanation: "DHCP Snooping crea un muro de confianza en el switch, permitiendo mensajes DHCP solo desde puertos marcados como 'trust' (donde está el servidor real) y bloqueando intentos desde puertos de usuario.",
+    },
+    {
+      id: 390,
+      subject: "REDES",
+      unit: "UT3",
+      question: "¿Qué protocolo se utiliza para monitorizar dispositivos de red?",
+      options: [
+        "SMTP",
+        "SNMP",
+        "HTTP",
+        "FTP"
+      ],
+      correct: 1,
+      explanation: "SNMP (Simple Network Management Protocol) permite a los administradores de red gestionar el rendimiento de la red, encontrar y resolver problemas, y planificar el crecimiento de la misma mediante la monitorización de dispositivos.",
+    },
+    {
+      id: 391,
+      subject: "REDES",
+      unit: "UT3",
+      question: "¿Qué protocolo evita los bucles en redes de conmutación?",
+      options: [
+        "STP",
+        "RIP",
+        "BGP",
+        "OSPF"
+      ],
+      correct: 0,
+      explanation: "STP (Spanning Tree Protocol) es el protocolo estándar de Capa 2 diseñado para detectar y prevenir bucles lógicos en topologías de red redundantes, bloqueando puertos de forma selectiva.",
+    },
   ];
 
   // =========================
