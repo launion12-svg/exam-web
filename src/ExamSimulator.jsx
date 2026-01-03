@@ -3,6 +3,83 @@ import { RotateCcw, BookOpen } from "lucide-react";
 
 const EXAM_DURATION_SECONDS = 60 * 60; // 60 minutos
 
+// ===== Helpers UT =====
+const parseUnitNumber = (unitStr) => {
+  const n = Number(String(unitStr || "").replace(/[^0-9]/g, ""));
+  return Number.isFinite(n) && n > 0 ? n : null;
+};
+
+const groupByUnit = (pool) => {
+  const map = new Map();
+  for (const q of pool) {
+    const u = parseUnitNumber(q.unit);
+    if (!u) continue;
+    if (!map.has(u)) map.set(u, []);
+    map.get(u).push(q);
+  }
+  return map;
+};
+
+const pickWeightedByUnit = (pool, total = 30, curve = 1.6) => {
+  const byUnit = groupByUnit(pool);
+  const units = Array.from(byUnit.keys()).sort((a, b) => a - b);
+  if (units.length === 0) return [];
+
+  const maxUnit = Math.max(...units);
+  const weights = units.map((u) => Math.pow(u / maxUnit, curve));
+  const sumW = weights.reduce((a, b) => a + b, 0);
+
+  const raw = units.map((u, idx) => {
+    const exact = (total * weights[idx]) / sumW;
+    return { unit: u, exact, base: Math.floor(exact), frac: exact - Math.floor(exact) };
+  });
+
+  let assigned = raw.reduce((a, x) => a + x.base, 0);
+  let remaining = total - assigned;
+
+  raw.sort((a, b) => b.frac - a.frac);
+  for (let i = 0; i < raw.length && remaining > 0; i++) {
+    raw[i].base += 1;
+    remaining -= 1;
+  }
+
+  raw.sort((a, b) => a.unit - b.unit);
+
+  let shortfall = 0;
+  for (const r of raw) {
+    const avail = byUnit.get(r.unit).length;
+    if (r.base > avail) {
+      shortfall += (r.base - avail);
+      r.base = avail;
+    }
+  }
+
+  if (shortfall > 0) {
+    const candidates = [...raw].sort((a, b) => b.unit - a.unit);
+    while (shortfall > 0) {
+      let placed = false;
+      for (const r of candidates) {
+        const avail = byUnit.get(r.unit).length;
+        if (r.base < avail) {
+          r.base += 1;
+          shortfall -= 1;
+          placed = true;
+          if (shortfall === 0) break;
+        }
+      }
+      if (!placed) break;
+    }
+  }
+
+  const picked = [];
+  for (const r of raw) {
+    const qs = shuffleArray(byUnit.get(r.unit));
+    picked.push(...qs.slice(0, r.base));
+  }
+
+  return shuffleArray(picked).slice(0, total);
+};
+
 const SUBJECTS = {
   ISO: "Implantación de Sistemas Operativos",
   REDES: "Planificación y Administración de Redes",
