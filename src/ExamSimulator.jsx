@@ -4811,6 +4811,286 @@ const ExamSimulator = () => {
       correct: 0,
       explanation: "STP (Spanning Tree Protocol) es el protocolo estándar de Capa 2 diseñado para detectar y prevenir bucles lógicos en topologías de red redundantes, bloqueando puertos de forma selectiva.",
     },
+    {
+      id: 392,
+      subject: "REDES",
+      unit: "UT4",
+      question: "¿Cuál es la función principal de un router en una red?",
+      options: [
+        "Proporcionar direcciones IP dinámicas",
+        "Conmutación de tramas Ethernet",
+        "Proteger contra malware",
+        "Encaminamiento de paquetes entre diferentes subredes"
+      ],
+      correct: 3,
+      explanation: "La función principal de un router es interconectar diferentes redes o subredes, determinando la mejor ruta para enviar los paquetes de datos desde su origen hasta su destino final.",
+    },
+    {
+      id: 393,
+      subject: "REDES",
+      unit: "UT4",
+      question: "¿Qué comando en Cisco muestra las traducciones NAT activas?",
+      options: [
+        "show ip nat translations",
+        "show running-config",
+        "show interfaces brief",
+        "show version"
+      ],
+      correct: 0,
+      explanation: "El comando 'show ip nat translations' muestra la tabla dinámica de NAT, donde se puede ver la correspondencia entre las direcciones IP privadas (locales) y las públicas (globales) en tiempo real.",
+    },
+    {
+      id: 394,
+      subject: "REDES",
+      unit: "UT4",
+      question: "¿Qué se consulta para verificar conectividad básica en router?",
+      options: [
+        "clear counters",
+        "show version",
+        "reload",
+        "Comando ping"
+      ],
+      correct: 3,
+      explanation: "El comando ping utiliza el protocolo ICMP para enviar paquetes de eco a una dirección IP de destino y esperar una respuesta, lo que permite verificar si existe conectividad física y lógica entre dos puntos.",
+    },
+    {
+      id: 395,
+      subject: "REDES",
+      unit: "UT4",
+      question: "¿Qué elemento define una ruta estática?",
+      options: [
+        "Dirección MAC",
+        "Destino, máscara y nexthop",
+        "Versión del firmware",
+        "Nombre de interfaz"
+      ],
+      correct: 1,
+      explanation: "Una ruta estática requiere especificar la red de destino, la máscara de subred correspondiente y la dirección IP del siguiente salto (next-hop) o la interfaz de salida.",
+    },
+    {
+      id: 396,
+      subject: "REDES",
+      unit: "UT4",
+      question: "¿Qué plano del router se encarga de reenviar paquetes?",
+      options: [
+        "Plano de seguridad",
+        "Plano de datos",
+        "Plano de control",
+        "Plano de gestión"
+      ],
+      correct: 1,
+      explanation: "El Plano de Datos (Data Plane o Forwarding Plane) es el responsable de mover los paquetes desde la interfaz de entrada a la de salida basándose en la tabla de reenvío.",
+    },
+    {
+      id: 397,
+      subject: "REDES",
+      unit: "UT4",
+      question: "¿Qué significa ACL en redes?",
+      options: [
+        "Active Connection Link",
+        "Address Configuration Layer",
+        "Administrative Control Level",
+        "Access Control List"
+      ],
+      correct: 3,
+      explanation: "Una ACL (Access Control List) es una lista de reglas que permiten o deniegan el paso de tráfico de red basándose en criterios como la dirección IP de origen, destino o el número de puerto.",
+    },
+    {
+      id: 398,
+      subject: "REDES",
+      unit: "UT4",
+      question: "¿Qué ventaja ofrece NAT?",
+      options: [
+        "Permite compartir una IP pública entre varias privadas",
+        "Sustituir al routing dinámico",
+        "Aumenta el ancho de banda",
+        "Mejora la latencia"
+      ],
+      correct: 0,
+      explanation: "La ventaja principal de NAT (Network Address Translation) es el ahorro de direcciones IPv4 públicas, permitiendo que múltiples dispositivos de una red privada salgan a Internet bajo una única dirección pública.",
+    },
+    {
+      id: 399,
+      subject: "REDES",
+      unit: "UT4",
+      question: "¿Qué protocolo se usa para monitorizar routers mediante SNMP?",
+      options: [
+        "Simple Network Management Protocol",
+        "Static Network Management Protocol",
+        "Secure Network Monitoring Protocol",
+        "System Network Management Process"
+      ],
+      correct: 0,
+      explanation: "SNMP (Simple Network Management Protocol) es el estándar de la capa de aplicación utilizado para el intercambio de información de gestión entre dispositivos de red y sistemas de monitorización.",
+    },
+    {
+      id: 400,
+      subject: "REDES",
+      unit: "UT4",
+      question: "¿Qué tecnología se puede combinar con ACLs?",
+      options: [
+        "DHCP",
+        "QoS",
+        "SMTP",
+        "FTP"
+      ],
+      correct: 1,
+      explanation: "Las ACLs se pueden utilizar dentro de políticas de QoS (Quality of Service) para clasificar el tráfico. Una vez identificado el tráfico específico mediante la ACL, el router puede darle prioridad o limitar su ancho de banda.",
+    },
+    {
+      id: 401,
+      subject: "REDES",
+      unit: "UT4",
+      question: "¿Qué comando en Cisco muestra los vecinos BGP?",
+      options: [
+        "show ip bgp summary",
+        "show processes cpu",
+        "show logging",
+        "show ip route"
+      ],
+      correct: 0,
+      explanation: "El comando 'show ip bgp summary' muestra el estado de las conexiones con los vecinos BGP (neighbors), indicando si la sesión está establecida y cuántos prefijos (rutas) se han recibido de cada uno.",
+    },
+    {
+      id: 402,
+      subject: "REDES",
+      unit: "UT4",
+      question: "¿Qué plano usa SSH y SNMP?",
+      options: [
+        "Plano de gestión",
+        "Plano físico",
+        "Plano de control",
+        "Plano de datos"
+      ],
+      correct: 0,
+      explanation: "El Plano de Gestión (Management Plane) se utiliza para el tráfico generado para administrar el dispositivo, incluyendo protocolos de acceso remoto como SSH y protocolos de monitorización como SNMP.",
+    },
+    {
+      id: 403,
+      subject: "REDES",
+      unit: "UT4",
+      question: "¿Qué significa CoPP?",
+      options: [
+        "Control Plane Policing",
+        "Configuration of Packet Paths",
+        "Core Port Processing",
+        "Control of Physical Ports"
+      ],
+      correct: 0,
+      explanation: "CoPP (Control Plane Policing) es una característica de seguridad que permite filtrar y limitar la tasa de tráfico destinado al procesador (plano de control) del router para evitar que sea sobrecargado por tráfico malicioso o excesivo.",
+    },
+    {
+      id: 404,
+      subject: "REDES",
+      unit: "UT4",
+      question: "¿Qué comando en Cisco permite ver la tabla de enrutamiento?",
+      options: [
+        "show interfaces status",
+        "ping",
+        "show ip route",
+        "show version"
+      ],
+      correct: 2,
+      explanation: "El comando 'show ip route' muestra la tabla de enrutamiento IP del router, detallando las redes conocidas, su origen (estático, conectado o protocolo dinámico) y la interfaz de salida.",
+    },
+    {
+      id: 405,
+      subject: "REDES",
+      unit: "UT4",
+      question: "¿Qué comando en Linux muestra las rutas activas?",
+      options: [
+        "ifconfig",
+        "ip route show",
+        "netstat -an",
+        "uname -a"
+      ],
+      correct: 1,
+      explanation: "En sistemas Linux modernos, el comando 'ip route show' (o simplemente 'ip route') es la herramienta estándar para visualizar y gestionar la tabla de enrutamiento IP.",
+    },
+    {
+      id: 406,
+      subject: "REDES",
+      unit: "UT4",
+      question: "¿Qué significa PAT?",
+      options: [
+        "Packet Adjustment Technique",
+        "Protocol Allocation Table",
+        "Public Address Transfer",
+        "Port Address Translation"
+      ],
+      correct: 3,
+      explanation: "PAT (Port Address Translation) es una forma de NAT dinámico que permite mapear múltiples direcciones IP privadas a una sola dirección IP pública utilizando diferentes números de puerto para distinguir cada sesión.",
+    },
+    {
+      id: 407,
+      subject: "REDES",
+      unit: "UT4",
+      question: "¿Qué campo se revisa en tabla de rutas para identificar origen?",
+      options: [
+        "Nombre del usuario",
+        "Velocidad del puerto",
+        "Código de ruta (C, S, O, B)",
+        "Dirección MAC"
+      ],
+      correct: 2,
+      explanation: "Los códigos de ruta al inicio de la tabla (como 'C' para redes conectadas o 'S' para estáticas) indican al administrador cómo ha aprendido el router esa ruta específica.",
+    },
+    {
+      id: 408,
+      subject: "REDES",
+      unit: "UT4",
+      question: "¿Qué recurso se debe tener siempre antes de un cambio en router?",
+      options: [
+        "Usuario root",
+        "Nueva licencia",
+        "Backup de configuración",
+        "Cambio de cableado"
+      ],
+      correct: 2,
+      explanation: "Realizar un backup de la configuración (running-config) permite restaurar el estado operativo del router en caso de que el nuevo cambio provoque fallos o inestabilidad en la red.",
+    },
+    {
+      id: 409,
+      subject: "REDES",
+      unit: "UT4",
+      question: "¿Qué técnica asegura un rollback rápido?",
+      options: [
+        "Reemplazo de hardware",
+        "Cambiar firmware",
+        "Reiniciar router",
+        "Backup de configuración"
+      ],
+      correct: 3,
+      explanation: "Contar con un backup de la configuración actual antes de aplicar cambios permite revertir (rollback) rápidamente el dispositivo a su estado funcional anterior si algo sale mal.",
+    },
+    {
+      id: 410,
+      subject: "REDES",
+      unit: "UT4",
+      question: "¿Qué máscara se suele usar en enlaces punto a punto?",
+      options: [
+        "/30 o /31",
+        "/24",
+        "/16",
+        "/8"
+      ],
+      correct: 0,
+      explanation: "En enlaces punto a punto (donde solo hay dos routers conectados) se usan máscaras /30 para tener 2 IPs útiles, o /31 para ahorrar aún más direcciones según el estándar RFC 3021.",
+    },
+    {
+      id: 411,
+      subject: "REDES",
+      unit: "UT4",
+      question: "¿Qué tipo de NAT traduce una IP privada en una pública fija?",
+      options: [
+        "NAT64",
+        "NAT dinámico",
+        "PAT",
+        "NAT estático"
+      ],
+      correct: 3,
+      explanation: "El NAT estático realiza un mapeo uno a uno de una dirección IP privada a una dirección IP pública específica y permanente.",
+    },
   ];
 
   // =========================
