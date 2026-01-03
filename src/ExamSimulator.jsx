@@ -5091,6 +5091,287 @@ const ExamSimulator = () => {
       correct: 3,
       explanation: "El NAT estático realiza un mapeo uno a uno de una dirección IP privada a una dirección IP pública específica y permanente.",
     },
+    {
+      id: 412,
+      subject: "REDES",
+      unit: "UT5",
+      question: "¿Qué comando muestra las VLANs permitidas en un trunk en Cisco?",
+      options: [
+        "show arp",
+        "show interfaces trunk",
+        "show ip route",
+        "show mac address-table"
+      ],
+      correct: 1,
+      explanation: "El comando 'show interfaces trunk' permite visualizar qué interfaces están actuando como enlaces troncales, el protocolo de encapsulamiento (802.1Q) y la lista de VLANs que tienen permitido el paso por dicho enlace.",
+    },
+    {
+      id: 413,
+      subject: "REDES",
+      unit: "UT5",
+      question: "¿Qué VLAN no es recomendable usar como nativa?",
+      options: [
+        "VLAN 200",
+        "VLAN 100",
+        "VLAN 10",
+        "VLAN 1"
+      ],
+      correct: 3,
+      explanation: "La VLAN 1 es la VLAN nativa por defecto en todos los switches Cisco. Por seguridad, se recomienda cambiarla a una VLAN no utilizada para evitar ataques de salto de VLAN (VLAN Hopping).",
+    },
+    {
+      id: 414,
+      subject: "REDES",
+      unit: "UT5",
+      question: "¿Qué interfaz lógica sirve de gateway para una VLAN?",
+      options: [
+        "VLAN nativa",
+        "QinQ",
+        "SVI (Switch Virtual Interface)",
+        "Puerto trunk"
+      ],
+      correct: 2,
+      explanation: "Una SVI (Switch Virtual Interface) es una interfaz lógica configurada en un switch de Capa 3 que actúa como la puerta de enlace (gateway) predeterminada para todos los dispositivos de esa VLAN específica.",
+    },
+    {
+      id: 415,
+      subject: "REDES",
+      unit: "UT5",
+      question: "¿Qué herramienta evita servidores DHCP no autorizados?",
+      options: [
+        "PortSecurity",
+        "NAT",
+        "ARP Inspection",
+        "DHCP Snooping"
+      ],
+      correct: 3,
+      explanation: "DHCP Snooping es una característica de seguridad de Capa 2 que filtra los mensajes DHCP de servidores no confiables, permitiendo el tráfico solo desde puertos configurados como 'trusted' (donde se encuentra el servidor DHCP legítimo).",
+    },
+    {
+      id: 416,
+      subject: "REDES",
+      unit: "UT5",
+      question: "¿Qué es una VLAN?",
+      options: [
+        "Un protocolo de enrutamiento dinámico",
+        "Una red lógica que segmenta un dominio de broadcast",
+        "Una interfaz física de red",
+        "Un dispositivo de seguridad perimetral"
+      ],
+      correct: 1,
+      explanation: "Una VLAN (Virtual Local Area Network) permite agrupar dispositivos de forma lógica, incluso si están en diferentes switches físicos, creando dominios de difusión (broadcast) separados para mejorar el rendimiento y la seguridad.",
+    },
+    {
+      id: 417,
+      subject: "REDES",
+      unit: "UT5",
+      question: "¿Qué es la VLAN nativa?",
+      options: [
+        "VLAN reservada para VoIP",
+        "VLAN dedicada a servidores",
+        "VLAN de administración",
+        "VLAN a la que van los frames no etiquetados"
+      ],
+      correct: 3,
+      explanation: "La VLAN nativa es aquella cuyas tramas (frames) se envían a través de un enlace troncal (trunk) sin ninguna etiqueta 802.1Q. Por defecto, en equipos Cisco es la VLAN 1.",
+    },
+    {
+      id: 418,
+      subject: "REDES",
+      unit: "UT5",
+      question: "¿Qué se requiere para que dos VLANs se comuniquen entre sí?",
+      options: [
+        "Un trunk abierto",
+        "Inter-VLAN routing",
+        "DHCP Snooping",
+        "QinQ"
+      ],
+      correct: 1,
+      explanation: "El Inter-VLAN routing es el proceso de reenviar tráfico de red de una VLAN a otra. Esto requiere un dispositivo de Capa 3, como un router o un switch multicapa (SVI).",
+    },
+    {
+      id: 419,
+      subject: "REDES",
+      unit: "UT5",
+      question: "¿Qué significa QinQ?",
+      options: [
+        "Protocolo de redundancia",
+        "Traducción de direcciones IP",
+        "Apilamiento de etiquetas VLAN",
+        "Enrutamiento entre VLANs"
+      ],
+      correct: 2,
+      explanation: "QinQ (estándar IEEE 802.1ad) consiste en añadir una segunda etiqueta VLAN (802.1Q) a una trama que ya tiene una, permitiendo que un proveedor de servicios transporte las VLANs de un cliente de forma aislada a través de su propia infraestructura.",
+    },
+    {
+      id: 420,
+      subject: "REDES",
+      unit: "UT5",
+      question: "¿Qué se debe probar tras configurar VLANs?",
+      options: [
+        "Únicamente tablas ARP",
+        "Únicamente conectividad",
+        "Conectividad, rendimiento y seguridad",
+        "Únicamente logs"
+      ],
+      correct: 2,
+      explanation: "Tras configurar VLANs, no basta con que haya 'ping'. Se debe verificar que el rendimiento sea el esperado (sin cuellos de botella en los trunks) y que las políticas de seguridad (aislamiento entre VLANs) se estén cumpliendo correctamente.",
+    },
+    {
+      id: 421,
+      subject: "REDES",
+      unit: "UT5",
+      question: "¿Qué protocolo inserta etiquetas para VLANs en tramas Ethernet?",
+      options: [
+        "RIP",
+        "802.1Q",
+        "OSPF",
+        "BGP"
+      ],
+      correct: 1,
+      explanation: "El estándar IEEE 802.1Q (dot1q) es el protocolo de encapsulamiento que añade una etiqueta de 4 bytes a la trama Ethernet original para identificar a qué VLAN pertenece el tráfico en un enlace troncal.",
+    },
+    {
+      id: 422,
+      subject: "REDES",
+      unit: "UT5",
+      question: "¿Qué comando en Cisco permite listar VLANs configuradas?",
+      options: [
+        "show interfaces status",
+        "show vlan brief",
+        "show running-config",
+        "show ip route"
+      ],
+      correct: 1,
+      explanation: "El comando 'show vlan brief' muestra un resumen de todas las VLANs existentes en el switch, su estado (active/activa) y los puertos asignados a cada una de ellas.",
+    },
+    {
+      id: 423,
+      subject: "REDES",
+      unit: "UT5",
+      question: "¿Qué protección evita ARP spoofing?",
+      options: [
+        "DHCP Snooping",
+        "IP Source Guard",
+        "Dynamic ARP Inspection (DAI)",
+        "VRRP"
+      ],
+      correct: 2,
+      explanation: "Dynamic ARP Inspection (DAI) valida los paquetes ARP en la red. Descarta aquellos que intentan suplantar una identidad comparándolos con una base de datos de confianza (generalmente creada por DHCP Snooping).",
+    },
+    {
+      id: 424,
+      subject: "REDES",
+      unit: "UT5",
+      question: "¿Qué tipo de puerto se usa para transportar varias VLANs?",
+      options: [
+        "Puerto access",
+        "Puerto loopback",
+        "Puerto de gestión",
+        "Puerto trunk"
+      ],
+      correct: 3,
+      explanation: "Un puerto trunk (troncal) permite el paso de tráfico de múltiples VLANs a través de un único enlace físico, utilizando etiquetas (802.1Q) para diferenciar a qué red pertenece cada trama.",
+    },
+    {
+      id: 425,
+      subject: "REDES",
+      unit: "UT5",
+      question: "¿Qué método básico permite interconectar VLANs en un router?",
+      options: [
+        "QinQ",
+        "VRRP",
+        "NAT overload",
+        "Router-on-a-stick"
+      ],
+      correct: 3,
+      explanation: "Router-on-a-stick es una configuración donde un único puerto físico del router se conecta a un switch mediante un enlace troncal, utilizando subinterfaces lógicas para enrutar el tráfico entre las diferentes VLANs.",
+    },
+    {
+      id: 426,
+      subject: "REDES",
+      unit: "UT5",
+      question: "¿Qué técnica bloquea IP spoofing en un puerto?",
+      options: [
+        "DHCP Snooping",
+        "IP Source Guard",
+        "NAT",
+        "DAI"
+      ],
+      correct: 1,
+      explanation: "IP Source Guard (IPSG) es una característica de seguridad que filtra el tráfico basándose en la dirección IP de origen, utilizando la base de datos de DHCP Snooping para evitar que un usuario utilice una IP que no le ha sido asignada.",
+    },
+    {
+      id: 427,
+      subject: "REDES",
+      unit: "UT5",
+      question: "¿Qué protocolo permite administrar VLANs de forma centralizada?",
+      options: [
+        "RIP",
+        "STP",
+        "VTP (VLAN Trunking Protocol)",
+        "OSPF"
+      ],
+      correct: 2,
+      explanation: "VTP (VLAN Trunking Protocol) permite a un administrador de red configurar una VLAN en un switch definido como 'Server' y que esta se propague automáticamente a todos los demás switches del dominio configurados como 'Clients'.",
+    },
+    {
+      id: 428,
+      subject: "REDES",
+      unit: "UT5",
+      question: "¿Qué técnica limita direcciones MAC en un puerto?",
+      options: [
+        "Port Security",
+        "IP Source Guard",
+        "DHCP Snooping",
+        "ARP Inspection"
+      ],
+      correct: 0,
+      explanation: "Port Security permite limitar el número de direcciones MAC que pueden enviar tráfico a través de un puerto del switch y definir qué direcciones específicas están autorizadas, bloqueando el puerto si se detecta una MAC desconocida.",
+    },
+    {
+      id: 429,
+      subject: "REDES",
+      unit: "UT5",
+      question: "¿Qué se debe documentar siempre de una VLAN?",
+      options: [
+        "Solo el rango IP",
+        "ID, nombre, propósito y puertos asociados",
+        "Únicamente el ID",
+        "Solo el switch asignado"
+      ],
+      correct: 1,
+      explanation: "Una documentación completa debe incluir el número de VLAN (ID), un nombre descriptivo, su función dentro de la red (propósito) y qué puertos físicos o subinterfaces están vinculados a ella.",
+    },
+    {
+      id: 430,
+      subject: "REDES",
+      unit: "UT5",
+      question: "¿Cuál es la principal ventaja de usar VLANs?",
+      options: [
+        "Aumentar la velocidad de los switches",
+        "Sustituir los routers en la red",
+        "Reducir el tráfico de broadcast y segmentar la red",
+        "Eliminar la necesidad de ACLs"
+      ],
+      correct: 2,
+      explanation: "Las VLANs permiten dividir un dominio de broadcast grande en varios más pequeños, lo que reduce la congestión de la red y mejora la seguridad al aislar lógicamente los grupos de usuarios.",
+    },
+    {
+      id: 431,
+      subject: "REDES",
+      unit: "UT5",
+      question: "¿Qué campo identifica una VLAN en una trama 802.1Q?",
+      options: [
+        "VID (VLAN Identifier)",
+        "TTL",
+        "Dirección MAC",
+        "Dirección IP"
+      ],
+      correct: 0,
+      explanation: "El campo VID (VLAN Identifier) es una parte de 12 bits dentro de la etiqueta 802.1Q que identifica específicamente a qué VLAN (de la 1 a la 4094) pertenece la trama.",
+    },
+    
   ];
 
   // =========================
