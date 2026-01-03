@@ -3,6 +3,15 @@ import { RotateCcw, BookOpen } from "lucide-react";
 
 const EXAM_DURATION_SECONDS = 60 * 60; // 60 minutos
 
+const shuffleArray = (array) => {
+    const newArray = [...array];
+    for (let i = newArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+  };
+
 // ===== Helpers UT =====
 const parseUnitNumber = (unitStr) => {
   const n = Number(String(unitStr || "").replace(/[^0-9]/g, ""));
@@ -5454,14 +5463,6 @@ const ExamSimulator = () => {
   // =========================
   // UTILIDADES
   // =========================
-  const shuffleArray = (array) => {
-    const newArray = [...array];
-    for (let i = newArray.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-    }
-    return newArray;
-  };
 
   const shuffleOptions = (question) => {
     const indices = [0, 1, 2, 3];
