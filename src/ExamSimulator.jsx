@@ -5540,8 +5540,11 @@ const ExamSimulator = () => {
 
   const initializeExam = (subjectKey) => {
     const pool = allQuestions.filter((q) => q.subject === subjectKey);
-    const shuffled = shuffleArray(pool);
-    const selected = shuffled.slice(0, 30);
+    const totalQuestions = 30;
+
+    // Llamamos a la función con curva 1.6 (el código que tú pasaste)
+    const selected = pickWeightedByUnit(pool, totalQuestions, 1.6);
+
     const questionsWithShuffledOptions = selected.map((q) => shuffleOptions(q));
     setQuestions(questionsWithShuffledOptions);
   };
