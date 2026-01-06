@@ -3,15 +3,6 @@ import { RotateCcw, BookOpen } from "lucide-react";
 
 const EXAM_DURATION_SECONDS = 60 * 60; // 60 minutos
 
-const shuffleArray = (array) => {
-    const newArray = [...array];
-    for (let i = newArray.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-    }
-    return newArray;
-  };
-
 // ===== Helpers UT =====
 const parseUnitNumber = (unitStr) => {
   const n = Number(String(unitStr || "").replace(/[^0-9]/g, ""));
@@ -5457,12 +5448,299 @@ const ExamSimulator = () => {
       correct: 0,
       explanation: "El campo VID (VLAN Identifier) es una parte de 12 bits dentro de la etiqueta 802.1Q que identifica específicamente a qué VLAN (de la 1 a la 4094) pertenece la trama.",
     },
-    
+    {
+      id: 432,
+      subject: "REDES",
+      unit: "UT6",
+      question: "¿Qué protocolo es considerado de estado de enlace?",
+      options: [
+        "RIPng",
+        "RIP",
+        "OSPF",
+        "RIPv2"
+      ],
+      correct: 2,
+      explanation: "OSPF (Open Shortest Path First) es un protocolo de estado de enlace que construye un mapa completo de la topología de la red (LSDB) para calcular la ruta más corta, a diferencia de los protocolos de vector de distancia.",
+    },
+    {
+      id: 433,
+      subject: "REDES",
+      unit: "UT6",
+      question: "¿Qué técnica permite optimizar el uso de direcciones IPv4 mediante máscaras variables?",
+      options: [
+        "ACL",
+        "DNS",
+        "VLSM",
+        "NAT"
+      ],
+      correct: 2,
+      explanation: "VLSM (Variable Length Subnet Mask) permite dividir un espacio de red en subredes de diferentes tamaños según las necesidades específicas de cada segmento, optimizando así el uso de las direcciones IP disponibles.",
+    },
+    {
+      id: 434,
+      subject: "REDES",
+      unit: "UT6",
+      question: "¿Qué ventaja principal ofrece el enrutamiento dinámico frente al estático?",
+      options: [
+        "Adaptación automática a fallos y cambios de topología",
+        "Requiere menos recursos de CPU",
+        "Evita el uso de protocolos de red",
+        "Siempre es más seguro"
+      ],
+      correct: 0,
+      explanation: "El enrutamiento dinámico permite que los routers intercambien información sobre el estado de la red en tiempo real, recalculando automáticamente nuevas rutas si un enlace falla o si se añade un nuevo segmento.",
+    },
+    {
+      id: 435,
+      subject: "REDES",
+      unit: "UT6",
+      question: "¿Qué protocolo utiliza LSAs y LSDB para calcular rutas?",
+      options: [
+        "BGP",
+        "RIP",
+        "EIGRP",
+        "OSPF"
+      ],
+      correct: 3,
+      explanation: "OSPF utiliza LSAs (Link-State Advertisements) para compartir información sobre enlaces, los cuales se almacenan en la LSDB (Link-State Database) para que cada router pueda calcular el árbol de rutas más cortas.",
+    },
+    {
+      id: 436,
+      subject: "REDES",
+      unit: "UT6",
+      question: "¿Qué técnica permite agrupar varias redes en una sola entrada de ruta?",
+      options: [
+        "CIDR",
+        "ARP",
+        "NAT",
+        "DNS"
+      ],
+      correct: 0,
+      explanation: "CIDR (Classless Inter-Domain Routing) permite la sumatización de rutas (supernetting), agrupando múltiples redes contiguas en una sola entrada de la tabla de enrutamiento para mejorar la eficiencia y reducir el uso de memoria en los routers.",
+    },
+    {
+      id: 437,
+      subject: "REDES",
+      unit: "UT6",
+      question: "¿Qué comando permite ver la base de datos de LSAs en Cisco?",
+      options: [
+        "show version",
+        "show ip ospf database",
+        "traceroute",
+        "show running-config"
+      ],
+      correct: 1,
+      explanation: "El comando 'show ip ospf database' muestra la Link-State Database (LSDB), que contiene todos los anuncios de estado de enlace (LSAs) recibidos de otros routers en el área.",
+    },
+    {
+      id: 438,
+      subject: "REDES",
+      unit: "UT6",
+      question: "¿Qué técnica de prevención de bucles se aplica en RIP?",
+      options: [
+        "Fast Reroute",
+        "Áreas stub",
+        "DR/BDR",
+        "Split horizon"
+      ],
+      correct: 3,
+      explanation: "Split Horizon (Horizonte Dividido) es un mecanismo que impide que un router anuncie una ruta de vuelta por la misma interfaz por la que la aprendió, evitando así bucles de enrutamiento simples.",
+    },
+    {
+      id: 439,
+      subject: "REDES",
+      unit: "UT6",
+      question: "¿Cuál es el valor de distancia administrativa por defecto de OSPF?",
+      options: [
+        "90",
+        "120",
+        "110",
+        "1"
+      ],
+      correct: 2,
+      explanation: "La Distancia Administrativa (AD) de OSPF es 110 por defecto. Este valor se utiliza para medir la confiabilidad del protocolo; cuanto menor sea el valor, más confiable se considera la ruta.",
+    },
+    {
+      id: 440,
+      subject: "REDES",
+      unit: "UT6",
+      question: "¿Cuál es el límite máximo de saltos en RIP antes de considerar una red inalcanzable?",
+      options: [
+        "10",
+        "5",
+        "16",
+        "32"
+      ],
+      correct: 2,
+      explanation: "En RIP, una métrica de 16 saltos se considera infinito (red inalcanzable). Esto limita el tamaño de la red a un máximo de 15 routers entre el origen y el destino.",
+    },
+    {
+      id: 441,
+      subject: "REDES",
+      unit: "UT6",
+      question: "¿Qué comando en Cisco permite verificar las rutas aprendidas por RIP?",
+      options: [
+        "ping",
+        "show version",
+        "show ip route",
+        "traceroute"
+      ],
+      correct: 2,
+      explanation: "El comando 'show ip route' muestra la tabla de enrutamiento completa. Las rutas aprendidas a través de RIP aparecerán marcadas con la letra 'R' al principio de la línea.",
+    },
+    {
+      id: 442,
+      subject: "REDES",
+      unit: "UT6",
+      question: "¿Qué protocolo permite configurar rutas jerárquicas mediante áreas?",
+      options: [
+        "RIP",
+        "RIPng",
+        "ARP",
+        "OSPF"
+      ],
+      correct: 3,
+      explanation: "OSPF utiliza el concepto de 'Áreas' para dividir la red. El 'Área 0' (Backbone) interconecta a las demás áreas, lo que permite reducir el tamaño de la base de datos de estado de enlace (LSDB) en cada router y mejorar la escalabilidad.",
+    },
+    {
+      id: 443,
+      subject: "REDES",
+      unit: "UT6",
+      question: "¿Qué protocolo de enrutamiento soporta redistribución de rutas externas con LSAs tipo 5?",
+      options: [
+        "RIPng",
+        "RIPv1",
+        "OSPF",
+        "RIP"
+      ],
+      correct: 2,
+      explanation: "OSPF utiliza LSAs de tipo 5 (External LSA) para anunciar rutas que han sido redistribuidas desde otros protocolos de enrutamiento o rutas estáticas. Estos LSAs son generados por el router ASBR (Autonomous System Boundary Router).",
+    },
+    {
+      id: 444,
+      subject: "REDES",
+      unit: "UT6",
+      question: "¿Qué protocolo de enrutamiento utiliza el número de saltos como métrica?",
+      options: [
+        "EIGRP",
+        "BGP",
+        "RIP",
+        "OSPF"
+      ],
+      correct: 2,
+      explanation: "RIP (Routing Information Protocol) utiliza únicamente el conteo de saltos (hop count) para determinar la mejor ruta hacia un destino, ignorando factores como el ancho de banda o el retardo.",
+    },
+    {
+      id: 445,
+      subject: "REDES",
+      unit: "UT6",
+      question: "¿Qué prefijo CIDR ofrece 62 hosts utilizables?",
+      options: [
+        "/25",
+        "/27",
+        "/26",
+        "/28"
+      ],
+      correct: 2,
+      explanation: "Un prefijo /26 utiliza 6 bits para hosts ($2^6 = 64$). Al restar la dirección de red y la de broadcast ($64 - 2$), obtenemos exactamente 62 direcciones de host utilizables.",
+    },
+    {
+      id: 446,
+      subject: "REDES",
+      unit: "UT6",
+      question: "¿Qué herramienta mide convergencia observando pérdida de paquetes y latencia?",
+      options: [
+        "ftp",
+        "ssh",
+        "iperf3",
+        "dnslookup"
+      ],
+      correct: 2,
+      explanation: "iperf3 es una herramienta de prueba de red que puede generar flujos de tráfico TCP o UDP para medir el ancho de banda, la pérdida de paquetes y la latencia (jitter), permitiendo analizar cómo se recupera la red ante fallos.",
+    },
+    {
+      id: 447,
+      subject: "REDES",
+      unit: "UT6",
+      question: "¿Qué comando en Cisco muestra los vecinos OSPF?",
+      options: [
+        "show ip ospf neighbor",
+        "ping",
+        "show running-config",
+        "show processes"
+      ],
+      correct: 0,
+      explanation: "El comando 'show ip ospf neighbor' permite verificar si un router ha formado una adyacencia con sus vecinos, mostrando el ID del vecino, la prioridad, el estado (como FULL) y la interfaz local utilizada.",
+    },
+    {
+      id: 448,
+      subject: "REDES",
+      unit: "UT6",
+      question: "¿Qué área debe existir siempre en un diseño OSPF?",
+      options: [
+        "Área 2",
+        "Área 0 (backbone)",
+        "Área 1",
+        "Cualquier área"
+      ],
+      correct: 1,
+      explanation: "El Área 0, también conocida como área de backbone, es el núcleo central de una red OSPF. Todas las demás áreas deben estar conectadas física o lógicamente al Área 0 para permitir el intercambio de rutas entre ellas.",
+    },
+    {
+      id: 449,
+      subject: "REDES",
+      unit: "UT6",
+      question: "¿Qué valor de distancia administrativa corresponde a RIP?",
+      options: [
+        "90",
+        "110",
+        "120",
+        "200"
+      ],
+      correct: 2,
+      explanation: "La Distancia Administrativa (AD) de RIP es 120 por defecto. Al ser mayor que la de OSPF (110) o EIGRP (90), el router preferirá las rutas de estos últimos si recibe información sobre la misma red por varios protocolos.",
+    },
+    {
+      id: 450,
+      subject: "REDES",
+      unit: "UT6",
+      question: "¿Qué protocolo utiliza el multicast 224.0.0.9 para sus actualizaciones?",
+      options: [
+        "BGP",
+        "RIPng",
+        "RIPv2",
+        "OSPF"
+      ],
+      correct: 2,
+      explanation: "RIPv2 utiliza la dirección multicast 224.0.0.9 para enviar sus actualizaciones de enrutamiento solo a los routers que ejecutan el mismo protocolo, a diferencia de RIPv1 que usaba broadcast (255.255.255.255).",
+    },
+    {
+      id: 451,
+      subject: "REDES",
+      unit: "UT6",
+      question: "¿Qué concepto define la prioridad de una ruta según el origen de información?",
+      options: [
+        "Distancia administrativa",
+        "Métrica",
+        "VLAN ID",
+        "Protocolo IP"
+      ],
+      correct: 0,
+      explanation: "La Distancia Administrativa (AD) es el parámetro que utilizan los routers para seleccionar la ruta más fiable cuando hay dos o más rutas diferentes hacia el mismo destino aprendidas por distintos protocolos de enrutamiento.",
+    },
   ];
 
   // =========================
   // UTILIDADES
   // =========================
+  const shuffleArray = (array) => {
+    const newArray = [...array];
+    for (let i = newArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+  };
 
   const shuffleOptions = (question) => {
     const indices = [0, 1, 2, 3];
