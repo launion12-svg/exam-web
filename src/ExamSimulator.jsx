@@ -5728,6 +5728,286 @@ const ExamSimulator = () => {
       correct: 0,
       explanation: "La Distancia Administrativa (AD) es el parámetro que utilizan los routers para seleccionar la ruta más fiable cuando hay dos o más rutas diferentes hacia el mismo destino aprendidas por distintos protocolos de enrutamiento.",
     },
+    {
+      id: 452,
+      subject: "REDES",
+      unit: "UT7",
+      question: "¿Qué protocolo VPN es más sencillo y eficiente para conexiones remotas?",
+      options: [
+        "WireGuard",
+        "Telnet",
+        "ARP",
+        "HTTP"
+      ],
+      correct: 0,
+      explanation: "WireGuard es un protocolo VPN moderno que destaca por tener un código mucho más simple y rápido que IPsec u OpenVPN, ofreciendo un alto rendimiento y una configuración más sencilla mediante el intercambio de claves públicas.",
+    },
+    {
+      id: 453,
+      subject: "REDES",
+      unit: "UT7",
+      question: "¿Qué comando en Linux prueba el MTU máximo evitando fragmentación?",
+      options: [
+        "curl",
+        "ifconfig",
+        "ping -M do -s <size>",
+        "traceroute"
+      ],
+      correct: 2,
+      explanation: "El comando 'ping -M do' activa el bit DF (Don't Fragment). Si el tamaño del paquete (-s) supera el MTU de cualquier salto en el camino, el sistema devolverá un error, permitiendo encontrar el tamaño máximo de paquete que la red soporta sin fragmentar.",
+    },
+    {
+      id: 454,
+      subject: "REDES",
+      unit: "UT7",
+      question: "¿Qué tipo de arquitectura VPN conecta usuarios individuales a la red corporativa?",
+      options: [
+        "Multihoming",
+        "Site-to-Site",
+        "MPLS",
+        "Remote Access"
+      ],
+      correct: 3,
+      explanation: "La VPN de acceso remoto (Remote Access) permite que usuarios móviles o teletrabajadores se conecten de forma segura a la red central de la empresa a través de Internet, generalmente mediante un software cliente.",
+    },
+    {
+      id: 455,
+      subject: "REDES",
+      unit: "UT7",
+      question: "¿Qué elemento de red se recomienda para segmentar servicios expuestos a Internet?",
+      options: [
+        "VLAN de usuarios",
+        "MPLS",
+        "DMZ",
+        "Proxy ARP"
+      ],
+      correct: 2,
+      explanation: "Una DMZ (Zona Desmilitarizada) es una red aislada que contiene los servidores que deben ser accesibles desde el exterior (como servidores web). Actúa como un cortafuegos intermedio para proteger la red interna (LAN) en caso de que un servicio expuesto sea comprometido.",
+    },
+    {
+      id: 456,
+      subject: "REDES",
+      unit: "UT7",
+      question: "¿Qué protocolo de enrutamiento externo se utiliza para multihoming con ISP?",
+      options: [
+        "EIGRP",
+        "OSPF",
+        "RIP",
+        "BGP"
+      ],
+      correct: 3,
+      explanation: "BGP (Border Gateway Protocol) es el protocolo de pasarela exterior (EGP) utilizado para intercambiar información de rutas entre diferentes Sistemas Autónomos (AS). Es el estándar para gestionar conexiones multihoming con uno o varios proveedores de servicios (ISPs).",
+    },
+    {
+      id: 457,
+      subject: "REDES",
+      unit: "UT7",
+      question: "¿Cuál es la técnica más usada para que múltiples hosts compartan una única IP pública?",
+      options: [
+        "PAT (Port Address Translation)",
+        "ACL",
+        "NAT estático",
+        "NAT dinámico con pool"
+      ],
+      correct: 0,
+      explanation: "PAT, también conocido como NAT con sobrecarga (Overload), permite que miles de direcciones IP privadas se traduzcan a una única IP pública utilizando diferentes números de puerto para distinguir cada conexión.",
+    },
+    {
+      id: 458,
+      subject: "REDES",
+      unit: "UT7",
+      question: "¿Qué protocolo inalámbrico ofrece mayor cobertura en entornos metropolitanos?",
+      options: [
+        "Bluetooth",
+        "WiFi",
+        "WiMAX",
+        "ZigBee"
+      ],
+      correct: 2,
+      explanation: "WiMAX (IEEE 802.16) está diseñado para redes de área metropolitana (MAN), permitiendo coberturas de hasta 50 km y proporcionando acceso de banda ancha inalámbrica en áreas donde el despliegue de cable es costoso.",
+    },
+    {
+      id: 459,
+      subject: "REDES",
+      unit: "UT7",
+      question: "¿Qué práctica de seguridad se recomienda para publicar un servidor HTTPS?",
+      options: [
+        "Usar certificados TLS válidos y WAF",
+        "Permitir todo el tráfico entrante",
+        "Usar solo NAT dinámico",
+        "Desactivar los logs"
+      ],
+      correct: 0,
+      explanation: "Para publicar un servidor HTTPS de forma segura se deben usar certificados TLS para el cifrado y un WAF (Web Application Firewall) para inspeccionar el tráfico y filtrar ataques específicos de capa 7 (como SQLi o XSS).",
+    },
+    {
+      id: 460,
+      subject: "REDES",
+      unit: "UT7",
+      question: "¿Qué protocolo se utiliza habitualmente para VPN site-to-site con seguridad fuerte?",
+      options: [
+        "IPsec/IKEv2",
+        "FTP",
+        "DNS",
+        "RIP"
+      ],
+      correct: 0,
+      explanation: "IPsec (Internet Protocol Security) junto con IKEv2 es el estándar para VPNs site-to-site. Proporciona autenticación, integridad y confidencialidad a nivel de red (Capa 3), permitiendo conectar oficinas remotas de forma transparente.",
+    },
+    {
+      id: 461,
+      subject: "REDES",
+      unit: "UT7",
+      question: "¿Qué protocolo WAN permite QoS garantizado y VRFs?",
+      options: [
+        "Broadband",
+        "Metro Ethernet",
+        "LTE",
+        "MPLS"
+      ],
+      correct: 3,
+      explanation: "MPLS (Multi-Protocol Label Switching) utiliza etiquetas para conmutar paquetes, lo que permite implementar QoS (Calidad de Servicio) para priorizar tráfico como voz o vídeo, y VRFs (Virtual Routing and Forwarding) para crear múltiples tablas de enrutamiento virtuales en un mismo router físico.",
+    },
+    {
+      id: 462,
+      subject: "REDES",
+      unit: "UT7",
+      question: "¿Qué función principal cumple el NAT en redes privadas conectadas a Internet?",
+      options: [
+        "Gestionar certificados digitales",
+        "Sustituir al firewall",
+        "Aumentar la velocidad de transmisión",
+        "Traducción de direcciones privadas a públicas"
+      ],
+      correct: 3,
+      explanation: "NAT (Network Address Translation) permite que los dispositivos de una red privada con direcciones IP no enrutables en Internet utilicen una o más direcciones IP públicas para comunicarse con el exterior.",
+    },
+    {
+      id: 463,
+      subject: "REDES",
+      unit: "UT7",
+      question: "¿Qué tipo de NAT se utiliza para publicar un servidor interno hacia Internet?",
+      options: [
+        "NAT64",
+        "PAT",
+        "NAT dinámico",
+        "NAT estático"
+      ],
+      correct: 3,
+      explanation: "El NAT estático establece una correspondencia uno a uno y fija entre una dirección IP privada interna y una dirección IP pública, permitiendo que dispositivos externos inicien conexiones hacia un servidor interno de forma predecible.",
+    },
+    {
+      id: 464,
+      subject: "REDES",
+      unit: "UT7",
+      question: "¿Qué herramienta correlaciona logs y genera alertas de seguridad?",
+      options: [
+        "FTP server",
+        "SIEM",
+        "DNS",
+        "SMTP relay"
+      ],
+      correct: 1,
+      explanation: "Un SIEM (Security Information and Event Management) recopila, analiza y correlaciona registros (logs) de diferentes dispositivos de red para detectar patrones sospechosos y generar alertas ante posibles incidentes de seguridad.",
+    },
+    {
+      id: 465,
+      subject: "REDES",
+      unit: "UT7",
+      question: "¿Qué tecnología WAN moderna permite orquestar enlaces múltiples por aplicación?",
+      options: [
+        "Dial-up",
+        "Metro Ethernet",
+        "MPLS",
+        "SDWAN"
+      ],
+      correct: 3,
+      explanation: "SD-WAN (Software-Defined WAN) permite gestionar múltiples conexiones (como fibra, 5G y MPLS) simultáneamente, dirigiendo el tráfico de aplicaciones específicas (como VoIP o SaaS) por el enlace que ofrezca mejor rendimiento en cada momento.",
+    },
+    {
+      id: 466,
+      subject: "REDES",
+      unit: "UT7",
+      question: "¿Qué protocolo de seguridad se usa junto a certificados y 2FA en VPN remotas?",
+      options: [
+        "SMTP",
+        "OpenVPN",
+        "Telnet",
+        "HTTP"
+      ],
+      correct: 1,
+      explanation: "OpenVPN es un protocolo de red de código abierto que utiliza la biblioteca OpenSSL para el cifrado. Permite implementar medidas de seguridad robustas como certificados digitales y autenticación de dos factores (2FA).",
+    },
+    {
+      id: 467,
+      subject: "REDES",
+      unit: "UT7",
+      question: "¿Qué protocolo de seguridad se recomienda para cifrar el tráfico de una web pública?",
+      options: [
+        "HTTP simple",
+        "TLS 1.2/1.3",
+        "SNMPv1",
+        "FTP"
+      ],
+      correct: 1,
+      explanation: "TLS (Transport Layer Security) en sus versiones 1.2 o 1.3 es el protocolo estándar que proporciona cifrado, integridad y autenticación para el tráfico web (HTTPS), sustituyendo al antiguo y vulnerable SSL.",
+    },
+    {
+      id: 468,
+      subject: "REDES",
+      unit: "UT7",
+      question: "¿Qué mecanismo de redundancia usa una IP virtual compartida entre routers?",
+      options: [
+        "DHCP",
+        "VRRP",
+        "FTP",
+        "NAT"
+      ],
+      correct: 1,
+      explanation: "VRRP (Virtual Router Redundancy Protocol) permite que varios routers compartan una dirección IP virtual (VIP). Si el router principal falla, el secundario asume automáticamente la VIP, manteniendo la conectividad de los usuarios sin cambios de configuración.",
+    },
+    {
+      id: 469,
+      subject: "REDES",
+      unit: "UT7",
+      question: "¿Qué comando en Cisco muestra las traducciones NAT activas?",
+      options: [
+        "show vlan brief",
+        "show running-config",
+        "show ip nat translations",
+        "ping"
+      ],
+      correct: 2,
+      explanation: "El comando 'show ip nat translations' muestra la tabla dinámica donde el router registra qué IP privada y qué puerto se están traduciendo a qué IP pública en un momento determinado.",
+    },
+    {
+      id: 470,
+      subject: "REDES",
+      unit: "UT7",
+      question: "¿Qué dispositivo software protege aplicaciones web frente a ataques como SQLi o XSS?",
+      options: [
+        "DHCP server",
+        "Switch L2",
+        "WAF",
+        "NAT64"
+      ],
+      correct: 2,
+      explanation: "Un WAF (Web Application Firewall) inspecciona el tráfico HTTP/HTTPS a nivel de aplicación, permitiendo filtrar ataques específicos como la inyección SQL (SQLi) o el Cross-Site Scripting (XSS) que los firewalls tradicionales no suelen detectar.",
+    },
+    {
+      id: 471,
+      subject: "REDES",
+      unit: "UT7",
+      question: "¿Qué protocolo de control se usa en Cisco para monitorizar enlaces y activar failover?",
+      options: [
+        "DNS",
+        "IP SLA",
+        "FTP",
+        "SSH"
+      ],
+      correct: 1,
+      explanation: "IP SLA (Service Level Agreement) de Cisco permite monitorizar de forma activa parámetros como la latencia, el jitter o la pérdida de paquetes. Se suele combinar con 'track' para cambiar automáticamente de ruta (failover) si un enlace deja de cumplir con la calidad mínima.",
+    },
   ];
 
   // =========================
