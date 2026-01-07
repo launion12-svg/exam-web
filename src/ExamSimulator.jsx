@@ -6103,7 +6103,7 @@ const ExamSimulator = () => {
     const totalQuestions = 30;
 
     // Llamamos a la función con curva 1.6 (el código que tú pasaste)
-    const selected = pickWeightedByUnit(pool, totalQuestions, 1.6);
+    const selected = pickWeightedByUnit(pool, totalQuestions, 1.4);
 
     const questionsWithShuffledOptions = selected.map((q) => shuffleOptions(q));
     setQuestions(questionsWithShuffledOptions);
