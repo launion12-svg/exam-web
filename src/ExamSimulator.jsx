@@ -3835,7 +3835,7 @@ const ExamSimulator = () => {
       question: "¿Qué comando impide temporalmente el acceso a una tabla por parte de otras transacciones?",
       options: ["RESTRICT", "ISOLATE", "DENY", "LOCK TABLE"],
       correct: 3,
-      xplanation: "LOCK TABLE permite a una transacción obtener un control explícito sobre el acceso a una tabla completa[cite: 476, 480].",
+      explanation: "LOCK TABLE permite a una transacción obtener un control explícito sobre el acceso a una tabla completa[cite: 476, 480].",
     },
     {
       id: 308,
@@ -3862,7 +3862,7 @@ const ExamSimulator = () => {
       question: "¿Qué tipo de bloqueo permite solo lectura simultánea por varias transacciones?",
       options: ["General", "Exclusivo", "Compartido", "Temporal"],
       correct: 2,
-      xplanation: "Un bloqueo compartido (S) permite que varias transacciones lean un recurso pero impide que ninguna lo modifique[cite: 491, 494].",
+      explanation: "Un bloqueo compartido (S) permite que varias transacciones lean un recurso pero impide que ninguna lo modifique[cite: 491, 494].",
     },
     {
       id: 311,
@@ -3909,7 +3909,7 @@ const ExamSimulator = () => {
       question: "¿Cuál de los siguientes formatos permite representar datos jerárquicos con etiquetas?",
       options: ["TXT", "SQL", "XML", "CSV"],
       correct: 2,
-      xplanation: "El formato XML utiliza etiquetas personalizadas para estructurar datos de forma jerárquica, facilitando el intercambio de información entre sistemas[cite: 519, 522].",
+      explanation: "El formato XML utiliza etiquetas personalizadas para estructurar datos de forma jerárquica, facilitando el intercambio de información entre sistemas[cite: 519, 522].",
     },
     {
       id: 316,
@@ -4044,7 +4044,7 @@ const ExamSimulator = () => {
       question: "¿Qué tipo de restauración requiere aplicar la copia completa y todas las incrementales?",
       options: ["Restauración diferencial", "Restauración simple", "Restauración parcial", "Restauración incremental"],
       correct: 3,
-      xplanation: "Para recuperar un sistema basado en backups incrementales, se debe restaurar primero el último backup completo y luego cada incremental en orden[cite: 599, 603].",
+      explanation: "Para recuperar un sistema basado en backups incrementales, se debe restaurar primero el último backup completo y luego cada incremental en orden[cite: 599, 603].",
     },
     {
       id: 331,
