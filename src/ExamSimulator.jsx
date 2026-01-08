@@ -6017,6 +6017,756 @@ const ExamSimulator = () => {
       correct: 1,
       explanation: "IP SLA (Service Level Agreement) de Cisco permite monitorizar de forma activa parámetros como la latencia, el jitter o la pérdida de paquetes. Se suele combinar con 'track' para cambiar automáticamente de ruta (failover) si un enlace deja de cumplir con la calidad mínima.",
     },
+    {
+      id: 472,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué tecnología de memoria ofrece mayor velocidad y menor latencia?",
+      options: [
+        "DDR3 con 1600 MHz",
+        "DDR4 con 2400 MHz",
+        "DDR5 con 4800 MHz",
+        "SDRAM con 800 MHz"
+      ],
+      correct: 2,
+      explanation: "DDR5 es la generación más reciente de RAM, ofreciendo velocidades desde 4800 MHz y menores latencias que DDR4 y DDR3, además de menor consumo energético."
+    },
+    {
+      id: 473,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué principio explica que los programas acceden repetidamente a datos cercanos en memoria?",
+      options: [
+        "Principio de caché multinivel",
+        "Principio de localidad espacial",
+        "Principio de fragmentación",
+        "Principio de swap dinámico"
+      ],
+      correct: 1,
+      explanation: "El principio de localidad espacial indica que si se accede a una posición de memoria, es probable acceder a posiciones cercanas, optimizando el uso de caché."
+    },
+    {
+      id: 474,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué técnica de seguridad aleatoriza la ubicación de procesos en memoria?",
+      options: [
+        "DEP (Data Execution Prevention)",
+        "ASLR (Address Space Layout Randomization)",
+        "MMU (Memory Management Unit)",
+        "TLB (Translation Lookaside Buffer)"
+      ],
+      correct: 1,
+      explanation: "ASLR aleatoriza las direcciones donde se cargan procesos en memoria, dificultando ataques de explotación como buffer overflow al hacer impredecible la ubicación del código."
+    },
+    {
+      id: 475,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué ventaja principal ofrecen los SSD frente a los HDD?",
+      options: [
+        "Mayor capacidad de almacenamiento por unidad",
+        "Menor coste por gigabyte",
+        "Velocidades de lectura y escritura superiores",
+        "Mayor compatibilidad con sistemas antiguos"
+      ],
+      correct: 2,
+      explanation: "Los SSD basados en memoria flash ofrecen velocidades muy superiores a los HDD mecánicos, además de menor consumo, mayor resistencia a golpes y menor latencia."
+    },
+    {
+      id: 476,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué tipo de software incluye compiladores e intérpretes?",
+      options: [
+        "Software de aplicación",
+        "Software de programación",
+        "Software de sistema operativo",
+        "Software de virtualización"
+      ],
+      correct: 1,
+      explanation: "El software de programación incluye herramientas para crear software: compiladores, intérpretes, IDEs, depuradores y sistemas de control de versiones."
+    },
+    {
+      id: 477,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Cuál es la fase del ciclo funcional donde la CPU transforma datos en información útil?",
+      options: [
+        "Entrada",
+        "Almacenamiento",
+        "Procesamiento",
+        "Salida"
+      ],
+      correct: 2,
+      explanation: "En la fase de procesamiento, la CPU ejecuta instrucciones y realiza cálculos que transforman los datos brutos en información útil para el usuario."
+    },
+    {
+      id: 478,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué tipo de sistemas operativos están optimizados para gestionar múltiples conexiones simultáneas?",
+      options: [
+        "Sistemas operativos embebidos",
+        "Sistemas operativos para servidores",
+        "Sistemas operativos móviles",
+        "Sistemas operativos de escritorio"
+      ],
+      correct: 1,
+      explanation: "Los sistemas operativos para servidores están diseñados para alta disponibilidad, gestionar múltiples usuarios y conexiones simultáneas, con énfasis en estabilidad y seguridad."
+    },
+    {
+      id: 479,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué licencia de software libre requiere que las modificaciones mantengan la misma licencia?",
+      options: [
+        "MIT",
+        "BSD",
+        "GPL (General Public License)",
+        "EULA"
+      ],
+      correct: 2,
+      explanation: "La GPL es una licencia copyleft que obliga a que cualquier trabajo derivado mantenga la misma licencia, garantizando que el software siga siendo libre."
+    },
+    {
+      id: 480,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué distribución Linux es conocida por su enfoque en seguridad y pentesting?",
+      options: [
+        "Ubuntu Server",
+        "Debian",
+        "Kali Linux",
+        "Red Hat Enterprise"
+      ],
+      correct: 2,
+      explanation: "Kali Linux está especializada en ciberseguridad y pentesting, incluyendo cientos de herramientas preinstaladas para análisis de vulnerabilidades y auditorías."
+    },
+    {
+      id: 481,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué tipo de hipervisor se ejecuta directamente sobre el hardware?",
+      options: [
+        "Hipervisor tipo 2 (hosted)",
+        "Hipervisor tipo 1 (bare-metal)",
+        "Contenedor Docker",
+        "Máquina virtual Java"
+      ],
+      correct: 1,
+      explanation: "Los hipervisores tipo 1 o bare-metal se ejecutan directamente sobre el hardware sin necesidad de un sistema operativo anfitrión, ofreciendo mejor rendimiento."
+    },
+    {
+      id: 482,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué permite una snapshot en virtualización?",
+      options: [
+        "Aumentar la memoria RAM asignada dinámicamente",
+        "Capturar el estado completo de una VM para restaurarlo después",
+        "Compartir el kernel entre múltiples VMs",
+        "Cifrar automáticamente todos los discos virtuales"
+      ],
+      correct: 1,
+      explanation: "Una snapshot captura el estado completo de una máquina virtual en un momento dado, permitiendo volver a ese estado si ocurre algún problema."
+    },
+    {
+      id: 483,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué mecanismo registra actividades de usuarios para detectar incidentes de seguridad?",
+      options: [
+        "Autenticación biométrica",
+        "Control de acceso basado en roles",
+        "Auditoría del sistema",
+        "Cifrado de contraseñas"
+      ],
+      correct: 2,
+      explanation: "La auditoría del sistema registra eventos y actividades de usuarios, permitiendo detectar comportamientos anómalos, responder a incidentes y cumplir con normativas."
+    },
+    {
+      id: 484,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué técnica en sistemas de archivos registra cambios pendientes para evitar corrupción?",
+      options: [
+        "Desfragmentación automática",
+        "Journaling",
+        "Compresión en línea",
+        "Indexación de contenido"
+      ],
+      correct: 1,
+      explanation: "El journaling registra las operaciones pendientes antes de ejecutarlas, permitiendo recuperar el sistema de archivos ante fallos o cortes de energía sin perder consistencia."
+    },
+    {
+      id: 485,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué modelo de permisos permite control granular con múltiples usuarios y grupos?",
+      options: [
+        "Permisos Unix básicos (rwx)",
+        "ACL (Access Control Lists)",
+        "Permisos solo lectura globales",
+        "Cifrado de archivos EFS"
+      ],
+      correct: 1,
+      explanation: "Las ACL permiten definir permisos específicos para múltiples usuarios y grupos en un mismo archivo, ofreciendo mayor granularidad que los permisos Unix tradicionales."
+    },
+    {
+      id: 486,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué tecnología permite a los dispositivos transferir datos directamente a memoria sin intervención de la CPU?",
+      options: [
+        "Interrupciones IRQ",
+        "DMA (Direct Memory Access)",
+        "Polling continuo",
+        "Buffers de E/S"
+      ],
+      correct: 1,
+      explanation: "DMA permite que dispositivos transfieran datos directamente a la memoria RAM sin pasar por la CPU, liberando recursos del procesador y mejorando el rendimiento."
+    },
+    {
+      id: 487,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué función permite la detección e instalación automática de hardware nuevo?",
+      options: [
+        "BIOS Legacy",
+        "Plug and Play",
+        "Modo protegido",
+        "Arranque seguro"
+      ],
+      correct: 1,
+      explanation: "Plug and Play permite que el sistema operativo detecte automáticamente nuevo hardware conectado e instale los controladores necesarios sin intervención manual."
+    },
+    {
+      id: 488,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿En qué estado se encuentra un proceso que espera un recurso o evento?",
+      options: [
+        "Estado ejecutando",
+        "Estado nuevo",
+        "Estado bloqueado",
+        "Estado terminado"
+      ],
+      correct: 2,
+      explanation: "Un proceso en estado bloqueado está esperando un evento externo (E/S, recurso ocupado, señal) y no puede ejecutarse hasta que se resuelva la espera."
+    },
+    {
+      id: 489,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué algoritmo de planificación asigna CPU a cada proceso por turnos de tiempo fijo?",
+      options: [
+        "FIFO (First In, First Out)",
+        "Prioridades estáticas",
+        "Round Robin",
+        "Planificación por plazos"
+      ],
+      correct: 2,
+      explanation: "Round Robin asigna a cada proceso un quantum de tiempo de CPU en turnos circulares, garantizando equidad y evitando que procesos monopolicen el procesador."
+    },
+    {
+      id: 490,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué mecanismo IPC permite compartir una región de memoria entre procesos?",
+      options: [
+        "Pipes anónimos",
+        "Colas de mensajes",
+        "Memoria compartida",
+        "Sockets de red"
+      ],
+      correct: 2,
+      explanation: "La memoria compartida permite que múltiples procesos accedan a la misma región de memoria, siendo el método IPC más rápido al evitar copias de datos."
+    },
+    {
+      id: 491,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué técnica divide la memoria en bloques de tamaño fijo para facilitar la gestión?",
+      options: [
+        "Segmentación lógica",
+        "Memoria virtual continua",
+        "Paginación",
+        "Asignación contigua"
+      ],
+      correct: 2,
+      explanation: "La paginación divide la memoria en páginas de tamaño fijo (típicamente 4 KB), facilitando la gestión, reduciendo fragmentación y permitiendo memoria virtual eficiente."
+    },
+    {
+      id: 492,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué shell es ampliamente utilizado en sistemas Linux para administración?",
+      options: [
+        "PowerShell",
+        "Bash",
+        "CMD",
+        "Zsh avanzado"
+      ],
+      correct: 1,
+      explanation: "Bash (Bourne Again Shell) es el shell más utilizado en sistemas Linux para administración y scripting, ofreciendo potentes herramientas de automatización."
+    },
+    {
+      id: 493,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué servicio permite conexiones remotas seguras a servidores?",
+      options: [
+        "FTP sin cifrado",
+        "Telnet básico",
+        "SSH (Secure Shell)",
+        "HTTP estándar"
+      ],
+      correct: 2,
+      explanation: "SSH (Secure Shell) es el servicio estándar para conexiones remotas seguras, cifrando toda la comunicación entre cliente y servidor."
+    },
+    {
+      id: 494,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué identificador único tiene cada proceso en el sistema operativo?",
+      options: [
+        "UID (User Identifier)",
+        "GID (Group Identifier)",
+        "PID (Process Identifier)",
+        "TID (Thread Identifier)"
+      ],
+      correct: 2,
+      explanation: "Cada proceso tiene un PID (Process Identifier) único que permite al sistema operativo identificarlo y gestionarlo durante su ciclo de vida."
+    },
+    {
+      id: 495,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué problema ocurre cuando dos procesos acceden simultáneamente a un recurso compartido sin sincronización?",
+      options: [
+        "Fragmentación de memoria",
+        "Condición de carrera (race condition)",
+        "Desbordamiento de pila",
+        "Pérdida de paquetes"
+      ],
+      correct: 1,
+      explanation: "Las condiciones de carrera ocurren cuando múltiples procesos acceden simultáneamente a recursos compartidos, produciendo resultados impredecibles sin mecanismos de sincronización."
+    },
+    {
+      id: 496,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué mecanismo de sincronización permite controlar el acceso mutuo a recursos compartidos?",
+      options: [
+        "Fragmentación externa",
+        "Mutex (mutual exclusion)",
+        "Paginación por demanda",
+        "Cache coherency"
+      ],
+      correct: 1,
+      explanation: "Los mutex (mutual exclusion) son mecanismos que garantizan que solo un proceso acceda a un recurso compartido a la vez, evitando condiciones de carrera."
+    },
+    {
+      id: 497,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿En qué tipo de multitarea los procesos ceden voluntariamente el control de la CPU?",
+      options: [
+        "Multitarea expropiativa (preemptive)",
+        "Multitarea cooperativa",
+        "Multitarea por prioridades",
+        "Multitarea en tiempo real"
+      ],
+      correct: 1,
+      explanation: "En multitarea cooperativa, los procesos deben ceder voluntariamente el control de la CPU, mientras que en expropiativa el SO puede quitarles el control en cualquier momento."
+    },
+    {
+      id: 498,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué sistema operativo clásico era monotarea y monousuario?",
+      options: [
+        "Unix System V",
+        "Windows NT",
+        "MS-DOS",
+        "Linux kernel 1.0"
+      ],
+      correct: 2,
+      explanation: "MS-DOS era un sistema operativo monotarea y monousuario, permitiendo ejecutar solo un programa a la vez por un único usuario."
+    },
+    {
+      id: 499,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué técnica permite distribuir tareas entre múltiples núcleos de CPU de forma equilibrada?",
+      options: [
+        "Paginación por segmentos",
+        "SMP (Symmetric Multiprocessing)",
+        "Single-threading",
+        "Memoria virtual expandida"
+      ],
+      correct: 1,
+      explanation: "SMP (Symmetric Multiprocessing) permite que el sistema operativo distribuya tareas entre múltiples núcleos o CPUs de forma equilibrada, mejorando el rendimiento."
+    },
+    {
+      id: 500,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué tipo de sistema operativo está diseñado para dispositivos con recursos limitados y tareas específicas?",
+      options: [
+        "Sistema operativo de servidor",
+        "Sistema operativo embebido",
+        "Sistema operativo de escritorio",
+        "Sistema operativo distribuido"
+      ],
+      correct: 1,
+      explanation: "Los sistemas operativos embebidos están diseñados para dispositivos específicos con recursos limitados como electrodomésticos, IoT, automoción o sistemas industriales."
+    },
+    {
+      id: 501,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué sistema operativo embebido ofrece garantías de tiempo real?",
+      options: [
+        "Windows 10 IoT",
+        "FreeRTOS",
+        "Ubuntu Desktop",
+        "macOS Server"
+      ],
+      correct: 1,
+      explanation: "FreeRTOS es un sistema operativo de tiempo real (RTOS) para sistemas embebidos que garantiza tiempos de respuesta deterministas, crítico en aplicaciones industriales."
+    },
+    {
+      id: 502,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué tipo de licencia acompaña típicamente al software propietario?",
+      options: [
+        "GPL (General Public License)",
+        "BSD permisiva",
+        "EULA (End User License Agreement)",
+        "MIT License"
+      ],
+      correct: 2,
+      explanation: "EULA (End User License Agreement) es el contrato típico del software propietario que limita el uso, copia, modificación y distribución del software."
+    },
+    {
+      id: 503,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué sistema operativo era monousuario pero soportaba multitarea limitada?",
+      options: [
+        "Unix multiusuario",
+        "Linux desde origen",
+        "Windows 95",
+        "Minix académico"
+      ],
+      correct: 2,
+      explanation: "Windows 95 era principalmente monousuario pero introducía multitarea cooperativa limitada, evolucionando hacia sistemas más robustos en versiones posteriores."
+    },
+    {
+      id: 504,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué sistema operativo UNIX propietario fue desarrollado por Sun Microsystems/Oracle?",
+      options: [
+        "FreeBSD abierto",
+        "Solaris comercial",
+        "Ubuntu Server",
+        "Red Hat Enterprise"
+      ],
+      correct: 1,
+      explanation: "Solaris es un sistema operativo UNIX propietario desarrollado originalmente por Sun Microsystems (ahora Oracle), conocido por su estabilidad y escalabilidad."
+    },
+    {
+      id: 505,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué proyecto busca reimplementar Windows de forma libre y compatible?",
+      options: [
+        "Wine compatibility layer",
+        "ReactOS",
+        "FreeDOS",
+        "Haiku OS"
+      ],
+      correct: 1,
+      explanation: "ReactOS es un proyecto de código abierto que busca reimplementar Windows de forma libre y compatible, permitiendo ejecutar aplicaciones Windows sin el sistema propietario."
+    },
+    {
+      id: 506,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué licencia libre es más permisiva al no requerir copyleft?",
+      options: [
+        "GPL v3 estricta",
+        "BSD License",
+        "LGPL restrictiva",
+        "AGPL de red"
+      ],
+      correct: 1,
+      explanation: "Las licencias BSD son más permisivas que GPL porque no requieren copyleft, permitiendo que el código modificado sea redistribuido bajo licencias propietarias."
+    },
+    {
+      id: 507,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué tipo de licencia permite integrar código modificado en software propietario?",
+      options: [
+        "GPL v3 con copyleft",
+        "BSD o MIT permisivas",
+        "AGPL de red estricta",
+        "LGPL con restricciones"
+      ],
+      correct: 1,
+      explanation: "Las licencias BSD y MIT son permisivas y no requieren copyleft, permitiendo que código modificado sea integrado en software propietario sin obligación de liberar las modificaciones."
+    },
+    {
+      id: 508,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué distribución Linux ofrece versiones LTS con soporte extendido?",
+      options: [
+        "Arch Linux rolling",
+        "Ubuntu con LTS",
+        "Gentoo desde fuentes",
+        "Slackware estable"
+      ],
+      correct: 1,
+      explanation: "Ubuntu ofrece versiones LTS (Long Term Support) con soporte extendido de 5 años, ideales para entornos de producción que requieren estabilidad."
+    },
+    {
+      id: 509,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué distribución Linux es la base de Ubuntu y reconocida por su estabilidad?",
+      options: [
+        "Fedora comunitaria",
+        "Debian estable",
+        "openSUSE Leap",
+        "CentOS Stream"
+      ],
+      correct: 1,
+      explanation: "Debian es reconocida por su estabilidad y robustez, siendo la base de Ubuntu y muchas otras distribuciones, con ciclo de actualizaciones conservador."
+    },
+    {
+      id: 510,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué distribuciones Linux ofrecen compatibilidad binaria con Red Hat Enterprise Linux?",
+      options: [
+        "Ubuntu Server y Mint",
+        "AlmaLinux y Rocky Linux",
+        "Debian y Kali Linux",
+        "Arch Linux y Manjaro"
+      ],
+      correct: 1,
+      explanation: "AlmaLinux y Rocky Linux son distribuciones que ofrecen compatibilidad binaria con RHEL, orientadas a servidores empresariales tras los cambios en CentOS."
+    },
+    {
+      id: 511,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué gestor de paquetes utiliza archivos .deb?",
+      options: [
+        "YUM para RPM",
+        "APT para Debian",
+        "Pacman para Arch",
+        "Zypper para SUSE"
+      ],
+      correct: 1,
+      explanation: "APT (Advanced Package Tool) es el gestor de paquetes usado en Debian y derivadas como Ubuntu, que trabaja con archivos de paquetes .deb."
+    },
+    {
+      id: 512,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué tipo de hipervisor se instala directamente sobre el hardware sin SO anfitrión?",
+      options: [
+        "Tipo 2 hosted",
+        "Tipo 1 bare-metal",
+        "Emulador de aplicación",
+        "Contenedor de procesos"
+      ],
+      correct: 1,
+      explanation: "Los hipervisores Tipo 1 o bare-metal se instalan directamente sobre el hardware sin necesidad de sistema operativo anfitrión, ofreciendo máximo rendimiento."
+    },
+    {
+      id: 513,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Cuál de estos es un hipervisor Tipo 1 bare-metal?",
+      options: [
+        "VirtualBox sobre Windows",
+        "VMware ESXi",
+        "VMware Workstation Player",
+        "QEMU sobre Linux"
+      ],
+      correct: 1,
+      explanation: "VMware ESXi es un hipervisor Tipo 1 que se instala directamente sobre el hardware, usado en entornos empresariales por su alto rendimiento y seguridad."
+    },
+    {
+      id: 514,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué hipervisor es Tipo 2 y funciona sobre sistemas operativos existentes?",
+      options: [
+        "Hyper-V Server bare-metal",
+        "VirtualBox",
+        "Xen Project bare-metal",
+        "KVM integrado en kernel"
+      ],
+      correct: 1,
+      explanation: "VirtualBox es un hipervisor Tipo 2 que se instala como aplicación sobre un sistema operativo existente, siendo más fácil de usar pero con menor rendimiento que Tipo 1."
+    },
+    {
+      id: 515,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿En qué tipo de virtualización el SO invitado coopera conscientemente con el hipervisor?",
+      options: [
+        "Virtualización completa",
+        "Paravirtualización",
+        "Contenedores nativos",
+        "Emulación por software"
+      ],
+      correct: 1,
+      explanation: "En paravirtualización, el sistema operativo invitado es modificado para cooperar con el hipervisor, optimizando el rendimiento al evitar emulación completa del hardware."
+    },
+    {
+      id: 516,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué tecnología ejecuta aplicaciones aisladas compartiendo el kernel del host?",
+      options: [
+        "Máquinas virtuales completas",
+        "Contenedores como Docker",
+        "Paravirtualización modificada",
+        "Virtualización anidada"
+      ],
+      correct: 1,
+      explanation: "Los contenedores como Docker ejecutan aplicaciones en entornos aislados compartiendo el kernel del sistema anfitrión, siendo muy eficientes en recursos pero con menor aislamiento que VMs."
+    },
+    {
+      id: 517,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué herramienta de cifrado de disco completo es nativa en Windows?",
+      options: [
+        "VeraCrypt multiplataforma",
+        "BitLocker de Microsoft",
+        "LUKS para Linux",
+        "FileVault de macOS"
+      ],
+      correct: 1,
+      explanation: "BitLocker es la tecnología de cifrado de disco completo nativa de Windows, que protege datos cifrando volúmenes completos y puede usar TPM para mayor seguridad."
+    },
+    {
+      id: 518,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué tecnología de cifrado de disco es estándar en sistemas Linux?",
+      options: [
+        "BitLocker de Windows",
+        "LUKS (Linux Unified Key Setup)",
+        "FileVault de Apple",
+        "EFS de NTFS"
+      ],
+      correct: 1,
+      explanation: "LUKS (Linux Unified Key Setup) es el estándar de facto para cifrado de disco en Linux, proporcionando cifrado transparente de particiones y volúmenes."
+    },
+    {
+      id: 519,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué archivo se usa para instalaciones desatendidas en Windows?",
+      options: [
+        "kickstart para Red Hat",
+        "unattend.xml de Windows",
+        "preseed para Debian",
+        "cloud-init para nubes"
+      ],
+      correct: 1,
+      explanation: "unattend.xml es el archivo de respuestas usado en Windows para automatizar instalaciones desatendidas, definiendo configuraciones como particionado, idioma y cuentas de usuario."
+    },
+    {
+      id: 520,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué protocolo permite instalar sistemas operativos por red sin medios físicos?",
+      options: [
+        "FTP para transferencias",
+        "PXE (Preboot Execution Environment)",
+        "SMB para compartir",
+        "HTTP simple"
+      ],
+      correct: 1,
+      explanation: "PXE (Preboot Execution Environment) permite que computadoras arranquen e instalen sistemas operativos directamente desde la red, sin necesidad de medios físicos como USB o DVD."
+    },
+    {
+      id: 521,
+      subject: "ISO",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué protocolo sincroniza el reloj del sistema con servidores de tiempo en red?",
+      options: [
+        "SNMP para monitoreo",
+        "NTP (Network Time Protocol)",
+        "DHCP para configuración",
+        "DNS para resolución"
+      ],
+      correct: 1,
+      explanation: "NTP (Network Time Protocol) es el protocolo estándar para sincronizar relojes de sistemas informáticos con servidores de tiempo precisos en la red."
+    },
   ];
 
   // =========================
