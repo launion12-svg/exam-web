@@ -6808,6 +6808,7 @@ const ExamSimulator = () => {
   const [studentName, setStudentName] = useState("");
   const [selectedSubject, setSelectedSubject] = useState("ISO");
   const [selectedUnit, setSelectedUnit] = useState("all"); // "all" o "UT1", "UT2", etc.
+  const [sourceFilter, setSourceFilter] = useState("all"); // "all", "campus", "new"
 
   // Corrección
   const [blankCountsAsWrong, setBlankCountsAsWrong] = useState(false); // OFF: blancos no penalizan
@@ -6858,8 +6859,18 @@ const ExamSimulator = () => {
     // No hacemos initializeExam aquí, porque depende de la asignatura seleccionada
   }, []);
 
-  const initializeExam = (subjectKey, unitFilter = "all") => {
+  const initializeExam = (subjectKey, unitFilter = "all", source = "all") => {
     let pool = allQuestions.filter((q) => q.subject === subjectKey);
+    
+    // Filtrar por origen de preguntas
+    if (source === "campus") {
+      // Solo preguntas del campus (sin campo source o source !== "new")
+      pool = pool.filter((q) => !q.source || q.source !== "new");
+    } else if (source === "new") {
+      // Solo preguntas nuevas del PDF
+      pool = pool.filter((q) => q.source === "new");
+    }
+    // Si source === "all", no filtramos nada
     
     // Si se seleccionó una UT específica, filtrar solo esas preguntas
     if (unitFilter !== "all") {
@@ -7150,6 +7161,43 @@ const ExamSimulator = () => {
             </div>
           )}
 
+          <label className="block text-sm font-semibold text-gray-700 mb-2">Origen de Preguntas</label>
+          <div className="mb-4 p-4 bg-gray-50 border-2 border-gray-300 rounded-lg">
+            <label className="flex items-center gap-2 mb-2 cursor-pointer">
+              <input
+                type="radio"
+                name="sourceFilter"
+                value="all"
+                checked={sourceFilter === "all"}
+                onChange={(e) => setSourceFilter(e.target.value)}
+                className="w-4 h-4 text-indigo-600"
+              />
+              <span className="text-gray-700">📚 Todas (Campus + Nuevas del PDF)</span>
+            </label>
+            <label className="flex items-center gap-2 mb-2 cursor-pointer">
+              <input
+                type="radio"
+                name="sourceFilter"
+                value="campus"
+                checked={sourceFilter === "campus"}
+                onChange={(e) => setSourceFilter(e.target.value)}
+                className="w-4 h-4 text-indigo-600"
+              />
+              <span className="text-gray-700">🏫 Solo Campus (Preguntas originales)</span>
+            </label>
+            <label className="flex items-center gap-2 cursor-pointer">
+              <input
+                type="radio"
+                name="sourceFilter"
+                value="new"
+                checked={sourceFilter === "new"}
+                onChange={(e) => setSourceFilter(e.target.value)}
+                className="w-4 h-4 text-indigo-600"
+              />
+              <span className="text-gray-700">📄 Solo Nuevas (Del PDF)</span>
+            </label>
+          </div>
+
           {!subjectHasQuestions && (
             <div className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg text-yellow-800 mb-4">
               Aún no hay preguntas cargadas para <span className="font-semibold">{selectedSubjectName}</span>.
@@ -7201,7 +7249,7 @@ const ExamSimulator = () => {
               setShowResults(false);
               setConfirmFinishOpen(false);
 
-              initializeExam(selectedSubject, selectedUnit);
+              initializeExam(selectedSubject, selectedUnit, sourceFilter);
               setExamStarted(true);
             }}
             disabled={!subjectHasQuestions}
