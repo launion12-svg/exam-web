@@ -6057,6 +6057,7 @@ const ExamSimulator = () => {
   // Nombre + asignatura
   const [studentName, setStudentName] = useState("");
   const [selectedSubject, setSelectedSubject] = useState("ISO");
+  const [selectedUnit, setSelectedUnit] = useState("all"); // "all" o "UT1", "UT2", etc.
 
   // Corrección
   const [blankCountsAsWrong, setBlankCountsAsWrong] = useState(false); // OFF: blancos no penalizan
@@ -6091,6 +6092,15 @@ const ExamSimulator = () => {
 
   const selectedSubjectName = SUBJECTS[selectedSubject] || "Examen";
 
+  // Obtener UTs disponibles para la asignatura seleccionada
+  const getAvailableUnits = (subjectKey) => {
+    const pool = allQuestions.filter((q) => q.subject === subjectKey);
+    const units = [...new Set(pool.map((q) => q.unit))].sort();
+    return units;
+  };
+
+  const availableUnits = useMemo(() => getAvailableUnits(selectedSubject), [selectedSubject]);
+
   // =========================
   // INICIALIZACIÓN (no arranca examen aquí, solo prepara estado)
   // =========================
@@ -6098,8 +6108,14 @@ const ExamSimulator = () => {
     // No hacemos initializeExam aquí, porque depende de la asignatura seleccionada
   }, []);
 
-  const initializeExam = (subjectKey) => {
-    const pool = allQuestions.filter((q) => q.subject === subjectKey);
+  const initializeExam = (subjectKey, unitFilter = "all") => {
+    let pool = allQuestions.filter((q) => q.subject === subjectKey);
+    
+    // Si se seleccionó una UT específica, filtrar solo esas preguntas
+    if (unitFilter !== "all") {
+      pool = pool.filter((q) => q.unit === unitFilter);
+    }
+    
     const totalQuestions = 30;
 
     // Llamamos a la función con curva 1.6 (el código que tú pasaste)
@@ -6198,6 +6214,7 @@ const ExamSimulator = () => {
         studentName: name,
         subject: selectedSubjectName,
         subjectKey: selectedSubject,
+        unitFilter: selectedUnit, // "all" o "UT1", "UT2", etc.
         mode: blankCountsAsWrong ? "blancos_penalizan" : "blancos_no_penalizan",
         grade10: details.grade10,
         percentage: details.percentage,
@@ -6344,7 +6361,10 @@ const ExamSimulator = () => {
           <label className="block text-sm font-semibold text-gray-700 mb-2">Asignatura</label>
 <select
   value={selectedSubject}
-  onChange={(e) => setSelectedSubject(e.target.value)}
+  onChange={(e) => {
+    setSelectedSubject(e.target.value);
+    setSelectedUnit("all"); // Reset unit cuando cambia la asignatura
+  }}
   className="w-full p-3 border-2 border-gray-300 rounded-lg mb-4 bg-white"
 >
   {Object.entries(SUBJECTS).map(([key, name]) => (
@@ -6353,6 +6373,32 @@ const ExamSimulator = () => {
     </option>
   ))}
 </select>
+
+          <label className="block text-sm font-semibold text-gray-700 mb-2">Unidad Temática</label>
+          <select
+            value={selectedUnit}
+            onChange={(e) => setSelectedUnit(e.target.value)}
+            className="w-full p-3 border-2 border-gray-300 rounded-lg mb-4 bg-white"
+          >
+            <option value="all">📚 Todas las UTs (Examen completo)</option>
+            {availableUnits.map((unit) => {
+              const unitQuestions = allQuestions.filter(
+                (q) => q.subject === selectedSubject && q.unit === unit
+              ).length;
+              return (
+                <option key={unit} value={unit}>
+                  {unit} ({unitQuestions} preguntas)
+                </option>
+              );
+            })}
+          </select>
+
+          {selectedUnit !== "all" && (
+            <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg text-blue-800 mb-4 text-sm">
+              ℹ️ Has seleccionado <span className="font-semibold">{selectedUnit}</span>. 
+              El examen solo incluirá preguntas de esta unidad.
+            </div>
+          )}
 
           {!subjectHasQuestions && (
             <div className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg text-yellow-800 mb-4">
@@ -6405,7 +6451,7 @@ const ExamSimulator = () => {
               setShowResults(false);
               setConfirmFinishOpen(false);
 
-              initializeExam(selectedSubject);
+              initializeExam(selectedSubject, selectedUnit);
               setExamStarted(true);
             }}
             disabled={!subjectHasQuestions}
@@ -6606,7 +6652,9 @@ const ExamSimulator = () => {
               </div>
 
               <div className="mt-2 text-sm text-gray-500">
-                Asignatura: {selectedSubjectName} · Modo: {blankCountsAsWrong ? "Blancos penalizan" : "Blancos NO penalizan"} ·
+                Asignatura: {selectedSubjectName} · 
+                {selectedUnit === "all" ? "Todas las UTs" : selectedUnit} · 
+                Modo: {blankCountsAsWrong ? "Blancos penalizan" : "Blancos NO penalizan"} ·
                 Tiempo usado: {formatTime(EXAM_DURATION_SECONDS - timeLeft)} / 60:00
               </div>
 
