@@ -7892,6 +7892,306 @@ const ExamSimulator = () => {
       correct: 1,
       explanation: "mdadm --action=check inicia una verificación de integridad (scrubbing) del array RAID, leyendo todos los bloques y verificando paridad."
     },
+    {
+      id: 597,
+      subject: "ISO",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué herramienta permite administrar remotamente Active Directory desde Windows 10/11?",
+      options: [
+        "CMD básico",
+        "RSAT (Remote Server Administration Tools)",
+        "Paint",
+        "Notepad++"
+      ],
+      correct: 1,
+      explanation: "RSAT proporciona herramientas gráficas y de línea de comandos para administrar Active Directory, DNS, DHCP y otros servicios de Windows Server desde estaciones cliente."
+    },
+    {
+      id: 598,
+      subject: "ISO",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué característica de AD permite aplicar políticas de contraseñas diferentes a grupos específicos?",
+      options: [
+        "Default Domain Policy",
+        "FGPP (Fine-Grained Password Policy)",
+        "Local Security Policy",
+        "Group Policy básica"
+      ],
+      correct: 1,
+      explanation: "FGPP permite crear PSOs (Password Settings Objects) con políticas de contraseñas específicas para diferentes grupos, superando la limitación de una única política por dominio."
+    },
+    {
+      id: 599,
+      subject: "ISO",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué componente de AD contiene un índice parcial de todos los objetos del bosque?",
+      options: [
+        "Schema master",
+        "Catálogo Global",
+        "SYSVOL",
+        "NTDS.DIT"
+      ],
+      correct: 1,
+      explanation: "El Catálogo Global es un índice parcial de todos los objetos del bosque, permitiendo búsquedas rápidas sin consultar todos los dominios y habilitando inicio de sesión universal."
+    },
+    {
+      id: 600,
+      subject: "ISO",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué tipo de relación permite que usuarios de un dominio accedan a recursos de otro dominio?",
+      options: [
+        "Group Policy Link",
+        "Trust (relación de confianza)",
+        "Site Link",
+        "OU Delegation"
+      ],
+      correct: 1,
+      explanation: "Los Trusts son relaciones de confianza entre dominios o bosques que permiten autenticación cruzada y acceso a recursos entre diferentes espacios de nombres."
+    },
+    {
+      id: 601,
+      subject: "ISO",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué identifica de forma única un servicio en el contexto de autenticación Kerberos?",
+      options: [
+        "GUID del servicio",
+        "SPN (Service Principal Name)",
+        "DNS A record",
+        "NetBIOS name"
+      ],
+      correct: 1,
+      explanation: "El SPN identifica unívocamente un servicio en Kerberos, permitiendo que los clientes soliciten tickets de servicio específicos para autenticación mutua."
+    },
+    {
+      id: 602,
+      subject: "ISO",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué protocolo permite conexiones gráficas remotas a servidores Windows?",
+      options: [
+        "SSH en texto",
+        "RDP (Remote Desktop Protocol)",
+        "Telnet inseguro",
+        "FTP simple"
+      ],
+      correct: 1,
+      explanation: "RDP proporciona acceso gráfico remoto a sistemas Windows, transmitiendo la interfaz visual y permitiendo administración completa del servidor."
+    },
+    {
+      id: 603,
+      subject: "ISO",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué servidor DNS de código abierto se usa comúnmente en Linux?",
+      options: [
+        "Windows DNS Server",
+        "BIND (Berkeley Internet Name Domain)",
+        "Notepad DNS",
+        "Paint Resolver"
+      ],
+      correct: 1,
+      explanation: "BIND es el servidor DNS de código abierto más utilizado en sistemas Linux/Unix, proporcionando resolución autoritativa y recursiva de nombres."
+    },
+    {
+      id: 604,
+      subject: "ISO",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué servidor DHCP moderno de ISC ofrece mejor rendimiento que ISC-DHCP clásico?",
+      options: [
+        "Windows DHCP Server",
+        "Kea DHCP",
+        "dhcpd legacy",
+        "udhcpc client"
+      ],
+      correct: 1,
+      explanation: "Kea es el servidor DHCP moderno de ISC que reemplaza ISC-DHCP, ofreciendo mejor rendimiento, API REST, hooks personalizados y soporte para alta disponibilidad."
+    },
+    {
+      id: 605,
+      subject: "ISO",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué sistema gestiona configuraciones de escritorio en GNOME (Linux)?",
+      options: [
+        "Registry Editor",
+        "dconf",
+        "Control Panel",
+        "Settings.ini"
+      ],
+      correct: 1,
+      explanation: "dconf es el sistema de configuración de GNOME que almacena preferencias de usuario y sistema, pudiendo ser gestionado mediante políticas centralizadas."
+    },
+    {
+      id: 606,
+      subject: "ISO",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué framework de Linux controla acciones privilegiadas mediante políticas?",
+      options: [
+        "sudo simple",
+        "polkit (PolicyKit)",
+        "chmod tradicional",
+        "su básico"
+      ],
+      correct: 1,
+      explanation: "polkit permite definir políticas granulares para controlar qué usuarios pueden ejecutar acciones privilegiadas sin necesidad de contraseña root completa."
+    },
+    {
+      id: 607,
+      subject: "ISO",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué herramienta de automatización usa playbooks para gestionar políticas en Linux similar a GPO?",
+      options: [
+        "Batch scripts",
+        "Ansible",
+        "Excel",
+        "Word"
+      ],
+      correct: 1,
+      explanation: "Ansible usa playbooks YAML para aplicar configuraciones y políticas de forma centralizada en Linux, siendo una alternativa a GPO en entornos no Windows."
+    },
+    {
+      id: 608,
+      subject: "ISO",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué mecanismo de AD sincroniza cambios entre controladores de dominio?",
+      options: [
+        "DNS replication",
+        "Replicación multimaster de AD",
+        "DHCP failover",
+        "SMB sharing"
+      ],
+      correct: 1,
+      explanation: "AD usa replicación multimaster donde todos los DC pueden recibir cambios y los sincronizan entre sí mediante un sistema basado en vectores de actualización y USNs."
+    },
+    {
+      id: 609,
+      subject: "ISO",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué estructura de AD define la topología de replicación según ubicaciones físicas?",
+      options: [
+        "Organizational Units",
+        "Sites (sitios)",
+        "Security Groups",
+        "Distribution Lists"
+      ],
+      correct: 1,
+      explanation: "Los Sites representan ubicaciones físicas conectadas por enlaces de red, optimizando la replicación de AD y permitiendo que los clientes se autentiquen con DCs cercanos."
+    },
+    {
+      id: 610,
+      subject: "ISO",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué comando permite buscar objetos en un directorio LDAP desde línea de comandos?",
+      options: [
+        "find simple",
+        "ldapsearch",
+        "grep directorio",
+        "locate ldap"
+      ],
+      correct: 1,
+      explanation: "ldapsearch es la herramienta de línea de comandos para consultar directorios LDAP, permitiendo búsquedas con filtros complejos y obtención de atributos específicos."
+    },
+    {
+      id: 611,
+      subject: "ISO",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué herramienta administra Samba AD desde línea de comandos?",
+      options: [
+        "net command",
+        "samba-tool",
+        "smb-admin",
+        "domain-tool"
+      ],
+      correct: 1,
+      explanation: "samba-tool es la herramienta principal para administrar Samba AD, permitiendo gestionar usuarios, grupos, GPOs, sitios y toda la infraestructura del dominio."
+    },
+    {
+      id: 612,
+      subject: "ISO",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué comando une un sistema Linux a un dominio Active Directory?",
+      options: [
+        "domain join",
+        "realm join",
+        "ad-connect",
+        "ldap-link"
+      ],
+      correct: 1,
+      explanation: "realm join (del paquete realmd) detecta automáticamente el dominio, configura SSSD, Kerberos y une el sistema Linux al dominio Active Directory."
+    },
+    {
+      id: 613,
+      subject: "ISO",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué característica de GPO permite configurar opciones que no son estrictamente políticas de seguridad?",
+      options: [
+        "Security Settings",
+        "Group Policy Preferences",
+        "Administrative Templates",
+        "Scripts Startup"
+      ],
+      correct: 1,
+      explanation: "Group Policy Preferences permiten configurar elementos como unidades mapeadas, accesos directos, impresoras y variables de entorno sin ser políticas de seguridad forzadas."
+    },
+    {
+      id: 614,
+      subject: "ISO",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué filtros permiten aplicar GPOs solo a equipos que cumplan condiciones WMI específicas?",
+      options: [
+        "Security Filtering",
+        "WMI Filters",
+        "LDAP Filters",
+        "DNS Filters"
+      ],
+      correct: 1,
+      explanation: "WMI Filters permiten aplicar GPOs condicionalmente según características del equipo (SO, RAM, disco, software instalado) consultadas mediante WMI."
+    },
+    {
+      id: 615,
+      subject: "ISO",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué mecanismo de GPO restringe la aplicación de políticas a usuarios o grupos específicos?",
+      options: [
+        "OU Linking",
+        "Security Filtering",
+        "Site Assignment",
+        "Domain Policy"
+      ],
+      correct: 1,
+      explanation: "Security Filtering usa permisos de lectura y aplicación de GPO para restringir qué usuarios o grupos reciben la política, refinando el ámbito de aplicación."
+    },
+    {
+      id: 616,
+      subject: "ISO",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué tipo de perfil de usuario se descarga desde el servidor cada vez que se inicia sesión?",
+      options: [
+        "Perfil local",
+        "Perfil móvil (roaming profile)",
+        "Perfil temporal",
+        "Perfil mandatorio"
+      ],
+      correct: 1,
+      explanation: "Los perfiles móviles se almacenan en el servidor y se descargan al iniciar sesión, permitiendo que el usuario tenga la misma experiencia en cualquier equipo del dominio."
+    },
   ];
 
   // =========================
