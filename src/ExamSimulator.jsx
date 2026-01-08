@@ -7592,6 +7592,306 @@ const ExamSimulator = () => {
       correct: 1,
       explanation: "mount -o ro (read-only) monta un sistema de archivos en modo solo lectura, impidiendo cualquier modificación en el contenido."
     },
+    {
+      id: 577,
+      subject: "ISO",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué nivel de RAID tolera el fallo de hasta dos discos simultáneos?",
+      options: [
+        "RAID 5 con paridad simple",
+        "RAID 6 con doble paridad",
+        "RAID 1 con espejo",
+        "RAID 0 sin redundancia"
+      ],
+      correct: 1,
+      explanation: "RAID 6 usa doble paridad distribuida, permitiendo tolerar el fallo de hasta dos discos simultáneamente sin pérdida de datos."
+    },
+    {
+      id: 578,
+      subject: "ISO",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué implementación de RAID en ZFS ofrece paridad con mejor rendimiento que RAID5 tradicional?",
+      options: [
+        "RAID clásico hardware",
+        "RAIDZ (RAIDZ1, RAIDZ2, RAIDZ3)",
+        "RAID por software mdadm",
+        "RAID 0 simple"
+      ],
+      correct: 1,
+      explanation: "RAIDZ de ZFS implementa paridad integrada con checksums end-to-end, ofreciendo mejor protección contra corrupción que RAID5 tradicional."
+    },
+    {
+      id: 579,
+      subject: "ISO",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué tipo de copia de seguridad guarda solo los cambios desde la última copia completa?",
+      options: [
+        "Copia incremental",
+        "Copia diferencial",
+        "Copia completa",
+        "Copia sintética"
+      ],
+      correct: 1,
+      explanation: "Las copias diferenciales guardan solo los cambios desde la última copia completa, ocupando más espacio que las incrementales pero restaurando más rápido."
+    },
+    {
+      id: 580,
+      subject: "ISO",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué característica de backups impide que sean modificados o eliminados por ransomware?",
+      options: [
+        "Compresión de datos",
+        "Inmutabilidad",
+        "Deduplicación",
+        "Cifrado simple"
+      ],
+      correct: 1,
+      explanation: "La inmutabilidad hace que los backups no puedan ser modificados ni eliminados durante un período definido, protegiéndolos contra ransomware."
+    },
+    {
+      id: 581,
+      subject: "ISO",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué componente hardware refuerza la seguridad de BitLocker sellando claves?",
+      options: [
+        "RAM DDR4",
+        "TPM 2.0",
+        "SSD NVMe",
+        "GPU dedicada"
+      ],
+      correct: 1,
+      explanation: "TPM 2.0 permite a BitLocker sellar las claves de cifrado mediante mediciones del sistema, desbloqueando automáticamente solo si el arranque no ha sido modificado."
+    },
+    {
+      id: 582,
+      subject: "ISO",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué versión de LUKS introduce mejor rendimiento y soporte para múltiples slots de claves?",
+      options: [
+        "LUKS1 antiguo",
+        "LUKS2",
+        "dm-crypt básico",
+        "eCryptfs"
+      ],
+      correct: 1,
+      explanation: "LUKS2 mejora sobre LUKS1 con mejor rendimiento, soporte para múltiples slots de claves, integración con TPM y algoritmos de cifrado modernos."
+    },
+    {
+      id: 583,
+      subject: "ISO",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué evento de Windows indica que una cuenta ha sido bloqueada por intentos fallidos?",
+      options: [
+        "Evento 4625",
+        "Evento 4740",
+        "Evento 4624",
+        "Evento 4648"
+      ],
+      correct: 1,
+      explanation: "El evento 4740 en el log de seguridad de Windows indica que una cuenta de usuario ha sido bloqueada por exceder el límite de intentos de inicio de sesión fallidos."
+    },
+    {
+      id: 584,
+      subject: "ISO",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué módulo PAM controla la complejidad de contraseñas mediante longitud y créditos?",
+      options: [
+        "pam_unix",
+        "pam_pwquality",
+        "pam_deny",
+        "pam_permit"
+      ],
+      correct: 1,
+      explanation: "pam_pwquality (anteriormente pam_cracklib) valida la complejidad de contraseñas definiendo longitud mínima, créditos por tipo de carácter y diccionarios."
+    },
+    {
+      id: 585,
+      subject: "ISO",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué parámetro de pwquality define cuántos caracteres deben ser diferentes de la contraseña anterior?",
+      options: [
+        "minlen",
+        "difok",
+        "retry",
+        "dcredit"
+      ],
+      correct: 1,
+      explanation: "difok (different ok) define el número mínimo de caracteres que deben ser diferentes entre la nueva contraseña y la anterior."
+    },
+    {
+      id: 586,
+      subject: "ISO",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué proceso de RAID verifica y corrige errores en los discos periódicamente?",
+      options: [
+        "Formatting",
+        "Scrubbing",
+        "Defragmentation",
+        "Partitioning"
+      ],
+      correct: 1,
+      explanation: "El scrubbing lee todos los bloques del RAID, verifica checksums o paridad y corrige errores silenciosos antes de que se acumulen y causen fallos."
+    },
+    {
+      id: 587,
+      subject: "ISO",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué significa URE en el contexto de almacenamiento?",
+      options: [
+        "Unified RAID Engine",
+        "Unrecoverable Read Error",
+        "Universal Recovery Element",
+        "Update Rollback Extension"
+      ],
+      correct: 1,
+      explanation: "URE (Unrecoverable Read Error) es un error de lectura que no puede corregirse, crítico durante reconstrucción de RAID cuando se leen todos los bloques."
+    },
+    {
+      id: 588,
+      subject: "ISO",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué métrica define el tiempo máximo aceptable de inactividad tras un incidente?",
+      options: [
+        "RPO (Recovery Point Objective)",
+        "RTO (Recovery Time Objective)",
+        "MTBF (Mean Time Between Failures)",
+        "MTTR (Mean Time To Repair)"
+      ],
+      correct: 1,
+      explanation: "RTO (Recovery Time Objective) define el tiempo máximo aceptable que un sistema puede estar inactivo tras un incidente antes de causar daño al negocio."
+    },
+    {
+      id: 589,
+      subject: "ISO",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué estrategia de despliegue de actualizaciones usa grupos piloto antes de aplicar masivamente?",
+      options: [
+        "Big bang deployment",
+        "Anillos de despliegue",
+        "Rolling update sin fases",
+        "Hotfix inmediato"
+      ],
+      correct: 1,
+      explanation: "Los anillos de despliegue aplican actualizaciones primero a grupos piloto (ring 0), luego a grupos más amplios (ring 1, 2...), validando en cada fase."
+    },
+    {
+      id: 590,
+      subject: "ISO",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué son los runbooks en el contexto de operaciones de TI?",
+      options: [
+        "Logs de auditoría",
+        "Procedimientos documentados paso a paso",
+        "Scripts de backup",
+        "Configuraciones de firewall"
+      ],
+      correct: 1,
+      explanation: "Los runbooks son procedimientos documentados paso a paso para ejecutar tareas operativas específicas, diagnóstico de problemas o respuesta a incidentes."
+    },
+    {
+      id: 591,
+      subject: "ISO",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué sistema de Windows controla qué aplicaciones pueden ejecutarse?",
+      options: [
+        "Windows Firewall",
+        "AppLocker o WDAC",
+        "BitLocker",
+        "Windows Update"
+      ],
+      correct: 1,
+      explanation: "AppLocker y WDAC (Windows Defender Application Control) permiten definir políticas de ejecución de aplicaciones mediante listas blancas y reglas de firma."
+    },
+    {
+      id: 592,
+      subject: "ISO",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué sistema de Linux implementa control de acceso obligatorio (MAC)?",
+      options: [
+        "Permisos Unix tradicionales",
+        "SELinux o AppArmor",
+        "sudo básico",
+        "chmod estándar"
+      ],
+      correct: 1,
+      explanation: "SELinux y AppArmor implementan MAC (Mandatory Access Control) añadiendo políticas de seguridad más allá de los permisos Unix tradicionales (DAC)."
+    },
+    {
+      id: 593,
+      subject: "ISO",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué servicio Linux audita el acceso a archivos y llamadas del sistema?",
+      options: [
+        "rsyslog",
+        "auditd",
+        "cron",
+        "systemd-journald"
+      ],
+      correct: 1,
+      explanation: "auditd proporciona auditoría detallada del sistema Linux, registrando accesos a archivos, llamadas del sistema y cambios de configuración según reglas definidas."
+    },
+    {
+      id: 594,
+      subject: "ISO",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué herramienta centraliza logs de múltiples sistemas en Linux?",
+      options: [
+        "grep local",
+        "syslog-ng o rsyslog",
+        "cat /var/log/*",
+        "tail simple"
+      ],
+      correct: 1,
+      explanation: "syslog-ng y rsyslog permiten centralizar logs de múltiples sistemas en un servidor central, facilitando análisis y correlación de eventos."
+    },
+    {
+      id: 595,
+      subject: "ISO",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué herramienta centraliza logs y eventos en entornos empresariales grandes?",
+      options: [
+        "Notepad++",
+        "SIEM (Splunk, ELK, Graylog)",
+        "Paint",
+        "Calculator"
+      ],
+      correct: 1,
+      explanation: "Los SIEM (Security Information and Event Management) como Splunk, ELK Stack o Graylog centralizan, correlacionan y analizan logs de múltiples fuentes."
+    },
+    {
+      id: 596,
+      subject: "ISO",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué comando mdadm verifica la integridad de un array RAID en Linux?",
+      options: [
+        "mdadm --create",
+        "mdadm --action=check",
+        "mdadm --stop",
+        "mdadm --zero-superblock"
+      ],
+      correct: 1,
+      explanation: "mdadm --action=check inicia una verificación de integridad (scrubbing) del array RAID, leyendo todos los bloques y verificando paridad."
+    },
   ];
 
   // =========================
