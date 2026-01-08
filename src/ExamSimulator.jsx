@@ -4338,6 +4338,306 @@ const ExamSimulator = () => {
       explanation: "IPv4 utiliza direcciones de 32 bits (unos 4.300 millones de direcciones), mientras que IPv6 utiliza 128 bits, permitiendo un espacio de direcciones prácticamente infinito para conectar todos los dispositivos actuales.",
     },
     {
+      id: 662,
+      subject: "REDES",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué tipo de red conecta dispositivos personales en un rango de pocos metros?",
+      options: [
+        "WAN",
+        "PAN (Personal Area Network)",
+        "MAN",
+        "LAN"
+      ],
+      correct: 1,
+      explanation: "PAN (Personal Area Network) conecta dispositivos personales como smartphones, auriculares Bluetooth y wearables en un rango de pocos metros."
+    },
+    {
+      id: 663,
+      subject: "REDES",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué tipo de red cubre un área geográfica como una ciudad o área metropolitana?",
+      options: [
+        "LAN local",
+        "MAN (Metropolitan Area Network)",
+        "PAN personal",
+        "WAN mundial"
+      ],
+      correct: 1,
+      explanation: "MAN (Metropolitan Area Network) cubre áreas metropolitanas o ciudades, típicamente mediante fibra óptica o conexiones de alta velocidad."
+    },
+    {
+      id: 664,
+      subject: "REDES",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué topología forma un circuito cerrado donde cada nodo se conecta a dos vecinos?",
+      options: [
+        "Estrella",
+        "Anillo",
+        "Bus",
+        "Malla"
+      ],
+      correct: 1,
+      explanation: "La topología en anillo forma un circuito cerrado donde cada dispositivo se conecta a exactamente dos vecinos, pasando datos en una dirección."
+    },
+    {
+      id: 665,
+      subject: "REDES",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué topología proporciona múltiples rutas redundantes entre todos los nodos?",
+      options: [
+        "Bus simple",
+        "Malla (Mesh)",
+        "Estrella básica",
+        "Anillo único"
+      ],
+      correct: 1,
+      explanation: "La topología en malla proporciona conexiones directas entre múltiples nodos, ofreciendo redundancia y alta disponibilidad mediante rutas alternativas."
+    },
+    {
+      id: 666,
+      subject: "REDES",
+      unit: "UT1",
+      source: "new",
+      question: "¿Cuántas capas tiene el modelo TCP/IP?",
+      options: [
+        "7 capas",
+        "4 capas",
+        "5 capas",
+        "3 capas"
+      ],
+      correct: 1,
+      explanation: "El modelo TCP/IP tiene 4 capas: Acceso a red, Internet, Transporte y Aplicación, siendo más simple que el modelo OSI de 7 capas."
+    },
+    {
+      id: 667,
+      subject: "REDES",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué diferencia principal hay entre un hub y un switch?",
+      options: [
+        "El precio",
+        "Hub transmite a todos, switch solo al destino",
+        "El tamaño",
+        "El color"
+      ],
+      correct: 1,
+      explanation: "Un hub transmite datos a todos los puertos (broadcast), mientras que un switch inteligentemente envía datos solo al puerto de destino usando direcciones MAC."
+    },
+    {
+      id: 668,
+      subject: "REDES",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué sistema detecta intrusiones pero NO las bloquea automáticamente?",
+      options: [
+        "Firewall",
+        "IDS (Intrusion Detection System)",
+        "Router",
+        "Switch"
+      ],
+      correct: 1,
+      explanation: "IDS (Intrusion Detection System) detecta y alerta sobre actividades sospechosas pero no las bloquea, mientras que IPS (Intrusion Prevention System) sí las bloquea."
+    },
+    {
+      id: 669,
+      subject: "REDES",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué dispositivo distribuye tráfico entre múltiples servidores para optimizar rendimiento?",
+      options: [
+        "Hub simple",
+        "Balanceador de carga",
+        "Switch básico",
+        "Modem"
+      ],
+      correct: 1,
+      explanation: "Los balanceadores de carga distribuyen peticiones entrantes entre múltiples servidores backend, mejorando rendimiento, disponibilidad y escalabilidad."
+    },
+    {
+      id: 670,
+      subject: "REDES",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué firewall se especializa en proteger aplicaciones web contra ataques?",
+      options: [
+        "Firewall de red",
+        "WAF (Web Application Firewall)",
+        "Router ACL",
+        "Switch port security"
+      ],
+      correct: 1,
+      explanation: "WAF (Web Application Firewall) protege aplicaciones web contra ataques como SQL injection, XSS y otros ataques de capa 7."
+    },
+    {
+      id: 671,
+      subject: "REDES",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué arquitectura permite gestionar redes mediante software centralizado?",
+      options: [
+        "Red tradicional",
+        "SDN (Software-Defined Networking)",
+        "Red punto a punto",
+        "Red ad-hoc"
+      ],
+      correct: 1,
+      explanation: "SDN (Software-Defined Networking) separa el plano de control del plano de datos, permitiendo gestión centralizada y programable de la red."
+    },
+    {
+      id: 672,
+      subject: "REDES",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué medio de transmisión fue común en redes Ethernet antiguas y TV por cable?",
+      options: [
+        "Par trenzado",
+        "Cable coaxial",
+        "Fibra óptica",
+        "WiFi"
+      ],
+      correct: 1,
+      explanation: "El cable coaxial fue ampliamente usado en Ethernet 10BASE2/10BASE5 y sigue siendo común en TV por cable por su resistencia a interferencias."
+    },
+    {
+      id: 673,
+      subject: "REDES",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué tecnología inalámbrica emergente usa luz visible para transmitir datos?",
+      options: [
+        "WiFi 6",
+        "LiFi (Light Fidelity)",
+        "Bluetooth 5",
+        "5G"
+      ],
+      correct: 1,
+      explanation: "LiFi usa luz visible modulada (LED) para transmitir datos a alta velocidad, ofreciendo mayor seguridad que WiFi al no atravesar paredes."
+    },
+    {
+      id: 674,
+      subject: "REDES",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué medio permite comunicaciones globales especialmente en áreas remotas?",
+      options: [
+        "Cable submarino",
+        "Satélite",
+        "Fibra urbana",
+        "WiFi mesh"
+      ],
+      correct: 1,
+      explanation: "Las comunicaciones por satélite permiten cobertura global, siendo esenciales en áreas remotas, marítimas y aéreas donde otras tecnologías no llegan."
+    },
+    {
+      id: 675,
+      subject: "REDES",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué protocolo envía mensajes de error y control en redes IP?",
+      options: [
+        "TCP",
+        "ICMP",
+        "UDP",
+        "ARP"
+      ],
+      correct: 1,
+      explanation: "ICMP (Internet Control Message Protocol) envía mensajes de error y control, siendo usado por herramientas como ping y traceroute."
+    },
+    {
+      id: 676,
+      subject: "REDES",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué protocolo resuelve direcciones IP a direcciones MAC en redes locales?",
+      options: [
+        "DNS",
+        "ARP (Address Resolution Protocol)",
+        "DHCP",
+        "ICMP"
+      ],
+      correct: 1,
+      explanation: "ARP (Address Resolution Protocol) traduce direcciones IP a direcciones MAC en redes locales, permitiendo la entrega de tramas en capa 2."
+    },
+    {
+      id: 677,
+      subject: "REDES",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué protocolo de transporte NO garantiza entrega ni orden de los datos?",
+      options: [
+        "TCP confiable",
+        "UDP (User Datagram Protocol)",
+        "SCTP",
+        "HTTP"
+      ],
+      correct: 1,
+      explanation: "UDP es un protocolo sin conexión que no garantiza entrega, orden ni control de errores, siendo más rápido que TCP para aplicaciones en tiempo real."
+    },
+    {
+      id: 678,
+      subject: "REDES",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué notación CIDR representa una red con máscara 255.255.255.0?",
+      options: [
+        "/16",
+        "/24",
+        "/32",
+        "/8"
+      ],
+      correct: 1,
+      explanation: "CIDR /24 representa 24 bits de red (255.255.255.0), proporcionando 256 direcciones (254 hosts útiles) en la subred."
+    },
+    {
+      id: 679,
+      subject: "REDES",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué comando muestra las conexiones de red activas y puertos en escucha?",
+      options: [
+        "ping",
+        "netstat",
+        "ipconfig",
+        "tracert"
+      ],
+      correct: 1,
+      explanation: "netstat muestra conexiones TCP/UDP activas, puertos en escucha, tablas de enrutamiento y estadísticas de red del sistema."
+    },
+    {
+      id: 680,
+      subject: "REDES",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué herramienta de línea de comandos captura y analiza tráfico de red?",
+      options: [
+        "ping",
+        "tcpdump",
+        "ipconfig",
+        "netstat"
+      ],
+      correct: 1,
+      explanation: "tcpdump es una herramienta de línea de comandos que captura y muestra paquetes de red en tiempo real, siendo el equivalente CLI de Wireshark."
+    },
+    {
+      id: 681,
+      subject: "REDES",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué tipo de amenaza son las APT en ciberseguridad?",
+      options: [
+        "Ataques simples",
+        "Advanced Persistent Threats (amenazas persistentes avanzadas)",
+        "Antivirus",
+        "Firewalls"
+      ],
+      correct: 1,
+      explanation: "APT (Advanced Persistent Threats) son ataques sofisticados y prolongados realizados por actores con recursos, que permanecen ocultos en redes durante meses."
+    },
+    {
       id: 352,
       subject: "REDES",
       unit: "UT2",
@@ -4616,6 +4916,306 @@ const ExamSimulator = () => {
       ],
       correct: 1,
       explanation: "El protocolo DHCP (Dynamic Host Configuration Protocol) es el encargado de asignar de forma automática y dinámica direcciones IP a los clientes de una red, junto con otros parámetros como la máscara y la puerta de enlace.",
+    },
+    {
+      id: 682,
+      subject: "REDES",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué estándar norteamericano define el cableado estructurado?",
+      options: [
+        "ISO 9001",
+        "ANSI/TIA/EIA-568",
+        "IEEE 802.3",
+        "RFC 1918"
+      ],
+      correct: 1,
+      explanation: "ANSI/TIA/EIA-568 es el estándar norteamericano que define cableado estructurado, especificando subsistemas, distancias, categorías de cable y métodos de certificación."
+    },
+    {
+      id: 683,
+      subject: "REDES",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué norma internacional regula el cableado estructurado globalmente?",
+      options: [
+        "EN 50173 europeo",
+        "ISO/IEC 11801",
+        "TIA-606",
+        "IEEE 802.11"
+      ],
+      correct: 1,
+      explanation: "ISO/IEC 11801 es la norma internacional que regula el cableado estructurado, siendo equivalente global de TIA/EIA-568 y base para estándares regionales."
+    },
+    {
+      id: 684,
+      subject: "REDES",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué categoría de cable UTP soporta 10 Gbps hasta 100 metros?",
+      options: [
+        "Cat 5e",
+        "Cat 6a",
+        "Cat 5",
+        "Cat 3"
+      ],
+      correct: 1,
+      explanation: "Cat 6a (Categoría 6 aumentada) soporta 10 Gbps a 500 MHz hasta 100 metros, siendo ideal para infraestructuras modernas de alta velocidad."
+    },
+    {
+      id: 685,
+      subject: "REDES",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué tipo de cable tiene blindaje individual por par y global?",
+      options: [
+        "UTP sin blindaje",
+        "FTP/STP blindado",
+        "Coaxial",
+        "Fibra óptica"
+      ],
+      correct: 1,
+      explanation: "FTP (Foiled Twisted Pair) o STP (Shielded Twisted Pair) incluyen blindaje que protege contra interferencias electromagnéticas, usado en entornos industriales."
+    },
+    {
+      id: 686,
+      subject: "REDES",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué tipo de fibra multimodo alcanza 550m a 10 Gbps?",
+      options: [
+        "OM1",
+        "OM4",
+        "OS1",
+        "Cat 6"
+      ],
+      correct: 1,
+      explanation: "OM4 es fibra multimodo optimizada para láser que alcanza 550 metros a 10 Gbps, siendo común en backbones de edificios modernos."
+    },
+    {
+      id: 687,
+      subject: "REDES",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué tipo de fibra se usa para enlaces de kilómetros entre edificios?",
+      options: [
+        "OM3 multimodo",
+        "OS2 monomodo",
+        "Cat 7",
+        "Coaxial"
+      ],
+      correct: 1,
+      explanation: "OS2 (monomodo) tiene núcleo estrecho que permite transmisiones de kilómetros o decenas de kilómetros, ideal para campus y redes metropolitanas."
+    },
+    {
+      id: 688,
+      subject: "REDES",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué tamaño estándar tienen los racks de comunicaciones?",
+      options: [
+        "15 pulgadas",
+        "19 pulgadas",
+        "21 pulgadas",
+        "24 pulgadas"
+      ],
+      correct: 1,
+      explanation: "Los racks de telecomunicaciones usan el estándar de 19 pulgadas de ancho, permitiendo instalar switches, patch panels y equipamiento compatible universalmente."
+    },
+    {
+      id: 689,
+      subject: "REDES",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué herramienta certifica fibra óptica mediante reflectometría?",
+      options: [
+        "Multímetro",
+        "OTDR (Optical Time-Domain Reflectometer)",
+        "Voltímetro",
+        "Osciloscopio"
+      ],
+      correct: 1,
+      explanation: "OTDR envía pulsos de luz y mide reflexiones para detectar roturas, empalmes defectuosos y atenuación en fibra óptica, certificando la calidad de la instalación."
+    },
+    {
+      id: 690,
+      subject: "REDES",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué estándar WiFi fue el primero en soportar 5 GHz con velocidades superiores a 100 Mbps?",
+      options: [
+        "802.11b",
+        "802.11n",
+        "802.11a",
+        "802.11g"
+      ],
+      correct: 1,
+      explanation: "802.11n (WiFi 4) introdujo MIMO, soportó dual-band (2.4/5 GHz) y alcanzó hasta 600 Mbps, siendo el primer estándar masivo de alta velocidad."
+    },
+    {
+      id: 691,
+      subject: "REDES",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué estándar WiFi usa MU-MIMO y alcanza hasta 3.5 Gbps?",
+      options: [
+        "802.11n",
+        "802.11ac (WiFi 5)",
+        "802.11g",
+        "802.11b"
+      ],
+      correct: 1,
+      explanation: "802.11ac (WiFi 5) introdujo MU-MIMO, canales de hasta 160 MHz en 5 GHz y alcanza velocidades teóricas de hasta 3.5 Gbps."
+    },
+    {
+      id: 692,
+      subject: "REDES",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué banda WiFi tiene más canales no solapados pero menor alcance?",
+      options: [
+        "2.4 GHz (3 canales)",
+        "5 GHz (múltiples canales)",
+        "900 MHz",
+        "60 GHz"
+      ],
+      correct: 1,
+      explanation: "La banda 5 GHz ofrece muchos más canales no solapados (hasta 25) que 2.4 GHz (solo 3), pero tiene menor penetración en paredes y menor alcance."
+    },
+    {
+      id: 693,
+      subject: "REDES",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué mecanismo prioriza tráfico crítico en redes?",
+      options: [
+        "FIFO simple",
+        "QoS (Quality of Service)",
+        "DHCP",
+        "DNS"
+      ],
+      correct: 1,
+      explanation: "QoS (Quality of Service) prioriza tráfico crítico (VoIP, videoconferencia) sobre tráfico menos sensible, usando técnicas como marcado DSCP y colas prioritarias."
+    },
+    {
+      id: 694,
+      subject: "REDES",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué parámetro define el tamaño máximo de paquete en una interfaz de red?",
+      options: [
+        "TTL",
+        "MTU (Maximum Transmission Unit)",
+        "MSS",
+        "VLAN ID"
+      ],
+      correct: 1,
+      explanation: "MTU define el tamaño máximo de paquete que puede transmitir una interfaz. El estándar Ethernet es 1500 bytes; valores mal configurados causan fragmentación."
+    },
+    {
+      id: 695,
+      subject: "REDES",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué tecnología permite encender remotamente un equipo enviando un paquete especial?",
+      options: [
+        "DHCP",
+        "WOL (Wake-on-LAN)",
+        "DNS",
+        "SNMP"
+      ],
+      correct: 1,
+      explanation: "WOL (Wake-on-LAN) permite encender equipos remotamente mediante un paquete mágico que contiene la dirección MAC, útil para administración remota."
+    },
+    {
+      id: 696,
+      subject: "REDES",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué herramienta configura red en Ubuntu mediante archivos YAML?",
+      options: [
+        "ifconfig legacy",
+        "Netplan",
+        "Windows Network Center",
+        "regedit"
+      ],
+      correct: 1,
+      explanation: "Netplan es el sistema de configuración de red en Ubuntu moderno que usa archivos YAML declarativos, reemplazando /etc/network/interfaces."
+    },
+    {
+      id: 697,
+      subject: "REDES",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué servicio de Linux gestiona conexiones de red de forma dinámica?",
+      options: [
+        "systemd básico",
+        "NetworkManager",
+        "Apache",
+        "MySQL"
+      ],
+      correct: 1,
+      explanation: "NetworkManager gestiona automáticamente conexiones de red en Linux, detectando interfaces, gestionando WiFi y VPNs, y siendo usado por entornos de escritorio."
+    },
+    {
+      id: 698,
+      subject: "REDES",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué son los Jumbo Frames en redes Ethernet?",
+      options: [
+        "Frames pequeños de 64 bytes",
+        "Frames mayores de 1500 bytes (hasta 9000)",
+        "Frames de 1500 bytes exactos",
+        "Frames de control"
+      ],
+      correct: 1,
+      explanation: "Jumbo Frames superan el MTU estándar de 1500 bytes (típicamente 9000), reduciendo overhead en transferencias masivas entre servidores y almacenamiento."
+    },
+    {
+      id: 699,
+      subject: "REDES",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué permite etiquetar tráfico de diferentes VLANs en un mismo enlace?",
+      options: [
+        "IP routing",
+        "VLAN tagging (802.1Q)",
+        "NAT",
+        "DHCP"
+      ],
+      correct: 1,
+      explanation: "VLAN tagging (802.1Q) añade una etiqueta de 4 bytes al frame Ethernet indicando la VLAN, permitiendo transportar múltiples VLANs por un mismo enlace trunk."
+    },
+    {
+      id: 700,
+      subject: "REDES",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué configuración DHCP asigna siempre la misma IP a una MAC específica?",
+      options: [
+        "Scope dinámico",
+        "Reserva DHCP",
+        "APIPA",
+        "Link-local"
+      ],
+      correct: 1,
+      explanation: "Las reservas DHCP asocian una dirección IP específica a una dirección MAC, garantizando que un dispositivo siempre reciba la misma IP del servidor DHCP."
+    },
+    {
+      id: 701,
+      subject: "REDES",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué comando Linux muestra velocidad y duplex de una interfaz Ethernet?",
+      options: [
+        "ping",
+        "ethtool",
+        "traceroute",
+        "nslookup"
+      ],
+      correct: 1,
+      explanation: "ethtool muestra y configura parámetros de interfaces Ethernet como velocidad, duplex, estadísticas de errores y capacidades de la tarjeta de red."
     },
     {
       id: 372,
@@ -4898,6 +5498,306 @@ const ExamSimulator = () => {
       explanation: "STP (Spanning Tree Protocol) es el protocolo estándar de Capa 2 diseñado para detectar y prevenir bucles lógicos en topologías de red redundantes, bloqueando puertos de forma selectiva.",
     },
     {
+      id: 702,
+      subject: "REDES",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué protocolo STP soporta múltiples instancias de spanning tree por VLAN?",
+      options: [
+        "STP clásico",
+        "MSTP (Multiple Spanning Tree Protocol)",
+        "RSTP básico",
+        "VTP"
+      ],
+      correct: 1,
+      explanation: "MSTP (IEEE 802.1s) permite agrupar VLANs en instancias de spanning tree, optimizando el uso de enlaces y reduciendo overhead comparado con PVST+."
+    },
+    {
+      id: 703,
+      subject: "REDES",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué tecnología permite agregación de enlaces entre diferentes switches físicos?",
+      options: [
+        "LACP simple",
+        "MLAG (Multi-chassis LAG)",
+        "STP",
+        "VTP"
+      ],
+      correct: 1,
+      explanation: "MLAG permite crear un LAG (Link Aggregation Group) distribuido entre dos switches físicos, proporcionando redundancia activo-activo sin bucles."
+    },
+    {
+      id: 704,
+      subject: "REDES",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué es una SVI en un switch de capa 3?",
+      options: [
+        "Puerto físico",
+        "Switch Virtual Interface (interfaz VLAN)",
+        "Cable virtual",
+        "Protocolo de routing"
+      ],
+      correct: 1,
+      explanation: "SVI (Switch Virtual Interface) es una interfaz lógica asociada a una VLAN que permite enrutamiento inter-VLAN en switches de capa 3."
+    },
+    {
+      id: 705,
+      subject: "REDES",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué método de autenticación usa la dirección MAC cuando 802.1X falla?",
+      options: [
+        "WPA2",
+        "MAB (MAC Authentication Bypass)",
+        "RADIUS directo",
+        "LDAP"
+      ],
+      correct: 1,
+      explanation: "MAB autentica dispositivos usando su dirección MAC cuando no soportan 802.1X (impresoras, IoT), validando la MAC contra un servidor RADIUS."
+    },
+    {
+      id: 706,
+      subject: "REDES",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué mecanismo verifica que la IP de origen coincida con la binding DHCP?",
+      options: [
+        "NAT",
+        "IP Source Guard",
+        "Firewall",
+        "ACL simple"
+      ],
+      correct: 1,
+      explanation: "IP Source Guard verifica que la IP de origen de cada paquete coincida con la binding table de DHCP Snooping, previniendo spoofing de direcciones IP."
+    },
+    {
+      id: 707,
+      subject: "REDES",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué ataque satura la tabla CAM del switch con MACs falsas?",
+      options: [
+        "DDoS HTTP",
+        "CAM table overflow",
+        "SQL injection",
+        "XSS"
+      ],
+      correct: 1,
+      explanation: "CAM table overflow inunda el switch con MACs falsas hasta saturar la tabla, haciendo que el switch entre en modo hub y permita sniffing de tráfico."
+    },
+    {
+      id: 708,
+      subject: "REDES",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué mecanismo de Cisco protege la CPU del switch limitando tráfico de control?",
+      options: [
+        "ACL simple",
+        "CoPP/CPPr (Control Plane Policing)",
+        "Port Security",
+        "VLAN ACL"
+      ],
+      correct: 1,
+      explanation: "CoPP (Control Plane Policing) y CPPr limitan el tráfico destinado a la CPU del switch, protegiéndola contra ataques DoS y sobrecarga."
+    },
+    {
+      id: 709,
+      subject: "REDES",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué sistema operativo usa Cisco en switches Nexus?",
+      options: [
+        "IOS clásico",
+        "NX-OS",
+        "Windows",
+        "Linux vanilla"
+      ],
+      correct: 1,
+      explanation: "NX-OS es el sistema operativo de Cisco para switches Nexus datacenter, basado en Linux y optimizado para alta densidad y virtualización."
+    },
+    {
+      id: 710,
+      subject: "REDES",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué sistema operativo usan switches Juniper EX y QFX?",
+      options: [
+        "Cisco IOS",
+        "Junos OS",
+        "Windows Server",
+        "Ubuntu"
+      ],
+      correct: 1,
+      explanation: "Junos OS es el sistema operativo común de Juniper Networks usado en routers y switches, conocido por su arquitectura modular y consistencia."
+    },
+    {
+      id: 711,
+      subject: "REDES",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué tecnología replica tráfico de un puerto a otro puerto remoto en red IP?",
+      options: [
+        "SPAN local",
+        "ERSPAN (Encapsulated Remote SPAN)",
+        "Port mirroring simple",
+        "VLAN tagging"
+      ],
+      correct: 1,
+      explanation: "ERSPAN encapsula el tráfico capturado en GRE sobre IP, permitiendo enviar tráfico espejado a un analizador remoto en cualquier punto de la red."
+    },
+    {
+      id: 712,
+      subject: "REDES",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué protocolo exporta estadísticas de flujo de tráfico para análisis?",
+      options: [
+        "SNMP simple",
+        "NetFlow/sFlow/IPFIX",
+        "Syslog",
+        "TFTP"
+      ],
+      correct: 1,
+      explanation: "NetFlow (Cisco), sFlow e IPFIX exportan metadatos de flujos de tráfico (IPs, puertos, protocolos, bytes) para análisis de rendimiento y seguridad."
+    },
+    {
+      id: 713,
+      subject: "REDES",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué base de datos estructura las métricas SNMP en jerarquía de objetos?",
+      options: [
+        "SQL database",
+        "MIB (Management Information Base)",
+        "NoSQL",
+        "XML schema"
+      ],
+      correct: 1,
+      explanation: "MIB (Management Information Base) define la estructura jerárquica de objetos SNMP (OIDs) que representan métricas y configuración de dispositivos de red."
+    },
+    {
+      id: 714,
+      subject: "REDES",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué procedimiento permite recuperar acceso a un switch cuando se olvida la contraseña?",
+      options: [
+        "Formatear y reinstalar",
+        "Password recovery (rommon/boot)",
+        "Comprar switch nuevo",
+        "No tiene solución"
+      ],
+      correct: 1,
+      explanation: "Password recovery interrumpe el boot, inicia en modo rommon/boot, permite ignorar startup-config y restablecer contraseñas con acceso físico al switch."
+    },
+    {
+      id: 715,
+      subject: "REDES",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué protocolo propaga información de VLANs entre switches Cisco?",
+      options: [
+        "STP",
+        "VTP (VLAN Trunking Protocol)",
+        "OSPF",
+        "BGP"
+      ],
+      correct: 1,
+      explanation: "VTP sincroniza la configuración de VLANs entre switches Cisco en un dominio, aunque por seguridad se recomienda usar modo transparent o deshabilitarlo."
+    },
+    {
+      id: 716,
+      subject: "REDES",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué VLAN transporta tráfico sin etiquetar 802.1Q en un trunk?",
+      options: [
+        "VLAN 1",
+        "Native VLAN",
+        "VLAN 4094",
+        "Management VLAN"
+      ],
+      correct: 1,
+      explanation: "La Native VLAN (por defecto VLAN 1) transporta frames sin etiqueta 802.1Q en trunks, debiendo coincidir en ambos extremos para evitar inconsistencias."
+    },
+    {
+      id: 717,
+      subject: "REDES",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué protocolo negocia automáticamente modo trunk entre switches Cisco?",
+      options: [
+        "STP",
+        "DTP (Dynamic Trunking Protocol)",
+        "LACP",
+        "LLDP"
+      ],
+      correct: 1,
+      explanation: "DTP negocia automáticamente el modo trunk/access entre switches Cisco, aunque por seguridad se recomienda deshabilitar DTP y configurar manualmente."
+    },
+    {
+      id: 718,
+      subject: "REDES",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué tipo de gestión usa conexión directa por consola sin depender de la red?",
+      options: [
+        "In-band management",
+        "Out-of-band management",
+        "Cloud management",
+        "Wireless management"
+      ],
+      correct: 1,
+      explanation: "Out-of-band management usa puerto de consola o red de gestión dedicada, permitiendo acceso incluso cuando la red de producción está caída."
+    },
+    {
+      id: 719,
+      subject: "REDES",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué tipo de gestión usa la red de producción para administrar dispositivos?",
+      options: [
+        "Out-of-band",
+        "In-band management",
+        "Console only",
+        "Physical access"
+      ],
+      correct: 1,
+      explanation: "In-band management usa la red de producción (SSH, HTTPS) para administrar dispositivos, siendo más conveniente pero dependiente de conectividad de red."
+    },
+    {
+      id: 720,
+      subject: "REDES",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué permite volver a una versión anterior de firmware después de una actualización fallida?",
+      options: [
+        "Formatear",
+        "Firmware rollback",
+        "Reinstalar OS",
+        "Comprar nuevo"
+      ],
+      correct: 1,
+      explanation: "Firmware rollback permite arrancar con la imagen anterior almacenada cuando la nueva presenta problemas, siendo crucial tener backup de imagen funcional."
+    },
+    {
+      id: 721,
+      subject: "REDES",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué técnica limita la cantidad de tráfico que puede enviar un host?",
+      options: [
+        "Firewall simple",
+        "Rate limiting",
+        "NAT",
+        "VLAN"
+      ],
+      correct: 1,
+      explanation: "Rate limiting controla la velocidad de tráfico permitida (paquetes/seg, bits/seg), protegiendo contra flooding y garantizando equidad entre usuarios."
+    },
+    {
       id: 392,
       subject: "REDES",
       unit: "UT4",
@@ -5176,6 +6076,306 @@ const ExamSimulator = () => {
       ],
       correct: 3,
       explanation: "El NAT estático realiza un mapeo uno a uno de una dirección IP privada a una dirección IP pública específica y permanente.",
+    },
+    {
+      id: 722,
+      subject: "REDES",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué métrica determina la preferencia entre protocolos de enrutamiento diferentes?",
+      options: [
+        "Métrica del protocolo",
+        "Distancia administrativa",
+        "Ancho de banda",
+        "Latencia"
+      ],
+      correct: 1,
+      explanation: "La distancia administrativa (AD) determina qué protocolo es más confiable cuando varios protocolos ofrecen rutas al mismo destino (ej: OSPF AD=110, BGP AD=20)."
+    },
+    {
+      id: 723,
+      subject: "REDES",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué componente hardware acelera el reenvío de paquetes en routers modernos?",
+      options: [
+        "CPU general",
+        "ASIC (fast-path)",
+        "Memoria RAM",
+        "Disco duro"
+      ],
+      correct: 1,
+      explanation: "Los ASIC (Application-Specific Integrated Circuit) implementan fast-path hardware para reenvío de paquetes a velocidad de línea sin involucrar la CPU."
+    },
+    {
+      id: 724,
+      subject: "REDES",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué memoria almacena ACLs y prefijos en switches/routers de alto rendimiento?",
+      options: [
+        "RAM normal",
+        "TCAM (Ternary Content-Addressable Memory)",
+        "Flash",
+        "ROM"
+      ],
+      correct: 1,
+      explanation: "TCAM permite búsquedas de prefijos y ACLs en un solo ciclo usando máscaras wildcard, siendo esencial para forwarding de alta velocidad."
+    },
+    {
+      id: 725,
+      subject: "REDES",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué herramienta modifica atributos BGP o filtra rutas en routers Cisco?",
+      options: [
+        "ACL simple",
+        "Route-map",
+        "VLAN",
+        "DHCP"
+      ],
+      correct: 1,
+      explanation: "Route-maps son políticas que modifican atributos de rutas (BGP path, métricas) o filtran prefijos mediante match/set conditions, similar a if-then-else."
+    },
+    {
+      id: 726,
+      subject: "REDES",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué protocolo crea túneles encapsulando paquetes IP dentro de otros paquetes IP?",
+      options: [
+        "HTTP",
+        "GRE (Generic Routing Encapsulation)",
+        "FTP",
+        "SMTP"
+      ],
+      correct: 1,
+      explanation: "GRE encapsula paquetes IP (u otros protocolos) dentro de paquetes IP, creando túneles punto a punto para VPNs o transportar protocolos de routing sobre Internet."
+    },
+    {
+      id: 727,
+      subject: "REDES",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué suite de protocolos proporciona cifrado y autenticación en túneles VPN?",
+      options: [
+        "HTTP/HTTPS",
+        "IPsec",
+        "FTP",
+        "Telnet"
+      ],
+      correct: 1,
+      explanation: "IPsec (ESP/AH, IKE) proporciona cifrado, autenticación e integridad para túneles VPN site-to-site o remote access, siendo estándar en routers empresariales."
+    },
+    {
+      id: 728,
+      subject: "REDES",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué protocolo de routing usa el algoritmo de Dijkstra en redes internas?",
+      options: [
+        "RIP",
+        "OSPF",
+        "BGP",
+        "EIGRP"
+      ],
+      correct: 1,
+      explanation: "OSPF (Open Shortest Path First) es un protocolo link-state que usa el algoritmo de Dijkstra para calcular el camino más corto (SPF) en redes empresariales."
+    },
+    {
+      id: 729,
+      subject: "REDES",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué protocolo de routing se usa entre sistemas autónomos en Internet?",
+      options: [
+        "OSPF interno",
+        "BGP (Border Gateway Protocol)",
+        "RIP",
+        "EIGRP"
+      ],
+      correct: 1,
+      explanation: "BGP es el protocolo de routing externo que interconecta sistemas autónomos (ISPs, grandes empresas), siendo la columna vertebral del routing de Internet."
+    },
+    {
+      id: 730,
+      subject: "REDES",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué protocolo link-state alternativo a OSPF se usa en ISPs y grandes redes?",
+      options: [
+        "RIP",
+        "IS-IS (Intermediate System to Intermediate System)",
+        "IGRP",
+        "EGP"
+      ],
+      correct: 1,
+      explanation: "IS-IS es un protocolo link-state similar a OSPF, común en ISPs y carriers por su estabilidad, escalabilidad y soporte nativo de IPv6."
+    },
+    {
+      id: 731,
+      subject: "REDES",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué tipo de ruta estática se activa solo si la ruta principal falla?",
+      options: [
+        "Ruta normal",
+        "Floating static route",
+        "Default route",
+        "Connected route"
+      ],
+      correct: 1,
+      explanation: "Floating static route tiene distancia administrativa más alta que la ruta principal, activándose solo cuando la ruta principal desaparece (backup route)."
+    },
+    {
+      id: 732,
+      subject: "REDES",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué ruta especial envía todo el tráfico sin ruta específica a un destino por defecto?",
+      options: [
+        "Ruta /32",
+        "Default route (0.0.0.0/0)",
+        "Ruta /24",
+        "Loopback route"
+      ],
+      correct: 1,
+      explanation: "La default route (0.0.0.0/0 o ::/0 en IPv6) envía todo el tráfico que no coincide con rutas más específicas hacia un gateway por defecto."
+    },
+    {
+      id: 733,
+      subject: "REDES",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué proceso resuelve recursivamente el next-hop hasta encontrar interfaz de salida?",
+      options: [
+        "ARP simple",
+        "Next-hop recursive lookup",
+        "DNS lookup",
+        "DHCP lookup"
+      ],
+      correct: 1,
+      explanation: "Next-hop recursive lookup consulta la tabla de rutas múltiples veces hasta resolver el next-hop a una interfaz directamente conectada o dirección IP alcanzable."
+    },
+    {
+      id: 734,
+      subject: "REDES",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué distancia administrativa tiene una ruta directamente conectada?",
+      options: [
+        "110",
+        "0",
+        "20",
+        "1"
+      ],
+      correct: 1,
+      explanation: "Las rutas directamente conectadas tienen AD=0 (máxima preferencia), seguidas por rutas estáticas (AD=1) y protocolos dinámicos (OSPF=110, BGP=20)."
+    },
+    {
+      id: 735,
+      subject: "REDES",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué modalidad NAT traduce múltiples IPs privadas a una sola IP pública usando puertos?",
+      options: [
+        "NAT estático 1:1",
+        "NAT overload (PAT)",
+        "NAT pool básico",
+        "No NAT"
+      ],
+      correct: 1,
+      explanation: "NAT overload o PAT (Port Address Translation) traduce múltiples IPs privadas a una sola IP pública diferenciando conexiones por puerto de origen."
+    },
+    {
+      id: 736,
+      subject: "REDES",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué configuración NAT traduce IPs privadas a un rango de IPs públicas?",
+      options: [
+        "PAT simple",
+        "NAT pool",
+        "No NAT",
+        "Proxy ARP"
+      ],
+      correct: 1,
+      explanation: "NAT pool asigna dinámicamente IPs de un rango (pool) de direcciones públicas a hosts privados, proporcionando más IPs públicas que PAT pero menos que 1:1."
+    },
+    {
+      id: 737,
+      subject: "REDES",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué tipo de ACL usa nombres descriptivos en lugar de números?",
+      options: [
+        "Numbered ACL",
+        "Named ACL",
+        "MAC ACL",
+        "VLAN ACL"
+      ],
+      correct: 1,
+      explanation: "Named ACLs usan nombres descriptivos (ej: 'BLOCK_GUEST') en lugar de números, siendo más legibles y permitiendo insertar/eliminar reglas específicas."
+    },
+    {
+      id: 738,
+      subject: "REDES",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué ACL filtra por IP origen, destino, protocolo y puerto?",
+      options: [
+        "Standard ACL",
+        "Extended ACL",
+        "MAC ACL",
+        "VLAN ACL"
+      ],
+      correct: 1,
+      explanation: "Extended ACL filtra por múltiples criterios: IP origen/destino, protocolo (TCP/UDP/ICMP), puertos, flags TCP, proporcionando control granular de tráfico."
+    },
+    {
+      id: 739,
+      subject: "REDES",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué ACL permite tráfico de retorno de conexiones iniciadas internamente?",
+      options: [
+        "ACL estándar",
+        "Reflexive ACL",
+        "MAC ACL",
+        "VLAN ACL"
+      ],
+      correct: 1,
+      explanation: "Reflexive ACL crea automáticamente reglas temporales que permiten tráfico de retorno de conexiones iniciadas desde la red interna, similar a stateful firewall."
+    },
+    {
+      id: 740,
+      subject: "REDES",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué ACL se activa/desactiva automáticamente según horarios configurados?",
+      options: [
+        "ACL permanente",
+        "Time-based ACL",
+        "MAC ACL",
+        "VLAN ACL"
+      ],
+      correct: 1,
+      explanation: "Time-based ACL aplica reglas solo durante horarios específicos (ej: bloquear redes sociales en horario laboral), usando time-ranges configurables."
+    },
+    {
+      id: 741,
+      subject: "REDES",
+      unit: "UT4",
+      source: "new",
+      question: "¿Qué distribución Linux especializada funciona como router open-source?",
+      options: [
+        "Ubuntu Desktop",
+        "VyOS",
+        "Windows Server",
+        "macOS"
+      ],
+      correct: 1,
+      explanation: "VyOS es una distribución Linux derivada de Vyatta que funciona como router/firewall open-source con CLI similar a Junos, soportando BGP, OSPF, VPN, etc."
     },
     {
       id: 412,
@@ -5458,6 +6658,206 @@ const ExamSimulator = () => {
       explanation: "El campo VID (VLAN Identifier) es una parte de 12 bits dentro de la etiqueta 802.1Q que identifica específicamente a qué VLAN (de la 1 a la 4094) pertenece la trama.",
     },
     {
+      id: 742,
+      subject: "REDES",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué tecnología permite aislar completamente tablas de enrutamiento por tenant?",
+      options: ["VLAN simple", "VRF (Virtual Routing and Forwarding)", "STP", "LACP"],
+      correct: 1,
+      explanation: "VRF crea instancias virtuales de routing con tablas independientes, permitiendo aislar completamente tráfico entre tenants o servicios en el mismo hardware."
+    },
+    {
+      id: 743,
+      subject: "REDES",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué limitación hardware puede saturarse con demasiadas VLANs?",
+      options: ["RAM general", "TCAM (límite de prefijos/ACLs)", "Disco duro", "Fuente alimentación"],
+      correct: 1,
+      explanation: "TCAM tiene límites finitos para almacenar prefijos, ACLs y VLANs; saturarlo degrada el rendimiento al forzar lookups en software (CPU)."
+    },
+    {
+      id: 744,
+      subject: "REDES",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué componente virtualiza switching en entornos de hypervisors?",
+      options: ["Switch físico solo", "vSwitch (virtual switch)", "Router virtual", "Firewall virtual"],
+      correct: 1,
+      explanation: "vSwitch (ej: VMware vSwitch, Open vSwitch) proporciona switching L2 entre VMs en un mismo host, debiendo configurarse con las mismas VLANs que switches físicos."
+    },
+    {
+      id: 745,
+      subject: "REDES",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué software gestiona inventario de IPs y VLANs en redes grandes?",
+      options: ["Excel simple", "IPAM (IP Address Management)", "Notepad", "Word"],
+      correct: 1,
+      explanation: "IPAM (ej: NetBox, phpIPAM, Infoblox) gestiona direccionamiento IP, VLANs, subnets y asignaciones, proporcionando CMDB para redes con auditoría y trazabilidad."
+    },
+    {
+      id: 746,
+      subject: "REDES",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué herramienta open-source documenta racks, cables, VLANs e IPs?",
+      options: ["Excel", "NetBox", "PowerPoint", "Paint"],
+      correct: 1,
+      explanation: "NetBox es IPAM/DCIM open-source que documenta infraestructura (racks, cables, dispositivos), direccionamiento (VLANs, IPs, prefijos) y circuitos con API REST."
+    },
+    {
+      id: 747,
+      subject: "REDES",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué campo de 3 bits en 802.1Q marca prioridad QoS?",
+      options: ["VLAN ID", "PCP (Priority Code Point)", "EtherType", "MAC address"],
+      correct: 1,
+      explanation: "PCP (Priority Code Point) son 3 bits en el tag 802.1Q que marcan prioridad de tráfico (0-7), usado para QoS en capa 2."
+    },
+    {
+      id: 748,
+      subject: "REDES",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué mapeo relaciona prioridades L2 (PCP) con prioridades L3 (IP)?",
+      options: ["MAC mapping", "PCP→DSCP mapping", "ARP mapping", "DNS mapping"],
+      correct: 1,
+      explanation: "PCP→DSCP mapping traduce prioridades de capa 2 (802.1Q PCP 0-7) a marcas DSCP de capa 3 (IP ToS), manteniendo QoS end-to-end."
+    },
+    {
+      id: 749,
+      subject: "REDES",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué VLAN se configura específicamente para teléfonos IP en un puerto?",
+      options: ["Data VLAN", "Voice VLAN", "Management VLAN", "Native VLAN"],
+      correct: 1,
+      explanation: "Voice VLAN permite segregar tráfico de VoIP en una VLAN dedicada en el mismo puerto físico que datos, con QoS prioritario y detección por LLDP/CDP."
+    },
+    {
+      id: 750,
+      subject: "REDES",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué protocolos detectan automáticamente dispositivos de red para asignar VLANs?",
+      options: ["HTTP/FTP", "LLDP/CDP", "SMTP/POP3", "DNS/DHCP"],
+      correct: 1,
+      explanation: "LLDP (estándar IEEE) y CDP (Cisco) descubren dispositivos vecinos, permitiendo asignación automática de VLANs (ej: detectar teléfono IP y asignar voice VLAN)."
+    },
+    {
+      id: 751,
+      subject: "REDES",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué tecnología permite alimentar teléfonos IP y APs por el cable Ethernet?",
+      options: ["USB charging", "PoE (Power over Ethernet)", "WiFi charging", "Solar power"],
+      correct: 1,
+      explanation: "PoE (802.3af/at/bt) alimenta dispositivos (teléfonos IP, APs, cámaras) a través del cable Ethernet, requiriendo verificar presupuesto PoE del switch al planificar VLANs."
+    },
+    {
+      id: 752,
+      subject: "REDES",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué tecnología permite trunks activo-activo entre switches redundantes?",
+      options: ["STP simple", "MLAG/VPC (Multi-chassis LAG)", "VLAN única", "Hub"],
+      correct: 1,
+      explanation: "MLAG (Aruba, Juniper) o VPC (Cisco) crea LAG distribuido entre dos switches físicos, requiriendo configuración simétrica de VLANs en ambos peers."
+    },
+    {
+      id: 753,
+      subject: "REDES",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué función aprende y fija automáticamente la primera MAC vista en un puerto?",
+      options: ["Dynamic MAC", "Sticky MAC address", "Static route", "DHCP lease"],
+      correct: 1,
+      explanation: "Sticky MAC (port-security sticky) aprende automáticamente la primera MAC y la convierte en configuración permanente, combinando seguridad con automatización."
+    },
+    {
+      id: 754,
+      subject: "REDES",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué comando acelera la transición a forwarding en puertos de acceso?",
+      options: ["spanning-tree priority", "spanning-tree portfast", "spanning-tree cost", "spanning-tree disable"],
+      correct: 1,
+      explanation: "spanning-tree portfast omite los estados listening/learning en puertos de acceso donde no hay switches, pasando directamente a forwarding (30s→inmediato)."
+    },
+    {
+      id: 755,
+      subject: "REDES",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué VLAN aísla puertos no usados para prevenir accesos no autorizados?",
+      options: ["VLAN 1 default", "VLAN de cuarentena/parking", "Native VLAN", "Management VLAN"],
+      correct: 1,
+      explanation: "VLAN de cuarentena o parking VLAN aísla puertos sin uso, aplicando shutdown administrativo o restricciones estrictas hasta que se activen formalmente."
+    },
+    {
+      id: 756,
+      subject: "REDES",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué técnica divide redes en segmentos pequeños con controles estrictos?",
+      options: ["Flat network", "Microsegmentación", "Hub-based network", "Single VLAN"],
+      correct: 1,
+      explanation: "Microsegmentación divide la red en segmentos muy pequeños (por aplicación/workload) con firewalls y políticas granulares, reduciendo movimiento lateral de ataques."
+    },
+    {
+      id: 757,
+      subject: "REDES",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué tipo de firewalling controla tráfico horizontal entre servidores internos?",
+      options: ["North-South solo", "EastWest firewalling", "Perimeter firewall", "Internet firewall"],
+      correct: 1,
+      explanation: "EastWest firewalling controla tráfico entre servidores/workloads internos (lateral), no solo North-South (entrada/salida), siendo clave en microsegmentación datacenter."
+    },
+    {
+      id: 758,
+      subject: "REDES",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué configuración soporta simultáneamente IPv4 e IPv6 en una VLAN?",
+      options: ["IPv4 solo", "Dual stack", "IPv6 solo", "Sin IP"],
+      correct: 1,
+      explanation: "Dual stack configura IPv4 e IPv6 simultáneamente en una VLAN/SVI, permitiendo transición gradual y coexistencia de ambos protocolos."
+    },
+    {
+      id: 759,
+      subject: "REDES",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué término describe VLANs que se extienden entre múltiples ubicaciones físicas?",
+      options: ["Local VLAN", "L2 extents/stretched VLANs", "Loopback", "Management VLAN"],
+      correct: 1,
+      explanation: "L2 extents o stretched VLANs extienden el mismo dominio L2 entre sitios (ej: via VPLS, OTV), permitiendo movilidad de VMs pero añadiendo complejidad."
+    },
+    {
+      id: 760,
+      subject: "REDES",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué modelo jerárquico de campus organiza VLANs en tres capas?",
+      options: ["Flat network", "Access/Distribution/Core", "Peer-to-peer", "Mesh total"],
+      correct: 1,
+      explanation: "El modelo Access/Distribution/Core organiza VLANs con acceso en edge, agregación/routing inter-VLAN en distribución y transporte en core, facilitando escalabilidad."
+    },
+    {
+      id: 761,
+      subject: "REDES",
+      unit: "UT5",
+      source: "new",
+      question: "¿Qué práctica reduce errores al desplegar VLANs en múltiples switches?",
+      options: ["Configuración manual sin plantillas", "Automatización con Ansible/plantillas", "Copiar/pegar sin verificar", "No documentar cambios"],
+      correct: 1,
+      explanation: "Automatización con Ansible y plantillas Jinja2 estandariza configuración de VLANs, reduce errores humanos, facilita auditoría y permite rollback controlado."
+    },
+    {
       id: 432,
       subject: "REDES",
       unit: "UT6",
@@ -5738,6 +7138,206 @@ const ExamSimulator = () => {
       explanation: "La Distancia Administrativa (AD) es el parámetro que utilizan los routers para seleccionar la ruta más fiable cuando hay dos o más rutas diferentes hacia el mismo destino aprendidas por distintos protocolos de enrutamiento.",
     },
     {
+      id: 762,
+      subject: "REDES",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué versión de RIP es classful y NO soporta VLSM?",
+      options: ["RIPv2 classless", "RIPv1", "RIPng IPv6", "OSPF"],
+      correct: 1,
+      explanation: "RIPv1 es classful (no envía máscara), no soporta VLSM ni autenticación. RIPv2 es classless y soporta VLSM con autenticación."
+    },
+    {
+      id: 763,
+      subject: "REDES",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué técnica RIP envía rutas con métrica infinita para prevenir bucles?",
+      options: ["Split horizon", "Poison reverse", "Hold-down", "TTL"],
+      correct: 1,
+      explanation: "Poison reverse envía la ruta recibida de vuelta con métrica 16 (infinita en RIP) para evitar que el vecino la use, previniendo bucles."
+    },
+    {
+      id: 764,
+      subject: "REDES",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué permite balancear tráfico entre múltiples rutas de igual costo?",
+      options: ["Single path", "ECMP (Equal Cost Multi Path)", "Loop prevention", "NAT"],
+      correct: 1,
+      explanation: "ECMP permite distribuir tráfico entre múltiples rutas con igual métrica, aprovechando redundancia y aumentando ancho de banda agregado."
+    },
+    {
+      id: 765,
+      subject: "REDES",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué algoritmo usa OSPF para calcular el camino más corto?",
+      options: ["Bellman-Ford", "SPF/Dijkstra", "Distance vector", "Random"],
+      correct: 1,
+      explanation: "OSPF usa el algoritmo SPF (Shortest Path First) de Dijkstra para calcular el árbol de caminos más cortos desde cada router a todos los destinos."
+    },
+    {
+      id: 766,
+      subject: "REDES",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué routers OSPF se eligen en redes broadcast para reducir adyacencias?",
+      options: ["Todos iguales", "DR/BDR (Designated Router/Backup)", "ABR solo", "ASBR solo"],
+      correct: 1,
+      explanation: "DR y BDR se eligen en redes broadcast (Ethernet) para centralizar intercambio de LSAs, reduciendo adyacencias de N² a 2N."
+    },
+    {
+      id: 767,
+      subject: "REDES",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué tipo de LSA OSPF describe routers dentro de un área?",
+      options: ["LSA tipo 5", "LSA tipo 1 (Router LSA)", "LSA tipo 7", "LSA tipo 4"],
+      correct: 1,
+      explanation: "LSA tipo 1 (Router LSA) describe los enlaces del router y se inunda dentro del área, siendo la base de la topología intra-área."
+    },
+    {
+      id: 768,
+      subject: "REDES",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué métrica usa OSPF basada en ancho de banda del enlace?",
+      options: ["Hop count", "Cost (100Mbps/bandwidth)", "Delay", "MTU"],
+      correct: 1,
+      explanation: "OSPF usa cost calculado como referencia/bandwidth (default 100Mbps/BW del enlace), favoreciendo enlaces más rápidos."
+    },
+    {
+      id: 769,
+      subject: "REDES",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué autenticación robusta soporta OSPF para proteger vecindades?",
+      options: ["Plain text", "MD5 o SHA", "Sin autenticación", "WPA2"],
+      correct: 1,
+      explanation: "OSPF soporta autenticación MD5 (legacy) o SHA (moderno) en mensajes Hello/LSA, previniendo routers maliciosos de inyectar rutas."
+    },
+    {
+      id: 770,
+      subject: "REDES",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué proceso intercambia rutas entre diferentes protocolos de routing?",
+      options: ["Routing normal", "Redistribución", "NAT", "VLAN"],
+      correct: 1,
+      explanation: "Redistribución permite importar rutas entre protocolos (ej: OSPF↔BGP), requiriendo cuidado con métricas y filtros para evitar bucles."
+    },
+    {
+      id: 771,
+      subject: "REDES",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué herramienta aplica políticas complejas de filtrado y modificación de rutas?",
+      options: ["ACL simple", "Route-map", "VLAN", "STP"],
+      correct: 1,
+      explanation: "Route-maps permiten match/set conditions complejas para filtrar, modificar métricas, set next-hop o aplicar políticas en redistribución y BGP."
+    },
+    {
+      id: 772,
+      subject: "REDES",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué lista filtra prefijos por direcciones/máscaras en políticas de routing?",
+      options: ["ACL extended", "Prefix-list", "MAC list", "ARP list"],
+      correct: 1,
+      explanation: "Prefix-lists filtran prefijos IP por dirección y longitud de máscara (ej: 10.0.0.0/8 le 24), siendo más eficientes que ACLs para routing."
+    },
+    {
+      id: 773,
+      subject: "REDES",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué atributo marca rutas para control en redistribución?",
+      options: ["VLAN ID", "Route tag", "MAC address", "Port number"],
+      correct: 1,
+      explanation: "Route tagging marca rutas con valores numéricos durante redistribución, permitiendo identificar origen y aplicar políticas selectivas."
+    },
+    {
+      id: 774,
+      subject: "REDES",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué base de datos almacena todos los LSAs en OSPF?",
+      options: ["RIB", "LSDB (Link State Database)", "FIB", "ARP table"],
+      correct: 1,
+      explanation: "LSDB almacena todos los LSAs recibidos en un área, siendo idéntica en todos los routers del área y base para el cálculo SPF."
+    },
+    {
+      id: 775,
+      subject: "REDES",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué router OSPF conecta múltiples áreas con el área 0?",
+      options: ["DR", "ABR (Area Border Router)", "BDR", "ASBR"],
+      correct: 1,
+      explanation: "ABR conecta un área no-backbone con área 0, generando LSAs tipo 3 (summary) para anunciar rutas inter-área."
+    },
+    {
+      id: 776,
+      subject: "REDES",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué router OSPF redistribuye rutas de otros protocolos o dominios?",
+      options: ["DR", "ASBR (Autonomous System Boundary Router)", "ABR", "BDR"],
+      correct: 1,
+      explanation: "ASBR redistribuye rutas externas (BGP, estáticas, otros protocolos) a OSPF mediante LSAs tipo 5 (external) o tipo 7 (NSSA)."
+    },
+    {
+      id: 777,
+      subject: "REDES",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué tipo de área OSPF no permite LSAs tipo 5 pero sí tipo 7?",
+      options: ["Área 0", "NSSA (Not-So-Stubby Area)", "Totally stubby", "Backbone"],
+      correct: 1,
+      explanation: "NSSA bloquea LSAs tipo 5 pero permite tipo 7 (convertidos a tipo 5 en ABR), útil cuando el área tiene ASBR pero se quiere reducir LSDB."
+    },
+    {
+      id: 778,
+      subject: "REDES",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué comando muestra configuración de protocolos de routing activos?",
+      options: ["show interfaces", "show ip protocols", "show arp", "show vlan"],
+      correct: 1,
+      explanation: "show ip protocols muestra protocolos activos, redes anunciadas, métricas, timers, redistribución y vecinos configurados."
+    },
+    {
+      id: 779,
+      subject: "REDES",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué tabla contiene las mejores rutas seleccionadas por routing?",
+      options: ["CAM table", "RIB (Routing Information Base)", "ARP cache", "MAC table"],
+      correct: 1,
+      explanation: "RIB (tabla de routing) contiene todas las rutas conocidas; el proceso selecciona las mejores que se instalan en FIB para forwarding."
+    },
+    {
+      id: 780,
+      subject: "REDES",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué tabla usa el hardware para reenviar paquetes a alta velocidad?",
+      options: ["RIB", "FIB (Forwarding Information Base)", "LSDB", "Neighbor table"],
+      correct: 1,
+      explanation: "FIB es la tabla de forwarding en hardware/ASIC con las rutas activas de RIB, optimizada para lookups de reenvío de paquetes a velocidad de línea."
+    },
+    {
+      id: 781,
+      subject: "REDES",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué métrica evalúa cuánto tarda la red en adaptarse a un fallo?",
+      options: ["Bandwidth", "Convergencia (tiempo)", "MTU", "TTL"],
+      correct: 1,
+      explanation: "Convergencia mide el tiempo desde que ocurre un fallo hasta que todos los routers actualizan sus tablas y restauran conectividad por rutas alternas."
+    },
+    {
       id: 452,
       subject: "REDES",
       unit: "UT7",
@@ -6016,6 +7616,206 @@ const ExamSimulator = () => {
       ],
       correct: 1,
       explanation: "IP SLA (Service Level Agreement) de Cisco permite monitorizar de forma activa parámetros como la latencia, el jitter o la pérdida de paquetes. Se suele combinar con 'track' para cambiar automáticamente de ruta (failover) si un enlace deja de cumplir con la calidad mínima.",
+    },
+    {
+      id: 782,
+      subject: "REDES",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué tecnología NAT usan ISPs para compartir IPs públicas entre múltiples clientes?",
+      options: ["NAT simple", "CGNAT (Carrier-Grade NAT)", "PAT básico", "No NAT"],
+      correct: 1,
+      explanation: "CGNAT permite a ISPs compartir IPs públicas entre miles de clientes, añadiendo doble NAT que complica servicios entrantes y gaming."
+    },
+    {
+      id: 783,
+      subject: "REDES",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué NAT traduce IPv6 a IPv4 para comunicación entre ambos protocolos?",
+      options: ["NAT44", "NAT64", "NAT simple", "PAT"],
+      correct: 1,
+      explanation: "NAT64 traduce entre IPv6 e IPv4, permitiendo que hosts IPv6-only accedan a servicios IPv4-only en Internet durante la transición."
+    },
+    {
+      id: 784,
+      subject: "REDES",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué módulo adapta protocolos complejos (FTP, SIP) que requieren múltiples puertos en NAT?",
+      options: ["Firewall simple", "ALG (Application Layer Gateway)", "Router básico", "Switch"],
+      correct: 1,
+      explanation: "ALG inspecciona y modifica payload de protocolos complejos para que funcionen con NAT, abriendo puertos dinámicos para FTP, SIP, H.323, etc."
+    },
+    {
+      id: 785,
+      subject: "REDES",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué versión moderna de IKE usa IPsec para negociar túneles VPN?",
+      options: ["IKEv1", "IKEv2", "SSHv2", "TLSv1"],
+      correct: 1,
+      explanation: "IKEv2 es la versión moderna de Internet Key Exchange, siendo más rápida, resistente a cambios de red (MOBIKE) y soportando EAP para autenticación."
+    },
+    {
+      id: 786,
+      subject: "REDES",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué solución VPN open-source usa SSL/TLS y es multiplataforma?",
+      options: ["PPTP", "OpenVPN", "L2TP solo", "IPSEC solo"],
+      correct: 1,
+      explanation: "OpenVPN usa SSL/TLS sobre TCP/UDP, siendo open-source, multiplataforma y altamente configurable con cifrados modernos y autenticación flexible."
+    },
+    {
+      id: 787,
+      subject: "REDES",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué implementación IPsec open-source es común en Linux?",
+      options: ["Cisco AnyConnect", "strongSwan", "FortiClient", "WireGuard solo"],
+      correct: 1,
+      explanation: "strongSwan es implementación IPsec/IKEv2 open-source para Linux, soportando autenticación con certificados, EAP y configuraciones site-to-site/remote-access."
+    },
+    {
+      id: 788,
+      subject: "REDES",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué método de autenticación VPN usa clave compartida secreta?",
+      options: ["Certificado X.509", "PSK (Pre-Shared Key)", "RADIUS", "LDAP"],
+      correct: 1,
+      explanation: "PSK (Pre-Shared Key) usa clave secreta compartida para autenticación IKE, siendo simple pero menos segura que certificados en despliegues grandes."
+    },
+    {
+      id: 789,
+      subject: "REDES",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué característica genera nuevas claves de sesión en cada renegociación VPN?",
+      options: ["Clave estática", "PFS (Perfect Forward Secrecy)", "PSK simple", "No rekeying"],
+      correct: 1,
+      explanation: "PFS asegura que comprometer una clave de sesión no exponga sesiones pasadas/futuras, generando claves efímeras independientes en cada renegociación."
+    },
+    {
+      id: 790,
+      subject: "REDES",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué prueba detecta si una VPN filtra consultas DNS fuera del túnel?",
+      options: ["Bandwidth test", "DNS leak test", "Ping test", "MTU test"],
+      correct: 1,
+      explanation: "DNS leak test verifica que las consultas DNS pasan por el túnel VPN y no por el ISP local, evitando exposición de navegación."
+    },
+    {
+      id: 791,
+      subject: "REDES",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué tecnología WAN usa Ethernet sobre redes metropolitanas con SLA?",
+      options: ["MPLS", "Metro Ethernet", "ADSL", "Dial-up"],
+      correct: 1,
+      explanation: "Metro Ethernet proporciona conectividad L2 sobre redes metropolitanas con ancho de banda simétrico, SLA y latencias bajas, compitiendo con MPLS."
+    },
+    {
+      id: 792,
+      subject: "REDES",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué tipo de WAN usa conexiones residenciales de fibra/cable para sucursales?",
+      options: ["MPLS dedicado", "Broadband (fibra/cable)", "Satélite", "Línea dedicada"],
+      correct: 1,
+      explanation: "Broadband WAN usa conexiones de consumidor (fibra, cable, DSL) para sucursales con SD-WAN, siendo más económico que MPLS pero sin SLA estricto."
+    },
+    {
+      id: 793,
+      subject: "REDES",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué acuerdo define disponibilidad, latencia y tiempo de resolución garantizados?",
+      options: ["Contrato simple", "SLA (Service Level Agreement)", "Factura", "Manual"],
+      correct: 1,
+      explanation: "SLA define métricas garantizadas (uptime, latencia, jitter, MTTR) y compensaciones por incumplimiento, siendo crítico en enlaces WAN empresariales."
+    },
+    {
+      id: 794,
+      subject: "REDES",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué métrica mide la variación del retardo entre paquetes en tiempo real?",
+      options: ["Bandwidth", "Jitter", "Throughput", "MTU"],
+      correct: 1,
+      explanation: "Jitter mide variación en latencia entre paquetes, siendo crítico para VoIP/video donde valores >30ms degradan calidad requiriendo buffers de jitter."
+    },
+    {
+      id: 795,
+      subject: "REDES",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué estándar IEEE permite etiquetar VLANs dentro de VLANs (stacked)?",
+      options: ["802.1Q simple", "QinQ (802.1ad)", "802.11ac", "802.3af"],
+      correct: 1,
+      explanation: "QinQ (802.1ad) permite encapsular tags 802.1Q dentro de otro tag, usado por ISPs para transportar VLANs de múltiples clientes en Metro Ethernet."
+    },
+    {
+      id: 796,
+      subject: "REDES",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué protocolo establece sesión PPP sobre Ethernet para autenticación DSL?",
+      options: ["DHCP", "PPPoE (PPP over Ethernet)", "ARP", "ICMP"],
+      correct: 1,
+      explanation: "PPPoE encapsula PPP en frames Ethernet, permitiendo autenticación (PAP/CHAP) y asignación de IP dinámica en conexiones DSL y fibra residenciales."
+    },
+    {
+      id: 797,
+      subject: "REDES",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué red distribuida cachea contenido cerca de usuarios reduciendo latencia?",
+      options: ["LAN local", "CDN (Content Delivery Network)", "WAN simple", "VPN"],
+      correct: 1,
+      explanation: "CDN distribuye contenido estático/dinámico en nodos globales (PoPs), reduciendo latencia, mejorando disponibilidad y mitigando ataques DDoS volumétricos."
+    },
+    {
+      id: 798,
+      subject: "REDES",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué servicio filtra tráfico DDoS antes de que llegue a la red del cliente?",
+      options: ["Firewall local", "DDoS scrubbing/cleaning centers", "Router simple", "Switch"],
+      correct: 1,
+      explanation: "DDoS scrubbing desvía tráfico a centros especializados que filtran ataques volumétricos, retornando solo tráfico legítimo al origen del cliente."
+    },
+    {
+      id: 799,
+      subject: "REDES",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué arquitectura converge red y seguridad en servicios cloud?",
+      options: ["LAN tradicional", "SASE (Secure Access Service Edge)", "Hub físico", "Switch core"],
+      correct: 1,
+      explanation: "SASE combina SD-WAN, CASB, FWaaS, SWG y ZTNA en plataforma cloud, proporcionando seguridad consistente para usuarios distribuidos y workloads cloud."
+    },
+    {
+      id: 800,
+      subject: "REDES",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué servidor fortificado actúa como punto de acceso único para administración?",
+      options: ["Servidor web", "Bastion host/jump server", "Servidor DNS", "Servidor DHCP"],
+      correct: 1,
+      explanation: "Bastion host es servidor endurecido que centraliza acceso SSH/RDP administrativo, con 2FA, logging completo y restricciones de IP para reducir superficie de ataque."
+    },
+    {
+      id: 801,
+      subject: "REDES",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué métricas definen tiempo de recuperación y pérdida de datos tolerables?",
+      options: ["Bandwidth/Latency", "RTO/RPO", "MTU/MSS", "VLAN/Subnet"],
+      correct: 1,
+      explanation: "RTO (Recovery Time Objective) define tiempo máximo de caída tolerable y RPO (Recovery Point Objective) define pérdida de datos aceptable en disaster recovery."
     },
     {
       id: 472,
