@@ -8642,6 +8642,231 @@ const ExamSimulator = () => {
       correct: 1,
       explanation: "La materialidad define el umbral a partir del cual un error o hallazgo es significativo para afectar decisiones, determinando qué debe reportarse en la auditoría."
     },
+    {
+      id: 647,
+      subject: "ISO",
+      unit: "UT8",
+      source: "new",
+      question: "¿Qué servidor web de código abierto es el más utilizado históricamente en Internet?",
+      options: [
+        "IIS de Microsoft",
+        "Apache HTTP Server",
+        "lighttpd",
+        "Caddy"
+      ],
+      correct: 1,
+      explanation: "Apache HTTP Server es el servidor web de código abierto más veterano y ampliamente utilizado, conocido por su modularidad y extensibilidad mediante módulos."
+    },
+    {
+      id: 648,
+      subject: "ISO",
+      unit: "UT8",
+      source: "new",
+      question: "¿Qué sistema de caché en memoria reduce consultas repetitivas a la base de datos?",
+      options: [
+        "MySQL Query Cache",
+        "Redis o Memcached",
+        "DNS Cache",
+        "Browser Cache"
+      ],
+      correct: 1,
+      explanation: "Redis y Memcached son sistemas de caché en memoria (key-value store) que almacenan resultados de consultas frecuentes, reduciendo drásticamente la carga de la base de datos."
+    },
+    {
+      id: 649,
+      subject: "ISO",
+      unit: "UT8",
+      source: "new",
+      question: "¿Qué sistemas de mensajería desacoplan servicios mediante colas?",
+      options: [
+        "HTTP simple",
+        "RabbitMQ o Kafka",
+        "FTP",
+        "SMTP"
+      ],
+      correct: 1,
+      explanation: "RabbitMQ y Apache Kafka son brokers de mensajería que implementan colas, permitiendo comunicación asíncrona entre servicios y mejorando la resiliencia del sistema."
+    },
+    {
+      id: 650,
+      subject: "ISO",
+      unit: "UT8",
+      source: "new",
+      question: "¿Qué componente distribuye conexiones entre múltiples servidores para evitar sobrecarga?",
+      options: [
+        "DNS Round Robin",
+        "Balanceador de carga",
+        "Firewall",
+        "Proxy web"
+      ],
+      correct: 1,
+      explanation: "Los balanceadores de carga (HAProxy, Nginx, AWS ELB) distribuyen las peticiones entrantes entre múltiples servidores backend, mejorando disponibilidad y rendimiento."
+    },
+    {
+      id: 651,
+      subject: "ISO",
+      unit: "UT8",
+      source: "new",
+      question: "¿Qué sistema de monitorización se especializa en recolectar métricas mediante scraping?",
+      options: [
+        "Nagios antiguo",
+        "Prometheus",
+        "SNMP básico",
+        "Syslog"
+      ],
+      correct: 1,
+      explanation: "Prometheus es un sistema de monitorización y alertas que recolecta métricas mediante scraping HTTP, diseñado especialmente para entornos dinámicos y microservicios."
+    },
+    {
+      id: 652,
+      subject: "ISO",
+      unit: "UT8",
+      source: "new",
+      question: "¿Qué herramienta visualiza métricas y dashboards de sistemas de monitorización?",
+      options: [
+        "Excel",
+        "Grafana",
+        "PowerPoint",
+        "Paint"
+      ],
+      correct: 1,
+      explanation: "Grafana es la plataforma líder para visualización de métricas, creando dashboards interactivos que se integran con Prometheus, InfluxDB, Elasticsearch y otras fuentes."
+    },
+    {
+      id: 653,
+      subject: "ISO",
+      unit: "UT8",
+      source: "new",
+      question: "¿Qué plataforma de contenedores es el estándar de facto para empaquetar aplicaciones?",
+      options: [
+        "VirtualBox VM",
+        "Docker",
+        "VMware",
+        "Hyper-V"
+      ],
+      correct: 1,
+      explanation: "Docker es la plataforma de contenedores más popular, permitiendo empaquetar aplicaciones con sus dependencias en imágenes ligeras y portables."
+    },
+    {
+      id: 654,
+      subject: "ISO",
+      unit: "UT8",
+      source: "new",
+      question: "¿Qué tipo de disco es imprescindible para servicios de alta concurrencia con miles de IOPS?",
+      options: [
+        "HDD mecánico",
+        "SSD NVMe",
+        "Floppy disk",
+        "CD-ROM"
+      ],
+      correct: 1,
+      explanation: "Los SSD NVMe (Non-Volatile Memory Express) ofrecen miles de IOPS y latencias ultra-bajas, siendo esenciales para bases de datos y servicios de alta concurrencia."
+    },
+    {
+      id: 655,
+      subject: "ISO",
+      unit: "UT8",
+      source: "new",
+      question: "¿Qué función cumple Nginx cuando recibe peticiones y las reenvía a servidores backend?",
+      options: [
+        "DNS Server",
+        "Proxy inverso",
+        "DHCP Server",
+        "File server"
+      ],
+      correct: 1,
+      explanation: "Un proxy inverso recibe peticiones de clientes y las reenvía a servidores backend, proporcionando balanceo de carga, caché, terminación SSL y protección."
+    },
+    {
+      id: 656,
+      subject: "ISO",
+      unit: "UT8",
+      source: "new",
+      question: "¿Qué autoridad certificadora gratuita automatiza la obtención de certificados TLS?",
+      options: [
+        "DigiCert comercial",
+        "Let's Encrypt",
+        "Verisign antiguo",
+        "Thawte"
+      ],
+      correct: 1,
+      explanation: "Let's Encrypt es una CA gratuita y automatizada que emite certificados TLS mediante el protocolo ACME, democratizando el cifrado HTTPS en Internet."
+    },
+    {
+      id: 657,
+      subject: "ISO",
+      unit: "UT8",
+      source: "new",
+      question: "¿Qué metodología integra desarrollo y operaciones con despliegues automatizados continuos?",
+      options: [
+        "Waterfall tradicional",
+        "CI/CD (Continuous Integration/Deployment)",
+        "Manual deployment",
+        "Agile solo"
+      ],
+      correct: 1,
+      explanation: "CI/CD automatiza la integración de código, pruebas y despliegue continuo mediante pipelines, acelerando entregas y reduciendo errores humanos."
+    },
+    {
+      id: 658,
+      subject: "ISO",
+      unit: "UT8",
+      source: "new",
+      question: "¿Qué interfaz conecta aplicaciones Python con servidores web como Apache o Nginx?",
+      options: [
+        "CGI antiguo",
+        "WSGI/uWSGI",
+        "JDBC",
+        "ODBC"
+      ],
+      correct: 1,
+      explanation: "WSGI (Web Server Gateway Interface) es el estándar Python para conectar aplicaciones web con servidores, implementado por uWSGI, Gunicorn y otros."
+    },
+    {
+      id: 659,
+      subject: "ISO",
+      unit: "UT8",
+      source: "new",
+      question: "¿Qué runtime JavaScript del lado del servidor se usa comúnmente con Express?",
+      options: [
+        "PHP",
+        "Node.js",
+        "Java",
+        "Ruby"
+      ],
+      correct: 1,
+      explanation: "Node.js es un runtime JavaScript basado en V8 que permite ejecutar JavaScript en el servidor, siendo la base de frameworks como Express para aplicaciones web."
+    },
+    {
+      id: 660,
+      subject: "ISO",
+      unit: "UT8",
+      source: "new",
+      question: "¿Qué protocolo permite a servidores web comunicarse con aplicaciones mediante procesos persistentes?",
+      options: [
+        "CGI lento",
+        "FastCGI",
+        "SMTP",
+        "FTP"
+      ],
+      correct: 1,
+      explanation: "FastCGI mantiene procesos de aplicación persistentes (PHP-FPM, etc.) en lugar de crear uno nuevo por petición como CGI, mejorando drásticamente el rendimiento."
+    },
+    {
+      id: 661,
+      subject: "ISO",
+      unit: "UT8",
+      source: "new",
+      question: "¿Qué característica de Apache permite alojar múltiples sitios web en un mismo servidor?",
+      options: [
+        "Single site mode",
+        "Virtual hosts",
+        "DNS only",
+        "Port forwarding"
+      ],
+      correct: 1,
+      explanation: "Los Virtual Hosts de Apache permiten configurar múltiples sitios web en un mismo servidor, diferenciándolos por nombre de dominio, IP o puerto."
+    },
   ];
 
   // =========================
