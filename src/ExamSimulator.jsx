@@ -6767,6 +6767,456 @@ const ExamSimulator = () => {
       correct: 1,
       explanation: "NTP (Network Time Protocol) es el protocolo estándar para sincronizar relojes de sistemas informáticos con servidores de tiempo precisos en la red."
     },
+    {
+      id: 522,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué requisito de firmware es obligatorio para instalar Windows 11?",
+      options: [
+        "BIOS Legacy con MBR",
+        "TPM 2.0 con UEFI y Secure Boot",
+        "RAID hardware activado",
+        "CSM compatibility mode"
+      ],
+      correct: 1,
+      explanation: "Windows 11 requiere TPM 2.0, UEFI nativo (sin CSM) y Secure Boot habilitado, formando parte de los requisitos de seguridad del sistema."
+    },
+    {
+      id: 523,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué modo de controladora SATA es recomendable activar para evitar dependencias de RAID propietario?",
+      options: [
+        "RAID Intel RST",
+        "AHCI (Advanced Host Controller Interface)",
+        "IDE Legacy",
+        "MegaRAID exclusivo"
+      ],
+      correct: 1,
+      explanation: "AHCI ofrece compatibilidad universal y permite usar RAID por software (mdadm, ZFS, Storage Spaces) evitando dependencias de drivers propietarios."
+    },
+    {
+      id: 524,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué herramienta permite convertir particiones MBR a GPT sin pérdida de datos?",
+      options: [
+        "format del diskpart",
+        "mbr2gpt o gdisk",
+        "chkdsk correctivo",
+        "defrag estándar"
+      ],
+      correct: 1,
+      explanation: "mbr2gpt (Windows) y gdisk (Linux) permiten convertir esquemas de particionado MBR a GPT preservando datos, aunque siempre debe hacerse backup previo."
+    },
+    {
+      id: 525,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué tamaño mínimo se recomienda para la partición ESP en instalaciones UEFI?",
+      options: [
+        "50-100 MB",
+        "300-512 MB",
+        "1-2 GB",
+        "5 GB o más"
+      ],
+      correct: 1,
+      explanation: "La ESP (EFI System Partition) debe ser de 300-512 MB en formato FAT32 para albergar múltiples bootloaders y actualizaciones de firmware."
+    },
+    {
+      id: 526,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué sistema de archivos se recomienda en Linux para aprovechar snapshots y compresión?",
+      options: [
+        "ext2 clásico",
+        "Btrfs con subvolúmenes",
+        "FAT32 extendido",
+        "NTFS en Linux"
+      ],
+      correct: 1,
+      explanation: "Btrfs ofrece snapshots instantáneos, compresión transparente, subvolúmenes y herramientas como Snapper/Timeshift para rollback del sistema."
+    },
+    {
+      id: 527,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué herramienta de Windows automatiza instalaciones desatendidas mediante archivos XML?",
+      options: [
+        "Kickstart",
+        "autounattend.xml con MDT/MECM",
+        "preseed para Ubuntu",
+        "cloud-init genérico"
+      ],
+      correct: 1,
+      explanation: "autounattend.xml junto con MDT (Microsoft Deployment Toolkit) o MECM automatizan instalaciones Windows definiendo particionado, usuarios, drivers y políticas."
+    },
+    {
+      id: 528,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué herramienta de Red Hat automatiza instalaciones mediante archivos de configuración?",
+      options: [
+        "preseed",
+        "Kickstart",
+        "autounattend.xml",
+        "Sysprep"
+      ],
+      correct: 1,
+      explanation: "Kickstart es el sistema de instalación automatizada de RHEL y derivados, definiendo particiones, paquetes, usuarios y configuración post-instalación."
+    },
+    {
+      id: 529,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué protocolo permite arrancar e instalar sistemas operativos directamente desde la red?",
+      options: [
+        "HTTP simple",
+        "PXE (Preboot Execution Environment)",
+        "FTP estándar",
+        "SMB/CIFS"
+      ],
+      correct: 1,
+      explanation: "PXE permite que los equipos arranquen por red mediante TFTP/HTTP, facilitando instalaciones masivas con herramientas como FOG, Cobbler o MAAS."
+    },
+    {
+      id: 530,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué herramienta permite crear USB multi-ISO con múltiples instaladores?",
+      options: [
+        "dd directo",
+        "Ventoy",
+        "diskpart solo",
+        "fsck repair"
+      ],
+      correct: 1,
+      explanation: "Ventoy permite crear un USB que puede contener múltiples ISOs sin reformatear, simplemente copiando archivos ISO a la partición de datos."
+    },
+    {
+      id: 531,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué sistema permite cifrado de disco completo en Linux?",
+      options: [
+        "BitLocker de Microsoft",
+        "LUKS2 (Linux Unified Key Setup)",
+        "FileVault de macOS",
+        "EFS de NTFS"
+      ],
+      correct: 1,
+      explanation: "LUKS2 es el estándar para cifrado de disco en Linux, soportando múltiples slots de claves, integración con TPM mediante clevis y algoritmos modernos."
+    },
+    {
+      id: 532,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué bootloader ofrece máxima flexibilidad soportando LUKS, LVM y Btrfs?",
+      options: [
+        "LILO antiguo",
+        "GRUB2",
+        "SYSLINUX básico",
+        "Windows Boot Manager"
+      ],
+      correct: 1,
+      explanation: "GRUB2 soporta configuraciones complejas incluyendo LUKS cifrado, LVM, Btrfs con subvolúmenes y múltiples sistemas operativos."
+    },
+    {
+      id: 533,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué bootloader UEFI prioriza simplicidad y rapidez?",
+      options: [
+        "GRUB2 completo",
+        "systemd-boot",
+        "LILO legacy",
+        "SYSLINUX extendido"
+      ],
+      correct: 1,
+      explanation: "systemd-boot es un bootloader minimalista que carga kernels EFI directamente, siendo más simple y rápido que GRUB2 pero con menos funcionalidades."
+    },
+    {
+      id: 534,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué bootloader ofrece interfaz visual y autodetección de sistemas operativos?",
+      options: [
+        "GRUB2 en texto",
+        "rEFInd",
+        "LILO básico",
+        "systemd-boot plano"
+      ],
+      correct: 1,
+      explanation: "rEFInd proporciona una interfaz gráfica atractiva y detecta automáticamente sistemas operativos, siendo ideal para configuraciones multiboot."
+    },
+    {
+      id: 535,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué herramienta permite gestionar entradas UEFI desde Linux?",
+      options: [
+        "bcdedit de Windows",
+        "efibootmgr",
+        "diskpart",
+        "fdisk tradicional"
+      ],
+      correct: 1,
+      explanation: "efibootmgr permite crear, modificar y eliminar entradas de arranque UEFI en NVRAM desde Linux, gestionando el orden de boot."
+    },
+    {
+      id: 536,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué permite shim en sistemas con Secure Boot activo?",
+      options: [
+        "Desactivar TPM permanentemente",
+        "Cargar bootloaders y módulos firmados con MOK",
+        "Arrancar en BIOS Legacy",
+        "Deshabilitar UEFI por completo"
+      ],
+      correct: 1,
+      explanation: "Shim es un bootloader pre-firmado que permite cargar GRUB y módulos de terceros mediante MOK (Machine Owner Keys) con Secure Boot activo."
+    },
+    {
+      id: 537,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué herramienta recompila módulos de kernel automáticamente tras actualizaciones?",
+      options: [
+        "apt-get upgrade",
+        "DKMS (Dynamic Kernel Module Support)",
+        "Windows Update",
+        "yum clean all"
+      ],
+      correct: 1,
+      explanation: "DKMS recompila automáticamente módulos externos (como drivers NVIDIA, VirtualBox) cuando se actualiza el kernel Linux, evitando errores de arranque."
+    },
+    {
+      id: 538,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué herramienta de clonación libre soporta multicast para despliegue masivo?",
+      options: [
+        "Notepad clonador",
+        "FOG Project",
+        "Windows Explorer",
+        "cp básico"
+      ],
+      correct: 1,
+      explanation: "FOG Project es una solución libre que permite clonar y desplegar imágenes mediante PXE con soporte multicast para actualizar múltiples equipos simultáneamente."
+    },
+    {
+      id: 539,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué herramienta permite clonar particiones y discos completos por bloques?",
+      options: [
+        "notepad duplicador",
+        "Clonezilla",
+        "Paint copier",
+        "Calculator backup"
+      ],
+      correct: 1,
+      explanation: "Clonezilla realiza clonación a nivel de bloques con compresión, soportando múltiples sistemas de archivos y restauración local o por red."
+    },
+    {
+      id: 540,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué comando Linux permite clonar discos a bajo nivel?",
+      options: [
+        "copy simple",
+        "dd (data duplicator)",
+        "move renamer",
+        "list lister"
+      ],
+      correct: 1,
+      explanation: "dd copia datos bloque a bloque, útil para clonar discos completos, crear backups a bajo nivel o escribir imágenes ISO a USB."
+    },
+    {
+      id: 541,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué tecnología protege claves de cifrado mediante mediciones de componentes de arranque?",
+      options: [
+        "Password simple",
+        "TPM 2.0 con PCR",
+        "POST básico",
+        "CMOS battery"
+      ],
+      correct: 1,
+      explanation: "TPM 2.0 usa registros PCR para medir componentes de arranque y sellar claves de cifrado, permitiendo desbloqueo automático solo si el sistema no ha sido modificado."
+    },
+    {
+      id: 542,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué herramienta de Ubuntu/Debian automatiza instalaciones mediante archivos de configuración?",
+      options: [
+        "Kickstart de RHEL",
+        "preseed",
+        "autounattend.xml",
+        "Sysprep"
+      ],
+      correct: 1,
+      explanation: "Preseed permite automatizar instalaciones de Debian/Ubuntu definiendo respuestas a todas las preguntas del instalador en un archivo de configuración."
+    },
+    {
+      id: 543,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué herramienta automatiza la configuración inicial de instancias cloud?",
+      options: [
+        "regedit manual",
+        "cloud-init",
+        "notepad configurador",
+        "paint setup"
+      ],
+      correct: 1,
+      explanation: "cloud-init es el estándar para configurar instancias en la nube (usuarios, red, SSH, paquetes) en el primer arranque mediante metadatos."
+    },
+    {
+      id: 544,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué sistema de archivos de Linux ofrece checksums end-to-end para integridad de datos?",
+      options: [
+        "ext2 básico",
+        "ZFS",
+        "FAT32",
+        "NTFS"
+      ],
+      correct: 1,
+      explanation: "ZFS calcula checksums de todos los datos y metadatos, detectando y corrigiendo corrupción silenciosa, además de ofrecer snapshots y compresión."
+    },
+    {
+      id: 545,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué comando Linux activa TRIM en SSD para mantener rendimiento?",
+      options: [
+        "format drive",
+        "fstrim",
+        "scandisk",
+        "chkdsk"
+      ],
+      correct: 1,
+      explanation: "fstrim notifica al SSD qué bloques están libres para optimizar el garbage collection, manteniendo el rendimiento a largo plazo."
+    },
+    {
+      id: 546,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué partición especial usa Windows en esquemas GPT para gestión del sistema?",
+      options: [
+        "Partición de arranque MBR",
+        "MSR (Microsoft Reserved)",
+        "Swap de Linux",
+        "ESP únicamente"
+      ],
+      correct: 1,
+      explanation: "MSR (Microsoft Reserved) es una partición de ~16 MB que Windows crea en GPT para gestión interna del sistema y conversión a disco dinámico."
+    },
+    {
+      id: 547,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué herramienta crea imágenes de sistema reproducibles para despliegue en cloud?",
+      options: [
+        "Notepad builder",
+        "Packer",
+        "Paint creator",
+        "Calculator imager"
+      ],
+      correct: 1,
+      explanation: "Packer de HashiCorp crea imágenes automatizadas y reproducibles para múltiples plataformas (AWS, Azure, VMware) mediante archivos de configuración."
+    },
+    {
+      id: 548,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué almacenamiento de claves debe usarse para secretos en instalaciones automatizadas?",
+      options: [
+        "Texto plano en scripts",
+        "HashiCorp Vault o Azure Key Vault",
+        "Variables de entorno sin cifrar",
+        "Archivos compartidos públicos"
+      ],
+      correct: 1,
+      explanation: "Bóvedas como HashiCorp Vault o Azure Key Vault gestionan secretos de forma segura, con control de acceso, rotación y auditoría."
+    },
+    {
+      id: 549,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué herramienta escanea vulnerabilidades en imágenes de contenedores?",
+      options: [
+        "Paint scanner",
+        "Trivy o Anchore",
+        "Notepad checker",
+        "Calculator auditor"
+      ],
+      correct: 1,
+      explanation: "Trivy y Anchore escanean imágenes de contenedores buscando vulnerabilidades conocidas (CVEs) en paquetes del sistema y dependencias."
+    },
+    {
+      id: 550,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué se recomienda instalar primero en configuraciones dual boot?",
+      options: [
+        "Linux primero",
+        "Windows primero, luego Linux",
+        "Ambos simultáneamente",
+        "No importa el orden"
+      ],
+      correct: 1,
+      explanation: "Se recomienda instalar Windows primero porque sobrescribe el bootloader. Luego Linux detecta Windows automáticamente y configura GRUB para ambos sistemas."
+    },
+    {
+      id: 551,
+      subject: "ISO",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué herramienta de gestión de configuración es específica de Windows?",
+      options: [
+        "Ansible genérico",
+        "DSC (Desired State Configuration)",
+        "Puppet multiplataforma",
+        "Chef universal"
+      ],
+      correct: 1,
+      explanation: "DSC (Desired State Configuration) es el sistema nativo de PowerShell para gestión de configuración declarativa en entornos Windows."
+    },
   ];
 
   // =========================
