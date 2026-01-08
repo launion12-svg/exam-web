@@ -7217,6 +7217,381 @@ const ExamSimulator = () => {
       correct: 1,
       explanation: "DSC (Desired State Configuration) es el sistema nativo de PowerShell para gestión de configuración declarativa en entornos Windows."
     },
+    {
+      id: 552,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué comando Linux crea un nuevo usuario con directorio home?",
+      options: [
+        "adduser básico",
+        "useradd -m",
+        "newuser simple",
+        "mkuser create"
+      ],
+      correct: 1,
+      explanation: "useradd -m crea un usuario y su directorio home automáticamente, copiando archivos desde /etc/skel y asignando permisos correctos."
+    },
+    {
+      id: 553,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué archivo Linux almacena las contraseñas cifradas de los usuarios?",
+      options: [
+        "/etc/passwd",
+        "/etc/shadow",
+        "/etc/group",
+        "/etc/login.defs"
+      ],
+      correct: 1,
+      explanation: "/etc/shadow almacena las contraseñas cifradas con restricciones de acceso, separándolas de /etc/passwd por seguridad."
+    },
+    {
+      id: 554,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué módulo PAM controla la complejidad de contraseñas en Linux?",
+      options: [
+        "pam_unix básico",
+        "pam_pwquality",
+        "pam_permit libre",
+        "pam_deny bloqueador"
+      ],
+      correct: 1,
+      explanation: "pam_pwquality (antes pam_cracklib) valida la complejidad de contraseñas definiendo longitud mínima, créditos y diccionarios prohibidos."
+    },
+    {
+      id: 555,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué módulo PAM bloquea cuentas tras intentos fallidos de login?",
+      options: [
+        "pam_tally antiguo",
+        "pam_faillock",
+        "pam_succeed siempre",
+        "pam_permit abierto"
+      ],
+      correct: 1,
+      explanation: "pam_faillock bloquea temporalmente cuentas tras un número configurable de intentos fallidos, protegiéndolas contra ataques de fuerza bruta."
+    },
+    {
+      id: 556,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué comando Linux gestiona ACL POSIX extendidas?",
+      options: [
+        "chmod tradicional",
+        "setfacl",
+        "chown propietario",
+        "umask máscara"
+      ],
+      correct: 1,
+      explanation: "setfacl permite establecer ACL POSIX que añaden permisos granulares a usuarios/grupos específicos más allá del modelo Unix clásico."
+    },
+    {
+      id: 557,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué comando muestra las ACL extendidas de un archivo en Linux?",
+      options: [
+        "ls -l estándar",
+        "getfacl",
+        "stat básico",
+        "file tipo"
+      ],
+      correct: 1,
+      explanation: "getfacl muestra las ACL POSIX extendidas de archivos y directorios, incluyendo permisos adicionales y valores por defecto."
+    },
+    {
+      id: 558,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué bit especial hace que archivos creados hereden el grupo del directorio?",
+      options: [
+        "sticky bit",
+        "setgid bit",
+        "setuid bit",
+        "execute bit"
+      ],
+      correct: 1,
+      explanation: "El setgid bit (chmod 2770) en un directorio hace que todos los archivos creados dentro hereden el grupo del directorio, facilitando colaboración."
+    },
+    {
+      id: 559,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué comando Windows gestiona permisos NTFS desde línea de comandos?",
+      options: [
+        "attrib atributos",
+        "icacls",
+        "cacls antiguo",
+        "chmod inexistente"
+      ],
+      correct: 1,
+      explanation: "icacls permite ver y modificar permisos NTFS desde la línea de comandos, siendo esencial para scripts de automatización en Windows."
+    },
+    {
+      id: 560,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Dónde se almacenan los perfiles de usuario en Windows?",
+      options: [
+        "C:\\Program Files",
+        "C:\\Users",
+        "C:\\Windows\\System32",
+        "C:\\ProgramData"
+      ],
+      correct: 1,
+      explanation: "C:\\Users almacena los perfiles de usuario incluyendo Desktop, Documents, AppData (Local, LocalLow, Roaming) y configuraciones personales."
+    },
+    {
+      id: 561,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué archivo Linux configura la resolución DNS?",
+      options: [
+        "/etc/hosts",
+        "/etc/resolv.conf",
+        "/etc/network/interfaces",
+        "/etc/hostname"
+      ],
+      correct: 1,
+      explanation: "/etc/resolv.conf define los servidores DNS que el sistema usará para resolver nombres de dominio a direcciones IP."
+    },
+    {
+      id: 562,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué servicio Linux gestiona montajes automáticos bajo demanda?",
+      options: [
+        "fstab estático",
+        "autofs/automount",
+        "systemd-mount básico",
+        "mount manual"
+      ],
+      correct: 1,
+      explanation: "autofs (automount) monta sistemas de archivos automáticamente cuando se accede a ellos y los desmonta tras un período de inactividad."
+    },
+    {
+      id: 563,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué comando Linux gestiona políticas de caducidad de contraseñas por usuario?",
+      options: [
+        "passwd cambio",
+        "chage",
+        "usermod modificación",
+        "expire fecha"
+      ],
+      correct: 1,
+      explanation: "chage permite gestionar la caducidad de contraseñas, días mínimos/máximos, advertencias y bloqueo de cuentas inactivas por usuario."
+    },
+    {
+      id: 564,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué comando Linux permite programar tareas periódicas?",
+      options: [
+        "at único",
+        "crontab",
+        "sleep pausa",
+        "wait espera"
+      ],
+      correct: 1,
+      explanation: "crontab permite editar el cron de un usuario para programar tareas periódicas (diarias, semanales, mensuales) mediante sintaxis de 5 campos."
+    },
+    {
+      id: 565,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué sistema de Linux ejecuta servicios y tareas temporalizadas modernamente?",
+      options: [
+        "init clásico",
+        "systemd timers",
+        "rc.local antiguo",
+        "inittab obsoleto"
+      ],
+      correct: 1,
+      explanation: "systemd timers son la alternativa moderna a cron, ofreciendo mejor integración con servicios, logs centralizados y opciones de calendario más flexibles."
+    },
+    {
+      id: 566,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué herramienta de automatización usa playbooks YAML para configurar sistemas?",
+      options: [
+        "Bash scripting",
+        "Ansible",
+        "PowerShell DSC",
+        "Chef recipes"
+      ],
+      correct: 1,
+      explanation: "Ansible usa playbooks en YAML para automatizar configuración de sistemas de forma declarativa e idempotente, sin necesidad de agentes."
+    },
+    {
+      id: 567,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué comando verifica conectividad de red enviando paquetes ICMP?",
+      options: [
+        "telnet conexión",
+        "ping",
+        "ssh remoto",
+        "ftp transferencia"
+      ],
+      correct: 1,
+      explanation: "ping envía paquetes ICMP Echo Request y espera Echo Reply, permitiendo verificar conectividad de red y medir latencia y pérdida de paquetes."
+    },
+    {
+      id: 568,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué comando muestra la ruta que siguen los paquetes hasta un destino?",
+      options: [
+        "route tabla",
+        "traceroute o tracert",
+        "ping simple",
+        "arp caché"
+      ],
+      correct: 1,
+      explanation: "traceroute (Linux) o tracert (Windows) muestran cada salto que los paquetes atraviesan hasta llegar al destino, identificando dónde hay problemas."
+    },
+    {
+      id: 569,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué comando Linux moderno reemplaza a netstat para ver conexiones de red?",
+      options: [
+        "ifconfig antiguo",
+        "ss (socket statistics)",
+        "route tabla",
+        "arp caché"
+      ],
+      correct: 1,
+      explanation: "ss es el reemplazo moderno de netstat, mostrando información de sockets (TCP, UDP, Unix) de forma más rápida y con más opciones."
+    },
+    {
+      id: 570,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué comando consulta logs del journal de systemd?",
+      options: [
+        "cat /var/log/syslog",
+        "journalctl",
+        "tail logs",
+        "dmesg kernel"
+      ],
+      correct: 1,
+      explanation: "journalctl permite consultar y filtrar logs del journal de systemd con opciones avanzadas como seguimiento en tiempo real (-f), filtros por servicio y prioridad."
+    },
+    {
+      id: 571,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué directorio contiene plantillas para nuevos usuarios en Linux?",
+      options: [
+        "/home/default",
+        "/etc/skel",
+        "/usr/share/templates",
+        "/var/lib/users"
+      ],
+      correct: 1,
+      explanation: "/etc/skel contiene archivos y directorios que se copian automáticamente al home de cada nuevo usuario creado con useradd -m."
+    },
+    {
+      id: 572,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué comando PowerShell crea un transcript de la sesión para auditoría?",
+      options: [
+        "Write-Log simple",
+        "Start-Transcript",
+        "Export-Session",
+        "Save-Commands"
+      ],
+      correct: 1,
+      explanation: "Start-Transcript registra todos los comandos ejecutados y sus salidas en un archivo, siendo esencial para auditoría y documentación de cambios."
+    },
+    {
+      id: 573,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué archivo Linux define valores por defecto de caducidad de contraseñas?",
+      options: [
+        "/etc/passwd",
+        "/etc/login.defs",
+        "/etc/shadow",
+        "/etc/security/limits.conf"
+      ],
+      correct: 1,
+      explanation: "/etc/login.defs define valores por defecto como PASS_MAX_DAYS, PASS_MIN_DAYS, PASS_WARN_AGE para nuevas cuentas."
+    },
+    {
+      id: 574,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué comando Linux añade un usuario a un grupo?",
+      options: [
+        "groupadd nombre",
+        "usermod -aG grupo usuario",
+        "addgroup miembro",
+        "chmod permisos"
+      ],
+      correct: 1,
+      explanation: "usermod -aG grupo usuario añade el usuario a un grupo adicional sin eliminar sus membresías existentes (-a = append, -G = grupos)."
+    },
+    {
+      id: 575,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué comando Windows configura políticas de cuenta locales?",
+      options: [
+        "secpol.msc gráfico",
+        "net accounts",
+        "gpupdate forzado",
+        "regedit manual"
+      ],
+      correct: 1,
+      explanation: "net accounts permite configurar desde línea de comandos la longitud mínima de contraseña, caducidad, historial y bloqueo de cuentas locales."
+    },
+    {
+      id: 576,
+      subject: "ISO",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué opción de mount hace que el montaje sea de solo lectura en Linux?",
+      options: [
+        "-t tipo",
+        "-o ro",
+        "-a todos",
+        "-v verbose"
+      ],
+      correct: 1,
+      explanation: "mount -o ro (read-only) monta un sistema de archivos en modo solo lectura, impidiendo cualquier modificación en el contenido."
+    },
   ];
 
   // =========================
