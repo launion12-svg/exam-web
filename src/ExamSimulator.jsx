@@ -8192,6 +8192,456 @@ const ExamSimulator = () => {
       correct: 1,
       explanation: "Los perfiles móviles se almacenan en el servidor y se descargan al iniciar sesión, permitiendo que el usuario tenga la misma experiencia en cualquier equipo del dominio."
     },
+    {
+      id: 617,
+      subject: "ISO",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué sistema de archivos se diseñó para superar la limitación de 4GB de FAT32 manteniendo compatibilidad?",
+      options: [
+        "NTFS completo",
+        "ExFAT",
+        "Ext4",
+        "ReFS"
+      ],
+      correct: 1,
+      explanation: "ExFAT fue diseñado específicamente para superar las limitaciones de tamaño de FAT32 (archivo 4GB, volumen 32GB) manteniendo compatibilidad multiplataforma."
+    },
+    {
+      id: 618,
+      subject: "ISO",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué característica de NTFS permite reducir el espacio ocupado por archivos poco usados?",
+      options: [
+        "Journaling",
+        "Compresión de archivos",
+        "Deduplicación",
+        "Fragmentación"
+      ],
+      correct: 1,
+      explanation: "NTFS soporta compresión transparente de archivos y carpetas, reduciendo el espacio ocupado sin necesidad de herramientas externas."
+    },
+    {
+      id: 619,
+      subject: "ISO",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué tecnología de NTFS cifra archivos individuales usando claves del usuario?",
+      options: [
+        "BitLocker de volumen",
+        "EFS (Encrypting File System)",
+        "LUKS de Linux",
+        "FileVault de macOS"
+      ],
+      correct: 1,
+      explanation: "EFS permite cifrar archivos y carpetas individuales en NTFS usando las credenciales del usuario, diferente al cifrado de volumen completo de BitLocker."
+    },
+    {
+      id: 620,
+      subject: "ISO",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué característica de NTFS limita la cantidad de espacio que puede usar un usuario?",
+      options: [
+        "Journaling",
+        "Cuotas de disco",
+        "Compresión",
+        "Fragmentación"
+      ],
+      correct: 1,
+      explanation: "Las cuotas de disco en NTFS permiten a los administradores limitar y monitorear cuánto espacio puede consumir cada usuario en un volumen."
+    },
+    {
+      id: 621,
+      subject: "ISO",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué técnica elimina copias duplicadas de datos almacenando solo una instancia?",
+      options: [
+        "Compresión simple",
+        "Deduplicación",
+        "Fragmentación",
+        "Journaling"
+      ],
+      correct: 1,
+      explanation: "La deduplicación identifica y elimina bloques de datos duplicados, almacenando solo una copia y usando referencias para las demás, ahorrando espacio significativo."
+    },
+    {
+      id: 622,
+      subject: "ISO",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué tipo de enlace en Linux crea una referencia directa al mismo inode?",
+      options: [
+        "Enlace simbólico (symlink)",
+        "Enlace duro (hard link)",
+        "Enlace de red",
+        "Acceso directo"
+      ],
+      correct: 1,
+      explanation: "Los enlaces duros apuntan directamente al mismo inode que el archivo original, compartiendo el mismo contenido y metadatos, mientras que los simbólicos son referencias indirectas."
+    },
+    {
+      id: 623,
+      subject: "ISO",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué estructura de datos en Linux almacena los metadatos de un archivo?",
+      options: [
+        "Directory entry",
+        "Inode",
+        "Block descriptor",
+        "Superblock"
+      ],
+      correct: 1,
+      explanation: "El inode almacena los metadatos del archivo (permisos, propietario, tamaño, timestamps, punteros a bloques) excepto el nombre, que está en el directorio."
+    },
+    {
+      id: 624,
+      subject: "ISO",
+      unit: "UT6",
+      source: "new",
+      question: "¿Cuál es el límite de tamaño de disco que puede manejar MBR?",
+      options: [
+        "1 TB",
+        "2 TB",
+        "4 TB",
+        "8 TB"
+      ],
+      correct: 1,
+      explanation: "MBR está limitado a direccionar discos de hasta 2 TB debido a su uso de direccionamiento de 32 bits con sectores de 512 bytes."
+    },
+    {
+      id: 625,
+      subject: "ISO",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué herramienta de Linux es más moderna y recomendada que fdisk para particionar?",
+      options: [
+        "disk manager",
+        "parted",
+        "partition tool",
+        "diskpart"
+      ],
+      correct: 1,
+      explanation: "parted es más moderno que fdisk, soporta mejor GPT, permite redimensionar particiones y puede trabajar con sistemas de archivos de forma más inteligente."
+    },
+    {
+      id: 626,
+      subject: "ISO",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué comando Linux crea un sistema de archivos ext4 en una partición?",
+      options: [
+        "format ext4",
+        "mkfs.ext4",
+        "create-fs",
+        "newfs"
+      ],
+      correct: 1,
+      explanation: "mkfs.ext4 (make filesystem) formatea una partición con el sistema de archivos ext4, siendo parte de la familia de comandos mkfs para diferentes tipos."
+    },
+    {
+      id: 627,
+      subject: "ISO",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué comando Linux ajusta parámetros de sistemas de archivos ext2/ext3/ext4?",
+      options: [
+        "fsck",
+        "tune2fs",
+        "e2fsck",
+        "resize2fs"
+      ],
+      correct: 1,
+      explanation: "tune2fs permite modificar parámetros de ext2/3/4 como el intervalo de verificación, el número de montajes máximo, etiquetas y características del sistema de archivos."
+    },
+    {
+      id: 628,
+      subject: "ISO",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué comando Linux muestra los UUID y tipos de sistemas de archivos de las particiones?",
+      options: [
+        "lsblk -f",
+        "blkid",
+        "fdisk -l",
+        "parted print"
+      ],
+      correct: 1,
+      explanation: "blkid muestra los identificadores UUID, etiquetas y tipos de sistemas de archivos de todos los dispositivos de bloque, útil para configurar fstab."
+    },
+    {
+      id: 629,
+      subject: "ISO",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué comando muestra el espacio usado y disponible en sistemas de archivos montados?",
+      options: [
+        "du (disk usage)",
+        "df (disk free)",
+        "ls -lh",
+        "stat filesystem"
+      ],
+      correct: 1,
+      explanation: "df muestra el espacio total, usado y disponible de los sistemas de archivos montados, mientras que du muestra el uso de directorios y archivos específicos."
+    },
+    {
+      id: 630,
+      subject: "ISO",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué fenómeno ocurre cuando un archivo se divide en fragmentos no contiguos en disco?",
+      options: [
+        "Compresión",
+        "Fragmentación",
+        "Deduplicación",
+        "Journaling"
+      ],
+      correct: 1,
+      explanation: "La fragmentación ocurre cuando los archivos se almacenan en bloques no contiguos, degradando el rendimiento. Windows necesita desfragmentación periódica, Linux con ext4 se autodesfragmenta."
+    },
+    {
+      id: 631,
+      subject: "ISO",
+      unit: "UT6",
+      source: "new",
+      question: "¿Qué herramienta de Windows verifica y repara archivos del sistema operativo?",
+      options: [
+        "CHKDSK",
+        "SFC (System File Checker)",
+        "DISM",
+        "diskpart"
+      ],
+      correct: 1,
+      explanation: "SFC (sfc /scannow) escanea y repara archivos del sistema de Windows que estén corruptos o faltantes, restaurándolos desde una caché de componentes."
+    },
+    {
+      id: 632,
+      subject: "ISO",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué tecnología de Windows limita a administradores a ejecutar solo comandos específicos?",
+      options: [
+        "UAC simple",
+        "JEA (Just-Enough-Administration)",
+        "RBAC básico",
+        "sudo de Linux"
+      ],
+      correct: 1,
+      explanation: "JEA (Just-Enough-Administration) de PowerShell permite crear endpoints restringidos donde los administradores solo pueden ejecutar comandos específicos, implementando mínimo privilegio."
+    },
+    {
+      id: 633,
+      subject: "ISO",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué característica de Windows solicita confirmación antes de ejecutar tareas administrativas?",
+      options: [
+        "Windows Defender",
+        "UAC (User Account Control)",
+        "BitLocker",
+        "Windows Firewall"
+      ],
+      correct: 1,
+      explanation: "UAC (User Account Control) solicita elevación explícita antes de ejecutar tareas administrativas, protegiendo contra cambios no autorizados y malware."
+    },
+    {
+      id: 634,
+      subject: "ISO",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué ID de evento de Windows indica que se asignaron privilegios especiales a una cuenta?",
+      options: [
+        "4624 inicio sesión",
+        "4672 privilegios especiales",
+        "4625 fallo acceso",
+        "4740 cuenta bloqueada"
+      ],
+      correct: 1,
+      explanation: "El evento 4672 registra cuando se asignan privilegios especiales (como SeDebugPrivilege, SeBackupPrivilege) a una cuenta durante el inicio de sesión."
+    },
+    {
+      id: 635,
+      subject: "ISO",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué evento de Windows registra la creación de un nuevo proceso?",
+      options: [
+        "4624 sesión",
+        "4688 creación proceso",
+        "4625 fallo",
+        "4672 privilegios"
+      ],
+      correct: 1,
+      explanation: "El evento 4688 registra cada proceso creado, incluyendo línea de comandos completa (si está habilitado), usuario y proceso padre, esencial para análisis forense."
+    },
+    {
+      id: 636,
+      subject: "ISO",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué base de datos mantiene un inventario de activos de TI para auditoría?",
+      options: [
+        "Active Directory",
+        "CMDB (Configuration Management Database)",
+        "DNS Server",
+        "DHCP Server"
+      ],
+      correct: 1,
+      explanation: "La CMDB mantiene un inventario de activos de TI (CIs), sus atributos, relaciones y dependencias, siendo fundamental para definir el alcance de auditorías."
+    },
+    {
+      id: 637,
+      subject: "ISO",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué conjunto de guías de hardening proporciona configuraciones de seguridad específicas por sistema?",
+      options: [
+        "OWASP Top 10",
+        "CIS Benchmarks",
+        "NIST Framework",
+        "MITRE ATT&CK"
+      ],
+      correct: 1,
+      explanation: "CIS Benchmarks proporciona guías detalladas de configuración segura (hardening) para sistemas operativos, aplicaciones y dispositivos, basadas en consenso de expertos."
+    },
+    {
+      id: 638,
+      subject: "ISO",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué metodología de objetivos usa criterios Específico, Medible, Alcanzable, Relevante y Temporal?",
+      options: [
+        "PDCA",
+        "SMART",
+        "RACI",
+        "SWOT"
+      ],
+      correct: 1,
+      explanation: "SMART es un acrónimo para definir objetivos: Specific, Measurable, Achievable, Relevant, Time-bound, asegurando que sean claros y medibles."
+    },
+    {
+      id: 639,
+      subject: "ISO",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué norma ISO proporciona directrices para auditoría de sistemas de gestión?",
+      options: [
+        "ISO 27001",
+        "ISO 19011",
+        "ISO 9001",
+        "ISO 20000"
+      ],
+      correct: 1,
+      explanation: "ISO 19011 proporciona directrices para auditar sistemas de gestión, incluyendo principios, gestión de programas de auditoría y competencia de auditores."
+    },
+    {
+      id: 640,
+      subject: "ISO",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué son las ventanas de mantenimiento en el contexto de auditoría?",
+      options: [
+        "Software actualización",
+        "Periodos programados para pruebas",
+        "Tiempo sincronización",
+        "Logs archivados"
+      ],
+      correct: 1,
+      explanation: "Las ventanas de mantenimiento son periodos programados donde se pueden realizar pruebas intrusivas, cambios de configuración y verificaciones que podrían afectar la disponibilidad."
+    },
+    {
+      id: 641,
+      subject: "ISO",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué análisis identifica la causa fundamental de un hallazgo de auditoría?",
+      options: [
+        "Análisis superficial",
+        "Análisis de causa raíz",
+        "Análisis de síntomas",
+        "Análisis de impacto"
+      ],
+      correct: 1,
+      explanation: "El análisis de causa raíz identifica el problema fundamental que origina un hallazgo, no solo los síntomas, permitiendo implementar soluciones efectivas y duraderas."
+    },
+    {
+      id: 642,
+      subject: "ISO",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué indicadores miden la efectividad de los controles de seguridad?",
+      options: [
+        "ROI financiero",
+        "KPIs (Key Performance Indicators)",
+        "SLA tiempo respuesta",
+        "Uptime porcentaje"
+      ],
+      correct: 1,
+      explanation: "Los KPIs de seguridad miden la efectividad de controles mediante métricas como tiempo de detección, tasa de falsos positivos, cobertura de logs y cumplimiento de políticas."
+    },
+    {
+      id: 643,
+      subject: "ISO",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué reglamento europeo debe considerarse en auditorías que involucran datos personales?",
+      options: [
+        "PCI-DSS",
+        "RGPD (GDPR)",
+        "HIPAA",
+        "SOX"
+      ],
+      correct: 1,
+      explanation: "El RGPD (Reglamento General de Protección de Datos) establece requisitos para protección de datos personales que deben verificarse en auditorías, incluyendo registro de tratamientos y medidas técnicas."
+    },
+    {
+      id: 644,
+      subject: "ISO",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué protocolo sincroniza relojes de sistemas para garantizar trazabilidad temporal precisa?",
+      options: [
+        "DNS",
+        "NTP (Network Time Protocol)",
+        "DHCP",
+        "SNMP"
+      ],
+      correct: 1,
+      explanation: "NTP sincroniza los relojes de sistemas, esencial para correlación de eventos en SIEM, análisis forense y cumplimiento de requisitos de trazabilidad temporal."
+    },
+    {
+      id: 645,
+      subject: "ISO",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué protocolo permite autenticación federada en aplicaciones web modernas?",
+      options: [
+        "NTLM legacy",
+        "SAML o OIDC",
+        "Kerberos básico",
+        "LDAP simple"
+      ],
+      correct: 1,
+      explanation: "SAML (Security Assertion Markup Language) y OIDC (OpenID Connect) permiten autenticación federada, habilitando Single Sign-On entre múltiples aplicaciones y proveedores de identidad."
+    },
+    {
+      id: 646,
+      subject: "ISO",
+      unit: "UT7",
+      source: "new",
+      question: "¿Qué concepto de auditoría determina qué errores son significativos para reportar?",
+      options: [
+        "Completitud",
+        "Materialidad",
+        "Exactitud",
+        "Validez"
+      ],
+      correct: 1,
+      explanation: "La materialidad define el umbral a partir del cual un error o hallazgo es significativo para afectar decisiones, determinando qué debe reportarse en la auditoría."
+    },
   ];
 
   // =========================
