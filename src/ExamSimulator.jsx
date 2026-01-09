@@ -4343,12 +4343,7 @@ const ExamSimulator = () => {
       unit: "UT1",
       source: "new",
       question: "¿Qué tipo de red conecta dispositivos personales en un rango de pocos metros?",
-      options: [
-        "WAN",
-        "PAN (Personal Area Network)",
-        "MAN",
-        "LAN"
-      ],
+      options: ["WAN", "PAN", "MAN", "LAN"],
       correct: 1,
       explanation: "PAN (Personal Area Network) conecta dispositivos personales como smartphones, auriculares Bluetooth y wearables en un rango de pocos metros."
     },
@@ -4358,12 +4353,7 @@ const ExamSimulator = () => {
       unit: "UT1",
       source: "new",
       question: "¿Qué tipo de red cubre un área geográfica como una ciudad o área metropolitana?",
-      options: [
-        "LAN local",
-        "MAN (Metropolitan Area Network)",
-        "PAN personal",
-        "WAN mundial"
-      ],
+      options: ["LAN local", "MAN", "PAN personal", "WAN mundial"],
       correct: 1,
       explanation: "MAN (Metropolitan Area Network) cubre áreas metropolitanas o ciudades, típicamente mediante fibra óptica o conexiones de alta velocidad."
     },
@@ -4388,12 +4378,7 @@ const ExamSimulator = () => {
       unit: "UT1",
       source: "new",
       question: "¿Qué topología proporciona múltiples rutas redundantes entre todos los nodos?",
-      options: [
-        "Bus simple",
-        "Malla (Mesh)",
-        "Estrella básica",
-        "Anillo único"
-      ],
+      options: ["Bus simple", "Malla", "Estrella básica", "Anillo único"],
       correct: 1,
       explanation: "La topología en malla proporciona conexiones directas entre múltiples nodos, ofreciendo redundancia y alta disponibilidad mediante rutas alternativas."
     },
@@ -4433,12 +4418,7 @@ const ExamSimulator = () => {
       unit: "UT1",
       source: "new",
       question: "¿Qué sistema detecta intrusiones pero NO las bloquea automáticamente?",
-      options: [
-        "Firewall",
-        "IDS (Intrusion Detection System)",
-        "Router",
-        "Switch"
-      ],
+      options: ["Firewall", "IDS", "Router", "Switch"],
       correct: 1,
       explanation: "IDS (Intrusion Detection System) detecta y alerta sobre actividades sospechosas pero no las bloquea, mientras que IPS (Intrusion Prevention System) sí las bloquea."
     },
@@ -4463,12 +4443,7 @@ const ExamSimulator = () => {
       unit: "UT1",
       source: "new",
       question: "¿Qué firewall se especializa en proteger aplicaciones web contra ataques?",
-      options: [
-        "Firewall de red",
-        "WAF (Web Application Firewall)",
-        "Router ACL",
-        "Switch port security"
-      ],
+      options: ["Firewall de red", "WAF", "Router ACL", "Switch port security"],
       correct: 1,
       explanation: "WAF (Web Application Firewall) protege aplicaciones web contra ataques como SQL injection, XSS y otros ataques de capa 7."
     },
@@ -4478,12 +4453,7 @@ const ExamSimulator = () => {
       unit: "UT1",
       source: "new",
       question: "¿Qué arquitectura permite gestionar redes mediante software centralizado?",
-      options: [
-        "Red tradicional",
-        "SDN (Software-Defined Networking)",
-        "Red punto a punto",
-        "Red ad-hoc"
-      ],
+      options: ["Red tradicional", "SDN", "Red punto a punto", "Red ad-hoc"],
       correct: 1,
       explanation: "SDN (Software-Defined Networking) separa el plano de control del plano de datos, permitiendo gestión centralizada y programable de la red."
     },
@@ -4508,12 +4478,7 @@ const ExamSimulator = () => {
       unit: "UT1",
       source: "new",
       question: "¿Qué tecnología inalámbrica emergente usa luz visible para transmitir datos?",
-      options: [
-        "WiFi 6",
-        "LiFi (Light Fidelity)",
-        "Bluetooth 5",
-        "5G"
-      ],
+      options: ["WiFi 6", "LiFi", "Bluetooth 5", "5G"],
       correct: 1,
       explanation: "LiFi usa luz visible modulada (LED) para transmitir datos a alta velocidad, ofreciendo mayor seguridad que WiFi al no atravesar paredes."
     },
@@ -4553,12 +4518,7 @@ const ExamSimulator = () => {
       unit: "UT1",
       source: "new",
       question: "¿Qué protocolo resuelve direcciones IP a direcciones MAC en redes locales?",
-      options: [
-        "DNS",
-        "ARP (Address Resolution Protocol)",
-        "DHCP",
-        "ICMP"
-      ],
+      options: ["DNS", "ARP", "DHCP", "ICMP"],
       correct: 1,
       explanation: "ARP (Address Resolution Protocol) traduce direcciones IP a direcciones MAC en redes locales, permitiendo la entrega de tramas en capa 2."
     },
@@ -4568,12 +4528,7 @@ const ExamSimulator = () => {
       unit: "UT1",
       source: "new",
       question: "¿Qué protocolo de transporte NO garantiza entrega ni orden de los datos?",
-      options: [
-        "TCP confiable",
-        "UDP (User Datagram Protocol)",
-        "SCTP",
-        "HTTP"
-      ],
+      options: ["TCP confiable", "UDP", "SCTP", "HTTP"],
       correct: 1,
       explanation: "UDP es un protocolo sin conexión que no garantiza entrega, orden ni control de errores, siendo más rápido que TCP para aplicaciones en tiempo real."
     },
@@ -4628,12 +4583,7 @@ const ExamSimulator = () => {
       unit: "UT1",
       source: "new",
       question: "¿Qué tipo de amenaza son las APT en ciberseguridad?",
-      options: [
-        "Ataques simples",
-        "Advanced Persistent Threats (amenazas persistentes avanzadas)",
-        "Antivirus",
-        "Firewalls"
-      ],
+      options: ["Ataques simples", "Advanced Persistent Threats", "Antivirus", "Firewalls"],
       correct: 1,
       explanation: "APT (Advanced Persistent Threats) son ataques sofisticados y prolongados realizados por actores con recursos, que permanecen ocultos en redes durante meses."
     },
@@ -5028,12 +4978,7 @@ const ExamSimulator = () => {
       unit: "UT2",
       source: "new",
       question: "¿Qué herramienta certifica fibra óptica mediante reflectometría?",
-      options: [
-        "Multímetro",
-        "OTDR (Optical Time-Domain Reflectometer)",
-        "Voltímetro",
-        "Osciloscopio"
-      ],
+      options: ["Multímetro", "OTDR", "Voltímetro", "Osciloscopio"],
       correct: 1,
       explanation: "OTDR envía pulsos de luz y mide reflexiones para detectar roturas, empalmes defectuosos y atenuación en fibra óptica, certificando la calidad de la instalación."
     },
@@ -5058,12 +5003,7 @@ const ExamSimulator = () => {
       unit: "UT2",
       source: "new",
       question: "¿Qué estándar WiFi usa MU-MIMO y alcanza hasta 3.5 Gbps?",
-      options: [
-        "802.11n",
-        "802.11ac (WiFi 5)",
-        "802.11g",
-        "802.11b"
-      ],
+      options: ["802.11n", "802.11ac", "802.11g", "802.11b"],
       correct: 1,
       explanation: "802.11ac (WiFi 5) introdujo MU-MIMO, canales de hasta 160 MHz en 5 GHz y alcanza velocidades teóricas de hasta 3.5 Gbps."
     },
@@ -5088,12 +5028,7 @@ const ExamSimulator = () => {
       unit: "UT2",
       source: "new",
       question: "¿Qué mecanismo prioriza tráfico crítico en redes?",
-      options: [
-        "FIFO simple",
-        "QoS (Quality of Service)",
-        "DHCP",
-        "DNS"
-      ],
+      options: ["FIFO simple", "QoS", "DHCP", "DNS"],
       correct: 1,
       explanation: "QoS (Quality of Service) prioriza tráfico crítico (VoIP, videoconferencia) sobre tráfico menos sensible, usando técnicas como marcado DSCP y colas prioritarias."
     },
@@ -5103,12 +5038,7 @@ const ExamSimulator = () => {
       unit: "UT2",
       source: "new",
       question: "¿Qué parámetro define el tamaño máximo de paquete en una interfaz de red?",
-      options: [
-        "TTL",
-        "MTU (Maximum Transmission Unit)",
-        "MSS",
-        "VLAN ID"
-      ],
+      options: ["TTL", "MTU", "MSS", "VLAN ID"],
       correct: 1,
       explanation: "MTU define el tamaño máximo de paquete que puede transmitir una interfaz. El estándar Ethernet es 1500 bytes; valores mal configurados causan fragmentación."
     },
@@ -5118,12 +5048,7 @@ const ExamSimulator = () => {
       unit: "UT2",
       source: "new",
       question: "¿Qué tecnología permite encender remotamente un equipo enviando un paquete especial?",
-      options: [
-        "DHCP",
-        "WOL (Wake-on-LAN)",
-        "DNS",
-        "SNMP"
-      ],
+      options: ["DHCP", "WOL", "DNS", "SNMP"],
       correct: 1,
       explanation: "WOL (Wake-on-LAN) permite encender equipos remotamente mediante un paquete mágico que contiene la dirección MAC, útil para administración remota."
     },
@@ -5163,12 +5088,7 @@ const ExamSimulator = () => {
       unit: "UT2",
       source: "new",
       question: "¿Qué son los Jumbo Frames en redes Ethernet?",
-      options: [
-        "Frames pequeños de 64 bytes",
-        "Frames mayores de 1500 bytes (hasta 9000)",
-        "Frames de 1500 bytes exactos",
-        "Frames de control"
-      ],
+      options: ["Frames pequeños de 64 bytes", "Frames mayores de 1500 bytes", "Frames de 1500 bytes exactos", "Frames de control"],
       correct: 1,
       explanation: "Jumbo Frames superan el MTU estándar de 1500 bytes (típicamente 9000), reduciendo overhead en transferencias masivas entre servidores y almacenamiento."
     },
@@ -5178,12 +5098,7 @@ const ExamSimulator = () => {
       unit: "UT2",
       source: "new",
       question: "¿Qué permite etiquetar tráfico de diferentes VLANs en un mismo enlace?",
-      options: [
-        "IP routing",
-        "VLAN tagging (802.1Q)",
-        "NAT",
-        "DHCP"
-      ],
+      options: ["IP routing", "VLAN tagging", "NAT", "DHCP"],
       correct: 1,
       explanation: "VLAN tagging (802.1Q) añade una etiqueta de 4 bytes al frame Ethernet indicando la VLAN, permitiendo transportar múltiples VLANs por un mismo enlace trunk."
     },
@@ -5503,12 +5418,7 @@ const ExamSimulator = () => {
       unit: "UT3",
       source: "new",
       question: "¿Qué protocolo STP soporta múltiples instancias de spanning tree por VLAN?",
-      options: [
-        "STP clásico",
-        "MSTP (Multiple Spanning Tree Protocol)",
-        "RSTP básico",
-        "VTP"
-      ],
+      options: ["STP clásico", "MSTP", "RSTP básico", "VTP"],
       correct: 1,
       explanation: "MSTP (IEEE 802.1s) permite agrupar VLANs en instancias de spanning tree, optimizando el uso de enlaces y reduciendo overhead comparado con PVST+."
     },
@@ -5518,12 +5428,7 @@ const ExamSimulator = () => {
       unit: "UT3",
       source: "new",
       question: "¿Qué tecnología permite agregación de enlaces entre diferentes switches físicos?",
-      options: [
-        "LACP simple",
-        "MLAG (Multi-chassis LAG)",
-        "STP",
-        "VTP"
-      ],
+      options: ["LACP simple", "MLAG", "STP", "VTP"],
       correct: 1,
       explanation: "MLAG permite crear un LAG (Link Aggregation Group) distribuido entre dos switches físicos, proporcionando redundancia activo-activo sin bucles."
     },
@@ -5533,12 +5438,7 @@ const ExamSimulator = () => {
       unit: "UT3",
       source: "new",
       question: "¿Qué es una SVI en un switch de capa 3?",
-      options: [
-        "Puerto físico",
-        "Switch Virtual Interface (interfaz VLAN)",
-        "Cable virtual",
-        "Protocolo de routing"
-      ],
+      options: ["Puerto físico", "Switch Virtual Interface", "Cable virtual", "Protocolo de routing"],
       correct: 1,
       explanation: "SVI (Switch Virtual Interface) es una interfaz lógica asociada a una VLAN que permite enrutamiento inter-VLAN en switches de capa 3."
     },
@@ -5548,12 +5448,7 @@ const ExamSimulator = () => {
       unit: "UT3",
       source: "new",
       question: "¿Qué método de autenticación usa la dirección MAC cuando 802.1X falla?",
-      options: [
-        "WPA2",
-        "MAB (MAC Authentication Bypass)",
-        "RADIUS directo",
-        "LDAP"
-      ],
+      options: ["WPA2", "MAB", "RADIUS directo", "LDAP"],
       correct: 1,
       explanation: "MAB autentica dispositivos usando su dirección MAC cuando no soportan 802.1X (impresoras, IoT), validando la MAC contra un servidor RADIUS."
     },
@@ -5593,12 +5488,7 @@ const ExamSimulator = () => {
       unit: "UT3",
       source: "new",
       question: "¿Qué mecanismo de Cisco protege la CPU del switch limitando tráfico de control?",
-      options: [
-        "ACL simple",
-        "CoPP/CPPr (Control Plane Policing)",
-        "Port Security",
-        "VLAN ACL"
-      ],
+      options: ["ACL simple", "CoPP/CPPr", "Port Security", "VLAN ACL"],
       correct: 1,
       explanation: "CoPP (Control Plane Policing) y CPPr limitan el tráfico destinado a la CPU del switch, protegiéndola contra ataques DoS y sobrecarga."
     },
@@ -5638,12 +5528,7 @@ const ExamSimulator = () => {
       unit: "UT3",
       source: "new",
       question: "¿Qué tecnología replica tráfico de un puerto a otro puerto remoto en red IP?",
-      options: [
-        "SPAN local",
-        "ERSPAN (Encapsulated Remote SPAN)",
-        "Port mirroring simple",
-        "VLAN tagging"
-      ],
+      options: ["SPAN local", "ERSPAN", "Port mirroring simple", "VLAN tagging"],
       correct: 1,
       explanation: "ERSPAN encapsula el tráfico capturado en GRE sobre IP, permitiendo enviar tráfico espejado a un analizador remoto en cualquier punto de la red."
     },
@@ -5668,12 +5553,7 @@ const ExamSimulator = () => {
       unit: "UT3",
       source: "new",
       question: "¿Qué base de datos estructura las métricas SNMP en jerarquía de objetos?",
-      options: [
-        "SQL database",
-        "MIB (Management Information Base)",
-        "NoSQL",
-        "XML schema"
-      ],
+      options: ["SQL database", "MIB", "NoSQL", "XML schema"],
       correct: 1,
       explanation: "MIB (Management Information Base) define la estructura jerárquica de objetos SNMP (OIDs) que representan métricas y configuración de dispositivos de red."
     },
@@ -5683,12 +5563,7 @@ const ExamSimulator = () => {
       unit: "UT3",
       source: "new",
       question: "¿Qué procedimiento permite recuperar acceso a un switch cuando se olvida la contraseña?",
-      options: [
-        "Formatear y reinstalar",
-        "Password recovery (rommon/boot)",
-        "Comprar switch nuevo",
-        "No tiene solución"
-      ],
+      options: ["Formatear y reinstalar", "Password recovery", "Comprar switch nuevo", "No tiene solución"],
       correct: 1,
       explanation: "Password recovery interrumpe el boot, inicia en modo rommon/boot, permite ignorar startup-config y restablecer contraseñas con acceso físico al switch."
     },
@@ -5698,12 +5573,7 @@ const ExamSimulator = () => {
       unit: "UT3",
       source: "new",
       question: "¿Qué protocolo propaga información de VLANs entre switches Cisco?",
-      options: [
-        "STP",
-        "VTP (VLAN Trunking Protocol)",
-        "OSPF",
-        "BGP"
-      ],
+      options: ["STP", "VTP", "OSPF", "BGP"],
       correct: 1,
       explanation: "VTP sincroniza la configuración de VLANs entre switches Cisco en un dominio, aunque por seguridad se recomienda usar modo transparent o deshabilitarlo."
     },
@@ -5728,12 +5598,7 @@ const ExamSimulator = () => {
       unit: "UT3",
       source: "new",
       question: "¿Qué protocolo negocia automáticamente modo trunk entre switches Cisco?",
-      options: [
-        "STP",
-        "DTP (Dynamic Trunking Protocol)",
-        "LACP",
-        "LLDP"
-      ],
+      options: ["STP", "DTP", "LACP", "LLDP"],
       correct: 1,
       explanation: "DTP negocia automáticamente el modo trunk/access entre switches Cisco, aunque por seguridad se recomienda deshabilitar DTP y configurar manualmente."
     },
@@ -6098,12 +5963,7 @@ const ExamSimulator = () => {
       unit: "UT4",
       source: "new",
       question: "¿Qué componente hardware acelera el reenvío de paquetes en routers modernos?",
-      options: [
-        "CPU general",
-        "ASIC (fast-path)",
-        "Memoria RAM",
-        "Disco duro"
-      ],
+      options: ["CPU general", "ASIC", "Memoria RAM", "Disco duro"],
       correct: 1,
       explanation: "Los ASIC (Application-Specific Integrated Circuit) implementan fast-path hardware para reenvío de paquetes a velocidad de línea sin involucrar la CPU."
     },
@@ -6113,12 +5973,7 @@ const ExamSimulator = () => {
       unit: "UT4",
       source: "new",
       question: "¿Qué memoria almacena ACLs y prefijos en switches/routers de alto rendimiento?",
-      options: [
-        "RAM normal",
-        "TCAM (Ternary Content-Addressable Memory)",
-        "Flash",
-        "ROM"
-      ],
+      options: ["RAM normal", "TCAM", "Flash", "ROM"],
       correct: 1,
       explanation: "TCAM permite búsquedas de prefijos y ACLs en un solo ciclo usando máscaras wildcard, siendo esencial para forwarding de alta velocidad."
     },
@@ -6143,12 +5998,7 @@ const ExamSimulator = () => {
       unit: "UT4",
       source: "new",
       question: "¿Qué protocolo crea túneles encapsulando paquetes IP dentro de otros paquetes IP?",
-      options: [
-        "HTTP",
-        "GRE (Generic Routing Encapsulation)",
-        "FTP",
-        "SMTP"
-      ],
+      options: ["HTTP", "GRE", "FTP", "SMTP"],
       correct: 1,
       explanation: "GRE encapsula paquetes IP (u otros protocolos) dentro de paquetes IP, creando túneles punto a punto para VPNs o transportar protocolos de routing sobre Internet."
     },
@@ -6188,12 +6038,7 @@ const ExamSimulator = () => {
       unit: "UT4",
       source: "new",
       question: "¿Qué protocolo de routing se usa entre sistemas autónomos en Internet?",
-      options: [
-        "OSPF interno",
-        "BGP (Border Gateway Protocol)",
-        "RIP",
-        "EIGRP"
-      ],
+      options: ["OSPF interno", "BGP", "RIP", "EIGRP"],
       correct: 1,
       explanation: "BGP es el protocolo de routing externo que interconecta sistemas autónomos (ISPs, grandes empresas), siendo la columna vertebral del routing de Internet."
     },
@@ -6203,12 +6048,7 @@ const ExamSimulator = () => {
       unit: "UT4",
       source: "new",
       question: "¿Qué protocolo link-state alternativo a OSPF se usa en ISPs y grandes redes?",
-      options: [
-        "RIP",
-        "IS-IS (Intermediate System to Intermediate System)",
-        "IGRP",
-        "EGP"
-      ],
+      options: ["RIP", "IS-IS", "IGRP", "EGP"],
       correct: 1,
       explanation: "IS-IS es un protocolo link-state similar a OSPF, común en ISPs y carriers por su estabilidad, escalabilidad y soporte nativo de IPv6."
     },
@@ -6233,12 +6073,7 @@ const ExamSimulator = () => {
       unit: "UT4",
       source: "new",
       question: "¿Qué ruta especial envía todo el tráfico sin ruta específica a un destino por defecto?",
-      options: [
-        "Ruta /32",
-        "Default route (0.0.0.0/0)",
-        "Ruta /24",
-        "Loopback route"
-      ],
+      options: ["Ruta /32", "Default route", "Ruta /24", "Loopback route"],
       correct: 1,
       explanation: "La default route (0.0.0.0/0 o ::/0 en IPv6) envía todo el tráfico que no coincide con rutas más específicas hacia un gateway por defecto."
     },
@@ -6278,12 +6113,7 @@ const ExamSimulator = () => {
       unit: "UT4",
       source: "new",
       question: "¿Qué modalidad NAT traduce múltiples IPs privadas a una sola IP pública usando puertos?",
-      options: [
-        "NAT estático 1:1",
-        "NAT overload (PAT)",
-        "NAT pool básico",
-        "No NAT"
-      ],
+      options: ["NAT estático 1:1", "NAT overload", "NAT pool básico", "No NAT"],
       correct: 1,
       explanation: "NAT overload o PAT (Port Address Translation) traduce múltiples IPs privadas a una sola IP pública diferenciando conexiones por puerto de origen."
     },
@@ -6663,7 +6493,7 @@ const ExamSimulator = () => {
       unit: "UT5",
       source: "new",
       question: "¿Qué tecnología permite aislar completamente tablas de enrutamiento por tenant?",
-      options: ["VLAN simple", "VRF (Virtual Routing and Forwarding)", "STP", "LACP"],
+      options: ["VLAN simple", "VRF", "STP", "LACP"],
       correct: 1,
       explanation: "VRF crea instancias virtuales de routing con tablas independientes, permitiendo aislar completamente tráfico entre tenants o servicios en el mismo hardware."
     },
@@ -6673,7 +6503,7 @@ const ExamSimulator = () => {
       unit: "UT5",
       source: "new",
       question: "¿Qué limitación hardware puede saturarse con demasiadas VLANs?",
-      options: ["RAM general", "TCAM (límite de prefijos/ACLs)", "Disco duro", "Fuente alimentación"],
+      options: ["RAM general", "TCAM", "Disco duro", "Fuente alimentación"],
       correct: 1,
       explanation: "TCAM tiene límites finitos para almacenar prefijos, ACLs y VLANs; saturarlo degrada el rendimiento al forzar lookups en software (CPU)."
     },
@@ -6683,7 +6513,7 @@ const ExamSimulator = () => {
       unit: "UT5",
       source: "new",
       question: "¿Qué componente virtualiza switching en entornos de hypervisors?",
-      options: ["Switch físico solo", "vSwitch (virtual switch)", "Router virtual", "Firewall virtual"],
+      options: ["Switch físico solo", "vSwitch", "Router virtual", "Firewall virtual"],
       correct: 1,
       explanation: "vSwitch (ej: VMware vSwitch, Open vSwitch) proporciona switching L2 entre VMs en un mismo host, debiendo configurarse con las mismas VLANs que switches físicos."
     },
@@ -6693,7 +6523,7 @@ const ExamSimulator = () => {
       unit: "UT5",
       source: "new",
       question: "¿Qué software gestiona inventario de IPs y VLANs en redes grandes?",
-      options: ["Excel simple", "IPAM (IP Address Management)", "Notepad", "Word"],
+      options: ["Excel simple", "IPAM", "Notepad", "Word"],
       correct: 1,
       explanation: "IPAM (ej: NetBox, phpIPAM, Infoblox) gestiona direccionamiento IP, VLANs, subnets y asignaciones, proporcionando CMDB para redes con auditoría y trazabilidad."
     },
@@ -6713,7 +6543,7 @@ const ExamSimulator = () => {
       unit: "UT5",
       source: "new",
       question: "¿Qué campo de 3 bits en 802.1Q marca prioridad QoS?",
-      options: ["VLAN ID", "PCP (Priority Code Point)", "EtherType", "MAC address"],
+      options: ["VLAN ID", "PCP", "EtherType", "MAC address"],
       correct: 1,
       explanation: "PCP (Priority Code Point) son 3 bits en el tag 802.1Q que marcan prioridad de tráfico (0-7), usado para QoS en capa 2."
     },
@@ -6753,7 +6583,7 @@ const ExamSimulator = () => {
       unit: "UT5",
       source: "new",
       question: "¿Qué tecnología permite alimentar teléfonos IP y APs por el cable Ethernet?",
-      options: ["USB charging", "PoE (Power over Ethernet)", "WiFi charging", "Solar power"],
+      options: ["USB charging", "PoE", "WiFi charging", "Solar power"],
       correct: 1,
       explanation: "PoE (802.3af/at/bt) alimenta dispositivos (teléfonos IP, APs, cámaras) a través del cable Ethernet, requiriendo verificar presupuesto PoE del switch al planificar VLANs."
     },
@@ -6763,7 +6593,7 @@ const ExamSimulator = () => {
       unit: "UT5",
       source: "new",
       question: "¿Qué tecnología permite trunks activo-activo entre switches redundantes?",
-      options: ["STP simple", "MLAG/VPC (Multi-chassis LAG)", "VLAN única", "Hub"],
+      options: ["STP simple", "MLAG/VPC", "VLAN única", "Hub"],
       correct: 1,
       explanation: "MLAG (Aruba, Juniper) o VPC (Cisco) crea LAG distribuido entre dos switches físicos, requiriendo configuración simétrica de VLANs en ambos peers."
     },
@@ -7163,7 +6993,7 @@ const ExamSimulator = () => {
       unit: "UT6",
       source: "new",
       question: "¿Qué permite balancear tráfico entre múltiples rutas de igual costo?",
-      options: ["Single path", "ECMP (Equal Cost Multi Path)", "Loop prevention", "NAT"],
+      options: ["Single path", "ECMP", "Loop prevention", "NAT"],
       correct: 1,
       explanation: "ECMP permite distribuir tráfico entre múltiples rutas con igual métrica, aprovechando redundancia y aumentando ancho de banda agregado."
     },
@@ -7183,7 +7013,7 @@ const ExamSimulator = () => {
       unit: "UT6",
       source: "new",
       question: "¿Qué routers OSPF se eligen en redes broadcast para reducir adyacencias?",
-      options: ["Todos iguales", "DR/BDR (Designated Router/Backup)", "ABR solo", "ASBR solo"],
+      options: ["Todos iguales", "DR/BDR", "ABR solo", "ASBR solo"],
       correct: 1,
       explanation: "DR y BDR se eligen en redes broadcast (Ethernet) para centralizar intercambio de LSAs, reduciendo adyacencias de N² a 2N."
     },
@@ -7193,7 +7023,7 @@ const ExamSimulator = () => {
       unit: "UT6",
       source: "new",
       question: "¿Qué tipo de LSA OSPF describe routers dentro de un área?",
-      options: ["LSA tipo 5", "LSA tipo 1 (Router LSA)", "LSA tipo 7", "LSA tipo 4"],
+      options: ["LSA tipo 5", "LSA tipo 1", "LSA tipo 7", "LSA tipo 4"],
       correct: 1,
       explanation: "LSA tipo 1 (Router LSA) describe los enlaces del router y se inunda dentro del área, siendo la base de la topología intra-área."
     },
@@ -7203,7 +7033,7 @@ const ExamSimulator = () => {
       unit: "UT6",
       source: "new",
       question: "¿Qué métrica usa OSPF basada en ancho de banda del enlace?",
-      options: ["Hop count", "Cost (100Mbps/bandwidth)", "Delay", "MTU"],
+      options: ["Hop count", "Cost", "Delay", "MTU"],
       correct: 1,
       explanation: "OSPF usa cost calculado como referencia/bandwidth (default 100Mbps/BW del enlace), favoreciendo enlaces más rápidos."
     },
@@ -7263,7 +7093,7 @@ const ExamSimulator = () => {
       unit: "UT6",
       source: "new",
       question: "¿Qué base de datos almacena todos los LSAs en OSPF?",
-      options: ["RIB", "LSDB (Link State Database)", "FIB", "ARP table"],
+      options: ["RIB", "LSDB", "FIB", "ARP table"],
       correct: 1,
       explanation: "LSDB almacena todos los LSAs recibidos en un área, siendo idéntica en todos los routers del área y base para el cálculo SPF."
     },
@@ -7273,7 +7103,7 @@ const ExamSimulator = () => {
       unit: "UT6",
       source: "new",
       question: "¿Qué router OSPF conecta múltiples áreas con el área 0?",
-      options: ["DR", "ABR (Area Border Router)", "BDR", "ASBR"],
+      options: ["DR", "ABR", "BDR", "ASBR"],
       correct: 1,
       explanation: "ABR conecta un área no-backbone con área 0, generando LSAs tipo 3 (summary) para anunciar rutas inter-área."
     },
@@ -7283,7 +7113,7 @@ const ExamSimulator = () => {
       unit: "UT6",
       source: "new",
       question: "¿Qué router OSPF redistribuye rutas de otros protocolos o dominios?",
-      options: ["DR", "ASBR (Autonomous System Boundary Router)", "ABR", "BDR"],
+      options: ["DR", "ASBR", "ABR", "BDR"],
       correct: 1,
       explanation: "ASBR redistribuye rutas externas (BGP, estáticas, otros protocolos) a OSPF mediante LSAs tipo 5 (external) o tipo 7 (NSSA)."
     },
@@ -7293,7 +7123,7 @@ const ExamSimulator = () => {
       unit: "UT6",
       source: "new",
       question: "¿Qué tipo de área OSPF no permite LSAs tipo 5 pero sí tipo 7?",
-      options: ["Área 0", "NSSA (Not-So-Stubby Area)", "Totally stubby", "Backbone"],
+      options: ["Área 0", "NSSA", "Totally stubby", "Backbone"],
       correct: 1,
       explanation: "NSSA bloquea LSAs tipo 5 pero permite tipo 7 (convertidos a tipo 5 en ABR), útil cuando el área tiene ASBR pero se quiere reducir LSDB."
     },
@@ -7313,7 +7143,7 @@ const ExamSimulator = () => {
       unit: "UT6",
       source: "new",
       question: "¿Qué tabla contiene las mejores rutas seleccionadas por routing?",
-      options: ["CAM table", "RIB (Routing Information Base)", "ARP cache", "MAC table"],
+      options: ["CAM table", "RIB", "ARP cache", "MAC table"],
       correct: 1,
       explanation: "RIB (tabla de routing) contiene todas las rutas conocidas; el proceso selecciona las mejores que se instalan en FIB para forwarding."
     },
@@ -7323,7 +7153,7 @@ const ExamSimulator = () => {
       unit: "UT6",
       source: "new",
       question: "¿Qué tabla usa el hardware para reenviar paquetes a alta velocidad?",
-      options: ["RIB", "FIB (Forwarding Information Base)", "LSDB", "Neighbor table"],
+      options: ["RIB", "FIB", "LSDB", "Neighbor table"],
       correct: 1,
       explanation: "FIB es la tabla de forwarding en hardware/ASIC con las rutas activas de RIB, optimizada para lookups de reenvío de paquetes a velocidad de línea."
     },
@@ -7333,7 +7163,7 @@ const ExamSimulator = () => {
       unit: "UT6",
       source: "new",
       question: "¿Qué métrica evalúa cuánto tarda la red en adaptarse a un fallo?",
-      options: ["Bandwidth", "Convergencia (tiempo)", "MTU", "TTL"],
+      options: ["Bandwidth", "Convergencia", "MTU", "TTL"],
       correct: 1,
       explanation: "Convergencia mide el tiempo desde que ocurre un fallo hasta que todos los routers actualizan sus tablas y restauran conectividad por rutas alternas."
     },
@@ -7623,7 +7453,7 @@ const ExamSimulator = () => {
       unit: "UT7",
       source: "new",
       question: "¿Qué tecnología NAT usan ISPs para compartir IPs públicas entre múltiples clientes?",
-      options: ["NAT simple", "CGNAT (Carrier-Grade NAT)", "PAT básico", "No NAT"],
+      options: ["NAT simple", "CGNAT", "PAT básico", "No NAT"],
       correct: 1,
       explanation: "CGNAT permite a ISPs compartir IPs públicas entre miles de clientes, añadiendo doble NAT que complica servicios entrantes y gaming."
     },
@@ -7643,7 +7473,7 @@ const ExamSimulator = () => {
       unit: "UT7",
       source: "new",
       question: "¿Qué módulo adapta protocolos complejos (FTP, SIP) que requieren múltiples puertos en NAT?",
-      options: ["Firewall simple", "ALG (Application Layer Gateway)", "Router básico", "Switch"],
+      options: ["Firewall simple", "ALG", "Router básico", "Switch"],
       correct: 1,
       explanation: "ALG inspecciona y modifica payload de protocolos complejos para que funcionen con NAT, abriendo puertos dinámicos para FTP, SIP, H.323, etc."
     },
@@ -7683,7 +7513,7 @@ const ExamSimulator = () => {
       unit: "UT7",
       source: "new",
       question: "¿Qué método de autenticación VPN usa clave compartida secreta?",
-      options: ["Certificado X.509", "PSK (Pre-Shared Key)", "RADIUS", "LDAP"],
+      options: ["Certificado X.509", "PSK", "RADIUS", "LDAP"],
       correct: 1,
       explanation: "PSK (Pre-Shared Key) usa clave secreta compartida para autenticación IKE, siendo simple pero menos segura que certificados en despliegues grandes."
     },
@@ -7693,7 +7523,7 @@ const ExamSimulator = () => {
       unit: "UT7",
       source: "new",
       question: "¿Qué característica genera nuevas claves de sesión en cada renegociación VPN?",
-      options: ["Clave estática", "PFS (Perfect Forward Secrecy)", "PSK simple", "No rekeying"],
+      options: ["Clave estática", "PFS", "PSK simple", "No rekeying"],
       correct: 1,
       explanation: "PFS asegura que comprometer una clave de sesión no exponga sesiones pasadas/futuras, generando claves efímeras independientes en cada renegociación."
     },
@@ -7723,7 +7553,7 @@ const ExamSimulator = () => {
       unit: "UT7",
       source: "new",
       question: "¿Qué tipo de WAN usa conexiones residenciales de fibra/cable para sucursales?",
-      options: ["MPLS dedicado", "Broadband (fibra/cable)", "Satélite", "Línea dedicada"],
+      options: ["MPLS dedicado", "Broadband", "Satélite", "Línea dedicada"],
       correct: 1,
       explanation: "Broadband WAN usa conexiones de consumidor (fibra, cable, DSL) para sucursales con SD-WAN, siendo más económico que MPLS pero sin SLA estricto."
     },
@@ -7733,7 +7563,7 @@ const ExamSimulator = () => {
       unit: "UT7",
       source: "new",
       question: "¿Qué acuerdo define disponibilidad, latencia y tiempo de resolución garantizados?",
-      options: ["Contrato simple", "SLA (Service Level Agreement)", "Factura", "Manual"],
+      options: ["Contrato simple", "SLA", "Factura", "Manual"],
       correct: 1,
       explanation: "SLA define métricas garantizadas (uptime, latencia, jitter, MTTR) y compensaciones por incumplimiento, siendo crítico en enlaces WAN empresariales."
     },
@@ -7753,7 +7583,7 @@ const ExamSimulator = () => {
       unit: "UT7",
       source: "new",
       question: "¿Qué estándar IEEE permite etiquetar VLANs dentro de VLANs (stacked)?",
-      options: ["802.1Q simple", "QinQ (802.1ad)", "802.11ac", "802.3af"],
+      options: ["802.1Q simple", "QinQ", "802.11ac", "802.3af"],
       correct: 1,
       explanation: "QinQ (802.1ad) permite encapsular tags 802.1Q dentro de otro tag, usado por ISPs para transportar VLANs de múltiples clientes en Metro Ethernet."
     },
@@ -7763,7 +7593,7 @@ const ExamSimulator = () => {
       unit: "UT7",
       source: "new",
       question: "¿Qué protocolo establece sesión PPP sobre Ethernet para autenticación DSL?",
-      options: ["DHCP", "PPPoE (PPP over Ethernet)", "ARP", "ICMP"],
+      options: ["DHCP", "PPPoE", "ARP", "ICMP"],
       correct: 1,
       explanation: "PPPoE encapsula PPP en frames Ethernet, permitiendo autenticación (PAP/CHAP) y asignación de IP dinámica en conexiones DSL y fibra residenciales."
     },
@@ -7773,7 +7603,7 @@ const ExamSimulator = () => {
       unit: "UT7",
       source: "new",
       question: "¿Qué red distribuida cachea contenido cerca de usuarios reduciendo latencia?",
-      options: ["LAN local", "CDN (Content Delivery Network)", "WAN simple", "VPN"],
+      options: ["LAN local", "CDN", "WAN simple", "VPN"],
       correct: 1,
       explanation: "CDN distribuye contenido estático/dinámico en nodos globales (PoPs), reduciendo latencia, mejorando disponibilidad y mitigando ataques DDoS volumétricos."
     },
@@ -7793,7 +7623,7 @@ const ExamSimulator = () => {
       unit: "UT7",
       source: "new",
       question: "¿Qué arquitectura converge red y seguridad en servicios cloud?",
-      options: ["LAN tradicional", "SASE (Secure Access Service Edge)", "Hub físico", "Switch core"],
+      options: ["LAN tradicional", "SASE", "Hub físico", "Switch core"],
       correct: 1,
       explanation: "SASE combina SD-WAN, CASB, FWaaS, SWG y ZTNA en plataforma cloud, proporcionando seguridad consistente para usuarios distribuidos y workloads cloud."
     },
@@ -7928,12 +7758,7 @@ const ExamSimulator = () => {
       unit: "UT1",
       source: "new",
       question: "¿Qué licencia de software libre requiere que las modificaciones mantengan la misma licencia?",
-      options: [
-        "MIT",
-        "BSD",
-        "GPL (General Public License)",
-        "EULA"
-      ],
+      options: ["MIT", "BSD", "GPL", "EULA"],
       correct: 2,
       explanation: "La GPL es una licencia copyleft que obliga a que cualquier trabajo derivado mantenga la misma licencia, garantizando que el software siga siendo libre."
     },
@@ -8033,12 +7858,7 @@ const ExamSimulator = () => {
       unit: "UT1",
       source: "new",
       question: "¿Qué tecnología permite a los dispositivos transferir datos directamente a memoria sin intervención de la CPU?",
-      options: [
-        "Interrupciones IRQ",
-        "DMA (Direct Memory Access)",
-        "Polling continuo",
-        "Buffers de E/S"
-      ],
+      options: ["Interrupciones IRQ", "DMA", "Polling continuo", "Buffers de E/S"],
       correct: 1,
       explanation: "DMA permite que dispositivos transfieran datos directamente a la memoria RAM sin pasar por la CPU, liberando recursos del procesador y mejorando el rendimiento."
     },
@@ -8138,12 +7958,7 @@ const ExamSimulator = () => {
       unit: "UT1",
       source: "new",
       question: "¿Qué servicio permite conexiones remotas seguras a servidores?",
-      options: [
-        "FTP sin cifrado",
-        "Telnet básico",
-        "SSH (Secure Shell)",
-        "HTTP estándar"
-      ],
+      options: ["FTP sin cifrado", "Telnet básico", "SSH", "HTTP estándar"],
       correct: 2,
       explanation: "SSH (Secure Shell) es el servicio estándar para conexiones remotas seguras, cifrando toda la comunicación entre cliente y servidor."
     },
@@ -8168,12 +7983,7 @@ const ExamSimulator = () => {
       unit: "UT1",
       source: "new",
       question: "¿Qué problema ocurre cuando dos procesos acceden simultáneamente a un recurso compartido sin sincronización?",
-      options: [
-        "Fragmentación de memoria",
-        "Condición de carrera (race condition)",
-        "Desbordamiento de pila",
-        "Pérdida de paquetes"
-      ],
+      options: ["Fragmentación de memoria", "Condición de carrera", "Desbordamiento de pila", "Pérdida de paquetes"],
       correct: 1,
       explanation: "Las condiciones de carrera ocurren cuando múltiples procesos acceden simultáneamente a recursos compartidos, produciendo resultados impredecibles sin mecanismos de sincronización."
     },
@@ -8183,12 +7993,7 @@ const ExamSimulator = () => {
       unit: "UT1",
       source: "new",
       question: "¿Qué mecanismo de sincronización permite controlar el acceso mutuo a recursos compartidos?",
-      options: [
-        "Fragmentación externa",
-        "Mutex (mutual exclusion)",
-        "Paginación por demanda",
-        "Cache coherency"
-      ],
+      options: ["Fragmentación externa", "Mutex", "Paginación por demanda", "Cache coherency"],
       correct: 1,
       explanation: "Los mutex (mutual exclusion) son mecanismos que garantizan que solo un proceso acceda a un recurso compartido a la vez, evitando condiciones de carrera."
     },
@@ -8228,12 +8033,7 @@ const ExamSimulator = () => {
       unit: "UT1",
       source: "new",
       question: "¿Qué técnica permite distribuir tareas entre múltiples núcleos de CPU de forma equilibrada?",
-      options: [
-        "Paginación por segmentos",
-        "SMP (Symmetric Multiprocessing)",
-        "Single-threading",
-        "Memoria virtual expandida"
-      ],
+      options: ["Paginación por segmentos", "SMP", "Single-threading", "Memoria virtual expandida"],
       correct: 1,
       explanation: "SMP (Symmetric Multiprocessing) permite que el sistema operativo distribuya tareas entre múltiples núcleos o CPUs de forma equilibrada, mejorando el rendimiento."
     },
@@ -8513,12 +8313,7 @@ const ExamSimulator = () => {
       unit: "UT1",
       source: "new",
       question: "¿Qué tecnología de cifrado de disco es estándar en sistemas Linux?",
-      options: [
-        "BitLocker de Windows",
-        "LUKS (Linux Unified Key Setup)",
-        "FileVault de Apple",
-        "EFS de NTFS"
-      ],
+      options: ["BitLocker de Windows", "LUKS", "FileVault de Apple", "EFS de NTFS"],
       correct: 1,
       explanation: "LUKS (Linux Unified Key Setup) es el estándar de facto para cifrado de disco en Linux, proporcionando cifrado transparente de particiones y volúmenes."
     },
@@ -8543,12 +8338,7 @@ const ExamSimulator = () => {
       unit: "UT1",
       source: "new",
       question: "¿Qué protocolo permite instalar sistemas operativos por red sin medios físicos?",
-      options: [
-        "FTP para transferencias",
-        "PXE (Preboot Execution Environment)",
-        "SMB para compartir",
-        "HTTP simple"
-      ],
+      options: ["FTP para transferencias", "PXE", "SMB para compartir", "HTTP simple"],
       correct: 1,
       explanation: "PXE (Preboot Execution Environment) permite que computadoras arranquen e instalen sistemas operativos directamente desde la red, sin necesidad de medios físicos como USB o DVD."
     },
@@ -8558,12 +8348,7 @@ const ExamSimulator = () => {
       unit: "UT1",
       source: "new",
       question: "¿Qué protocolo sincroniza el reloj del sistema con servidores de tiempo en red?",
-      options: [
-        "SNMP para monitoreo",
-        "NTP (Network Time Protocol)",
-        "DHCP para configuración",
-        "DNS para resolución"
-      ],
+      options: ["SNMP para monitoreo", "NTP", "DHCP para configuración", "DNS para resolución"],
       correct: 1,
       explanation: "NTP (Network Time Protocol) es el protocolo estándar para sincronizar relojes de sistemas informáticos con servidores de tiempo precisos en la red."
     },
@@ -8588,12 +8373,7 @@ const ExamSimulator = () => {
       unit: "UT2",
       source: "new",
       question: "¿Qué modo de controladora SATA es recomendable activar para evitar dependencias de RAID propietario?",
-      options: [
-        "RAID Intel RST",
-        "AHCI (Advanced Host Controller Interface)",
-        "IDE Legacy",
-        "MegaRAID exclusivo"
-      ],
+      options: ["RAID Intel RST", "AHCI", "IDE Legacy", "MegaRAID exclusivo"],
       correct: 1,
       explanation: "AHCI ofrece compatibilidad universal y permite usar RAID por software (mdadm, ZFS, Storage Spaces) evitando dependencias de drivers propietarios."
     },
@@ -8678,12 +8458,7 @@ const ExamSimulator = () => {
       unit: "UT2",
       source: "new",
       question: "¿Qué protocolo permite arrancar e instalar sistemas operativos directamente desde la red?",
-      options: [
-        "HTTP simple",
-        "PXE (Preboot Execution Environment)",
-        "FTP estándar",
-        "SMB/CIFS"
-      ],
+      options: ["HTTP simple", "PXE", "FTP estándar", "SMB/CIFS"],
       correct: 1,
       explanation: "PXE permite que los equipos arranquen por red mediante TFTP/HTTP, facilitando instalaciones masivas con herramientas como FOG, Cobbler o MAAS."
     },
@@ -8708,12 +8483,7 @@ const ExamSimulator = () => {
       unit: "UT2",
       source: "new",
       question: "¿Qué sistema permite cifrado de disco completo en Linux?",
-      options: [
-        "BitLocker de Microsoft",
-        "LUKS2 (Linux Unified Key Setup)",
-        "FileVault de macOS",
-        "EFS de NTFS"
-      ],
+      options: ["BitLocker de Microsoft", "LUKS2", "FileVault de macOS", "EFS de NTFS"],
       correct: 1,
       explanation: "LUKS2 es el estándar para cifrado de disco en Linux, soportando múltiples slots de claves, integración con TPM mediante clevis y algoritmos modernos."
     },
@@ -8798,12 +8568,7 @@ const ExamSimulator = () => {
       unit: "UT2",
       source: "new",
       question: "¿Qué herramienta recompila módulos de kernel automáticamente tras actualizaciones?",
-      options: [
-        "apt-get upgrade",
-        "DKMS (Dynamic Kernel Module Support)",
-        "Windows Update",
-        "yum clean all"
-      ],
+      options: ["apt-get upgrade", "DKMS", "Windows Update", "yum clean all"],
       correct: 1,
       explanation: "DKMS recompila automáticamente módulos externos (como drivers NVIDIA, VirtualBox) cuando se actualiza el kernel Linux, evitando errores de arranque."
     },
@@ -8843,12 +8608,7 @@ const ExamSimulator = () => {
       unit: "UT2",
       source: "new",
       question: "¿Qué comando Linux permite clonar discos a bajo nivel?",
-      options: [
-        "copy simple",
-        "dd (data duplicator)",
-        "move renamer",
-        "list lister"
-      ],
+      options: ["copy simple", "dd", "move renamer", "list lister"],
       correct: 1,
       explanation: "dd copia datos bloque a bloque, útil para clonar discos completos, crear backups a bajo nivel o escribir imágenes ISO a USB."
     },
@@ -8933,12 +8693,7 @@ const ExamSimulator = () => {
       unit: "UT2",
       source: "new",
       question: "¿Qué partición especial usa Windows en esquemas GPT para gestión del sistema?",
-      options: [
-        "Partición de arranque MBR",
-        "MSR (Microsoft Reserved)",
-        "Swap de Linux",
-        "ESP únicamente"
-      ],
+      options: ["Partición de arranque MBR", "MSR", "Swap de Linux", "ESP únicamente"],
       correct: 1,
       explanation: "MSR (Microsoft Reserved) es una partición de ~16 MB que Windows crea en GPT para gestión interna del sistema y conversión a disco dinámico."
     },
@@ -9008,12 +8763,7 @@ const ExamSimulator = () => {
       unit: "UT2",
       source: "new",
       question: "¿Qué herramienta de gestión de configuración es específica de Windows?",
-      options: [
-        "Ansible genérico",
-        "DSC (Desired State Configuration)",
-        "Puppet multiplataforma",
-        "Chef universal"
-      ],
+      options: ["Ansible genérico", "DSC", "Puppet multiplataforma", "Chef universal"],
       correct: 1,
       explanation: "DSC (Desired State Configuration) es el sistema nativo de PowerShell para gestión de configuración declarativa en entornos Windows."
     },
@@ -9278,12 +9028,7 @@ const ExamSimulator = () => {
       unit: "UT3",
       source: "new",
       question: "¿Qué comando Linux moderno reemplaza a netstat para ver conexiones de red?",
-      options: [
-        "ifconfig antiguo",
-        "ss (socket statistics)",
-        "route tabla",
-        "arp caché"
-      ],
+      options: ["ifconfig antiguo", "ss", "route tabla", "arp caché"],
       correct: 1,
       explanation: "ss es el reemplazo moderno de netstat, mostrando información de sockets (TCP, UDP, Unix) de forma más rápida y con más opciones."
     },
@@ -9413,12 +9158,7 @@ const ExamSimulator = () => {
       unit: "UT4",
       source: "new",
       question: "¿Qué implementación de RAID en ZFS ofrece paridad con mejor rendimiento que RAID5 tradicional?",
-      options: [
-        "RAID clásico hardware",
-        "RAIDZ (RAIDZ1, RAIDZ2, RAIDZ3)",
-        "RAID por software mdadm",
-        "RAID 0 simple"
-      ],
+      options: ["RAID clásico hardware", "RAIDZ", "RAID por software mdadm", "RAID 0 simple"],
       correct: 1,
       explanation: "RAIDZ de ZFS implementa paridad integrada con checksums end-to-end, ofreciendo mejor protección contra corrupción que RAID5 tradicional."
     },
@@ -9668,12 +9408,7 @@ const ExamSimulator = () => {
       unit: "UT4",
       source: "new",
       question: "¿Qué herramienta centraliza logs y eventos en entornos empresariales grandes?",
-      options: [
-        "Notepad++",
-        "SIEM (Splunk, ELK, Graylog)",
-        "Paint",
-        "Calculator"
-      ],
+      options: ["Notepad++", "SIEM", "Paint", "Calculator"],
       correct: 1,
       explanation: "Los SIEM (Security Information and Event Management) como Splunk, ELK Stack o Graylog centralizan, correlacionan y analizan logs de múltiples fuentes."
     },
@@ -9698,12 +9433,7 @@ const ExamSimulator = () => {
       unit: "UT5",
       source: "new",
       question: "¿Qué herramienta permite administrar remotamente Active Directory desde Windows 10/11?",
-      options: [
-        "CMD básico",
-        "RSAT (Remote Server Administration Tools)",
-        "Paint",
-        "Notepad++"
-      ],
+      options: ["CMD básico", "RSAT", "Paint", "Notepad++"],
       correct: 1,
       explanation: "RSAT proporciona herramientas gráficas y de línea de comandos para administrar Active Directory, DNS, DHCP y otros servicios de Windows Server desde estaciones cliente."
     },
@@ -9713,12 +9443,7 @@ const ExamSimulator = () => {
       unit: "UT5",
       source: "new",
       question: "¿Qué característica de AD permite aplicar políticas de contraseñas diferentes a grupos específicos?",
-      options: [
-        "Default Domain Policy",
-        "FGPP (Fine-Grained Password Policy)",
-        "Local Security Policy",
-        "Group Policy básica"
-      ],
+      options: ["Default Domain Policy", "FGPP", "Local Security Policy", "Group Policy básica"],
       correct: 1,
       explanation: "FGPP permite crear PSOs (Password Settings Objects) con políticas de contraseñas específicas para diferentes grupos, superando la limitación de una única política por dominio."
     },
@@ -9743,12 +9468,7 @@ const ExamSimulator = () => {
       unit: "UT5",
       source: "new",
       question: "¿Qué tipo de relación permite que usuarios de un dominio accedan a recursos de otro dominio?",
-      options: [
-        "Group Policy Link",
-        "Trust (relación de confianza)",
-        "Site Link",
-        "OU Delegation"
-      ],
+      options: ["Group Policy Link", "Trust", "Site Link", "OU Delegation"],
       correct: 1,
       explanation: "Los Trusts son relaciones de confianza entre dominios o bosques que permiten autenticación cruzada y acceso a recursos entre diferentes espacios de nombres."
     },
@@ -9758,12 +9478,7 @@ const ExamSimulator = () => {
       unit: "UT5",
       source: "new",
       question: "¿Qué identifica de forma única un servicio en el contexto de autenticación Kerberos?",
-      options: [
-        "GUID del servicio",
-        "SPN (Service Principal Name)",
-        "DNS A record",
-        "NetBIOS name"
-      ],
+      options: ["GUID del servicio", "SPN", "DNS A record", "NetBIOS name"],
       correct: 1,
       explanation: "El SPN identifica unívocamente un servicio en Kerberos, permitiendo que los clientes soliciten tickets de servicio específicos para autenticación mutua."
     },
@@ -9773,12 +9488,7 @@ const ExamSimulator = () => {
       unit: "UT5",
       source: "new",
       question: "¿Qué protocolo permite conexiones gráficas remotas a servidores Windows?",
-      options: [
-        "SSH en texto",
-        "RDP (Remote Desktop Protocol)",
-        "Telnet inseguro",
-        "FTP simple"
-      ],
+      options: ["SSH en texto", "RDP", "Telnet inseguro", "FTP simple"],
       correct: 1,
       explanation: "RDP proporciona acceso gráfico remoto a sistemas Windows, transmitiendo la interfaz visual y permitiendo administración completa del servidor."
     },
@@ -9788,12 +9498,7 @@ const ExamSimulator = () => {
       unit: "UT5",
       source: "new",
       question: "¿Qué servidor DNS de código abierto se usa comúnmente en Linux?",
-      options: [
-        "Windows DNS Server",
-        "BIND (Berkeley Internet Name Domain)",
-        "Notepad DNS",
-        "Paint Resolver"
-      ],
+      options: ["Windows DNS Server", "BIND", "Notepad DNS", "Paint Resolver"],
       correct: 1,
       explanation: "BIND es el servidor DNS de código abierto más utilizado en sistemas Linux/Unix, proporcionando resolución autoritativa y recursiva de nombres."
     },
@@ -9833,12 +9538,7 @@ const ExamSimulator = () => {
       unit: "UT5",
       source: "new",
       question: "¿Qué framework de Linux controla acciones privilegiadas mediante políticas?",
-      options: [
-        "sudo simple",
-        "polkit (PolicyKit)",
-        "chmod tradicional",
-        "su básico"
-      ],
+      options: ["sudo simple", "polkit", "chmod tradicional", "su básico"],
       correct: 1,
       explanation: "polkit permite definir políticas granulares para controlar qué usuarios pueden ejecutar acciones privilegiadas sin necesidad de contraseña root completa."
     },
@@ -9878,12 +9578,7 @@ const ExamSimulator = () => {
       unit: "UT5",
       source: "new",
       question: "¿Qué estructura de AD define la topología de replicación según ubicaciones físicas?",
-      options: [
-        "Organizational Units",
-        "Sites (sitios)",
-        "Security Groups",
-        "Distribution Lists"
-      ],
+      options: ["Organizational Units", "Sites", "Security Groups", "Distribution Lists"],
       correct: 1,
       explanation: "Los Sites representan ubicaciones físicas conectadas por enlaces de red, optimizando la replicación de AD y permitiendo que los clientes se autentiquen con DCs cercanos."
     },
@@ -9983,12 +9678,7 @@ const ExamSimulator = () => {
       unit: "UT5",
       source: "new",
       question: "¿Qué tipo de perfil de usuario se descarga desde el servidor cada vez que se inicia sesión?",
-      options: [
-        "Perfil local",
-        "Perfil móvil (roaming profile)",
-        "Perfil temporal",
-        "Perfil mandatorio"
-      ],
+      options: ["Perfil local", "Perfil móvil", "Perfil temporal", "Perfil mandatorio"],
       correct: 1,
       explanation: "Los perfiles móviles se almacenan en el servidor y se descargan al iniciar sesión, permitiendo que el usuario tenga la misma experiencia en cualquier equipo del dominio."
     },
@@ -10028,12 +9718,7 @@ const ExamSimulator = () => {
       unit: "UT6",
       source: "new",
       question: "¿Qué tecnología de NTFS cifra archivos individuales usando claves del usuario?",
-      options: [
-        "BitLocker de volumen",
-        "EFS (Encrypting File System)",
-        "LUKS de Linux",
-        "FileVault de macOS"
-      ],
+      options: ["BitLocker de volumen", "EFS", "LUKS de Linux", "FileVault de macOS"],
       correct: 1,
       explanation: "EFS permite cifrar archivos y carpetas individuales en NTFS usando las credenciales del usuario, diferente al cifrado de volumen completo de BitLocker."
     },
@@ -10208,12 +9893,7 @@ const ExamSimulator = () => {
       unit: "UT6",
       source: "new",
       question: "¿Qué herramienta de Windows verifica y repara archivos del sistema operativo?",
-      options: [
-        "CHKDSK",
-        "SFC (System File Checker)",
-        "DISM",
-        "diskpart"
-      ],
+      options: ["CHKDSK", "SFC", "DISM", "diskpart"],
       correct: 1,
       explanation: "SFC (sfc /scannow) escanea y repara archivos del sistema de Windows que estén corruptos o faltantes, restaurándolos desde una caché de componentes."
     },
@@ -10223,12 +9903,7 @@ const ExamSimulator = () => {
       unit: "UT7",
       source: "new",
       question: "¿Qué tecnología de Windows limita a administradores a ejecutar solo comandos específicos?",
-      options: [
-        "UAC simple",
-        "JEA (Just-Enough-Administration)",
-        "RBAC básico",
-        "sudo de Linux"
-      ],
+      options: ["UAC simple", "JEA", "RBAC básico", "sudo de Linux"],
       correct: 1,
       explanation: "JEA (Just-Enough-Administration) de PowerShell permite crear endpoints restringidos donde los administradores solo pueden ejecutar comandos específicos, implementando mínimo privilegio."
     },
@@ -10238,12 +9913,7 @@ const ExamSimulator = () => {
       unit: "UT7",
       source: "new",
       question: "¿Qué característica de Windows solicita confirmación antes de ejecutar tareas administrativas?",
-      options: [
-        "Windows Defender",
-        "UAC (User Account Control)",
-        "BitLocker",
-        "Windows Firewall"
-      ],
+      options: ["Windows Defender", "UAC", "BitLocker", "Windows Firewall"],
       correct: 1,
       explanation: "UAC (User Account Control) solicita elevación explícita antes de ejecutar tareas administrativas, protegiendo contra cambios no autorizados y malware."
     },
@@ -10283,12 +9953,7 @@ const ExamSimulator = () => {
       unit: "UT7",
       source: "new",
       question: "¿Qué base de datos mantiene un inventario de activos de TI para auditoría?",
-      options: [
-        "Active Directory",
-        "CMDB (Configuration Management Database)",
-        "DNS Server",
-        "DHCP Server"
-      ],
+      options: ["Active Directory", "CMDB", "DNS Server", "DHCP Server"],
       correct: 1,
       explanation: "La CMDB mantiene un inventario de activos de TI (CIs), sus atributos, relaciones y dependencias, siendo fundamental para definir el alcance de auditorías."
     },
@@ -10373,12 +10038,7 @@ const ExamSimulator = () => {
       unit: "UT7",
       source: "new",
       question: "¿Qué indicadores miden la efectividad de los controles de seguridad?",
-      options: [
-        "ROI financiero",
-        "KPIs (Key Performance Indicators)",
-        "SLA tiempo respuesta",
-        "Uptime porcentaje"
-      ],
+      options: ["ROI financiero", "KPIs", "SLA tiempo respuesta", "Uptime porcentaje"],
       correct: 1,
       explanation: "Los KPIs de seguridad miden la efectividad de controles mediante métricas como tiempo de detección, tasa de falsos positivos, cobertura de logs y cumplimiento de políticas."
     },
@@ -10388,12 +10048,7 @@ const ExamSimulator = () => {
       unit: "UT7",
       source: "new",
       question: "¿Qué reglamento europeo debe considerarse en auditorías que involucran datos personales?",
-      options: [
-        "PCI-DSS",
-        "RGPD (GDPR)",
-        "HIPAA",
-        "SOX"
-      ],
+      options: ["PCI-DSS", "RGPD", "HIPAA", "SOX"],
       correct: 1,
       explanation: "El RGPD (Reglamento General de Protección de Datos) establece requisitos para protección de datos personales que deben verificarse en auditorías, incluyendo registro de tratamientos y medidas técnicas."
     },
@@ -10403,12 +10058,7 @@ const ExamSimulator = () => {
       unit: "UT7",
       source: "new",
       question: "¿Qué protocolo sincroniza relojes de sistemas para garantizar trazabilidad temporal precisa?",
-      options: [
-        "DNS",
-        "NTP (Network Time Protocol)",
-        "DHCP",
-        "SNMP"
-      ],
+      options: ["DNS", "NTP", "DHCP", "SNMP"],
       correct: 1,
       explanation: "NTP sincroniza los relojes de sistemas, esencial para correlación de eventos en SIEM, análisis forense y cumplimiento de requisitos de trazabilidad temporal."
     },
@@ -10598,12 +10248,7 @@ const ExamSimulator = () => {
       unit: "UT8",
       source: "new",
       question: "¿Qué metodología integra desarrollo y operaciones con despliegues automatizados continuos?",
-      options: [
-        "Waterfall tradicional",
-        "CI/CD (Continuous Integration/Deployment)",
-        "Manual deployment",
-        "Agile solo"
-      ],
+      options: ["Waterfall tradicional", "CI/CD", "Manual deployment", "Agile solo"],
       correct: 1,
       explanation: "CI/CD automatiza la integración de código, pruebas y despliegue continuo mediante pipelines, acelerando entregas y reduciendo errores humanos."
     },
