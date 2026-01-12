@@ -10420,20 +10420,33 @@ const ExamSimulator = () => {
     }
     
     let selected = [];
+    let pattern = null;
 
     // ========================================================
-    // 3. APLICAR EL PATRÓN DE EXAMEN (ISO vs RESTO)
+    // 3. DEFINICIÓN DE PATRONES ESPECÍFICOS
     // ========================================================
-    if (subjectKey === "ISO" && unitFilter === "all") {
-      // Tu patrón: 111-222-333-444-555-666-777-888-3-5-3-3-5-2
-      const isoPattern = [
-        1,1,1, 2,2,2, 3,3,3, 4,4,4, 5,5,5, 6,6,6, 7,7,7, 8,8,8, 
-        3, 5, 3, 3, 5, 2 
-      ];
-      
+    if (unitFilter === "all") {
+      if (subjectKey === "ISO") {
+        // Tu patrón ISO: 3 de cada una (1-8) + 3,5,3,3,5,2
+        pattern = [
+          1,1,1, 2,2,2, 3,3,3, 4,4,4, 5,5,5, 6,6,6, 7,7,7, 8,8,8, 
+          3, 5, 3, 3, 5, 2 
+        ];
+      } else if (subjectKey === "REDES") {
+        // Tu patrón REDES: 4 de cada una (1-7) + 5,4
+        pattern = [
+          1,1,1,1, 2,2,2,2, 3,3,3,3, 4,4,4,4, 5,5,5,5, 6,6,6,6, 7,7,7,7, 
+          5, 4
+        ];
+      }
+    }
+
+    // ========================================================
+    // 4. CONSTRUCCIÓN DEL EXAMEN
+    // ========================================================
+    if (pattern) {
       const usedIds = new Set();
-
-      isoPattern.forEach((unitNum) => {
+      pattern.forEach((unitNum) => {
         const unitStr = `UT${unitNum}`;
         let candidates = pool.filter(q => q.unit === unitStr && !usedIds.has(q.id));
         
@@ -10446,14 +10459,12 @@ const ExamSimulator = () => {
           usedIds.add(picked.id);
         }
       });
-      // Importante: No barajamos 'selected' para mantener el orden secuencial del patrón
     } else {
-      // Para Redes, BBDD o cuando filtras una UT específica en ISO
-      // Usamos el sistema aleatorio normal de 30 preguntas
+      // Para BBDD, IPE o cuando filtras una UT específica
       selected = pickWeightedByUnit(pool, 30, 1.4);
     }
 
-    // 4. Barajar opciones de cada pregunta y guardar en el estado
+    // 5. Barajar opciones y guardar
     const questionsWithShuffledOptions = selected.map((q) => shuffleOptions(q));
     setQuestions(questionsWithShuffledOptions);
   };
