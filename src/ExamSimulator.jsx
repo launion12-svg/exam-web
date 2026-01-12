@@ -10470,11 +10470,10 @@ const ExamSimulator = () => {
   };
 
   // =========================
-  // CÁLCULO NOTA (penalización 1/3 fallos)
+  // CÁLCULO NOTA (1 pregunta restada por cada 3 fallos)
   // =========================
   const getScoreDetails = () => {
     const total = questions.length;
-
     let correct = 0;
     let answered = 0;
 
@@ -10484,29 +10483,37 @@ const ExamSimulator = () => {
       if (a === q.correct) correct++;
     });
 
-    const blanks = total - answered;
+    // "Preguntas sin responder": ni suman ni restan
+    const blanks = total - answered; 
+    
+    // "Respuestas erróneas"
+    const wrong = answered - correct; 
 
-    const wrong = blankCountsAsWrong ? total - correct : answered - correct;
+    // Cada pregunta vale 0.33 puntos (para un examen de 30)
+    const pointsPerQuestion = total > 0 ? 10 / total : 0;
 
+    // "Calificación obtenida por las respuestas correctas"
+    const scoreFromCorrect = correct * pointsPerQuestion;
+
+    // "Número de preguntas correctas penalizadas" (1 por cada 3 fallos completos)
     const penaltyQuestions = Math.floor(wrong / 3);
 
-    const netCorrect = Math.max(0, correct - penaltyQuestions);
+    // "Penalización en la calificación"
+    const totalPenaltyScore = penaltyQuestions * pointsPerQuestion;
 
-    const pointsPerQuestion = total > 0 ? 10 / total : 0;
-    const grade10 = Number((netCorrect * pointsPerQuestion).toFixed(2));
-
-    const percentage = total > 0 ? Number(((netCorrect / total) * 100).toFixed(1)) : 0;
+    // "Calificación final del simulacro"
+    const grade10 = Math.max(0, scoreFromCorrect - totalPenaltyScore);
 
     return {
       total,
-      answered,
-      blanks,
       correct,
       wrong,
+      blanks,
+      scoreFromCorrect: Number(scoreFromCorrect.toFixed(2)),
       penaltyQuestions,
-      netCorrect,
-      grade10,
-      percentage,
+      totalPenaltyScore: Number(totalPenaltyScore.toFixed(2)),
+      grade10: Number(grade10.toFixed(2)),
+      percentage: total > 0 ? Number(((grade10 / 10) * 100).toFixed(1)) : 0,
     };
   };
 
