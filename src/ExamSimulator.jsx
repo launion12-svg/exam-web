@@ -10404,29 +10404,56 @@ const ExamSimulator = () => {
     // No hacemos initializeExam aquí, porque depende de la asignatura seleccionada
   }, []);
 
-  const initializeExam = (subjectKey, unitFilter = "all", source = "all") => {
+ const initializeExam = (subjectKey, unitFilter = "all", source = "all") => {
     let pool = allQuestions.filter((q) => q.subject === subjectKey);
     
-    // Filtrar por origen de preguntas
+    // 1. Filtrar por origen de preguntas (Campus / Nuevas)
     if (source === "campus") {
-      // Solo preguntas del campus (sin campo source o source !== "new")
       pool = pool.filter((q) => !q.source || q.source !== "new");
     } else if (source === "new") {
-      // Solo preguntas nuevas del PDF
       pool = pool.filter((q) => q.source === "new");
     }
-    // Si source === "all", no filtramos nada
     
-    // Si se seleccionó una UT específica, filtrar solo esas preguntas
+    // 2. Filtrar por UT si se seleccionó una específica
     if (unitFilter !== "all") {
       pool = pool.filter((q) => q.unit === unitFilter);
     }
     
-    const totalQuestions = 30;
+    let selected = [];
 
-    // Llamamos a la función con curva 1.6 (el código que tú pasaste)
-    const selected = pickWeightedByUnit(pool, totalQuestions, 1.4);
+    // ========================================================
+    // 3. APLICAR EL PATRÓN DE EXAMEN (ISO vs RESTO)
+    // ========================================================
+    if (subjectKey === "ISO" && unitFilter === "all") {
+      // Tu patrón: 111-222-333-444-555-666-777-888-3-5-3-3-5-2
+      const isoPattern = [
+        1,1,1, 2,2,2, 3,3,3, 4,4,4, 5,5,5, 6,6,6, 7,7,7, 8,8,8, 
+        3, 5, 3, 3, 5, 2 
+      ];
+      
+      const usedIds = new Set();
 
+      isoPattern.forEach((unitNum) => {
+        const unitStr = `UT${unitNum}`;
+        let candidates = pool.filter(q => q.unit === unitStr && !usedIds.has(q.id));
+        
+        // Si no hay suficientes preguntas únicas en esa UT, permitimos repetir
+        if (candidates.length === 0) candidates = pool.filter(q => q.unit === unitStr);
+
+        if (candidates.length > 0) {
+          const picked = candidates[Math.floor(Math.random() * candidates.length)];
+          selected.push(picked);
+          usedIds.add(picked.id);
+        }
+      });
+      // Importante: No barajamos 'selected' para mantener el orden secuencial del patrón
+    } else {
+      // Para Redes, BBDD o cuando filtras una UT específica en ISO
+      // Usamos el sistema aleatorio normal de 30 preguntas
+      selected = pickWeightedByUnit(pool, 30, 1.4);
+    }
+
+    // 4. Barajar opciones de cada pregunta y guardar en el estado
     const questionsWithShuffledOptions = selected.map((q) => shuffleOptions(q));
     setQuestions(questionsWithShuffledOptions);
   };
