@@ -10605,10 +10605,21 @@ const ExamSimulator = () => {
   // =========================
   const handleAnswer = (questionId, answerIndex) => {
     if (showResults) return;
-    setSelectedAnswers((prev) => ({
-      ...prev,
-      [questionId]: answerIndex,
-    }));
+    
+    setSelectedAnswers((prev) => {
+      const newAnswers = { ...prev };
+      
+      // Si el usuario hace clic en la respuesta que YA estaba seleccionada...
+      if (prev[questionId] === answerIndex) {
+        // ... la eliminamos del objeto (esto deja la pregunta en blanco)
+        delete newAnswers[questionId];
+      } else {
+        // ... si no estaba seleccionada o es una distinta, la marcamos
+        newAnswers[questionId] = answerIndex;
+      }
+      
+      return newAnswers;
+    });
   };
 
   const nextQuestion = () => {
