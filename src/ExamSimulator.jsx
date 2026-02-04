@@ -10314,6 +10314,93 @@ const ExamSimulator = () => {
       correct: 1,
       explanation: "Los Virtual Hosts de Apache permiten configurar múltiples sitios web en un mismo servidor, diferenciándolos por nombre de dominio, IP o puerto."
     },
+    // =========================
+    // IAW (Implantación de Aplicaciones Web)
+    // =========================
+    {
+      id: 662,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué elemento forma parte del lado cliente en una aplicación web?",
+      options: [
+        "MySQL",
+        "PHP",
+        "JavaScript",
+        "Apache"
+      ],
+      correct: 2,
+      explanation: "JavaScript se ejecuta en el navegador del usuario, por lo que es parte del lado cliente. MySQL, PHP y Apache se ejecutan en el servidor."
+    },
+    {
+      id: 663,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Cuál es el objetivo principal de un entorno de desarrollo web?",
+      options: [
+        "Mostrar interfaces gráficas al usuario final",
+        "Publicar sitios web automáticamente",
+        "Ejecutar código directamente en producción",
+        "Probar, desarrollar y mantener aplicaciones antes de su despliegue final"
+      ],
+      correct: 3,
+      explanation: "Un entorno de desarrollo web permite probar, desarrollar y mantener aplicaciones de forma controlada antes de llevarlas a producción, reduciendo riesgos y errores."
+    },
+    {
+      id: 664,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Por qué es importante documentar un entorno de desarrollo?",
+      options: [
+        "Porque lo exige la normativa fiscal",
+        "Para instalar software automáticamente",
+        "Para garantizar la trazabilidad y facilitar mantenimiento",
+        "Para poder compartirlo en redes sociales"
+      ],
+      correct: 2,
+      explanation: "Documentar el entorno permite reproducir configuraciones, asegurar la trazabilidad y facilitar el mantenimiento y la transferencia de conocimiento."
+    },
+    {
+      id: 665,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué elemento permite establecer reglas de acceso en Apache?",
+      options: [
+        "config.json",
+        ".env",
+        "server.conf",
+        ".htaccess"
+      ],
+      correct: 3,
+      explanation: "El archivo .htaccess permite definir reglas de acceso y configuración por directorio en servidores Apache."
+    },
+    {
+      id: 666,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué significa localhost en un entorno de desarrollo?",
+      options: [
+        "El equipo del usuario que ejecuta el servidor local",
+        "Un servidor remoto con acceso seguro",
+        "Un nombre de dominio reservado para producción",
+        "Un proxy que enruta las conexiones externas"
+      ],
+      correct: 0,
+      explanation: "localhost hace referencia a la propia máquina (127.0.0.1), es decir, el equipo que ejecuta el servidor en local."
+    },
+    {
+      id: 667,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué herramienta NO forma parte de un paquete XAMPP?",
+      options: [
+        "Python",
+        "Apache",
+        "MariaDB",
+        "PHP"
+      ],
+      correct: 0,
+      explanation: "XAMPP incluye Apache, MariaDB y PHP (entre otros), pero no incluye Python como parte del paquete base."
+    },
   ];
 
   // =========================
