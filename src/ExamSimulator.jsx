@@ -92,7 +92,9 @@ const pickWeightedByUnit = (pool, total = 30, curve = 1.6) => {
 const SUBJECTS = {
   ISO: "Implantación de Sistemas Operativos",
   REDES: "Planificación y Administración de Redes",
-  IPE1: "Itinerario Personal para la Empleabilidad I",
+  IAW: "Implantación de Aplicaciones Web",
+  ASO: "Administración de Sistemas Operativos",
+  LMSGI: "Lenguajes de Marcas y Sistemas de Gestión de Información",
   BBDD: "Bases de Datos", // <--- Añadimos esta línea
 };
 
