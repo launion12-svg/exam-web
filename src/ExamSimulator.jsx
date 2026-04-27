@@ -11432,220 +11432,240 @@ const ExamSimulator = () => {
     // =========================
     // IAW (Implantación de Aplicaciones Web) - UT1
     // =========================
-    {
-      id: 902, // (Nº 19)
+   {
+      id: 902, // (Nº 1)
       subject: "IAW",
       unit: "UT1",
-      question: "¿Qué comando permite acceder a la consola de MySQL en Linux?",
-      options: ["mysql -login", "connect mysql", "sudo mysql", "service mysql status"],
-      correct: 2,
-      explanation: "En Linux, `sudo mysql` permite abrir la consola del servidor MySQL/MariaDB cuando se dispone de permisos adecuados."
-    },
-    {
-      id: 903, // (Nº 11)
-      subject: "IAW",
-      unit: "UT1",
-      question: "¿Cuál es la principal diferencia entre Apache y Nginx?",
+      question: "¿Qué caracteriza a un lenguaje de marcas?",
       options: [
-        "Apache es gratuito y Nginx es de pago",
-        "Nginx solo funciona en Linux",
-        "Nginx usa un modelo asíncrono de procesamiento",
-        "Apache no permite configuración modular"
+        "Se utiliza solo para cálculos numéricos.",
+        "Describe cómo ejecutar operaciones.",
+        "Define estructura y significado del contenido mediante etiquetas.",
+        "Es un lenguaje de programación imperativo."
       ],
       correct: 2,
-      explanation: "Nginx destaca por su modelo orientado a eventos y procesamiento asíncrono, eficiente en alta concurrencia."
+      explanation: "Los lenguajes de marcas (como HTML o XML) no ejecutan lógica, sino que usan etiquetas para organizar y dar sentido a la información."
     },
     {
-      id: 904, // (Nº 17)
+      id: 903, // (Nº 2)
       subject: "IAW",
       unit: "UT1",
-      question: "¿Qué tipo de cifrado garantiza la seguridad en HTTPS?",
+      question: "¿Cuál fue el antecesor histórico del XML y HTML?",
+      options: ["CSS", "JSON", "YAML", "SGML"],
+      correct: 3,
+      explanation: "SGML (Standard Generalized Markup Language) es el estándar internacional del que derivan tanto HTML como XML."
+    },
+    {
+      id: 904, // (Nº 3)
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué lenguaje se utiliza principalmente para estructurar páginas web?",
+      options: ["JSON", "HTML", "XML", "CSV"],
+      correct: 1,
+      explanation: "HTML es el lenguaje estándar diseñado específicamente para la creación y estructuración de documentos en la World Wide Web."
+    },
+    {
+      id: 905, // (Nº 4)
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué significa que un documento XML esté 'bien formado'?",
       options: [
-        "Cifrado por sustitución",
-        "Cifrado simétrico sin clave",
-        "Cifrado con certificados SSL/TLS",
-        "Ningún tipo de cifrado"
+        "Cumple las reglas de un esquema XSD.",
+        "Está validado con Schematron.",
+        "Tiene etiquetas correctamente anidadas y cerradas.",
+        "Contiene datos numéricos válidos."
       ],
       correct: 2,
-      explanation: "HTTPS protege la comunicación mediante TLS (históricamente SSL) y certificados digitales."
+      explanation: "Un documento 'bien formado' es aquel que sigue las reglas sintácticas básicas de XML (raíz única, etiquetas cerradas, anidamiento correcto)."
     },
     {
-      id: 663, // (Nº 1)
+      id: 906, // (Nº 5)
       subject: "IAW",
       unit: "UT1",
-      question: "¿Cuál es el objetivo principal de un entorno de desarrollo web?",
+      question: "¿Cuál de los siguientes NO es un lenguaje de marcas?",
+      options: ["XML", "HTML", "XSD", "Python"],
+      correct: 3,
+      explanation: "Python es un lenguaje de programación de propósito general, mientras que los otros tres se basan en etiquetas o esquemas de marcas."
+    },
+    {
+      id: 907, // (Nº 6)
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué herramienta se utiliza para transformar XML en otros formatos?",
+      options: ["XPath", "XSLT", "JSON", "XSD"],
+      correct: 1,
+      explanation: "XSLT (Extensible Stylesheet Language Transformations) es el lenguaje utilizado para transformar documentos XML a HTML, texto u otros XML."
+    },
+    {
+      id: 908, // (Nº 7)
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué papel cumplen los espacios de nombres (namespaces) en XML?",
       options: [
-        "Probar, desarrollar y mantener aplicaciones antes de su despliegue final",
-        "Publicar sitios web automáticamente",
-        "Ejecutar código directamente en producción",
-        "Mostrar interfaces gráficas al usuario final"
+        "Evitan colisiones entre vocabularios distintos.",
+        "Controlan el tamaño del archivo.",
+        "Limitan el número de etiquetas por documento.",
+        "Permiten definir estilos visuales."
       ],
       correct: 0,
-      explanation: "Un entorno de desarrollo permite crear y validar aplicaciones de forma segura antes de publicarlas en producción."
+      explanation: "Los namespaces permiten usar etiquetas con el mismo nombre pero de diferentes fuentes (vocabularios) sin que haya conflictos en el documento."
     },
     {
-      id: 906, // (Nº 4)
+      id: 909, // (Nº 8)
       subject: "IAW",
       unit: "UT1",
-      question: "¿Qué archivo se utiliza para configurar parámetros de PHP?",
-      options: ["apache2.conf", ".htaccess", "config.php", "php.ini"],
-      correct: 3,
-      explanation: "`php.ini` es el archivo principal donde se ajustan directivas globales de configuración de PHP."
-    },
-    {
-      id: 907, // (Nº 14)
-      subject: "IAW",
-      unit: "UT1",
-      question: "¿Qué extensión de archivo se asocia con scripts de PHP?",
-      options: [".html", ".db", ".py", ".php"],
-      correct: 3,
-      explanation: "Los scripts de PHP se guardan habitualmente con extensión `.php` para que el servidor los interprete."
-    },
-    {
-      id: 908, // (Nº 13)
-      subject: "IAW",
-      unit: "UT1",
-      question: "¿Cuál es el comando correcto para instalar Apache en Ubuntu?",
-      options: ["sudo apt install apache2", "sudo install apache2", "apache2 install", "apt-get apache"],
-      correct: 0,
-      explanation: "En Ubuntu, Apache se instala desde repositorios con `sudo apt install apache2`."
-    },
-    {
-      id: 909, // (Nº 10)
-      subject: "IAW",
-      unit: "UT1",
-      question: "¿Qué componente permite procesar código PHP en un servidor Apache?",
-      options: ["phpMyAdmin", "Node.js", "MySQL-server", "libapache2-mod-php"],
-      correct: 3,
-      explanation: "`libapache2-mod-php` integra PHP con Apache para ejecutar scripts del lado servidor."
-    },
-    {
-      id: 910, // (Nº 5)
-      subject: "IAW",
-      unit: "UT1",
-      question: "¿Qué tecnología actúa del lado del servidor?",
-      options: ["JavaScript", "CSS", "PHP", "HTML"],
-      correct: 2,
-      explanation: "PHP se ejecuta en el servidor y genera la respuesta dinámica enviada al cliente."
-    },
-    {
-      id: 664, // (Nº 20)
-      subject: "IAW",
-      unit: "UT1",
-      question: "¿Por qué es importante documentar un entorno de desarrollo?",
+      question: "¿Qué elemento XML sirve como raíz del documento?",
       options: [
-        "Para poder compartirlo en redes sociales",
-        "Para garantizar la trazabilidad y facilitar mantenimiento",
-        "Porque lo exige la normativa fiscal",
-        "Para instalar software automáticamente"
+        "El encabezado XML",
+        "Un único elemento contenedor de todos los demás",
+        "El esquema XSD",
+        "El primer comentario"
       ],
       correct: 1,
-      explanation: "Documentar facilita reproducir el entorno, mantenerlo y transferir conocimiento dentro del equipo."
+      explanation: "Todo documento XML debe tener exactamente un elemento raíz que envuelva a todo el resto del contenido."
     },
     {
-      id: 912, // (Nº 6)
+      id: 910, // (Nº 9)
       subject: "IAW",
       unit: "UT1",
-      question: "¿Qué significa localhost en un entorno de desarrollo?",
-      options: [
-        "Un proxy que enruta las conexiones externas",
-        "El equipo del usuario que ejecuta el servidor local",
-        "Un nombre de dominio reservado para producción",
-        "Un servidor remoto con acceso seguro"
-      ],
-      correct: 1,
-      explanation: "`localhost` se refiere al propio equipo local (normalmente 127.0.0.1 o ::1)."
-    },
-    {
-      id: 913, // (Nº 9)
-      subject: "IAW",
-      unit: "UT1",
-      question: "¿Cuál de las siguientes opciones mejora la seguridad de una base de datos?",
-      options: [
-        "Permitir conexiones remotas anónimas",
-        "Dar permisos globales a todos los usuarios",
-        "Limitar los permisos según las necesidades",
-        "Usar el usuario root sin contraseña"
-      ],
+      question: "¿Qué extensión tienen normalmente los esquemas XML?",
+      options: [".html", ".json", ".xsd", ".css"],
       correct: 2,
-      explanation: "Aplicar el principio de mínimo privilegio mejora la seguridad limitando accesos innecesarios."
+      explanation: "Los archivos XSD (XML Schema Definition) definen la estructura y tipos de datos permitidos en un XML."
     },
     {
-      id: 914, // (Nº 16)
+      id: 911, // (Nº 10)
       subject: "IAW",
       unit: "UT1",
-      question: "¿Qué herramienta permite gestionar visualmente bases de datos en XAMPP?",
-      options: ["phpMyAdmin", "Composer", "VS Code", "Apache Control Panel"],
-      correct: 0,
-      explanation: "phpMyAdmin ofrece una interfaz web para administrar bases de datos MySQL/MariaDB."
-    },
-    {
-      id: 915, // (Nº 8)
-      subject: "IAW",
-      unit: "UT1",
-      question: "¿Qué indica el código de estado HTTP 404?",
-      options: ["Solicitud correcta", "Recurso no encontrado", "Redirección permanente", "Error interno del servidor"],
-      correct: 1,
-      explanation: "El estado 404 indica que el recurso solicitado no ha sido encontrado en el servidor."
-    },
-    {
-      id: 916, // (Nº 7)
-      subject: "IAW",
-      unit: "UT1",
-      question: "¿Qué protocolo se utiliza en las peticiones web entre cliente y servidor?",
-      options: ["FTP", "DNS", "HTTP", "SMTP"],
-      correct: 2,
-      explanation: "HTTP es el protocolo principal para intercambio de peticiones y respuestas web."
-    },
-    {
-      id: 917, // (Nº 2)
-      subject: "IAW",
-      unit: "UT1",
-      question: "¿Qué herramienta NO forma parte de un paquete XAMPP?",
-      options: ["MariaDB", "PHP", "Python", "Apache"],
-      correct: 2,
-      explanation: "XAMPP incluye Apache, MariaDB y PHP, pero no Python como componente base del paquete."
-    },
-    {
-      id: 918, // (Nº 15)
-      subject: "IAW",
-      unit: "UT1",
-      question: "¿Cuál es el propósito del archivo phpinfo.php?",
+      question: "¿Cuál es la diferencia principal entre HTML y XML?",
       options: [
-        "Mostrar información sobre el entorno PHP",
-        "Crear una base de datos vacía",
-        "Servir como página de error 404",
-        "Generar scripts HTML automáticamente"
+        "HTML permite errores; XML exige corrección total.",
+        "XML solo se usa en navegadores.",
+        "HTML es binario; XML es textual.",
+        "XML no usa etiquetas."
       ],
       correct: 0,
-      explanation: "Un script con `phpinfo()` muestra información de configuración y módulos disponibles de PHP."
+      explanation: "XML es mucho más estricto; si hay un error de sintaxis (como una etiqueta sin cerrar), el procesador detiene la ejecución, a diferencia de los navegadores con HTML."
     },
     {
-      id: 919, // (Nº 12)
+      id: 912, // (Nº 11)
       subject: "IAW",
       unit: "UT1",
-      question: "¿Cuál de las siguientes herramientas se considera un editor de código?",
-      options: ["MySQL Workbench", "phpMyAdmin", "NetBeans", "Apache Server"],
-      correct: 2,
-      explanation: "NetBeans es un entorno de desarrollo (IDE) orientado a edición y programación."
+      question: "¿Qué lenguaje define reglas de validación por condiciones lógicas en XML?",
+      options: ["CSS", "Schematron", "DTD", "XSD"],
+      correct: 1,
+      explanation: "Schematron permite realizar validaciones basadas en reglas de negocio complejas que los esquemas gramaticales como XSD no pueden cubrir."
     },
     {
-      id: 920, // (Nº 18)
+      id: 913, // (Nº 12)
       subject: "IAW",
       unit: "UT1",
-      question: "¿Qué elemento permite establecer reglas de acceso en Apache?",
-      options: ["config.json", ".env", "server.conf", ".htaccess"],
+      question: "¿Cuál de las siguientes herramientas es un editor profesional XML?",
+      options: ["Oxygen XML Editor", "Excel", "Notepad clásico", "Paint"],
+      correct: 0,
+      explanation: "Oxygen es uno de los IDEs más potentes y utilizados profesionalmente para trabajar con XML, XSLT y esquemas."
+    },
+    {
+      id: 914, // (Nº 13)
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué característica distingue a un documento XML válido?",
+      options: [
+        "Está en formato binario.",
+        "Cumple las reglas definidas en su esquema.",
+        "Contiene solo datos numéricos.",
+        "No incluye namespaces."
+      ],
+      correct: 1,
+      explanation: "Un documento es 'válido' si, además de estar bien formado, cumple con las reglas de estructura definidas en un DTD o XSD."
+    },
+    {
+      id: 915, // (Nº 14)
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué lenguaje permite seleccionar nodos dentro de un documento XML?",
+      options: ["XSLT", "CSS", "XQuery", "XPath"],
       correct: 3,
-      explanation: "El archivo `.htaccess` permite aplicar reglas de acceso y configuración por directorio en Apache."
+      explanation: "XPath es el lenguaje de expresiones que se utiliza para navegar a través de los elementos y atributos de un documento XML."
     },
     {
-      id: 921, // (Nº 3)
+      id: 916, // (Nº 15)
       subject: "IAW",
       unit: "UT1",
-      question: "¿Qué elemento forma parte del lado cliente en una aplicación web?",
-      options: ["JavaScript", "PHP", "Apache", "MySQL"],
-      correct: 0,
-      explanation: "JavaScript se ejecuta en el navegador (cliente), mientras PHP/Apache/MySQL operan en el servidor."
+      question: "¿Qué representa la etiqueta <!DOCTYPE html>?",
+      options: [
+        "Un comentario de autoría.",
+        "Una declaración de codificación XML.",
+        "La definición del tipo de documento HTML.",
+        "Un espacio de nombres por defecto."
+      ],
+      correct: 2,
+      explanation: "El DOCTYPE informa al navegador que el documento debe ser interpretado bajo el estándar de HTML5."
+    },
+    {
+      id: 917, // (Nº 16)
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Cuál de las siguientes opciones describe mejor JSON frente a XML?",
+      options: [
+        "No admite jerarquía.",
+        "Es más ligero y orientado a APIs.",
+        "Solo se usa en impresión.",
+        "Es más pesado pero más formal."
+      ],
+      correct: 1,
+      explanation: "JSON es preferido en el intercambio de datos web modernos por ser menos verboso (ocupa menos espacio) y fácil de leer para JavaScript."
+    },
+    {
+      id: 918, // (Nº 17)
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué función cumple la validación en XML?",
+      options: [
+        "Asignar estilos visuales.",
+        "Verificar estructura y tipos de datos.",
+        "Traducirlo a JSON.",
+        "Comprimir el documento."
+      ],
+      correct: 1,
+      explanation: "La validación asegura que el archivo XML contiene la información necesaria y en el formato correcto para ser procesado por una aplicación."
+    },
+    {
+      id: 919, // (Nº 18)
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué es un atributo en XML?",
+      options: [
+        "Un elemento hijo con contenido textual.",
+        "Una etiqueta de cierre.",
+        "Un comentario del autor.",
+        "Una metainformación del elemento en forma clave-valor."
+      ],
+      correct: 3,
+      explanation: "Los atributos se colocan dentro de la etiqueta de apertura y proporcionan información adicional sobre el elemento (ej: <item id='10'>)."
+    },
+    {
+      id: 920, // (Nº 19)
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué editor gratuito puede configurarse con plugins XML en entornos docentes?",
+      options: ["XMLSpy", "Oxygen XML Editor", "VS Code", "Dreamweaver"],
+      correct: 2,
+      explanation: "Visual Studio Code es muy popular porque permite instalar extensiones para autocompletado y validación de XML y XSD."
+    },
+    {
+      id: 921, // (Nº 20)
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Cuál de los siguientes pares de lenguajes se usan juntos para publicar y dar estilo a contenidos web?",
+      options: [
+        "DTD y Schematron",
+        "XML y JSON",
+        "HTML y CSS",
+        "XSD y XSLT"
+      ],
+      correct: 2,
+      explanation: "HTML proporciona la estructura de la página y CSS se encarga de la presentación visual (colores, fuentes, disposición)."
     },
     // =========================
     // IAW (Implantación de Aplicaciones Web) - UT2
