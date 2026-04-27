@@ -13458,6 +13458,231 @@ const ExamSimulator = () => {
       correct: 2,
       explanation: "El Administrador de Tareas (Task Manager) ofrece una vista rápida, y services.msc permite el control avanzado de cada servicio."
     },
+      {
+      id: 2041, // P1
+      subject: "ASO",
+      unit: "UT3",
+      question: "¿Cuál es uno de los beneficios principales de la automatización en administración del sistema?",
+      options: [
+        "Eliminar la necesidad de logs",
+        "Evitar el uso de CI/CD",
+        "Aumentar la intervención manual",
+        "Reducir errores y mejorar la consistencia operativa"
+      ],
+      correct: 3,
+      explanation: "La automatización garantiza que las tareas se realicen siempre de la misma manera, eliminando el error humano y permitiendo escalar la gestión de sistemas."
+    },
+    {
+      id: 2042, // P2
+      subject: "ASO",
+      unit: "UT3",
+      question: "¿Qué herramienta gráfica permite gestionar tareas con triggers complejos en Windows?",
+      options: ["Resource Monitor", "Task Scheduler", "Event Viewer", "gpupdate"],
+      correct: 1,
+      explanation: "El Programador de Tareas (Task Scheduler) de Windows permite ejecutar scripts o programas basados en eventos específicos, horarios o estados del sistema."
+    },
+    {
+      id: 2043, // P3
+      subject: "ASO",
+      unit: "UT3",
+      question: "¿Qué opción de Bash ayuda a detectar errores tempranos en scripts?",
+      options: ["set -vx", "set -euo pipefail", "unset ALL", "nohup"],
+      correct: 1,
+      explanation: "'set -e' detiene el script si un comando falla, 'set -u' detecta variables no definidas y 'pipefail' asegura que los errores en tuberías no pasen desapercibidos."
+    },
+    {
+      id: 2044, // P4
+      subject: "ASO",
+      unit: "UT3",
+      question: "¿Qué debe evitarse al gestionar claves y contraseñas en scripts?",
+      options: [
+        "Integrar con vaults",
+        "Rotación periódica",
+        "Utilizar variables de entorno cifradas",
+        "Hardcodear credenciales en texto plano"
+      ],
+      correct: 3,
+      explanation: "Nunca se deben escribir contraseñas directamente en el código (hardcoding). Se deben usar gestores de secretos (Vaults) o variables de entorno protegidas."
+    },
+    {
+      id: 2045, // P5
+      subject: "ASO",
+      unit: "UT3",
+      question: "¿Cuál es una ventaja de los systemd timers frente a cron?",
+      options: [
+        "No pueden reiniciarse servicios",
+        "No requieren unit files",
+        "No soportan recurrencia",
+        "Ofrecen trazabilidad integrada mediante journal"
+      ],
+      correct: 3,
+      explanation: "A diferencia de cron, los timers de systemd registran toda su actividad en journald, facilitando mucho la depuración de fallos."
+    },
+    {
+      id: 2046, // P6
+      subject: "ASO",
+      unit: "UT3",
+      question: "¿Qué técnica permite detectar procesos anómalos en ejercicios avanzados de automatización?",
+      options: [
+        "Revisión manual de servicios",
+        "Scripts de análisis de CPU y conexiones",
+        "Reiniciar el sistema regularmente",
+        "Desactivar logs"
+      ],
+      correct: 1,
+      explanation: "La automatización del monitoreo mediante scripts que analizan picos de CPU o conexiones sospechosas permite una respuesta proactiva ante incidentes."
+    },
+    {
+      id: 2047, // P7
+      subject: "ASO",
+      unit: "UT3",
+      question: "¿Qué herramienta permite recuperar un secreto seguro en Bash según el ejemplo de UT3?",
+      options: ["vault", "ldapquery", "passkeyctl", "cfgtool"],
+      correct: 0,
+      explanation: "HashiCorp Vault o herramientas similares permiten que un script solicite credenciales de forma dinámica y segura en tiempo de ejecución."
+    },
+    {
+      id: 2048, // P8
+      subject: "ASO",
+      unit: "UT3",
+      question: "¿Qué protocolo se menciona como esencial para sincronizar tiempos en sistemas distribuidos?",
+      options: ["SNMP", "SMB", "FTP", "NTP"],
+      correct: 3,
+      explanation: "NTP (Network Time Protocol) es vital para que los logs de diferentes máquinas coincidan cronológicamente, algo crítico para auditorías y seguridad."
+    },
+    {
+      id: 2049, // P9
+      subject: "ASO",
+      unit: "UT3",
+      question: "¿Qué parámetro en systemd permite limitar el número de descriptores abiertos?",
+      options: ["RestrictFileDescriptor", "LimitNOFILE", "TimeoutStartSec", "CPUQuota"],
+      correct: 1,
+      explanation: "LimitNOFILE define el máximo de archivos abiertos permitidos, protegiendo al sistema de servicios que puedan colapsar la tabla de descriptores."
+    },
+    {
+      id: 2050, // P10
+      subject: "ASO",
+      unit: "UT3",
+      question: "¿Qué elemento mejora la trazabilidad y permite auditorías fiables en automatización?",
+      options: ["Variables de entorno", "Uso de rutas relativas", "Procesos interactivos", "Logging estructurado"],
+      correct: 3,
+      explanation: "El logging estructurado permite que las herramientas automáticas procesen los registros fácilmente, identificando fallos sin intervención manual."
+    },
+    {
+      id: 2051, // P11
+      subject: "ASO",
+      unit: "UT3",
+      question: "¿Qué comando se usa para programar una tarea puntual en Linux?",
+      options: ["timerctl", "at", "flock", "cron"],
+      correct: 1,
+      explanation: "Mientras que cron es para tareas repetitivas, el comando 'at' se utiliza para programar una tarea que se ejecutará una única vez en el futuro."
+    },
+    {
+      id: 2052, // P12
+      subject: "ASO",
+      unit: "UT3",
+      question: "¿Qué archivo define en systemd cómo debe ejecutarse un servicio?",
+      options: [
+        "/etc/systemd/table.map",
+        "/usr/local/service.map",
+        "Unit file .service",
+        "/etc/services.conf"
+      ],
+      correct: 2,
+      explanation: "Los archivos .service contienen la definición de cómo arrancar, detener y vigilar un proceso bajo el control de systemd."
+    },
+    {
+      id: 2053, // P13
+      subject: "ASO",
+      unit: "UT3",
+      question: "¿Qué herramienta se usa en Linux para programar tareas periódicas?",
+      options: ["systemd-analyze", "cron", "dsconfig", "ldapsync"],
+      correct: 1,
+      explanation: "Cron es el demonio clásico de Unix para ejecutar tareas en intervalos regulares (minutos, horas, días)."
+    },
+    {
+      id: 2054, // P14
+      subject: "ASO",
+      unit: "UT3",
+      question: "¿Qué característica destaca en Rundeck como plataforma de automatización?",
+      options: [
+        "Funciona solo en local",
+        "No permite RBAC",
+        "No gestiona logs",
+        "Ejecuta tareas en múltiples nodos con control de acceso"
+      ],
+      correct: 3,
+      explanation: "Rundeck permite orquestar flujos de trabajo sobre flotas de servidores, gestionando permisos y guardando un historial de ejecuciones."
+    },
+    {
+      id: 2055, // P15
+      subject: "ASO",
+      unit: "UT3",
+      question: "¿Qué mecanismo permite validar configuraciones antes de un despliegue automatizado?",
+      options: ["Dry-run o pre-flight checks", "Eliminación del estado previo", "Ejecución sin logs", "Reinicio forzado del servicio"],
+      correct: 0,
+      explanation: "Un 'dry-run' simula la ejecución para ver qué cambios se realizarían sin llegar a aplicarlos, evitando desastres en producción."
+    },
+    {
+      id: 2056, // P16
+      subject: "ASO",
+      unit: "UT3",
+      question: "¿Qué riesgo común se mitiga usando flock en tareas programadas?",
+      options: ["Ejecuciones superpuestas", "Permisos incorrectos", "Fallos en logs", "Pérdida de variables de entorno"],
+      correct: 0,
+      explanation: "flock gestiona bloqueos de archivos. Evita que si una tarea tarda más de lo previsto, una segunda instancia de la misma tarea empiece a correr a la vez."
+    },
+    {
+      id: 2057, // P17
+      subject: "ASO",
+      unit: "UT3",
+      question: "¿Qué ventaja ofrece documentar y versionar tareas programadas?",
+      options: [
+        "Permite reproducir configuraciones y auditar cambios",
+        "Evita la ejecución de scripts",
+        "Reemplaza los logs",
+        "Impide modificar horarios"
+      ],
+      correct: 0,
+      explanation: "Usar Git para los scripts y tareas permite saber quién cambió un horario o una lógica y revertirlo si algo falla."
+    },
+    {
+      id: 2058, // P18
+      subject: "ASO",
+      unit: "UT3",
+      question: "¿Qué tipo de política evita reinicios infinitos en servicios automatizados?",
+      options: [
+        "restart never",
+        "restart immediate sin delay",
+        "restart on-failure con umbrales definidos",
+        "restart always"
+      ],
+      correct: 2,
+      explanation: "Configurar un servicio para que se reinicie solo si falla, pero limitando cuántas veces lo intenta en un tiempo dado (StartLimitIntervalSec), evita bucles infinitos."
+    },
+    {
+      id: 2059, // P19
+      subject: "ASO",
+      unit: "UT3",
+      question: "¿Qué ventaja principal ofrece PowerShell respecto a Bash?",
+      options: [
+        "Usa un modelo basado en objetos",
+        "Soporta menos cmdlets",
+        "No soporta scripting modular",
+        "No permite validación de parámetros"
+      ],
+      correct: 0,
+      explanation: "A diferencia de Bash (que maneja texto), PowerShell maneja objetos .NET, lo que permite acceder a propiedades sin tener que usar comandos complejos de filtrado como 'grep' o 'awk'."
+    },
+    {
+      id: 2060, // P20
+      subject: "ASO",
+      unit: "UT3",
+      question: "¿Qué propiedad asegura que un script pueda ejecutarse varias veces sin producir efectos indeseados?",
+      options: ["Liveness", "Persistencia", "Idempotencia", "Concurrencia"],
+      correct: 2,
+      explanation: "Un script es idempotente si al ejecutarlo una segunda vez, detecta que el trabajo ya está hecho y no produce cambios duplicados o errores."
+    },
   ];
 
   // =========================
