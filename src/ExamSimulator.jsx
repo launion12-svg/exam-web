@@ -11917,6 +11917,13 @@ const ExamSimulator = () => {
       ],
       correct: 0,
       explanation: "Un backup incremental almacena solo cambios desde la última copia, reduciendo tiempo y espacio de respaldo."
+    }, // <--- AQUÍ TERMINA LA 941
+    {  // <--- AQUÍ EMPIEZA LA NUEVA (Dale un ID nuevo si quieres, por ejemplo 942)
+      id: 942, 
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Por qué es importante documentar una instalación web?",
+      options: [
         "Porque lo exige la normativa fiscal",
         "Para instalar software automáticamente",
         "Para garantizar la trazabilidad y facilitar mantenimiento",
