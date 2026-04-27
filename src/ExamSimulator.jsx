@@ -11203,6 +11203,231 @@ const ExamSimulator = () => {
       ],
       correct: 1,
       explanation: "SQL/XML permite integrar datos XML y relacionales en consultas híbridas dentro del ecosistema SQL."
+    },
+    {
+      id: 882,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué diferencia principal existe entre una base de datos nativa XML y una relacional con soporte XML?",
+      options: [
+        "La relacional tiene mejor rendimiento en consultas jerárquicas.",
+        "La nativa almacena documentos XML completos, mientras que la relacional los fragmenta en tablas.",
+        "La nativa no soporta XPath ni XQuery.",
+        "Ambas almacenan datos XML del mismo modo."
+      ],
+      correct: 1,
+      explanation: "Las bases nativas XML almacenan documentos completos y preservan su estructura jerárquica; en relacionales suele hacerse un mapeo a tablas."
+    },
+    {
+      id: 883,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué lenguajes se utilizan principalmente para realizar consultas en bases de datos XML?",
+      options: ["SQL y JSONPath", "REST y SOAP", "XSLT y DTD", "XPath y XQuery"],
+      correct: 3,
+      explanation: "XPath y XQuery son los lenguajes estándar para navegar y consultar datos en documentos y bases XML."
+    },
+    {
+      id: 884,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Cuál es el propósito de la serialización XML?",
+      options: [
+        "Convertir un documento XML en una secuencia de bytes para almacenamiento o transmisión.",
+        "Cifrar datos XML sensibles.",
+        "Validar la estructura de un documento XML.",
+        "Generar consultas XQuery."
+      ],
+      correct: 0,
+      explanation: "Serializar XML consiste en convertir su estructura en un formato de salida apto para transporte o persistencia."
+    },
+    {
+      id: 885,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué técnica mejora el rendimiento de las consultas en bases de datos XML?",
+      options: [
+        "Indexación de caminos y valores",
+        "Eliminar etiquetas XML redundantes",
+        "Desactivar validaciones XSD",
+        "Comprimir el XML con gzip"
+      ],
+      correct: 0,
+      explanation: "Los índices sobre rutas y valores permiten localizar nodos relevantes con menos coste y acelerar las consultas."
+    },
+    {
+      id: 886,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué garantiza la gestión de transacciones en bases de datos XML?",
+      options: [
+        "La transformación automática de XML",
+        "La integridad y consistencia de los datos en operaciones concurrentes",
+        "El cifrado de los mensajes SOAP",
+        "La compresión de datos XML"
+      ],
+      correct: 1,
+      explanation: "La gestión transaccional asegura consistencia e integridad cuando múltiples operaciones o usuarios actúan a la vez."
+    },
+    {
+      id: 887,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué rol cumple XML en sistemas ERP?",
+      options: [
+        "Reemplazar completamente las bases de datos relacionales",
+        "Generar interfaces gráficas de usuario",
+        "Sustituir los esquemas SQL existentes",
+        "Facilitar la interoperabilidad entre módulos y sistemas externos mediante un formato estándar"
+      ],
+      correct: 3,
+      explanation: "XML actúa como formato común de intercambio, permitiendo que módulos ERP y sistemas externos compartan datos de forma interoperable."
+    },
+    {
+      id: 888,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué protocolo usa mensajes estructurados en formato XML con encabezado y cuerpo definidos?",
+      options: ["REST", "JSON-RPC", "SOAP", "FTP"],
+      correct: 2,
+      explanation: "SOAP define mensajes XML con estructura formal, incluyendo header y body para intercambio de información."
+    },
+    {
+      id: 889,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué estilo arquitectónico usa los métodos HTTP y puede transmitir datos en XML o JSON?",
+      options: ["RPC", "SMTP", "SOAP", "REST"],
+      correct: 3,
+      explanation: "REST se apoya en HTTP (GET, POST, PUT, DELETE, etc.) y puede usar XML o JSON como representación."
+    },
+    {
+      id: 890,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué estándar define mecanismos de seguridad como cifrado y firma digital en servicios SOAP?",
+      options: ["XMLSchema", "HTTPS", "OAuth 2.0", "WS-Security"],
+      correct: 3,
+      explanation: "WS-Security define cómo aplicar firmas, cifrado y tokens de seguridad en mensajes SOAP."
+    },
+    {
+      id: 891,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué formato es más compacto y rápido para la serialización de datos?",
+      options: ["XML", "JSON", "Protocol Buffers", "YAML"],
+      correct: 2,
+      explanation: "Protocol Buffers usa codificación binaria eficiente, normalmente más compacta y rápida que formatos textuales."
+    },
+    {
+      id: 892,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué ventaja ofrece JSON frente a XML en integraciones web?",
+      options: [
+        "Mejor manejo de datos jerárquicos complejos",
+        "Mayor soporte para validaciones de esquema",
+        "Soporte nativo para namespaces",
+        "Mayor ligereza y velocidad de procesamiento"
+      ],
+      correct: 3,
+      explanation: "JSON suele ser más ligero y rápido de parsear en entornos web, especialmente en aplicaciones JavaScript."
+    },
+    {
+      id: 893,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué formato utiliza esquemas estrictos definidos en archivos .proto?",
+      options: ["JSON", "XML", "Protocol Buffers", "XSLT"],
+      correct: 2,
+      explanation: "Protocol Buffers define estructuras en archivos .proto para generar serialización y deserialización tipada."
+    },
+    {
+      id: 894,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué herramienta permite convertir XML a JSON utilizando plantillas?",
+      options: ["SQL/XML", "XMLSpy", "XSLT 3.0", "JSON Schema"],
+      correct: 2,
+      explanation: "Con XSLT 3.0 se pueden definir plantillas de transformación para producir salidas en JSON a partir de XML."
+    },
+    {
+      id: 895,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué es un pipeline de integración?",
+      options: [
+        "Un protocolo de autenticación entre APIs",
+        "Una tabla que almacena XML comprimido",
+        "Un servicio de correo automatizado",
+        "Un flujo automatizado de tareas de validación, transformación y despliegue"
+      ],
+      correct: 3,
+      explanation: "Un pipeline encadena etapas automáticas para validar, transformar y desplegar de forma repetible y controlada."
+    },
+    {
+      id: 896,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué componente centraliza las peticiones a microservicios en una arquitectura distribuida?",
+      options: ["BaseX", "DTD", "ESB", "API Gateway"],
+      correct: 3,
+      explanation: "El API Gateway actúa como punto de entrada único, enrutando y aplicando políticas sobre peticiones a microservicios."
+    },
+    {
+      id: 897,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué permite la automatización de flujos de integración?",
+      options: [
+        "Aumentar el tamaño de los archivos XML",
+        "Evitar el uso de validaciones XSD",
+        "Reducir errores y acelerar los procesos empresariales",
+        "Sustituir protocolos REST por SOAP"
+      ],
+      correct: 2,
+      explanation: "Automatizar reduce tareas manuales repetitivas, disminuye errores humanos y mejora tiempos de ejecución."
+    },
+    {
+      id: 898,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué característica distingue a las plataformas EAI (Enterprise Application Integration)?",
+      options: [
+        "Sustituyen los sistemas ERP existentes",
+        "Facilitan la comunicación entre sistemas heterogéneos mediante transformación y orquestación de datos",
+        "Funcionan solo con datos JSON",
+        "No requieren configuración de seguridad"
+      ],
+      correct: 1,
+      explanation: "EAI integra aplicaciones heterogéneas mediante conectores, transformación de datos y orquestación de procesos."
+    },
+    {
+      id: 899,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué lenguaje se usa en la orquestación de servicios web?",
+      options: ["SQL", "BPEL", "XSD", "JSONPath"],
+      correct: 1,
+      explanation: "BPEL (Business Process Execution Language) se emplea para definir y orquestar flujos de servicios web."
+    },
+    {
+      id: 900,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué herramienta se usa para probar servicios web y validar esquemas XML?",
+      options: ["Docker", "Notepad++", "Photoshop", "SoapUI"],
+      correct: 3,
+      explanation: "SoapUI permite probar APIs/servicios web y validar peticiones y respuestas, incluyendo escenarios con XML."
+    },
+    {
+      id: 901,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué concepto combina integración, automatización y control de calidad continuo?",
+      options: ["XML-RPC", "VPN", "UML", "CI/CD (Integración y Despliegue Continuos)"],
+      correct: 3,
+      explanation: "CI/CD integra cambios de forma continua, automatiza pruebas/despliegues y mejora la calidad del flujo de entrega."
     },// =========================
     // IAW (Implantación de Aplicaciones Web)
     // =========================
