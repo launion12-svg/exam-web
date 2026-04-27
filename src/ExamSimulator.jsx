@@ -13015,7 +13015,21 @@ const ExamSimulator = () => {
       ],
       correct: 0,
       explanation: "mysqldump es la utilidad de consola que genera un volcado (dump) del contenido y estructura de la base de datos en un archivo .sql."
-    }
+    },
+      {
+  id: 1021,
+  subject: "IAW",
+  unit: "UT6",
+  question: "¿Qué sistema gestor de bases de datos se utiliza habitualmente junto con PHP?",
+  options: [
+    "SQL Server",
+    "MySQL",
+    "Oracle",
+    "MongoDB"
+  ],
+  correct: 1,
+  explanation: "MySQL es el sistema gestor de bases de datos más utilizado junto con PHP, formando parte del conocido stack LAMP."
+}
   ];
 
   // =========================
