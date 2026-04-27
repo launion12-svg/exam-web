@@ -12729,8 +12729,8 @@ const ExamSimulator = () => {
       ],
       correct: 3,
       explanation: "HTTPS utiliza TLS para cifrar la conexión extremo a extremo, impidiendo que las contraseñas sean capturadas en tránsito."
-    }
-{
+    },
+    {
       id: 1002, // (Nº 1)
       subject: "IAW",
       unit: "UT6",
