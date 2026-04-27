@@ -13029,7 +13029,230 @@ const ExamSimulator = () => {
   ],
   correct: 1,
   explanation: "MySQL es el sistema gestor de bases de datos más utilizado junto con PHP, formando parte del conocido stack LAMP."
-}
+},
+      // ========================================================
+    // ASO (Administración de Sistemas Operativos) - UT1
+    // ========================================================
+    {
+      id: 2001, // P1
+      subject: "ASO",
+      unit: "UT1",
+      question: "¿Cuál es la función principal de un sistema operativo?",
+      options: [
+        "Ejecutar únicamente procesos del sistema",
+        "Evitar el uso de memoria virtual",
+        "Permitir el acceso directo del usuario al hardware",
+        "Gestionar recursos y ofrecer un entorno estable a las aplicaciones"
+      ],
+      correct: 3,
+      explanation: "El SO actúa como intermediario, abstrayendo la complejidad del hardware y administrando CPU, memoria y periféricos para las aplicaciones."
+    },
+    {
+      id: 2002, // P2
+      subject: "ASO",
+      unit: "UT1",
+      question: "¿Cuál de los siguientes es un ejemplo de sistema operativo monolítico?",
+      options: ["Windows NT", "QNX", "Linux", "MINIX"],
+      correct: 2,
+      explanation: "Linux es un kernel monolítico porque todos los servicios principales (gestión de memoria, drivers, sistemas de archivos) se ejecutan en el espacio del núcleo."
+    },
+    {
+      id: 2003, // P3
+      subject: "ASO",
+      unit: "UT1",
+      question: "¿Qué sistema de archivos usa journaling para reducir la corrupción tras apagones?",
+      options: ["NTFS", "FAT32", "ext2", "UFS"],
+      correct: 0,
+      explanation: "El journaling registra los cambios pendientes en un diario antes de aplicarlos, lo que permite recuperar la integridad del sistema rápidamente tras un fallo."
+    },
+    {
+      id: 2004, // P4
+      subject: "ASO",
+      unit: "UT1",
+      question: "¿Qué política de planificación en Linux busca repartir el tiempo de CPU de forma 'justa'?",
+      options: ["SCHED_RR", "SCHED_FIFO", "Round Robin clásico", "CFS"],
+      correct: 3,
+      explanation: "El CFS (Completely Fair Scheduler) es el planificador por defecto de Linux; utiliza un árbol rojo-negro para maximizar la equidad en el uso de la CPU."
+    },
+    {
+      id: 2005, // P5
+      subject: "ASO",
+      unit: "UT1",
+      question: "¿Qué elemento realiza la traducción de direcciones virtuales a físicas?",
+      options: ["MMU", "DMA", "Driver", "Scheduler"],
+      correct: 0,
+      explanation: "La MMU (Memory Management Unit) es el componente de hardware que traduce las direcciones lógicas de los procesos a direcciones físicas en la RAM."
+    },
+    {
+      id: 2006, // P6
+      subject: "ASO",
+      unit: "UT1",
+      question: "¿Qué herramienta de Linux permite observar el uso de memoria y caché en tiempo real?",
+      options: ["chmod", "free -h", "uname", "lsblk"],
+      correct: 1,
+      explanation: "El comando 'free -h' muestra de forma legible la memoria total, usada, libre y la utilizada por el buffer/caché del sistema."
+    },
+    {
+      id: 2007, // P7
+      subject: "ASO",
+      unit: "UT1",
+      question: "¿Qué mecanismo permite que un dispositivo avise al procesador cuando requiere atención?",
+      options: ["Interrupción", "Caching", "Paging", "Swap"],
+      correct: 0,
+      explanation: "Una interrupción es una señal enviada al procesador que suspende temporalmente la actividad actual para atender un evento de hardware o software."
+    },
+    {
+      id: 2008, // P8
+      subject: "ASO",
+      unit: "UT1",
+      question: "¿Qué característica es propia de los sistemas operativos de servidor?",
+      options: [
+        "Reducen el soporte de redes",
+        "Priorizan la experiencia multimedia",
+        "Optimizan estabilidad y seguridad",
+        "Eliminan la multitarea"
+      ],
+      correct: 2,
+      explanation: "Los SO de servidor se diseñan para estar operativos 24/7, priorizando el rendimiento de red, la seguridad y la robustez sobre la interfaz visual."
+    },
+    {
+      id: 2009, // P9
+      subject: "ASO",
+      unit: "UT1",
+      question: "¿Qué tipo de licencia obliga a publicar modificaciones si se redistribuyen binarios modificados?",
+      options: ["Apache 2.0", "GPL", "BSD", "MIT"],
+      correct: 1,
+      explanation: "La licencia GPL (General Public License) tiene una cláusula 'copyleft' que obliga a compartir el código fuente de cualquier versión modificada que se distribuya."
+    },
+    {
+      id: 2010, // P10
+      subject: "ASO",
+      unit: "UT1",
+      question: "¿Qué componente del sistema operativo decide qué proceso usa la CPU y cuándo?",
+      options: ["Sistema de archivos", "Shell", "Driver de E/S", "Planificador"],
+      correct: 3,
+      explanation: "El Planificador (Scheduler) asigna el tiempo de CPU a los distintos procesos basándose en algoritmos de prioridad y equidad."
+    },
+    {
+      id: 2011, // P11
+      subject: "ASO",
+      unit: "UT1",
+      question: "¿Qué técnica permite que los procesos utilicen más memoria de la disponible físicamente?",
+      options: ["Fragmentación dinámica", "Multiplexación", "Memoria virtual", "Conmutación de tareas"],
+      correct: 2,
+      explanation: "La memoria virtual utiliza espacio en el disco (swap o archivo de paginación) para simular tener una memoria RAM mayor a la física."
+    },
+    {
+      id: 2012, // P12
+      subject: "ASO",
+      unit: "UT1",
+      question: "¿Qué ventaja principal ofrece un microkernel en sistemas críticos?",
+      options: ["Drivers más rápidos", "Menor complejidad del sistema", "Mayor rendimiento que un monolítico", "Aislamiento y robustez ante fallos"],
+      correct: 3,
+      explanation: "Al ejecutar los drivers como procesos de usuario, si uno falla, no tumba todo el sistema, lo que aumenta la estabilidad en entornos críticos."
+    },
+    {
+      id: 2013, // P13
+      subject: "ASO",
+      unit: "UT1",
+      question: "¿Qué caracteriza a los sistemas operativos de microkernel?",
+      options: [
+        "Mantienen drivers y servicios como procesos separados",
+        "La mayoría de servicios se ejecutan en modo kernel",
+        "No soportan multitarea",
+        "Ofrecen menor aislamiento ante fallos"
+      ],
+      correct: 0,
+      explanation: "Un microkernel solo mantiene las funciones mínimas en el núcleo; el resto (red, archivos, drivers) corre en el espacio de usuario."
+    },
+    {
+      id: 2014, // P14
+      subject: "ASO",
+      unit: "UT1",
+      question: "¿Qué herramienta de Windows permite gestionar servicios?",
+      options: ["auditd", "top", "services.msc", "lsmod"],
+      correct: 2,
+      explanation: "services.msc es la consola de administración que permite iniciar, detener y configurar el comportamiento de los servicios en Windows."
+    },
+    {
+      id: 2015, // P15
+      subject: "ASO",
+      unit: "UT1",
+      question: "¿Qué indica la presencia de 'buff/cache' alta en Linux?",
+      options: [
+        "Uso normal de caché para acelerar accesos",
+        "Falta grave de RAM",
+        "Error de paginación",
+        "Swapping intensivo"
+      ],
+      correct: 0,
+      explanation: "Linux utiliza la RAM sobrante para cachear datos del disco. Es algo positivo; si una aplicación necesita memoria, el sistema la libera instantáneamente."
+    },
+    {
+      id: 2016, // P16
+      subject: "ASO",
+      unit: "UT1",
+      question: "¿Qué función principal tiene el kernel de un sistema operativo?",
+      options: [
+        "Proporcionar interfaz gráfica al usuario",
+        "Ejecutar aplicaciones de usuario directamente",
+        "Gestionar los recursos del sistema y servir de intermediario entre hardware y software",
+        "Actuar como sistema de archivos principal"
+      ],
+      correct: 2,
+      explanation: "El Kernel es el núcleo del SO que controla directamente el hardware y gestiona la ejecución segura de todos los procesos."
+    },
+    {
+      id: 2017, // P17
+      subject: "ASO",
+      unit: "UT1",
+      question: "¿Qué representa un proceso en un sistema operativo?",
+      options: [
+        "Una instrucción individual enviada a la CPU",
+        "Un hilo de ejecución sin recursos asignados",
+        "Un programa en ejecución con memoria y recursos asociados",
+        "Un archivo binario almacenado en disco"
+      ],
+      correct: 2,
+      explanation: "Mientras que un programa es estático (archivo), un proceso es la instancia dinámica que incluye el código, sus datos y su estado de ejecución."
+    },
+    {
+      id: 2018, // P18
+      subject: "ASO",
+      unit: "UT1",
+      question: "¿Qué es el espacio de usuario (userspace)?",
+      options: [
+        "La memoria asignada al kernel",
+        "El entorno donde se ejecutan las aplicaciones sin acceso directo al hardware",
+        "Un área de memoria compartida entre todos los procesos",
+        "El área donde se almacenan los drivers"
+      ],
+      correct: 1,
+      explanation: "Las aplicaciones corren en userspace para evitar que un fallo en el programa pueda dañar directamente el núcleo del sistema."
+    },
+    {
+      id: 2019, // P19
+      subject: "ASO",
+      unit: "UT1",
+      question: "¿Qué tipo de sistema operativo está diseñado para responder en tiempos predecibles?",
+      options: [
+        "Sistemas operativos de escritorio",
+        "Sistemas operativos de servidor",
+        "Sistemas operativos de tiempo real (RTOS)",
+        "Sistemas operativos embebidos genéricos"
+      ],
+      correct: 2,
+      explanation: "Un RTOS garantiza que una tarea crítica se complete en un tiempo máximo determinado (determinismo), vital en aviónica o medicina."
+    },
+    {
+      id: 2020, // P20
+      subject: "ASO",
+      unit: "UT1",
+      question: "¿Qué herramienta de Linux muestra los módulos del kernel cargados actualmente?",
+      options: ["uname -r", "ps aux", "lsmod", "dmesg"],
+      correct: 2,
+      explanation: "lsmod lista los módulos (drivers dinámicos) cargados en el kernel, mostrando su tamaño y si otros módulos dependen de ellos."
+    },
   ];
 
   // =========================
