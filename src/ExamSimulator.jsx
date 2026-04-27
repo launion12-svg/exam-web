@@ -11470,11 +11470,6 @@ const ExamSimulator = () => {
       explanation: "HTTPS protege la comunicación mediante TLS (históricamente SSL) y certificados digitales."
     },
     {
-      id: 905,
-    },// =========================
-    // IAW (Implantación de Aplicaciones Web)
-    // =========================
-    {
       id: 662,
       subject: "IAW",
       unit: "UT1",
