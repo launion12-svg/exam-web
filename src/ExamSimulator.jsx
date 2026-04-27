@@ -10563,7 +10563,7 @@ const ExamSimulator = () => {
       options: ["DTD y Schematron", "XML y JSON", "HTML y CSS", "XSD y XSLT"],
       correct: 2,
       explanation: "HTML define la estructura del contenido web y CSS define su presentación visual (colores, tipografía, diseño y disposición)."
-    // =========================
+    },// =========================
     // IAW (Implantación de Aplicaciones Web)
     // =========================
     {
