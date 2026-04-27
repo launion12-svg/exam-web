@@ -13253,6 +13253,211 @@ const ExamSimulator = () => {
       correct: 2,
       explanation: "lsmod lista los módulos (drivers dinámicos) cargados en el kernel, mostrando su tamaño y si otros módulos dependen de ellos."
     },
+      {
+      id: 2021, // P1
+      subject: "ASO",
+      unit: "UT2",
+      question: "¿Qué representa un proceso en un sistema operativo?",
+      options: [
+        "Una instrucción individual enviada a la CPU",
+        "Un hilo de ejecución sin recursos asignados",
+        "Un programa en ejecución con memoria y recursos asociados",
+        "Un archivo binario almacenado en disco"
+      ],
+      correct: 2,
+      explanation: "Un proceso es la unidad dinámica de ejecución. A diferencia del programa (estático en disco), el proceso tiene asignado un espacio de direcciones, hilos y descriptores de archivos."
+    },
+    {
+      id: 2022, // P2
+      subject: "ASO",
+      unit: "UT2",
+      question: "¿Cuál es el estado en el que un proceso espera por un evento externo o E/S?",
+      options: ["En ejecución", "Terminado", "Listo", "Bloqueado"],
+      correct: 3,
+      explanation: "Cuando un proceso solicita un recurso (como leer un disco o esperar un paquete de red), pasa al estado bloqueado para no consumir CPU inútilmente."
+    },
+    {
+      id: 2023, // P3
+      subject: "ASO",
+      unit: "UT2",
+      question: "¿Qué herramienta de Linux permite ver estados como R, S, D, T y Z?",
+      options: ["chmod", "nano", "ps", "tail"],
+      correct: 2,
+      explanation: "El comando 'ps' (especialmente ps aux) muestra el estado en la columna STAT: R (Running), S (Sleeping), D (Disk Sleep), T (Stopped) y Z (Zombie)."
+    },
+    {
+      id: 2024, // P4
+      subject: "ASO",
+      unit: "UT2",
+      question: "¿Qué herramienta de Windows permite listar procesos y su consumo?",
+      options: ["tasklist", "chmod", "mount", "sysctl"],
+      correct: 0,
+      explanation: "En la terminal de Windows, 'tasklist' es el comando equivalente al 'ps' de Linux para ver los procesos activos."
+    },
+    {
+      id: 2025, // P5
+      subject: "ASO",
+      unit: "UT2",
+      question: "¿Qué opción en unit files de systemd limita el número de descriptores de archivo?",
+      options: ["LimitNOFILE", "TimeoutStopSec", "RestartSec", "CPUQuota"],
+      correct: 0,
+      explanation: "LimitNOFILE (Number of Open Files) se usa en los archivos .service para evitar que un proceso agote los recursos del sistema abriendo demasiados archivos o conexiones."
+    },
+    {
+      id: 2026, // P6
+      subject: "ASO",
+      unit: "UT2",
+      question: "¿Qué señal en Linux solicita una terminación ordenada del proceso?",
+      options: ["SIGUSR1", "SIGTERM", "SIGSTOP", "SIGKILL"],
+      correct: 1,
+      explanation: "SIGTERM (señal 15) es la forma amable de cerrar un proceso, permitiéndole guardar datos y cerrar archivos antes de morir. SIGKILL (9) lo mata de golpe."
+    },
+    {
+      id: 2027, // P7
+      subject: "ASO",
+      unit: "UT2",
+      question: "¿Qué utilidad muestra el tiempo que tarda cada unidad en arrancar en systemd?",
+      options: ["ps aux", "lsmod", "journalctl -f", "systemd-analyze blame"],
+      correct: 3,
+      explanation: "systemd-analyze blame lista los servicios de mayor a menor tiempo de carga, permitiendo identificar cuellos de botella en el arranque."
+    },
+    {
+      id: 2028, // P8
+      subject: "ASO",
+      unit: "UT2",
+      question: "¿Qué herramienta permite trazar llamadas al sistema para diagnosticar problemas?",
+      options: ["df -h", "iptables", "strace", "rm -rf"],
+      correct: 2,
+      explanation: "strace intercepta y registra las llamadas al sistema (syscalls) que hace un proceso, útil para ver por qué un programa falla al abrir un archivo o red."
+    },
+    {
+      id: 2029, // P9
+      subject: "ASO",
+      unit: "UT2",
+      question: "¿Cuál es el comando recomendado para reiniciar un servicio gestionado por systemd?",
+      options: ["stop-service", "systemctl restart <servicio>", "service --reload", "sc restart"],
+      correct: 1,
+      explanation: "systemctl es la herramienta estándar en distribuciones modernas; 'restart' detiene e inicia el servicio en un solo paso."
+    },
+    {
+      id: 2030, // P10
+      subject: "ASO",
+      unit: "UT2",
+      question: "¿Qué estado refleja la marca 'D' en ps?",
+      options: [
+        "Proceso en ejecución",
+        "Proceso detenido manualmente",
+        "Proceso en espera no interrumpible (I/O)",
+        "Proceso zombie"
+      ],
+      correct: 2,
+      explanation: "El estado 'D' (Uninterruptible Sleep) suele indicar que el proceso está esperando una respuesta del hardware (disco, normalmente) y no responderá ni a un kill -9."
+    },
+    {
+      id: 2031, // P11
+      subject: "ASO",
+      unit: "UT2",
+      question: "¿Qué acción realiza SIGSTOP sobre un proceso?",
+      options: ["Cambia su prioridad", "Reinicia el proceso", "Suspende su ejecución", "Lo finaliza inmediatamente"],
+      correct: 2,
+      explanation: "SIGSTOP congela el proceso. No lo mata, simplemente detiene su ejecución en la CPU hasta que reciba un SIGCONT."
+    },
+    {
+      id: 2032, // P12
+      subject: "ASO",
+      unit: "UT2",
+      question: "¿Qué técnica mejora la seguridad limitando recursos para evitar degradación del sistema?",
+      options: ["Desactivar systemd", "Incrementar permisos de usuarios", "Eliminar logs periódicamente", "Aplicar límites mediante cgroups"],
+      correct: 3,
+      explanation: "Los cgroups (Control Groups) permiten al kernel limitar CPU, memoria e I/O a grupos de procesos, evitando que un proceso malicioso colapse el sistema."
+    },
+    {
+      id: 2033, // P13
+      subject: "ASO",
+      unit: "UT2",
+      question: "¿Qué estado indica un proceso zombie?",
+      options: [
+        "Está esperando E/S",
+        "Consume mucha CPU",
+        "Se encuentra detenido por el kernel",
+        "Finalizó pero el padre no recogió su estado"
+      ],
+      correct: 3,
+      explanation: "Un zombie (Z) es un proceso que ha terminado pero sigue en la tabla de procesos porque su padre aún no ha leído su código de salida con la función wait()."
+    },
+    {
+      id: 2034, // P14
+      subject: "ASO",
+      unit: "UT2",
+      question: "¿Qué comando permite ver los hilos de un proceso en Linux?",
+      options: ["ps -eLf", "kill -STOP", "ps -eo pid", "top -d 1"],
+      correct: 0,
+      explanation: "La opción '-L' de ps muestra los hilos (Lightweight Processes) asociados a los procesos, incluyendo su propio LWP ID."
+    },
+    {
+      id: 2035, // P15
+      subject: "ASO",
+      unit: "UT2",
+      question: "¿Cuál es la finalidad del archivo /proc/<PID>/status en Linux?",
+      options: [
+        "Borrar procesos obsoletos",
+        "Guardar métricas de red",
+        "Asignar prioridades automáticamente",
+        "Mostrar información detallada del proceso"
+      ],
+      correct: 3,
+      explanation: "El sistema de archivos /proc es una interfaz al kernel; el archivo 'status' contiene datos legibles sobre el uso de memoria, hilos y UID del proceso."
+    },
+    {
+      id: 2036, // P16
+      subject: "ASO",
+      unit: "UT2",
+      question: "¿Cuál de las siguientes acciones forma parte de la recolección de evidencia ante un proceso sospechoso?",
+      options: [
+        "Cambiar la prioridad del proceso",
+        "Obtener un volcado de memoria con gcore",
+        "Reiniciar el sistema operativo",
+        "Matar el proceso inmediatamente"
+      ],
+      correct: 1,
+      explanation: "En análisis forense, gcore permite obtener una imagen de la memoria del proceso para analizarla después sin perder datos volátiles antes de matarlo."
+    },
+    {
+      id: 2037, // P17
+      subject: "ASO",
+      unit: "UT2",
+      question: "¿Cuál es el proceso PID 1 en sistemas Linux modernos?",
+      options: ["initrd", "systemd", "GRUB", "kernel.exe"],
+      correct: 1,
+      explanation: "Systemd es el primer proceso de usuario en arrancar y es el padre de todos los demás procesos del sistema."
+    },
+    {
+      id: 2038, // P18
+      subject: "ASO",
+      unit: "UT2",
+      question: "¿Qué herramienta permite identificar conexiones abiertas por un proceso?",
+      options: ["lsblk", "lsof -i", "free -h", "top -H"],
+      correct: 1,
+      explanation: "lsof (LiSt Open Files) con la opción -i muestra los sockets de red y archivos abiertos por los procesos."
+    },
+    {
+      id: 2039, // P19
+      subject: "ASO",
+      unit: "UT2",
+      question: "¿Qué comando permite enviar señales basadas en el nombre del proceso?",
+      options: ["pkill", "pgrep", "nice", "uname"],
+      correct: 0,
+      explanation: "Mientras que 'kill' necesita el PID numérico, 'pkill' permite buscar por nombre de proceso para enviar señales (ej: pkill nginx)."
+    },
+    {
+      id: 2040, // P20
+      subject: "ASO",
+      unit: "UT2",
+      question: "¿Qué herramienta en Windows permite ver y gestionar servicios de forma gráfica?",
+      options: ["tasklist", "cmd", "Task Manager / services.msc", "regedit"],
+      correct: 2,
+      explanation: "El Administrador de Tareas (Task Manager) ofrece una vista rápida, y services.msc permite el control avanzado de cada servicio."
+    },
   ];
 
   // =========================
