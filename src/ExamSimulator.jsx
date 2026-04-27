@@ -10318,7 +10318,6 @@ const ExamSimulator = () => {
       id: 802,
       subject: "LMSGI",
       unit: "UT1",
-      source: "new",
       question: "¿Qué caracteriza a un lenguaje de marcas?",
       options: [
         "Se utiliza solo para cálculos numéricos.",
@@ -10333,7 +10332,6 @@ const ExamSimulator = () => {
       id: 803,
       subject: "LMSGI",
       unit: "UT1",
-      source: "new",
       question: "¿Cuál fue el antecesor histórico del XML y HTML?",
       options: ["CSS", "JSON", "YAML", "SGML"],
       correct: 3,
@@ -10343,7 +10341,6 @@ const ExamSimulator = () => {
       id: 804,
       subject: "LMSGI",
       unit: "UT1",
-      source: "new",
       question: "¿Qué lenguaje se utiliza principalmente para estructurar páginas web?",
       options: ["JSON", "HTML", "XML", "CSV"],
       correct: 1,
@@ -10353,7 +10350,6 @@ const ExamSimulator = () => {
       id: 805,
       subject: "LMSGI",
       unit: "UT1",
-      source: "new",
       question: "¿Qué significa que un documento XML esté \"bien formado\"?",
       options: [
         "Cumple las reglas de un esquema XSD.",
@@ -10368,7 +10364,6 @@ const ExamSimulator = () => {
       id: 806,
       subject: "LMSGI",
       unit: "UT1",
-      source: "new",
       question: "¿Cuál de los siguientes NO es un lenguaje de marcas?",
       options: ["XML", "HTML", "XSD", "Python"],
       correct: 3,
@@ -10378,7 +10373,6 @@ const ExamSimulator = () => {
       id: 807,
       subject: "LMSGI",
       unit: "UT1",
-      source: "new",
       question: "¿Qué herramienta se utiliza para transformar XML en otros formatos?",
       options: ["XPath", "XSLT", "JSON", "XSD"],
       correct: 1,
@@ -10388,7 +10382,6 @@ const ExamSimulator = () => {
       id: 808,
       subject: "LMSGI",
       unit: "UT1",
-      source: "new",
       question: "¿Qué papel cumplen los espacios de nombres (namespaces) en XML?",
       options: [
         "Evitan colisiones entre vocabularios distintos.",
@@ -10403,7 +10396,6 @@ const ExamSimulator = () => {
       id: 809,
       subject: "LMSGI",
       unit: "UT1",
-      source: "new",
       question: "¿Qué elemento XML sirve como raíz del documento?",
       options: [
         "El encabezado XML",
@@ -10418,7 +10410,6 @@ const ExamSimulator = () => {
       id: 810,
       subject: "LMSGI",
       unit: "UT1",
-      source: "new",
       question: "¿Qué extensión tienen normalmente los esquemas XML?",
       options: [".html", ".json", ".xsd", ".css"],
       correct: 2,
@@ -10428,7 +10419,6 @@ const ExamSimulator = () => {
       id: 811,
       subject: "LMSGI",
       unit: "UT1",
-      source: "new",
       question: "¿Cuál es la diferencia principal entre HTML y XML?",
       options: [
         "HTML permite errores; XML exige corrección total.",
@@ -10443,7 +10433,6 @@ const ExamSimulator = () => {
       id: 812,
       subject: "LMSGI",
       unit: "UT1",
-      source: "new",
       question: "¿Qué lenguaje define reglas de validación por condiciones lógicas en XML?",
       options: ["CSS", "Schematron", "DTD", "XSD"],
       correct: 1,
@@ -10453,7 +10442,6 @@ const ExamSimulator = () => {
       id: 813,
       subject: "LMSGI",
       unit: "UT1",
-      source: "new",
       question: "¿Cuál de las siguientes herramientas es un editor profesional XML?",
       options: ["Oxygen XML Editor", "Excel", "Notepad clásico", "Paint"],
       correct: 0,
@@ -10463,7 +10451,6 @@ const ExamSimulator = () => {
       id: 814,
       subject: "LMSGI",
       unit: "UT1",
-      source: "new",
       question: "¿Qué característica distingue a un documento XML válido?",
       options: [
         "Está en formato binario.",
@@ -10478,7 +10465,6 @@ const ExamSimulator = () => {
       id: 815,
       subject: "LMSGI",
       unit: "UT1",
-      source: "new",
       question: "¿Qué lenguaje permite seleccionar nodos dentro de un documento XML?",
       options: ["XSLT", "CSS", "XQuery", "XPath"],
       correct: 3,
@@ -10488,7 +10474,6 @@ const ExamSimulator = () => {
       id: 816,
       subject: "LMSGI",
       unit: "UT1",
-      source: "new",
       question: "¿Qué representa la etiqueta <!DOCTYPE html>?",
       options: [
         "Un comentario de autoría.",
@@ -10503,7 +10488,6 @@ const ExamSimulator = () => {
       id: 817,
       subject: "LMSGI",
       unit: "UT1",
-      source: "new",
       question: "¿Cuál de las siguientes opciones describe mejor JSON frente a XML?",
       options: [
         "No admite jerarquía.",
@@ -10518,7 +10502,6 @@ const ExamSimulator = () => {
       id: 818,
       subject: "LMSGI",
       unit: "UT1",
-      source: "new",
       question: "¿Qué función cumple la validación en XML?",
       options: [
         "Asignar estilos visuales.",
@@ -10533,7 +10516,6 @@ const ExamSimulator = () => {
       id: 819,
       subject: "LMSGI",
       unit: "UT1",
-      source: "new",
       question: "¿Qué es un atributo en XML?",
       options: [
         "Un elemento hijo con contenido textual.",
@@ -10548,7 +10530,6 @@ const ExamSimulator = () => {
       id: 820,
       subject: "LMSGI",
       unit: "UT1",
-      source: "new",
       question: "¿Qué editor gratuito puede configurarse con plugins XML en entornos docentes?",
       options: ["XMLSpy", "Oxygen XML Editor", "VS Code", "Dreamweaver"],
       correct: 2,
@@ -10558,7 +10539,6 @@ const ExamSimulator = () => {
       id: 821,
       subject: "LMSGI",
       unit: "UT1",
-      source: "new",
       question: "¿Cuál de los siguientes pares de lenguajes se usan juntos para publicar y dar estilo a contenidos web?",
       options: ["DTD y Schematron", "XML y JSON", "HTML y CSS", "XSD y XSLT"],
       correct: 2,
@@ -10568,7 +10548,6 @@ const ExamSimulator = () => {
       id: 822,
       subject: "LMSGI",
       unit: "UT2",
-      source: "new",
       question: "¿Qué indica la declaración <!DOCTYPE html> en un documento HTML5?",
       options: [
         "Que el documento usa CSS3",
@@ -10583,7 +10562,6 @@ const ExamSimulator = () => {
       id: 823,
       subject: "LMSGI",
       unit: "UT2",
-      source: "new",
       question: "¿Cuál es la principal diferencia entre HTML y XHTML?",
       options: [
         "HTML es incompatible con navegadores modernos",
@@ -10598,7 +10576,6 @@ const ExamSimulator = () => {
       id: 824,
       subject: "LMSGI",
       unit: "UT2",
-      source: "new",
       question: "¿Qué atributo define el idioma del documento HTML?",
       options: ["lang", "type", "charset", "dir"],
       correct: 0,
@@ -10608,7 +10585,6 @@ const ExamSimulator = () => {
       id: 825,
       subject: "LMSGI",
       unit: "UT2",
-      source: "new",
       question: "¿Qué etiqueta se usa para definir un enlace en HTML?",
       options: ["<link>", "<a>", "<href>", "<connect>"],
       correct: 1,
@@ -10618,7 +10594,6 @@ const ExamSimulator = () => {
       id: 826,
       subject: "LMSGI",
       unit: "UT2",
-      source: "new",
       question: "¿Qué etiqueta sirve para insertar una imagen?",
       options: ["<pic>", "<image>", "<src>", "<img>"],
       correct: 3,
@@ -10628,7 +10603,6 @@ const ExamSimulator = () => {
       id: 827,
       subject: "LMSGI",
       unit: "UT2",
-      source: "new",
       question: "¿Qué elemento HTML agrupa contenido temático?",
       options: ["<footer>", "<meta>", "<section>", "<div>"],
       correct: 2,
@@ -10638,7 +10612,6 @@ const ExamSimulator = () => {
       id: 828,
       subject: "LMSGI",
       unit: "UT2",
-      source: "new",
       question: "¿Qué lenguaje se usa para definir la presentación visual de un documento HTML?",
       options: ["CSS", "JSON", "PHP", "XML"],
       correct: 0,
@@ -10648,7 +10621,6 @@ const ExamSimulator = () => {
       id: 829,
       subject: "LMSGI",
       unit: "UT2",
-      source: "new",
       question: "¿Cuál es la sintaxis correcta de un comentario en CSS?",
       options: ["# comentario", "// comentario", "<!-- comentario -->", "/* comentario */"],
       correct: 3,
@@ -10658,7 +10630,6 @@ const ExamSimulator = () => {
       id: 830,
       subject: "LMSGI",
       unit: "UT2",
-      source: "new",
       question: "¿Qué propiedad CSS controla el color del texto?",
       options: ["foreground", "color", "font-color", "text-color"],
       correct: 1,
@@ -10668,7 +10639,6 @@ const ExamSimulator = () => {
       id: 831,
       subject: "LMSGI",
       unit: "UT2",
-      source: "new",
       question: "¿Qué modelo de diseño CSS se usa para crear layouts flexibles en una sola dirección?",
       options: ["Grid", "Float", "Flexbox", "Table"],
       correct: 2,
@@ -10678,7 +10648,6 @@ const ExamSimulator = () => {
       id: 832,
       subject: "LMSGI",
       unit: "UT2",
-      source: "new",
       question: "¿Qué framework CSS utiliza un sistema de 12 columnas y componentes predefinidos?",
       options: ["Tailwind", "Bootstrap", "Bulma", "Foundation"],
       correct: 1,
@@ -10688,7 +10657,6 @@ const ExamSimulator = () => {
       id: 833,
       subject: "LMSGI",
       unit: "UT2",
-      source: "new",
       question: "¿Qué formato de sindicación utiliza una estructura XML con etiquetas <channel> y <item>?",
       options: ["JSON", "SOAP", "Atom", "RSS"],
       correct: 3,
@@ -10698,7 +10666,6 @@ const ExamSimulator = () => {
       id: 834,
       subject: "LMSGI",
       unit: "UT2",
-      source: "new",
       question: "¿Qué formato de fecha utiliza Atom para las actualizaciones?",
       options: ["ISO 8601", "RFC 822", "DD/MM/YYYY", "Unix timestamp"],
       correct: 0,
@@ -10708,7 +10675,6 @@ const ExamSimulator = () => {
       id: 835,
       subject: "LMSGI",
       unit: "UT2",
-      source: "new",
       question: "¿Qué etiqueta identifica de forma única una entrada en un feed RSS?",
       options: ["<unique>", "<id>", "<ref>", "<guid>"],
       correct: 3,
@@ -10718,7 +10684,6 @@ const ExamSimulator = () => {
       id: 836,
       subject: "LMSGI",
       unit: "UT2",
-      source: "new",
       question: "¿Qué herramienta del W3C permite validar la estructura de un canal RSS?",
       options: ["Feed Validation Service", "HTML Validator", "CSS Linter", "Lighthouse"],
       correct: 0,
@@ -10728,7 +10693,6 @@ const ExamSimulator = () => {
       id: 837,
       subject: "LMSGI",
       unit: "UT2",
-      source: "new",
       question: "¿Qué propiedad CSS define el espacio interno entre el contenido y el borde?",
       options: ["margin", "border", "spacing", "padding"],
       correct: 3,
@@ -10738,7 +10702,6 @@ const ExamSimulator = () => {
       id: 838,
       subject: "LMSGI",
       unit: "UT2",
-      source: "new",
       question: "¿Qué atributo de la etiqueta <img> mejora la accesibilidad describiendo la imagen?",
       options: ["title", "label", "src", "alt"],
       correct: 3,
@@ -10748,7 +10711,6 @@ const ExamSimulator = () => {
       id: 839,
       subject: "LMSGI",
       unit: "UT2",
-      source: "new",
       question: "¿Qué formato de sindicación permite mayor flexibilidad y extensibilidad que RSS?",
       options: ["XML", "JSON", "HTML", "Atom"],
       correct: 3,
@@ -10758,7 +10720,6 @@ const ExamSimulator = () => {
       id: 840,
       subject: "LMSGI",
       unit: "UT2",
-      source: "new",
       question: "¿Qué metaetiqueta se usa para definir la codificación de caracteres UTF-8?",
       options: [
         "<meta charset=\"UTF-8\">",
@@ -10773,7 +10734,6 @@ const ExamSimulator = () => {
       id: 841,
       subject: "LMSGI",
       unit: "UT2",
-      source: "new",
       question: "¿Qué propiedad CSS controla la disposición de elementos en filas y columnas bidimensionales?",
       options: ["Display", "Float", "Grid", "Flexbox"],
       correct: 2,
@@ -10783,7 +10743,6 @@ const ExamSimulator = () => {
       id: 842,
       subject: "LMSGI",
       unit: "UT3",
-      source: "new",
       question: "¿Qué es una transformación XML?",
       options: [
         "El proceso de validar documentos XML",
@@ -10798,7 +10757,6 @@ const ExamSimulator = () => {
       id: 843,
       subject: "LMSGI",
       unit: "UT3",
-      source: "new",
       question: "¿Qué lenguaje se utiliza para realizar transformaciones XML?",
       options: ["CSS", "XSD", "XSLT", "DTD"],
       correct: 2,
@@ -10808,7 +10766,6 @@ const ExamSimulator = () => {
       id: 844,
       subject: "LMSGI",
       unit: "UT3",
-      source: "new",
       question: "¿Qué significa XSLT?",
       options: [
         "Extensible Stylesheet Language Transformations",
@@ -10823,7 +10780,6 @@ const ExamSimulator = () => {
       id: 845,
       subject: "LMSGI",
       unit: "UT3",
-      source: "new",
       question: "¿Cuál es la función principal de XPath en XSLT?",
       options: [
         "Traducir etiquetas XML a HTML",
@@ -10838,7 +10794,6 @@ const ExamSimulator = () => {
       id: 846,
       subject: "LMSGI",
       unit: "UT3",
-      source: "new",
       question: "¿Qué elemento de XSLT define una plantilla?",
       options: ["<xsl:template>", "<xsl:case>", "<xsl:style>", "<xsl:rule>"],
       correct: 0,
@@ -10848,7 +10803,6 @@ const ExamSimulator = () => {
       id: 847,
       subject: "LMSGI",
       unit: "UT3",
-      source: "new",
       question: "¿Qué elemento de XSLT se utiliza para aplicar una plantilla?",
       options: ["<xsl:apply-templates>", "<xsl:template-call>", "<xsl:for-each>", "<xsl:use-template>"],
       correct: 0,
@@ -10858,7 +10812,6 @@ const ExamSimulator = () => {
       id: 848,
       subject: "LMSGI",
       unit: "UT3",
-      source: "new",
       question: "¿Qué etiqueta XSLT se usa para iterar sobre nodos repetidos?",
       options: ["<xsl:repeat>", "<xsl:for-each>", "<xsl:loop>", "<xsl:cycle>"],
       correct: 1,
@@ -10868,7 +10821,6 @@ const ExamSimulator = () => {
       id: 849,
       subject: "LMSGI",
       unit: "UT3",
-      source: "new",
       question: "¿Qué elemento XSLT permite realizar condiciones?",
       options: ["<xsl:case>", "<xsl:when>", "<xsl:choose>", "<xsl:if>"],
       correct: 3,
@@ -10878,7 +10830,6 @@ const ExamSimulator = () => {
       id: 850,
       subject: "LMSGI",
       unit: "UT3",
-      source: "new",
       question: "¿Cuál es la función principal de DTD?",
       options: [
         "Definir la presentación visual de un documento XML",
@@ -10893,7 +10844,6 @@ const ExamSimulator = () => {
       id: 851,
       subject: "LMSGI",
       unit: "UT3",
-      source: "new",
       question: "¿Qué significa XSD?",
       options: ["XML Structured Document", "XML Schema Definition", "Extended Schema Definition", "XHTML Style Directive"],
       correct: 1,
@@ -10903,7 +10853,6 @@ const ExamSimulator = () => {
       id: 852,
       subject: "LMSGI",
       unit: "UT3",
-      source: "new",
       question: "¿Qué ventaja tiene XSD sobre DTD?",
       options: [
         "No requiere validación",
@@ -10918,7 +10867,6 @@ const ExamSimulator = () => {
       id: 853,
       subject: "LMSGI",
       unit: "UT3",
-      source: "new",
       question: "¿Qué lenguaje permite definir reglas lógicas de validación?",
       options: ["JSON", "Schematron", "XSLT", "XMLPath"],
       correct: 1,
@@ -10928,7 +10876,6 @@ const ExamSimulator = () => {
       id: 854,
       subject: "LMSGI",
       unit: "UT3",
-      source: "new",
       question: "¿Qué etiqueta se utiliza en un esquema XSD para definir un elemento?",
       options: ["<xs:rule>", "<xs:element>", "<xs:data>", "<xs:item>"],
       correct: 1,
@@ -10938,7 +10885,6 @@ const ExamSimulator = () => {
       id: 855,
       subject: "LMSGI",
       unit: "UT3",
-      source: "new",
       question: "¿Qué atributo en XSD permite indicar el número mínimo de ocurrencias?",
       options: ["minRepeat", "minCount", "minOccurs", "lowerBound"],
       correct: 2,
@@ -10948,7 +10894,6 @@ const ExamSimulator = () => {
       id: 856,
       subject: "LMSGI",
       unit: "UT3",
-      source: "new",
       question: "¿Qué herramienta se usa para seleccionar nodos en XML?",
       options: ["XPath", "CSS", "HTML", "XQuery"],
       correct: 0,
@@ -10958,7 +10903,6 @@ const ExamSimulator = () => {
       id: 857,
       subject: "LMSGI",
       unit: "UT3",
-      source: "new",
       question: "¿Qué permite hacer Schematron además de la validación estructural?",
       options: [
         "Convertir XML en JSON",
@@ -10973,7 +10917,6 @@ const ExamSimulator = () => {
       id: 858,
       subject: "LMSGI",
       unit: "UT3",
-      source: "new",
       question: "¿Qué tipo de salida puede generar una transformación XSLT?",
       options: ["Solo PDF", "Solo HTML", "HTML, texto plano o XML", "Solo JSON"],
       correct: 2,
@@ -10983,7 +10926,6 @@ const ExamSimulator = () => {
       id: 859,
       subject: "LMSGI",
       unit: "UT3",
-      source: "new",
       question: "¿Qué atributo en XSLT permite definir el formato de salida?",
       options: ["<xsl:template>", "<xsl:style>", "<xsl:output>", "<xsl:format>"],
       correct: 2,
@@ -10993,7 +10935,6 @@ const ExamSimulator = () => {
       id: 860,
       subject: "LMSGI",
       unit: "UT3",
-      source: "new",
       question: "¿Qué herramienta del W3C valida documentos XML contra XSD?",
       options: ["XML Beautifier", "HTML Linter", "XSLT Transformer", "W3C XML Schema Validator"],
       correct: 3,
@@ -11003,11 +10944,265 @@ const ExamSimulator = () => {
       id: 861,
       subject: "LMSGI",
       unit: "UT3",
-      source: "new",
       question: "¿Qué combinación de tecnologías permite validar tanto estructura como reglas lógicas?",
       options: ["XSD y Schematron", "DTD y CSS", "XPath y HTML", "XSLT y XQuery"],
       correct: 0,
       explanation: "XSD valida estructura y tipos de datos, mientras Schematron permite añadir validaciones lógicas y de negocio."
+    },
+    {
+      id: 862,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué es una base de datos nativa XML (NXD)?",
+      options: [
+        "Una base de datos relacional tradicional con soporte parcial para XML",
+        "Un formato binario de compresión de datos",
+        "Un repositorio de texto plano sin estructura",
+        "Un sistema diseñado específicamente para almacenar y consultar documentos XML"
+      ],
+      correct: 3,
+      explanation: "Una NXD está pensada para almacenar documentos XML de forma nativa y consultarlos directamente con tecnologías XML."
+    },
+    {
+      id: 863,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Cuál es la principal función de XPath?",
+      options: [
+        "Generar archivos HTML",
+        "Validar la estructura de un documento XML",
+        "Seleccionar nodos dentro de un documento XML",
+        "Transformar XML a otros formatos"
+      ],
+      correct: 2,
+      explanation: "XPath sirve para navegar por el árbol XML y seleccionar nodos mediante expresiones de ruta."
+    },
+    {
+      id: 864,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué significa XQuery?",
+      options: ["XML Query Language", "Extended Query Resource", "XML Quality Reader", "XML Quick Response"],
+      correct: 0,
+      explanation: "XQuery significa XML Query Language y se utiliza para consultar y procesar datos XML."
+    },
+    {
+      id: 865,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué estructura define el lenguaje XQuery?",
+      options: [
+        "LOOP-IF-END",
+        "TRY-CATCH",
+        "SELECT-FROM-WHERE",
+        "FLWOR (For, Let, Where, Order, Return)"
+      ],
+      correct: 3,
+      explanation: "La estructura FLWOR es el patrón principal de consulta en XQuery para iterar, filtrar, ordenar y devolver resultados."
+    },
+    {
+      id: 866,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Cuál es el propósito de la serialización XML?",
+      options: [
+        "Convertir documentos XML en una secuencia de bytes para almacenamiento o transmisión",
+        "Cifrar datos XML",
+        "Validar la sintaxis de un documento XML",
+        "Transformar XML a JSON"
+      ],
+      correct: 0,
+      explanation: "La serialización convierte la estructura XML en un formato de salida apto para guardar o transmitir."
+    },
+    {
+      id: 867,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué tipo de lenguaje es XPath?",
+      options: [
+        "Un lenguaje de programación imperativo",
+        "Un lenguaje de consulta para navegar por estructuras XML",
+        "Un lenguaje de marcado",
+        "Un lenguaje de validación de esquemas"
+      ],
+      correct: 1,
+      explanation: "XPath es un lenguaje de consulta/navegación para localizar nodos en documentos XML."
+    },
+    {
+      id: 868,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué hace la cláusula WHERE en una consulta FLWOR?",
+      options: [
+        "Devuelve los datos transformados",
+        "Define el orden de los resultados",
+        "Filtra los resultados según una condición",
+        "Crea variables locales"
+      ],
+      correct: 2,
+      explanation: "WHERE aplica condiciones lógicas para filtrar qué elementos pasan al resultado final."
+    },
+    {
+      id: 869,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué ventaja ofrecen las bases de datos nativas XML frente a las relacionales?",
+      options: [
+        "Permiten solo lectura de datos",
+        "Almacenan y consultan XML directamente sin necesidad de conversión",
+        "Utilizan menor espacio en disco",
+        "No requieren índices ni esquemas"
+      ],
+      correct: 1,
+      explanation: "Las NXD evitan el mapeo XML-tablas y trabajan directamente con la estructura jerárquica de XML."
+    },
+    {
+      id: 870,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué extensión de SQL permite combinar datos XML y relacionales?",
+      options: ["XSD/SQL", "XML/DB", "SQL/XML", "SQL/JSON"],
+      correct: 2,
+      explanation: "SQL/XML integra operaciones SQL con funciones para manipular y consultar datos XML."
+    },
+    {
+      id: 871,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué representa el término FLWOR en XQuery?",
+      options: [
+        "Fetch, Loop, Write, Output, Read",
+        "Format, Label, Work, Organize, Return",
+        "File, Load, Write, Output, Result",
+        "For, Let, Where, Order, Return"
+      ],
+      correct: 3,
+      explanation: "FLWOR son las cláusulas For, Let, Where, Order by y Return, base de muchas consultas XQuery."
+    },
+    {
+      id: 872,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué función tiene la cláusula RETURN en una consulta XQuery?",
+      options: [
+        "Determina el orden de salida",
+        "Devuelve el resultado final de la consulta",
+        "Define una variable temporal",
+        "Especifica la condición de filtrado"
+      ],
+      correct: 1,
+      explanation: "RETURN construye y devuelve el resultado final que la consulta XQuery produce."
+    },
+    {
+      id: 873,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué herramienta permite indexar documentos XML para acelerar consultas?",
+      options: [
+        "Un editor de texto",
+        "El motor de base de datos nativa XML",
+        "Un compilador SQL",
+        "Un transformador XSLT"
+      ],
+      correct: 1,
+      explanation: "El propio motor de base de datos XML gestiona índices para mejorar tiempos de búsqueda y recuperación."
+    },
+    {
+      id: 874,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué es la conversión XML-relacional?",
+      options: [
+        "El proceso de transformar HTML a XML",
+        "El proceso de mapear estructuras XML en tablas de una base de datos relacional",
+        "El proceso de cifrar datos XML",
+        "La validación de esquemas XML"
+      ],
+      correct: 1,
+      explanation: "La conversión XML-relacional consiste en mapear nodos y atributos XML a tablas, columnas y relaciones."
+    },
+    {
+      id: 875,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué lenguaje se utiliza para seleccionar nodos dentro de un documento XML?",
+      options: ["SQL", "JSONPath", "XPath", "XSL-FO"],
+      correct: 2,
+      explanation: "XPath es el lenguaje estándar para seleccionar nodos y atributos de documentos XML."
+    },
+    {
+      id: 876,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué caracteriza a la serialización binaria de XML?",
+      options: [
+        "Permite editar XML con cualquier editor de texto",
+        "Genera documentos XML legibles por humanos",
+        "Requiere validación con DTD",
+        "Representa datos XML en formato compacto y eficiente"
+      ],
+      correct: 3,
+      explanation: "La serialización binaria prioriza compactación y rendimiento, sacrificando la legibilidad directa humana."
+    },
+    {
+      id: 877,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué función cumple la indexación en bases de datos XML?",
+      options: [
+        "Reducir el tamaño de los documentos",
+        "Aumentar el nivel de seguridad",
+        "Convertir XML a texto plano",
+        "Mejorar la velocidad de búsqueda y recuperación de datos"
+      ],
+      correct: 3,
+      explanation: "Los índices aceleran la localización de nodos y mejoran el rendimiento de las consultas."
+    },
+    {
+      id: 878,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué operador de XPath selecciona todos los descendientes de un nodo?",
+      options: [".", "/", "@", "//"],
+      correct: 3,
+      explanation: "El operador // en XPath busca nodos descendientes en cualquier nivel bajo el contexto actual."
+    },
+    {
+      id: 879,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué función tiene la cláusula ORDER BY en XQuery?",
+      options: [
+        "Ordenar los resultados de una consulta",
+        "Validar un esquema XSD",
+        "Filtrar los nodos XML por nombre",
+        "Crear nuevas etiquetas XML"
+      ],
+      correct: 0,
+      explanation: "ORDER BY establece el criterio de ordenación de los resultados antes de devolverlos."
+    },
+    {
+      id: 880,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué formato de almacenamiento permite mayor interoperabilidad entre sistemas?",
+      options: ["CSV", "XML", "BIN", "PDF"],
+      correct: 1,
+      explanation: "XML es un formato estándar, autodescriptivo y ampliamente soportado para intercambio entre sistemas heterogéneos."
+    },
+    {
+      id: 881,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué permite realizar SQL/XML?",
+      options: [
+        "Transformar XML en CSS",
+        "Consultas híbridas que combinan SQL y XPath/XQuery",
+        "Validar documentos XML en bases relacionales",
+        "Convertir datos JSON a XML"
+      ],
+      correct: 1,
+      explanation: "SQL/XML permite integrar datos XML y relacionales en consultas híbridas dentro del ecosistema SQL."
     },// =========================
     // IAW (Implantación de Aplicaciones Web)
     // =========================
