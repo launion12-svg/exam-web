@@ -10778,6 +10778,236 @@ const ExamSimulator = () => {
       options: ["Display", "Float", "Grid", "Flexbox"],
       correct: 2,
       explanation: "CSS Grid está diseñado para maquetación bidimensional (filas y columnas), a diferencia de Flexbox que se centra en un solo eje."
+    },
+    {
+      id: 842,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué es una transformación XML?",
+      options: [
+        "El proceso de validar documentos XML",
+        "El proceso de eliminar etiquetas XML",
+        "El proceso de convertir un documento XML en otro formato",
+        "El proceso de encriptar datos XML"
+      ],
+      correct: 2,
+      explanation: "Una transformación XML consiste en tomar un XML de entrada y generar otro resultado (por ejemplo HTML, texto o XML) según reglas definidas."
+    },
+    {
+      id: 843,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué lenguaje se utiliza para realizar transformaciones XML?",
+      options: ["CSS", "XSD", "XSLT", "DTD"],
+      correct: 2,
+      explanation: "XSLT es el lenguaje estándar para transformar documentos XML en otros formatos de salida."
+    },
+    {
+      id: 844,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué significa XSLT?",
+      options: [
+        "Extensible Stylesheet Language Transformations",
+        "XML Structure Language Tool",
+        "Extended Style Layout Table",
+        "XHTML Source Language Transformation"
+      ],
+      correct: 0,
+      explanation: "XSLT significa Extensible Stylesheet Language Transformations y forma parte de la familia XSL para procesar XML."
+    },
+    {
+      id: 845,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Cuál es la función principal de XPath en XSLT?",
+      options: [
+        "Traducir etiquetas XML a HTML",
+        "Crear atributos nuevos en el XML",
+        "Seleccionar nodos dentro de un documento XML",
+        "Comprimir datos XML"
+      ],
+      correct: 2,
+      explanation: "XPath se usa en XSLT para localizar y seleccionar nodos del XML sobre los que aplicar plantillas y transformaciones."
+    },
+    {
+      id: 846,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué elemento de XSLT define una plantilla?",
+      options: ["<xsl:template>", "<xsl:case>", "<xsl:style>", "<xsl:rule>"],
+      correct: 0,
+      explanation: "El elemento <xsl:template> define una plantilla de transformación que se aplica a nodos que cumplan un patrón."
+    },
+    {
+      id: 847,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué elemento de XSLT se utiliza para aplicar una plantilla?",
+      options: ["<xsl:apply-templates>", "<xsl:template-call>", "<xsl:for-each>", "<xsl:use-template>"],
+      correct: 0,
+      explanation: "<xsl:apply-templates> indica al procesador XSLT que aplique las plantillas correspondientes a los nodos seleccionados."
+    },
+    {
+      id: 848,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué etiqueta XSLT se usa para iterar sobre nodos repetidos?",
+      options: ["<xsl:repeat>", "<xsl:for-each>", "<xsl:loop>", "<xsl:cycle>"],
+      correct: 1,
+      explanation: "<xsl:for-each> recorre una selección de nodos y permite generar salida para cada uno de ellos."
+    },
+    {
+      id: 849,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué elemento XSLT permite realizar condiciones?",
+      options: ["<xsl:case>", "<xsl:when>", "<xsl:choose>", "<xsl:if>"],
+      correct: 3,
+      explanation: "<xsl:if> permite evaluar una condición y generar salida solo cuando el test es verdadero."
+    },
+    {
+      id: 850,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Cuál es la función principal de DTD?",
+      options: [
+        "Definir la presentación visual de un documento XML",
+        "Definir la estructura y los elementos permitidos de un documento XML",
+        "Crear estilos CSS para XML",
+        "Transformar XML a HTML"
+      ],
+      correct: 1,
+      explanation: "DTD define qué elementos, atributos y estructura son válidos en un documento XML."
+    },
+    {
+      id: 851,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué significa XSD?",
+      options: ["XML Structured Document", "XML Schema Definition", "Extended Schema Definition", "XHTML Style Directive"],
+      correct: 1,
+      explanation: "XSD significa XML Schema Definition, lenguaje para definir la estructura y tipos de datos de documentos XML."
+    },
+    {
+      id: 852,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué ventaja tiene XSD sobre DTD?",
+      options: [
+        "No requiere validación",
+        "Es menos estricto en la sintaxis",
+        "Permite definir tipos de datos y restricciones",
+        "Tiene una sintaxis más simple que DTD"
+      ],
+      correct: 2,
+      explanation: "XSD permite definir tipos de dato (string, date, integer, etc.) y restricciones detalladas, algo más limitado en DTD."
+    },
+    {
+      id: 853,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué lenguaje permite definir reglas lógicas de validación?",
+      options: ["JSON", "Schematron", "XSLT", "XMLPath"],
+      correct: 1,
+      explanation: "Schematron permite validar reglas lógicas y de negocio complejas mediante expresiones XPath."
+    },
+    {
+      id: 854,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué etiqueta se utiliza en un esquema XSD para definir un elemento?",
+      options: ["<xs:rule>", "<xs:element>", "<xs:data>", "<xs:item>"],
+      correct: 1,
+      explanation: "En XSD, <xs:element> se usa para declarar elementos del esquema y sus propiedades."
+    },
+    {
+      id: 855,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué atributo en XSD permite indicar el número mínimo de ocurrencias?",
+      options: ["minRepeat", "minCount", "minOccurs", "lowerBound"],
+      correct: 2,
+      explanation: "El atributo minOccurs define el número mínimo de veces que un elemento puede aparecer en el XML."
+    },
+    {
+      id: 856,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué herramienta se usa para seleccionar nodos en XML?",
+      options: ["XPath", "CSS", "HTML", "XQuery"],
+      correct: 0,
+      explanation: "XPath es la herramienta estándar para navegar y seleccionar nodos dentro de un documento XML."
+    },
+    {
+      id: 857,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué permite hacer Schematron además de la validación estructural?",
+      options: [
+        "Convertir XML en JSON",
+        "Comprimir documentos XML",
+        "Transformar XML en CSS",
+        "Validar reglas de negocio mediante expresiones XPath"
+      ],
+      correct: 3,
+      explanation: "Schematron permite comprobar condiciones de negocio y coherencia semántica con reglas basadas en XPath."
+    },
+    {
+      id: 858,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué tipo de salida puede generar una transformación XSLT?",
+      options: ["Solo PDF", "Solo HTML", "HTML, texto plano o XML", "Solo JSON"],
+      correct: 2,
+      explanation: "XSLT puede producir distintos resultados como HTML para web, texto plano para informes o XML transformado."
+    },
+    {
+      id: 859,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué atributo en XSLT permite definir el formato de salida?",
+      options: ["<xsl:template>", "<xsl:style>", "<xsl:output>", "<xsl:format>"],
+      correct: 2,
+      explanation: "En XSLT se utiliza <xsl:output> para configurar el método de salida (xml, html, text) y otras propiedades."
+    },
+    {
+      id: 860,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué herramienta del W3C valida documentos XML contra XSD?",
+      options: ["XML Beautifier", "HTML Linter", "XSLT Transformer", "W3C XML Schema Validator"],
+      correct: 3,
+      explanation: "El validador de esquemas XML del entorno W3C permite comprobar si un XML cumple las restricciones definidas en un XSD."
+    },
+    {
+      id: 861,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué combinación de tecnologías permite validar tanto estructura como reglas lógicas?",
+      options: ["XSD y Schematron", "DTD y CSS", "XPath y HTML", "XSLT y XQuery"],
+      correct: 0,
+      explanation: "XSD valida estructura y tipos de datos, mientras Schematron permite añadir validaciones lógicas y de negocio."
     },// =========================
     // IAW (Implantación de Aplicaciones Web)
     // =========================
