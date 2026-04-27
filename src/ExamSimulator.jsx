@@ -92,7 +92,9 @@ const pickWeightedByUnit = (pool, total = 30, curve = 1.6) => {
 const SUBJECTS = {
   ISO: "Implantación de Sistemas Operativos",
   REDES: "Planificación y Administración de Redes",
-  IPE1: "Itinerario Personal para la Empleabilidad I",
+  IAW: "Implantación de Aplicaciones Web",
+  ASO: "Administración de Sistemas Operativos",
+  LMSGI: "Lenguajes de Marcas y Sistemas de Gestión de Información",
   BBDD: "Bases de Datos", // <--- Añadimos esta línea
 };
 
@@ -10311,6 +10313,701 @@ const ExamSimulator = () => {
       ],
       correct: 1,
       explanation: "Los Virtual Hosts de Apache permiten configurar múltiples sitios web en un mismo servidor, diferenciándolos por nombre de dominio, IP o puerto."
+    },
+    {
+      id: 802,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué caracteriza a un lenguaje de marcas?",
+      options: [
+        "Se utiliza solo para cálculos numéricos.",
+        "Describe cómo ejecutar operaciones.",
+        "Define estructura y significado del contenido mediante etiquetas.",
+        "Es un lenguaje de programación imperativo."
+      ],
+      correct: 2,
+      explanation: "Un lenguaje de marcas utiliza etiquetas para estructurar y describir datos o contenido, separando la información de su presentación y facilitando el intercambio entre sistemas."
+    },
+    {
+      id: 803,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Cuál fue el antecesor histórico del XML y HTML?",
+      options: ["CSS", "JSON", "YAML", "SGML"],
+      correct: 3,
+      explanation: "SGML (Standard Generalized Markup Language) es el metalinguaje del que derivan tanto HTML como XML."
+    },
+    {
+      id: 804,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué lenguaje se utiliza principalmente para estructurar páginas web?",
+      options: ["JSON", "HTML", "XML", "CSV"],
+      correct: 1,
+      explanation: "HTML es el lenguaje estándar para estructurar el contenido de las páginas web (encabezados, párrafos, enlaces, formularios, etc.)."
+    },
+    {
+      id: 805,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué significa que un documento XML esté \"bien formado\"?",
+      options: [
+        "Cumple las reglas de un esquema XSD.",
+        "Está validado con Schematron.",
+        "Tiene etiquetas correctamente anidadas y cerradas.",
+        "Contiene datos numéricos válidos."
+      ],
+      correct: 2,
+      explanation: "Un XML bien formado respeta la sintaxis básica: un único elemento raíz, etiquetas cerradas y anidamiento correcto."
+    },
+    {
+      id: 806,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Cuál de los siguientes NO es un lenguaje de marcas?",
+      options: ["XML", "HTML", "XSD", "Python"],
+      correct: 3,
+      explanation: "Python es un lenguaje de programación de propósito general, mientras que XML, HTML y XSD pertenecen al ámbito de marcado y definición de estructuras."
+    },
+    {
+      id: 807,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué herramienta se utiliza para transformar XML en otros formatos?",
+      options: ["XPath", "XSLT", "JSON", "XSD"],
+      correct: 1,
+      explanation: "XSLT está diseñado para transformar documentos XML en otros XML, HTML, texto plano u otros formatos de salida."
+    },
+    {
+      id: 808,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué papel cumplen los espacios de nombres (namespaces) en XML?",
+      options: [
+        "Evitan colisiones entre vocabularios distintos.",
+        "Controlan el tamaño del archivo.",
+        "Limitan el número de etiquetas por documento.",
+        "Permiten definir estilos visuales."
+      ],
+      correct: 0,
+      explanation: "Los namespaces permiten diferenciar etiquetas con el mismo nombre local cuando provienen de vocabularios XML distintos."
+    },
+    {
+      id: 809,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué elemento XML sirve como raíz del documento?",
+      options: [
+        "El encabezado XML",
+        "Un único elemento contenedor de todos los demás",
+        "El esquema XSD",
+        "El primer comentario"
+      ],
+      correct: 1,
+      explanation: "Todo documento XML debe tener exactamente un elemento raíz que contenga al resto de nodos del documento."
+    },
+    {
+      id: 810,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué extensión tienen normalmente los esquemas XML?",
+      options: [".html", ".json", ".xsd", ".css"],
+      correct: 2,
+      explanation: "Los esquemas XML se almacenan habitualmente con extensión .xsd, porque se escriben en XML Schema Definition."
+    },
+    {
+      id: 811,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Cuál es la diferencia principal entre HTML y XML?",
+      options: [
+        "HTML permite errores; XML exige corrección total.",
+        "XML solo se usa en navegadores.",
+        "HTML es binario; XML es textual.",
+        "XML no usa etiquetas."
+      ],
+      correct: 0,
+      explanation: "HTML es más tolerante a errores de sintaxis en navegadores, mientras que XML exige documentos estrictamente bien formados para ser procesados."
+    },
+    {
+      id: 812,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué lenguaje define reglas de validación por condiciones lógicas en XML?",
+      options: ["CSS", "Schematron", "DTD", "XSD"],
+      correct: 1,
+      explanation: "Schematron permite expresar reglas lógicas (assert/report) sobre nodos XML mediante patrones y expresiones XPath."
+    },
+    {
+      id: 813,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Cuál de las siguientes herramientas es un editor profesional XML?",
+      options: ["Oxygen XML Editor", "Excel", "Notepad clásico", "Paint"],
+      correct: 0,
+      explanation: "Oxygen XML Editor es una herramienta profesional para editar, validar y transformar XML con soporte avanzado de estándares."
+    },
+    {
+      id: 814,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué característica distingue a un documento XML válido?",
+      options: [
+        "Está en formato binario.",
+        "Cumple las reglas definidas en su esquema.",
+        "Contiene solo datos numéricos.",
+        "No incluye namespaces."
+      ],
+      correct: 1,
+      explanation: "Un XML válido, además de estar bien formado, cumple las restricciones de su DTD/XSD (estructura, tipos de datos y cardinalidad)."
+    },
+    {
+      id: 815,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué lenguaje permite seleccionar nodos dentro de un documento XML?",
+      options: ["XSLT", "CSS", "XQuery", "XPath"],
+      correct: 3,
+      explanation: "XPath es el lenguaje de rutas usado para localizar y seleccionar nodos de un documento XML."
+    },
+    {
+      id: 816,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué representa la etiqueta <!DOCTYPE html>?",
+      options: [
+        "Un comentario de autoría.",
+        "Una declaración de codificación XML.",
+        "La definición del tipo de documento HTML.",
+        "Un espacio de nombres por defecto."
+      ],
+      correct: 2,
+      explanation: "La declaración <!DOCTYPE html> indica al navegador que el documento usa HTML5 y activa el modo de renderizado estándar."
+    },
+    {
+      id: 817,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Cuál de las siguientes opciones describe mejor JSON frente a XML?",
+      options: [
+        "No admite jerarquía.",
+        "Es más ligero y orientado a APIs.",
+        "Solo se usa en impresión.",
+        "Es más pesado pero más formal."
+      ],
+      correct: 1,
+      explanation: "JSON suele ser más compacto y es muy usado en APIs REST por su sencillez para serializar estructuras de datos."
+    },
+    {
+      id: 818,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué función cumple la validación en XML?",
+      options: [
+        "Asignar estilos visuales.",
+        "Verificar estructura y tipos de datos.",
+        "Traducirlo a JSON.",
+        "Comprimir el documento."
+      ],
+      correct: 1,
+      explanation: "Validar un XML permite comprobar que su estructura, orden de elementos y tipos de dato cumplen un esquema definido."
+    },
+    {
+      id: 819,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué es un atributo en XML?",
+      options: [
+        "Un elemento hijo con contenido textual.",
+        "Una etiqueta de cierre.",
+        "Un comentario del autor.",
+        "Una metainformación del elemento en forma clave-valor."
+      ],
+      correct: 3,
+      explanation: "Un atributo añade metadatos a un elemento mediante pares nombre=\"valor\" dentro de su etiqueta de apertura."
+    },
+    {
+      id: 820,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué editor gratuito puede configurarse con plugins XML en entornos docentes?",
+      options: ["XMLSpy", "Oxygen XML Editor", "VS Code", "Dreamweaver"],
+      correct: 2,
+      explanation: "VS Code es gratuito y puede ampliarse con extensiones para XML, validación, formateo y soporte de esquemas."
+    },
+    {
+      id: 821,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Cuál de los siguientes pares de lenguajes se usan juntos para publicar y dar estilo a contenidos web?",
+      options: ["DTD y Schematron", "XML y JSON", "HTML y CSS", "XSD y XSLT"],
+      correct: 2,
+      explanation: "HTML define la estructura del contenido web y CSS define su presentación visual (colores, tipografía, diseño y disposición)."
+    },
+    {
+      id: 822,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué indica la declaración <!DOCTYPE html> en un documento HTML5?",
+      options: [
+        "Que el documento usa CSS3",
+        "Que el documento está escrito en HTML5",
+        "Que el documento está comprimido",
+        "Que el documento incluye JavaScript"
+      ],
+      correct: 1,
+      explanation: "La declaración <!DOCTYPE html> informa al navegador de que el documento sigue el estándar HTML5 y evita modos de compatibilidad antiguos."
+    },
+    {
+      id: 823,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Cuál es la principal diferencia entre HTML y XHTML?",
+      options: [
+        "HTML es incompatible con navegadores modernos",
+        "HTML requiere etiquetas cerradas siempre",
+        "XHTML es más estricto y sigue las reglas de XML",
+        "XHTML no necesita DOCTYPE"
+      ],
+      correct: 2,
+      explanation: "XHTML aplica reglas estrictas de XML (etiquetas bien cerradas, anidamiento correcto y sintaxis más rigurosa) frente a la mayor tolerancia de HTML."
+    },
+    {
+      id: 824,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué atributo define el idioma del documento HTML?",
+      options: ["lang", "type", "charset", "dir"],
+      correct: 0,
+      explanation: "El atributo lang, normalmente en la etiqueta <html>, indica el idioma principal del contenido y mejora accesibilidad y SEO."
+    },
+    {
+      id: 825,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué etiqueta se usa para definir un enlace en HTML?",
+      options: ["<link>", "<a>", "<href>", "<connect>"],
+      correct: 1,
+      explanation: "La etiqueta <a> (anchor) crea hipervínculos mediante el atributo href con la URL de destino."
+    },
+    {
+      id: 826,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué etiqueta sirve para insertar una imagen?",
+      options: ["<pic>", "<image>", "<src>", "<img>"],
+      correct: 3,
+      explanation: "La etiqueta <img> inserta imágenes en HTML y utiliza atributos como src para la ruta y alt para texto alternativo."
+    },
+    {
+      id: 827,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué elemento HTML agrupa contenido temático?",
+      options: ["<footer>", "<meta>", "<section>", "<div>"],
+      correct: 2,
+      explanation: "<section> representa una sección temática del documento con contenido relacionado, normalmente con encabezado."
+    },
+    {
+      id: 828,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué lenguaje se usa para definir la presentación visual de un documento HTML?",
+      options: ["CSS", "JSON", "PHP", "XML"],
+      correct: 0,
+      explanation: "CSS (Cascading Style Sheets) define estilos visuales como colores, tipografías, espaciados y diseño de la interfaz."
+    },
+    {
+      id: 829,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Cuál es la sintaxis correcta de un comentario en CSS?",
+      options: ["# comentario", "// comentario", "<!-- comentario -->", "/* comentario */"],
+      correct: 3,
+      explanation: "En CSS los comentarios se escriben entre /* y */, no con // ni con sintaxis HTML."
+    },
+    {
+      id: 830,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué propiedad CSS controla el color del texto?",
+      options: ["foreground", "color", "font-color", "text-color"],
+      correct: 1,
+      explanation: "La propiedad color establece el color del texto de un elemento en CSS."
+    },
+    {
+      id: 831,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué modelo de diseño CSS se usa para crear layouts flexibles en una sola dirección?",
+      options: ["Grid", "Float", "Flexbox", "Table"],
+      correct: 2,
+      explanation: "Flexbox está pensado para distribuir elementos en un eje principal (fila o columna) de forma flexible."
+    },
+    {
+      id: 832,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué framework CSS utiliza un sistema de 12 columnas y componentes predefinidos?",
+      options: ["Tailwind", "Bootstrap", "Bulma", "Foundation"],
+      correct: 1,
+      explanation: "Bootstrap popularizó la rejilla de 12 columnas y ofrece numerosos componentes reutilizables de interfaz."
+    },
+    {
+      id: 833,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué formato de sindicación utiliza una estructura XML con etiquetas <channel> y <item>?",
+      options: ["JSON", "SOAP", "Atom", "RSS"],
+      correct: 3,
+      explanation: "RSS estructura el canal con <channel> y cada entrada mediante elementos <item>."
+    },
+    {
+      id: 834,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué formato de fecha utiliza Atom para las actualizaciones?",
+      options: ["ISO 8601", "RFC 822", "DD/MM/YYYY", "Unix timestamp"],
+      correct: 0,
+      explanation: "Atom usa fechas en formato ISO 8601 (por ejemplo, 2026-04-27T15:30:00Z) para representar instantes temporales."
+    },
+    {
+      id: 835,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué etiqueta identifica de forma única una entrada en un feed RSS?",
+      options: ["<unique>", "<id>", "<ref>", "<guid>"],
+      correct: 3,
+      explanation: "El elemento <guid> en RSS proporciona un identificador único para cada entrada del feed."
+    },
+    {
+      id: 836,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué herramienta del W3C permite validar la estructura de un canal RSS?",
+      options: ["Feed Validation Service", "HTML Validator", "CSS Linter", "Lighthouse"],
+      correct: 0,
+      explanation: "El Feed Validation Service permite comprobar la validez sintáctica y estructural de feeds RSS/Atom."
+    },
+    {
+      id: 837,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué propiedad CSS define el espacio interno entre el contenido y el borde?",
+      options: ["margin", "border", "spacing", "padding"],
+      correct: 3,
+      explanation: "padding define el espacio interior del elemento, entre el contenido y su borde."
+    },
+    {
+      id: 838,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué atributo de la etiqueta <img> mejora la accesibilidad describiendo la imagen?",
+      options: ["title", "label", "src", "alt"],
+      correct: 3,
+      explanation: "El atributo alt aporta una descripción textual alternativa de la imagen para lectores de pantalla o cuando no puede cargarse."
+    },
+    {
+      id: 839,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué formato de sindicación permite mayor flexibilidad y extensibilidad que RSS?",
+      options: ["XML", "JSON", "HTML", "Atom"],
+      correct: 3,
+      explanation: "Atom define un modelo más uniforme y extensible que RSS para sindicación de contenidos."
+    },
+    {
+      id: 840,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué metaetiqueta se usa para definir la codificación de caracteres UTF-8?",
+      options: [
+        "<meta charset=\"UTF-8\">",
+        "<meta encoding=\"UTF-8\">",
+        "<meta type=\"UTF-8\">",
+        "<meta lang=\"UTF-8\">"
+      ],
+      correct: 0,
+      explanation: "La forma estándar en HTML5 es <meta charset=\"UTF-8\"> para declarar la codificación de caracteres del documento."
+    },
+    {
+      id: 841,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué propiedad CSS controla la disposición de elementos en filas y columnas bidimensionales?",
+      options: ["Display", "Float", "Grid", "Flexbox"],
+      correct: 2,
+      explanation: "CSS Grid está diseñado para maquetación bidimensional (filas y columnas), a diferencia de Flexbox que se centra en un solo eje."
+    },
+    {
+      id: 842,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué es una transformación XML?",
+      options: [
+        "El proceso de validar documentos XML",
+        "El proceso de eliminar etiquetas XML",
+        "El proceso de convertir un documento XML en otro formato",
+        "El proceso de encriptar datos XML"
+      ],
+      correct: 2,
+      explanation: "Una transformación XML consiste en tomar un XML de entrada y generar otro resultado (por ejemplo HTML, texto o XML) según reglas definidas."
+    },
+    {
+      id: 843,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué lenguaje se utiliza para realizar transformaciones XML?",
+      options: ["CSS", "XSD", "XSLT", "DTD"],
+      correct: 2,
+      explanation: "XSLT es el lenguaje estándar para transformar documentos XML en otros formatos de salida."
+    },
+    {
+      id: 844,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué significa XSLT?",
+      options: [
+        "Extensible Stylesheet Language Transformations",
+        "XML Structure Language Tool",
+        "Extended Style Layout Table",
+        "XHTML Source Language Transformation"
+      ],
+      correct: 0,
+      explanation: "XSLT significa Extensible Stylesheet Language Transformations y forma parte de la familia XSL para procesar XML."
+    },
+    {
+      id: 845,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Cuál es la función principal de XPath en XSLT?",
+      options: [
+        "Traducir etiquetas XML a HTML",
+        "Crear atributos nuevos en el XML",
+        "Seleccionar nodos dentro de un documento XML",
+        "Comprimir datos XML"
+      ],
+      correct: 2,
+      explanation: "XPath se usa en XSLT para localizar y seleccionar nodos del XML sobre los que aplicar plantillas y transformaciones."
+    },
+    {
+      id: 846,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué elemento de XSLT define una plantilla?",
+      options: ["<xsl:template>", "<xsl:case>", "<xsl:style>", "<xsl:rule>"],
+      correct: 0,
+      explanation: "El elemento <xsl:template> define una plantilla de transformación que se aplica a nodos que cumplan un patrón."
+    },
+    {
+      id: 847,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué elemento de XSLT se utiliza para aplicar una plantilla?",
+      options: ["<xsl:apply-templates>", "<xsl:template-call>", "<xsl:for-each>", "<xsl:use-template>"],
+      correct: 0,
+      explanation: "<xsl:apply-templates> indica al procesador XSLT que aplique las plantillas correspondientes a los nodos seleccionados."
+    },
+    {
+      id: 848,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué etiqueta XSLT se usa para iterar sobre nodos repetidos?",
+      options: ["<xsl:repeat>", "<xsl:for-each>", "<xsl:loop>", "<xsl:cycle>"],
+      correct: 1,
+      explanation: "<xsl:for-each> recorre una selección de nodos y permite generar salida para cada uno de ellos."
+    },
+    {
+      id: 849,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué elemento XSLT permite realizar condiciones?",
+      options: ["<xsl:case>", "<xsl:when>", "<xsl:choose>", "<xsl:if>"],
+      correct: 3,
+      explanation: "<xsl:if> permite evaluar una condición y generar salida solo cuando el test es verdadero."
+    },
+    {
+      id: 850,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Cuál es la función principal de DTD?",
+      options: [
+        "Definir la presentación visual de un documento XML",
+        "Definir la estructura y los elementos permitidos de un documento XML",
+        "Crear estilos CSS para XML",
+        "Transformar XML a HTML"
+      ],
+      correct: 1,
+      explanation: "DTD define qué elementos, atributos y estructura son válidos en un documento XML."
+    },
+    {
+      id: 851,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué significa XSD?",
+      options: ["XML Structured Document", "XML Schema Definition", "Extended Schema Definition", "XHTML Style Directive"],
+      correct: 1,
+      explanation: "XSD significa XML Schema Definition, lenguaje para definir la estructura y tipos de datos de documentos XML."
+    },
+    {
+      id: 852,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué ventaja tiene XSD sobre DTD?",
+      options: [
+        "No requiere validación",
+        "Es menos estricto en la sintaxis",
+        "Permite definir tipos de datos y restricciones",
+        "Tiene una sintaxis más simple que DTD"
+      ],
+      correct: 2,
+      explanation: "XSD permite definir tipos de dato (string, date, integer, etc.) y restricciones detalladas, algo más limitado en DTD."
+    },
+    {
+      id: 853,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué lenguaje permite definir reglas lógicas de validación?",
+      options: ["JSON", "Schematron", "XSLT", "XMLPath"],
+      correct: 1,
+      explanation: "Schematron permite validar reglas lógicas y de negocio complejas mediante expresiones XPath."
+    },
+    {
+      id: 854,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué etiqueta se utiliza en un esquema XSD para definir un elemento?",
+      options: ["<xs:rule>", "<xs:element>", "<xs:data>", "<xs:item>"],
+      correct: 1,
+      explanation: "En XSD, <xs:element> se usa para declarar elementos del esquema y sus propiedades."
+    },
+    {
+      id: 855,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué atributo en XSD permite indicar el número mínimo de ocurrencias?",
+      options: ["minRepeat", "minCount", "minOccurs", "lowerBound"],
+      correct: 2,
+      explanation: "El atributo minOccurs define el número mínimo de veces que un elemento puede aparecer en el XML."
+    },
+    {
+      id: 856,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué herramienta se usa para seleccionar nodos en XML?",
+      options: ["XPath", "CSS", "HTML", "XQuery"],
+      correct: 0,
+      explanation: "XPath es la herramienta estándar para navegar y seleccionar nodos dentro de un documento XML."
+    },
+    {
+      id: 857,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué permite hacer Schematron además de la validación estructural?",
+      options: [
+        "Convertir XML en JSON",
+        "Comprimir documentos XML",
+        "Transformar XML en CSS",
+        "Validar reglas de negocio mediante expresiones XPath"
+      ],
+      correct: 3,
+      explanation: "Schematron permite comprobar condiciones de negocio y coherencia semántica con reglas basadas en XPath."
+    },
+    {
+      id: 858,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué tipo de salida puede generar una transformación XSLT?",
+      options: ["Solo PDF", "Solo HTML", "HTML, texto plano o XML", "Solo JSON"],
+      correct: 2,
+      explanation: "XSLT puede producir distintos resultados como HTML para web, texto plano para informes o XML transformado."
+    },
+    {
+      id: 859,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué atributo en XSLT permite definir el formato de salida?",
+      options: ["<xsl:template>", "<xsl:style>", "<xsl:output>", "<xsl:format>"],
+      correct: 2,
+      explanation: "En XSLT se utiliza <xsl:output> para configurar el método de salida (xml, html, text) y otras propiedades."
+    },
+    {
+      id: 860,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué herramienta del W3C valida documentos XML contra XSD?",
+      options: ["XML Beautifier", "HTML Linter", "XSLT Transformer", "W3C XML Schema Validator"],
+      correct: 3,
+      explanation: "El validador de esquemas XML del entorno W3C permite comprobar si un XML cumple las restricciones definidas en un XSD."
+    },
+    {
+      id: 861,
+      subject: "LMSGI",
+      unit: "UT3",
+      source: "new",
+      question: "¿Qué combinación de tecnologías permite validar tanto estructura como reglas lógicas?",
+      options: ["XSD y Schematron", "DTD y CSS", "XPath y HTML", "XSLT y XQuery"],
+      correct: 0,
+      explanation: "XSD valida estructura y tipos de datos, mientras Schematron permite añadir validaciones lógicas y de negocio."
     },
   ];
 
