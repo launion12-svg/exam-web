@@ -14153,14 +14153,6 @@ const ExamSimulator = () => {
       correct: 2,
       explanation: "Los filtros LDAP usan notación polaca inversa; el operador '&' indica que deben cumplirse ambas condiciones simultáneamente."
     },
-      Aquí tienes el código para la UT6: Servidores de impresión e integración con la red de la asignatura ASO. Con este bloque completamos las 120 preguntas (20 por unidad) de la asignatura.
-
-He configurado los IDs del 2101 al 2120 para mantener la correlación con los bloques anteriores.
-
-JavaScript
-    // ========================================================
-    // ASO (Administración de Sistemas Operativos) - UT6
-    // ========================================================
     {
       id: 2101, // P1
       subject: "ASO",
