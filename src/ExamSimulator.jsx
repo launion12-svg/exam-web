@@ -11678,6 +11678,249 @@ const ExamSimulator = () => {
       options: ["JavaScript", "PHP", "Apache", "MySQL"],
       correct: 0,
       explanation: "JavaScript se ejecuta en el navegador (cliente), mientras PHP/Apache/MySQL operan en el servidor."
+    },
+    // =========================
+    // IAW (Implantación de Aplicaciones Web) - UT2
+    // =========================
+    {
+      id: 922,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué carpeta de Joomla contiene la interfaz administrativa?",
+      options: ["/content/", "/administrator/", "/modules/", "/plugins/"],
+      correct: 1,
+      explanation: "En Joomla, la interfaz de administración se encuentra en el directorio `/administrator/`."
+    },
+    {
+      id: 923,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué tarea forma parte de las pruebas de funcionamiento antes de publicar un CMS?",
+      options: [
+        "Verificar que todos los enlaces, formularios y funcionalidades trabajan correctamente",
+        "Configurar el panel de control del proveedor de hosting",
+        "Instalar todos los plugins disponibles en el repositorio",
+        "Modificar el código fuente del núcleo del CMS"
+      ],
+      correct: 0,
+      explanation: "Antes de publicar, se debe comprobar que enlaces, formularios y funcionalidades operan correctamente para evitar fallos en producción."
+    },
+    {
+      id: 924,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué comando se usa para exportar una base de datos MySQL desde terminal Linux?",
+      options: [
+        "mysqlbackup -d basedatos -f backup.sql",
+        "mysqldump -u usuario -p basedatos > backup.sql",
+        "exportdb -u usuario basedatos",
+        "cp basedatos /backup.sql"
+      ],
+      correct: 1,
+      explanation: "`mysqldump` es la herramienta estándar para exportar bases de datos MySQL/MariaDB desde terminal."
+    },
+    {
+      id: 925,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Cuál es el propósito de un cortafuegos de aplicaciones web (WAF)?",
+      options: [
+        "Mejorar el diseño visual de la web",
+        "Filtrar y monitorizar el tráfico HTTP",
+        "Acelerar la carga del sitio",
+        "Optimizar la base de datos"
+      ],
+      correct: 1,
+      explanation: "Un WAF inspecciona y filtra tráfico HTTP/HTTPS para proteger aplicaciones web frente a ataques comunes."
+    },
+    {
+      id: 926,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué rol en WordPress tiene control total sobre el sitio web?",
+      options: ["Editor", "Autor", "Administrador", "Colaborador"],
+      correct: 2,
+      explanation: "El rol de Administrador dispone de permisos completos sobre configuración, usuarios, temas y plugins."
+    },
+    {
+      id: 927,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué documento debe elaborar el técnico tras la publicación del CMS?",
+      options: [
+        "Un informe de costes de hosting",
+        "Un contrato de licencia de software",
+        "Una memoria técnica del proyecto",
+        "Un manual de usuario básico y documentación de instalación"
+      ],
+      correct: 3,
+      explanation: "Tras publicar, es clave entregar manual de uso y documentación de instalación/mantenimiento para facilitar la operación."
+    },
+    {
+      id: 928,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué conjunto de tecnologías compone el entorno LAMP?",
+      options: [
+        "Linux, Apache, MySQL, PHP",
+        "Linux, Apache, MongoDB, Perl",
+        "Linux, Angular, MySQL, Python",
+        "Laravel, Apache, MariaDB, PostgreSQL"
+      ],
+      correct: 0,
+      explanation: "LAMP significa Linux, Apache, MySQL y PHP (o, en ocasiones, MariaDB como variante del motor SQL)."
+    },
+    {
+      id: 929,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué es un CMS o gestor de contenidos?",
+      options: [
+        "Un servidor de correo electrónico",
+        "Un software que permite crear y gestionar sitios web sin programar",
+        "Un lenguaje de programación web",
+        "Un sistema de gestión de archivos en la nube"
+      ],
+      correct: 1,
+      explanation: "Un CMS permite crear, editar y administrar contenido web con menor necesidad de programación manual."
+    },
+    {
+      id: 930,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué licencia de software garantiza las cuatro libertades básicas del software libre?",
+      options: ["MIT License", "GPL (GNU General Public License)", "Apache License 2.0", "Creative Commons"],
+      correct: 1,
+      explanation: "La GPL es una licencia copyleft que protege libertades de uso, estudio, modificación y redistribución."
+    },
+    {
+      id: 931,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Cuál de los siguientes CMS es de tipo educativo?",
+      options: ["Drupal", "Moodle", "PrestaShop", "Ghost"],
+      correct: 1,
+      explanation: "Moodle es un LMS/CMS orientado específicamente a entornos educativos y formación en línea."
+    },
+    {
+      id: 932,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué práctica mejora el rendimiento del CMS en producción?",
+      options: [
+        "Desactivar la caché del servidor",
+        "Aumentar el número de plugins",
+        "Usar imágenes en máxima resolución",
+        "Habilitar la caché y usar un CDN"
+      ],
+      correct: 3,
+      explanation: "Activar caché y CDN reduce latencia y carga del servidor, mejorando tiempos de respuesta."
+    },
+    {
+      id: 933,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué protocolo se utiliza para cifrar las comunicaciones entre cliente y servidor?",
+      options: ["FTP", "HTTP", "SSL/TLS (HTTPS)", "SMTP"],
+      correct: 2,
+      explanation: "La comunicación cifrada en web se establece mediante TLS (históricamente SSL), usado en HTTPS."
+    },
+    {
+      id: 934,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué medida de seguridad evita el acceso no autorizado mediante una verificación adicional?",
+      options: [
+        "Contraseñas de 4 dígitos",
+        "Autenticación de dos factores (2FA)",
+        "Desactivar el firewall",
+        "Eliminar los logs de acceso"
+      ],
+      correct: 1,
+      explanation: "2FA añade un segundo factor de verificación, reduciendo accesos indebidos incluso si se compromete la contraseña."
+    },
+    {
+      id: 935,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Cuál es el directorio de WordPress donde se guardan los temas instalados?",
+      options: ["/wp-content/themes/", "/themes/", "/wp-admin/themes/", "/wp-includes/themes/"],
+      correct: 0,
+      explanation: "Los temas de WordPress se almacenan en `/wp-content/themes/`."
+    },
+    {
+      id: 936,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué se debe hacer antes de actualizar un CMS?",
+      options: [
+        "Eliminar todos los usuarios del sistema",
+        "Cambiar el dominio del sitio",
+        "Realizar una copia de seguridad completa",
+        "Desinstalar el servidor web"
+      ],
+      correct: 2,
+      explanation: "Hacer backup completo antes de actualizar permite recuperar el sistema ante cualquier fallo."
+    },
+    {
+      id: 937,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Cuál es el objetivo principal de la personalización de un CMS?",
+      options: [
+        "Aumentar la complejidad del código",
+        "Adaptar el sistema a las necesidades específicas del cliente",
+        "Eliminar funcionalidades innecesarias",
+        "Reducir el número de usuarios"
+      ],
+      correct: 1,
+      explanation: "Personalizar un CMS busca ajustar funcionalidades, diseño y flujo a los requisitos del proyecto."
+    },
+    {
+      id: 938,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Cuál es la función del archivo .htaccess en un CMS?",
+      options: [
+        "Almacenar las imágenes del sitio",
+        "Configurar reglas de reescritura y seguridad en Apache",
+        "Definir la estructura de la base de datos",
+        "Establecer las credenciales del administrador"
+      ],
+      correct: 1,
+      explanation: "`.htaccess` permite aplicar reglas de reescritura, redirecciones y restricciones de acceso en Apache."
+    },
+    {
+      id: 939,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué archivo principal de WordPress contiene los datos de conexión a la base de datos?",
+      options: ["index.php", "wp-config.php", "functions.php", "style.css"],
+      correct: 1,
+      explanation: "`wp-config.php` guarda configuración clave, incluidos parámetros de conexión a base de datos."
+    },
+    {
+      id: 940,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué sistema se encarga de traducir nombres de dominio a direcciones IP?",
+      options: ["DHCP", "DNS", "FTP", "SMTP"],
+      correct: 1,
+      explanation: "DNS resuelve nombres de dominio en direcciones IP para que los clientes puedan localizar servidores."
+    },
+    {
+      id: 941,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué es un backup incremental?",
+      options: [
+        "Una copia de seguridad que guarda solo los datos modificados desde el último backup",
+        "Una copia de seguridad completa de todos los datos",
+        "Un sistema de recuperación de datos borrados",
+        "Un tipo de base de datos en la nube"
+      ],
+      correct: 0,
+      explanation: "Un backup incremental almacena solo cambios desde la última copia, reduciendo tiempo y espacio de respaldo."
         "Porque lo exige la normativa fiscal",
         "Para instalar software automáticamente",
         "Para garantizar la trazabilidad y facilitar mantenimiento",
