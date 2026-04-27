@@ -14363,14 +14363,6 @@ const ExamSimulator = () => {
       correct: 2,
       explanation: "Una impresora lógica es la cola que ve el usuario; puede apuntar a un grupo de impresoras físicas (pooling) para repartir la carga."
     },
-        ¡Vamos con la UT7: Guiones de administración y automatización de servicios! Esta es la unidad donde todo cobra sentido, uniendo Bash, PowerShell y otros lenguajes para que el sistema trabaje por ti.
-
-He configurado los IDs del 2121 al 2140. Al añadir este bloque, tu simulador de ASO alcanzará las 140 preguntas.
-
-JavaScript
-    // ========================================================
-    // ASO (Administración de Sistemas Operativos) - UT7
-    // ========================================================
     {
       id: 2121, // P1
       subject: "ASO",
