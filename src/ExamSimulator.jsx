@@ -12449,8 +12449,8 @@ const ExamSimulator = () => {
       ],
       correct: 3,
       explanation: "El técnico es el responsable de que la suite sea productiva pero, sobre todo, segura y ajustada a la legalidad vigente."
-    }
-      {
+   },
+    {
       id: 982,
       subject: "IAW",
       unit: "UT5",
