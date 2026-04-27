@@ -11890,6 +11890,286 @@ const ExamSimulator = () => {
       correct: 0,
       explanation: "Un backup incremental almacena solo cambios desde la última copia, reduciendo tiempo y espacio de respaldo."
     },
+      {
+      id: 942, // (Nº 20)
+      subject: "IAW",
+      unit: "UT3",
+      question: "¿Qué archivo de configuración se usa en NGINX como equivalente funcional de .htaccess?",
+      options: [
+        "php.ini",
+        "wp-login.php",
+        "nginx.conf",
+        "index.html"
+      ],
+      correct: 2,
+      explanation: "A diferencia de Apache con su .htaccess, NGINX centraliza las reglas de redirección y seguridad en el archivo nginx.conf o archivos incluidos en él."
+    },
+    {
+      id: 943, // (Nº 18)
+      subject: "IAW",
+      unit: "UT3",
+      question: "¿Qué herramienta integrada evalúa la salud y el estado técnico del sitio WordPress?",
+      options: [
+        "Plugin de caché",
+        "Herramienta de Salud del Sitio (Site Health)",
+        "Panel de Analytics",
+        "Consola de comandos SSH"
+      ],
+      correct: 1,
+      explanation: "La herramienta 'Salud del sitio' en WordPress proporciona un análisis crítico sobre la configuración de seguridad y el rendimiento del servidor."
+    },
+    {
+      id: 944, // (Nº 19)
+      subject: "IAW",
+      unit: "UT3",
+      question: "¿Qué documento recoge los procedimientos técnicos estandarizados en la administración del CMS?",
+      options: [
+        "Contrato de servicios",
+        "Manual de estilo",
+        "Política de uso de software libre",
+        "Manual de procedimientos técnicos"
+      ],
+      correct: 3,
+      explanation: "El manual de procedimientos técnicos describe de forma detallada cómo realizar tareas recurrentes como backups, actualizaciones y gestión de usuarios."
+    },
+    {
+      id: 945, // (Nº 2)
+      subject: "IAW",
+      unit: "UT3",
+      question: "¿Cuál es el archivo principal de configuración de WordPress?",
+      options: [
+        "wp-content.php",
+        "index.php",
+        "wp-config.php",
+        "functions.php"
+      ],
+      correct: 2,
+      explanation: "wp-config.php es el archivo esencial que contiene la configuración de la base de datos y otras claves de seguridad del sitio."
+    },
+    {
+      id: 946, // (Nº 16)
+      subject: "IAW",
+      unit: "UT3",
+      question: "¿Qué archivo controla las credenciales y parámetros de la base de datos?",
+      options: [
+        "wp-login.php",
+        "wp-config.php",
+        ".htaccess",
+        "style.css"
+      ],
+      correct: 1,
+      explanation: "La conexión con el servidor MySQL/MariaDB se define mediante constantes dentro del archivo wp-config.php."
+    },
+    {
+      id: 947, // (Nº 14)
+      subject: "IAW",
+      unit: "UT3",
+      question: "¿Qué acción debe realizarse antes de actualizar un plugin o tema?",
+      options: [
+        "Cambiar el nombre del sitio",
+        "Desactivar todos los plugins",
+        "Eliminar el tema activo",
+        "Realizar una copia de seguridad"
+      ],
+      correct: 3,
+      explanation: "Realizar un backup previo es la medida de seguridad fundamental para poder restaurar el sitio si la actualización causa una incompatibilidad."
+    },
+    {
+      id: 948, // (Nº 3)
+      subject: "IAW",
+      unit: "UT3",
+      question: "¿Qué principio se aplica al asignar el menor nivel de permisos necesario a cada usuario?",
+      options: [
+        "Principio de máxima disponibilidad",
+        "Principio de redundancia",
+        "Principio de mínimo privilegio",
+        "Principio de acceso universal"
+      ],
+      correct: 2,
+      explanation: "El principio de mínimo privilegio limita el daño potencial en caso de compromiso de una cuenta, otorgando solo los permisos estrictamente necesarios."
+    },
+    {
+      id: 949, // (Nº 11)
+      subject: "IAW",
+      unit: "UT3",
+      question: "¿Qué formato es ideal para importar datos estructurados como usuarios o productos?",
+      options: [
+        ".docx",
+        ".jpg",
+        ".csv",
+        ".mp3"
+      ],
+      correct: 2,
+      explanation: "El formato CSV (Comma-Separated Values) es el estándar para el intercambio de datos tabulares entre aplicaciones de gestión de contenidos."
+    },
+    {
+      id: 950, // (Nº 5)
+      subject: "IAW",
+      unit: "UT3",
+      question: "¿Qué rol en WordPress tiene el máximo nivel de permisos?",
+      options: [
+        "Colaborador",
+        "Editor",
+        "Administrador",
+        "Suscriptor"
+      ],
+      correct: 2,
+      explanation: "El administrador tiene acceso total a todas las funciones de gestión, incluyendo la edición de código, temas y plugins."
+    },
+    {
+      id: 951, // (Nº 7)
+      subject: "IAW",
+      unit: "UT3",
+      question: "¿Qué archivo controla las reglas de reescritura de URLs en servidores Apache?",
+      options: [
+        "php.ini",
+        "wp-config.php",
+        ".htaccess",
+        "nginx.conf"
+      ],
+      correct: 2,
+      explanation: "Apache utiliza archivos distribuidos .htaccess para configurar redirecciones y permalinks de forma dinámica por directorio."
+    },
+    {
+      id: 952, // (Nº 17)
+      subject: "IAW",
+      unit: "UT3",
+      question: "¿Qué práctica garantiza la integridad de un backup?",
+      options: [
+        "Almacenarlo solo en el mismo servidor",
+        "Verificar y probar periódicamente la restauración",
+        "Eliminar los backups antiguos sin comprobar",
+        "No documentar el proceso de restauración"
+      ],
+      correct: 1,
+      explanation: "Un backup no es útil si no funciona; la única forma de garantizar su integridad es mediante pruebas de restauración periódicas."
+    },
+    {
+      id: 953, // (Nº 6)
+      subject: "IAW",
+      unit: "UT3",
+      question: "¿Qué es un tema hijo (Child Theme)?",
+      options: [
+        "Un tema diseñado para niños",
+        "Un tema que hereda las funcionalidades de un tema padre para personalizarlo sin modificarlo",
+        "Un tema con licencia gratuita",
+        "Un tema que no requiere instalación"
+      ],
+      correct: 1,
+      explanation: "Los temas hijo permiten modificar el diseño o lógica de un tema sin perder los cambios cuando el tema padre se actualiza."
+    },
+    {
+      id: 954, // (Nº 1)
+      subject: "IAW",
+      unit: "UT3",
+      question: "¿Qué modelo de control de acceso utiliza WordPress para gestionar permisos de usuario?",
+      options: [
+        "MAC (Mandatory Access Control)",
+        "DAC (Discretionary Access Control)",
+        "RBAC (Role-Based Access Control)",
+        "ABAC (Attribute-Based Access Control)"
+      ],
+      correct: 2,
+      explanation: "WordPress utiliza RBAC, donde los permisos se asignan a roles predefinidos (administrador, editor, etc.) en lugar de a usuarios individuales."
+    },
+    {
+      id: 955, // (Nº 13)
+      subject: "IAW",
+      unit: "UT3",
+      question: "¿Qué función tiene el archivo robots.txt?",
+      options: [
+        "Configurar las reglas del firewall",
+        "Definir el diseño responsive del sitio",
+        "Indicar a los motores de búsqueda qué páginas pueden rastrear",
+        "Establecer las credenciales de administrador"
+      ],
+      correct: 2,
+      explanation: "El archivo robots.txt sirve para dar instrucciones a los rastreadores de los buscadores sobre qué partes del sitio no deben indexar."
+    },
+    {
+      id: 956, // (Nº 4)
+      subject: "IAW",
+      unit: "UT3",
+      question: "¿Cuál es el formato nativo que usa WordPress para exportar contenidos?",
+      options: [
+        "JSON",
+        "WXR (WordPress eXtended RSS / XML)",
+        "CSV",
+        "SQL"
+      ],
+      correct: 1,
+      explanation: "WordPress utiliza el formato WXR (una variante de XML) para exportar entradas, páginas, comentarios y metadatos del sitio."
+    },
+    {
+      id: 957, // (Nº 9)
+      subject: "IAW",
+      unit: "UT3",
+      question: "¿Qué plugin o utilidad permite realizar copias de seguridad automáticas en WordPress?",
+      options: [
+        "Yoast SEO",
+        "UpdraftPlus o similar",
+        "Contact Form 7",
+        "WooCommerce"
+      ],
+      correct: 1,
+      explanation: "UpdraftPlus es uno de los plugins más utilizados para automatizar backups y almacenarlos en servicios externos como Drive o Dropbox."
+    },
+    {
+      id: 958, // (Nº 12)
+      subject: "IAW",
+      unit: "UT3",
+      question: "¿Qué tipo de contenido personalizado permite definir nuevas estructuras de datos en WordPress?",
+      options: [
+        "Custom Post Types (Tipos de entrada personalizados)",
+        "Widgets de barra lateral",
+        "Temas de bloques",
+        "Shortcodes"
+      ],
+      correct: 0,
+      explanation: "Los Custom Post Types (CPT) permiten que WordPress gestione contenidos diferentes a entradas o páginas, como portafolios o productos."
+    },
+    {
+      id: 959, // (Nº 10)
+      subject: "IAW",
+      unit: "UT3",
+      question: "¿Qué método de copia sigue la estrategia 3-2-1 recomendada por ENISA?",
+      options: [
+        "Una copia local, una en la nube y una en soporte extraíble",
+        "Tres copias en el mismo disco",
+        "Dos copias en servidores distintos",
+        "Una copia completa cada año"
+      ],
+      correct: 0,
+      explanation: "La estrategia 3-2-1 implica tener al menos 3 copias, en 2 soportes distintos y 1 de ellas fuera de línea o en una ubicación diferente (nube)."
+    },
+    {
+      id: 960, // (Nº 8)
+      subject: "IAW",
+      unit: "UT3",
+      question: "¿Qué extensión de archivo se usa para definir la configuración de estilos y tipografías en temas de bloques?",
+      options: [
+        ".json (theme.json)",
+        ".php",
+        ".css",
+        ".xml"
+      ],
+      correct: 0,
+      explanation: "En la edición de sitio completo (FSE) de WordPress, el archivo theme.json define los ajustes globales de estilo y tipografía del tema."
+    },
+    {
+      id: 961, // (Nº 15)
+      subject: "IAW",
+      unit: "UT3",
+      question: "¿Qué característica define a los mu-plugins en WordPress?",
+      options: [
+        "Se desactivan automáticamente tras una actualización",
+        "Se activan automáticamente y no se pueden desactivar desde el panel",
+        "Requieren licencia de pago",
+        "Solo funcionan en entornos de desarrollo"
+      ],
+      correct: 1,
+      explanation: "Los 'Must-Use plugins' (mu-plugins) se cargan siempre antes que los plugins normales y no pueden desactivarse a través del panel administrativo."
+    },
   ];
 
   // =========================
