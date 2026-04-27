@@ -11552,6 +11552,7 @@ const ExamSimulator = () => {
       subject: "IAW",
       unit: "UT1",
       question: "Cuál es el objetivo principal de un entorno de desarrollo web",
+      options: [
         "Mostrar interfaces gráficas al usuario final",
         "Publicar sitios web automáticamente",
         "Ejecutar código directamente en producción",
