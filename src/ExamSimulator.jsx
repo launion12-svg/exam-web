@@ -10314,7 +10314,256 @@ const ExamSimulator = () => {
       correct: 1,
       explanation: "Los Virtual Hosts de Apache permiten configurar múltiples sitios web en un mismo servidor, diferenciándolos por nombre de dominio, IP o puerto."
     },
-    // =========================
+    {
+      id: 802,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué caracteriza a un lenguaje de marcas?",
+      options: [
+        "Se utiliza solo para cálculos numéricos.",
+        "Describe cómo ejecutar operaciones.",
+        "Define estructura y significado del contenido mediante etiquetas.",
+        "Es un lenguaje de programación imperativo."
+      ],
+      correct: 2,
+      explanation: "Un lenguaje de marcas utiliza etiquetas para estructurar y describir datos o contenido, separando la información de su presentación y facilitando el intercambio entre sistemas."
+    },
+    {
+      id: 803,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Cuál fue el antecesor histórico del XML y HTML?",
+      options: ["CSS", "JSON", "YAML", "SGML"],
+      correct: 3,
+      explanation: "SGML (Standard Generalized Markup Language) es el metalinguaje del que derivan tanto HTML como XML."
+    },
+    {
+      id: 804,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué lenguaje se utiliza principalmente para estructurar páginas web?",
+      options: ["JSON", "HTML", "XML", "CSV"],
+      correct: 1,
+      explanation: "HTML es el lenguaje estándar para estructurar el contenido de las páginas web (encabezados, párrafos, enlaces, formularios, etc.)."
+    },
+    {
+      id: 805,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué significa que un documento XML esté \"bien formado\"?",
+      options: [
+        "Cumple las reglas de un esquema XSD.",
+        "Está validado con Schematron.",
+        "Tiene etiquetas correctamente anidadas y cerradas.",
+        "Contiene datos numéricos válidos."
+      ],
+      correct: 2,
+      explanation: "Un XML bien formado respeta la sintaxis básica: un único elemento raíz, etiquetas cerradas y anidamiento correcto."
+    },
+    {
+      id: 806,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Cuál de los siguientes NO es un lenguaje de marcas?",
+      options: ["XML", "HTML", "XSD", "Python"],
+      correct: 3,
+      explanation: "Python es un lenguaje de programación de propósito general, mientras que XML, HTML y XSD pertenecen al ámbito de marcado y definición de estructuras."
+    },
+    {
+      id: 807,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué herramienta se utiliza para transformar XML en otros formatos?",
+      options: ["XPath", "XSLT", "JSON", "XSD"],
+      correct: 1,
+      explanation: "XSLT está diseñado para transformar documentos XML en otros XML, HTML, texto plano u otros formatos de salida."
+    },
+    {
+      id: 808,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué papel cumplen los espacios de nombres (namespaces) en XML?",
+      options: [
+        "Evitan colisiones entre vocabularios distintos.",
+        "Controlan el tamaño del archivo.",
+        "Limitan el número de etiquetas por documento.",
+        "Permiten definir estilos visuales."
+      ],
+      correct: 0,
+      explanation: "Los namespaces permiten diferenciar etiquetas con el mismo nombre local cuando provienen de vocabularios XML distintos."
+    },
+    {
+      id: 809,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué elemento XML sirve como raíz del documento?",
+      options: [
+        "El encabezado XML",
+        "Un único elemento contenedor de todos los demás",
+        "El esquema XSD",
+        "El primer comentario"
+      ],
+      correct: 1,
+      explanation: "Todo documento XML debe tener exactamente un elemento raíz que contenga al resto de nodos del documento."
+    },
+    {
+      id: 810,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué extensión tienen normalmente los esquemas XML?",
+      options: [".html", ".json", ".xsd", ".css"],
+      correct: 2,
+      explanation: "Los esquemas XML se almacenan habitualmente con extensión .xsd, porque se escriben en XML Schema Definition."
+    },
+    {
+      id: 811,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Cuál es la diferencia principal entre HTML y XML?",
+      options: [
+        "HTML permite errores; XML exige corrección total.",
+        "XML solo se usa en navegadores.",
+        "HTML es binario; XML es textual.",
+        "XML no usa etiquetas."
+      ],
+      correct: 0,
+      explanation: "HTML es más tolerante a errores de sintaxis en navegadores, mientras que XML exige documentos estrictamente bien formados para ser procesados."
+    },
+    {
+      id: 812,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué lenguaje define reglas de validación por condiciones lógicas en XML?",
+      options: ["CSS", "Schematron", "DTD", "XSD"],
+      correct: 1,
+      explanation: "Schematron permite expresar reglas lógicas (assert/report) sobre nodos XML mediante patrones y expresiones XPath."
+    },
+    {
+      id: 813,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Cuál de las siguientes herramientas es un editor profesional XML?",
+      options: ["Oxygen XML Editor", "Excel", "Notepad clásico", "Paint"],
+      correct: 0,
+      explanation: "Oxygen XML Editor es una herramienta profesional para editar, validar y transformar XML con soporte avanzado de estándares."
+    },
+    {
+      id: 814,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué característica distingue a un documento XML válido?",
+      options: [
+        "Está en formato binario.",
+        "Cumple las reglas definidas en su esquema.",
+        "Contiene solo datos numéricos.",
+        "No incluye namespaces."
+      ],
+      correct: 1,
+      explanation: "Un XML válido, además de estar bien formado, cumple las restricciones de su DTD/XSD (estructura, tipos de datos y cardinalidad)."
+    },
+    {
+      id: 815,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué lenguaje permite seleccionar nodos dentro de un documento XML?",
+      options: ["XSLT", "CSS", "XQuery", "XPath"],
+      correct: 3,
+      explanation: "XPath es el lenguaje de rutas usado para localizar y seleccionar nodos de un documento XML."
+    },
+    {
+      id: 816,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué representa la etiqueta <!DOCTYPE html>?",
+      options: [
+        "Un comentario de autoría.",
+        "Una declaración de codificación XML.",
+        "La definición del tipo de documento HTML.",
+        "Un espacio de nombres por defecto."
+      ],
+      correct: 2,
+      explanation: "La declaración <!DOCTYPE html> indica al navegador que el documento usa HTML5 y activa el modo de renderizado estándar."
+    },
+    {
+      id: 817,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Cuál de las siguientes opciones describe mejor JSON frente a XML?",
+      options: [
+        "No admite jerarquía.",
+        "Es más ligero y orientado a APIs.",
+        "Solo se usa en impresión.",
+        "Es más pesado pero más formal."
+      ],
+      correct: 1,
+      explanation: "JSON suele ser más compacto y es muy usado en APIs REST por su sencillez para serializar estructuras de datos."
+    },
+    {
+      id: 818,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué función cumple la validación en XML?",
+      options: [
+        "Asignar estilos visuales.",
+        "Verificar estructura y tipos de datos.",
+        "Traducirlo a JSON.",
+        "Comprimir el documento."
+      ],
+      correct: 1,
+      explanation: "Validar un XML permite comprobar que su estructura, orden de elementos y tipos de dato cumplen un esquema definido."
+    },
+    {
+      id: 819,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué es un atributo en XML?",
+      options: [
+        "Un elemento hijo con contenido textual.",
+        "Una etiqueta de cierre.",
+        "Un comentario del autor.",
+        "Una metainformación del elemento en forma clave-valor."
+      ],
+      correct: 3,
+      explanation: "Un atributo añade metadatos a un elemento mediante pares nombre=\"valor\" dentro de su etiqueta de apertura."
+    },
+    {
+      id: 820,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Qué editor gratuito puede configurarse con plugins XML en entornos docentes?",
+      options: ["XMLSpy", "Oxygen XML Editor", "VS Code", "Dreamweaver"],
+      correct: 2,
+      explanation: "VS Code es gratuito y puede ampliarse con extensiones para XML, validación, formateo y soporte de esquemas."
+    },
+    {
+      id: 821,
+      subject: "LMSGI",
+      unit: "UT1",
+      source: "new",
+      question: "¿Cuál de los siguientes pares de lenguajes se usan juntos para publicar y dar estilo a contenidos web?",
+      options: ["DTD y Schematron", "XML y JSON", "HTML y CSS", "XSD y XSLT"],
+      correct: 2,
+      explanation: "HTML define la estructura del contenido web y CSS define su presentación visual (colores, tipografía, diseño y disposición)."
+    },// =========================
     // IAW (Implantación de Aplicaciones Web)
     // =========================
     {
