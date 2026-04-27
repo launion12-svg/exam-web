@@ -11428,6 +11428,49 @@ const ExamSimulator = () => {
       options: ["XML-RPC", "VPN", "UML", "CI/CD (Integración y Despliegue Continuos)"],
       correct: 3,
       explanation: "CI/CD integra cambios de forma continua, automatiza pruebas/despliegues y mejora la calidad del flujo de entrega."
+    },
+    // =========================
+    // IAW (Implantación de Aplicaciones Web) - UT1
+    // =========================
+    {
+      id: 902,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué comando permite acceder a la consola de MySQL en Linux?",
+      options: ["mysql -login", "connect mysql", "sudo mysql", "service mysql status"],
+      correct: 2,
+      explanation: "En Linux, `sudo mysql` permite abrir la consola del servidor MySQL/MariaDB cuando se dispone de permisos adecuados."
+    },
+    {
+      id: 903,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Cuál es la principal diferencia entre Apache y Nginx?",
+      options: [
+        "Apache es gratuito y Nginx es de pago",
+        "Nginx solo funciona en Linux",
+        "Nginx usa un modelo asíncrono de procesamiento",
+        "Apache no permite configuración modular"
+      ],
+      correct: 2,
+      explanation: "Nginx destaca por su modelo orientado a eventos y procesamiento asíncrono, eficiente en alta concurrencia."
+    },
+    {
+      id: 904,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué tipo de cifrado garantiza la seguridad en HTTPS?",
+      options: [
+        "Cifrado por sustitución",
+        "Cifrado simétrico sin clave",
+        "Cifrado con certificados SSL/TLS",
+        "Ningún tipo de cifrado"
+      ],
+      correct: 2,
+      explanation: "HTTPS protege la comunicación mediante TLS (históricamente SSL) y certificados digitales."
+    },
+    {
+      id: 905,
     },// =========================
     // IAW (Implantación de Aplicaciones Web)
     // =========================
@@ -11451,6 +11494,61 @@ const ExamSimulator = () => {
       unit: "UT1",
       question: "¿Cuál es el objetivo principal de un entorno de desarrollo web?",
       options: [
+        "Probar, desarrollar y mantener aplicaciones antes de su despliegue final",
+        "Publicar sitios web automáticamente",
+        "Ejecutar código directamente en producción",
+        "Mostrar interfaces gráficas al usuario final"
+      ],
+      correct: 0,
+      explanation: "Un entorno de desarrollo permite crear y validar aplicaciones de forma segura antes de publicarlas en producción."
+    },
+    {
+      id: 906,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué archivo se utiliza para configurar parámetros de PHP?",
+      options: ["apache2.conf", ".htaccess", "config.php", "php.ini"],
+      correct: 3,
+      explanation: "`php.ini` es el archivo principal donde se ajustan directivas globales de configuración de PHP."
+    },
+    {
+      id: 907,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué extensión de archivo se asocia con scripts de PHP?",
+      options: [".html", ".db", ".py", ".php"],
+      correct: 3,
+      explanation: "Los scripts de PHP se guardan habitualmente con extensión `.php` para que el servidor los interprete."
+    },
+    {
+      id: 908,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Cuál es el comando correcto para instalar Apache en Ubuntu?",
+      options: ["sudo apt install apache2", "sudo install apache2", "apache2 install", "apt-get apache"],
+      correct: 0,
+      explanation: "En Ubuntu, Apache se instala desde repositorios con `sudo apt install apache2`."
+    },
+    {
+      id: 909,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué componente permite procesar código PHP en un servidor Apache?",
+      options: ["phpMyAdmin", "Node.js", "MySQL-server", "libapache2-mod-php"],
+      correct: 3,
+      explanation: "`libapache2-mod-php` integra PHP con Apache para ejecutar scripts del lado servidor."
+    },
+    {
+      id: 910,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué tecnología actúa del lado del servidor?",
+      options: ["JavaScript", "CSS", "PHP", "HTML"],
+      correct: 2,
+      explanation: "PHP se ejecuta en el servidor y genera la respuesta dinámica enviada al cliente."
+    },
+    {
+      id: 911,
         "Mostrar interfaces gráficas al usuario final",
         "Publicar sitios web automáticamente",
         "Ejecutar código directamente en producción",
@@ -11465,6 +11563,118 @@ const ExamSimulator = () => {
       unit: "UT1",
       question: "¿Por qué es importante documentar un entorno de desarrollo?",
       options: [
+        "Para poder compartirlo en redes sociales",
+        "Para garantizar la trazabilidad y facilitar mantenimiento",
+        "Porque lo exige la normativa fiscal",
+        "Para instalar software automáticamente"
+      ],
+      correct: 1,
+      explanation: "Documentar facilita reproducir el entorno, mantenerlo y transferir conocimiento dentro del equipo."
+    },
+    {
+      id: 912,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué significa localhost en un entorno de desarrollo?",
+      options: [
+        "Un proxy que enruta las conexiones externas",
+        "El equipo del usuario que ejecuta el servidor local",
+        "Un nombre de dominio reservado para producción",
+        "Un servidor remoto con acceso seguro"
+      ],
+      correct: 1,
+      explanation: "`localhost` se refiere al propio equipo local (normalmente 127.0.0.1 o ::1)."
+    },
+    {
+      id: 913,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Cuál de las siguientes opciones mejora la seguridad de una base de datos?",
+      options: [
+        "Permitir conexiones remotas anónimas",
+        "Dar permisos globales a todos los usuarios",
+        "Limitar los permisos según las necesidades",
+        "Usar el usuario root sin contraseña"
+      ],
+      correct: 2,
+      explanation: "Aplicar el principio de mínimo privilegio mejora la seguridad limitando accesos innecesarios."
+    },
+    {
+      id: 914,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué herramienta permite gestionar visualmente bases de datos en XAMPP?",
+      options: ["phpMyAdmin", "Composer", "VS Code", "Apache Control Panel"],
+      correct: 0,
+      explanation: "phpMyAdmin ofrece una interfaz web para administrar bases de datos MySQL/MariaDB."
+    },
+    {
+      id: 915,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué indica el código de estado HTTP 404?",
+      options: ["Solicitud correcta", "Recurso no encontrado", "Redirección permanente", "Error interno del servidor"],
+      correct: 1,
+      explanation: "El estado 404 indica que el recurso solicitado no ha sido encontrado en el servidor."
+    },
+    {
+      id: 916,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué protocolo se utiliza en las peticiones web entre cliente y servidor?",
+      options: ["FTP", "DNS", "HTTP", "SMTP"],
+      correct: 2,
+      explanation: "HTTP es el protocolo principal para intercambio de peticiones y respuestas web."
+    },
+    {
+      id: 917,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué herramienta NO forma parte de un paquete XAMPP?",
+      options: ["MariaDB", "PHP", "Python", "Apache"],
+      correct: 2,
+      explanation: "XAMPP incluye Apache, MariaDB y PHP, pero no Python como componente base del paquete."
+    },
+    {
+      id: 918,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Cuál es el propósito del archivo phpinfo.php?",
+      options: [
+        "Mostrar información sobre el entorno PHP",
+        "Crear una base de datos vacía",
+        "Servir como página de error 404",
+        "Generar scripts HTML automáticamente"
+      ],
+      correct: 0,
+      explanation: "Un script con `phpinfo()` muestra información de configuración y módulos disponibles de PHP."
+    },
+    {
+      id: 919,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Cuál de las siguientes herramientas se considera un editor de código?",
+      options: ["MySQL Workbench", "phpMyAdmin", "NetBeans", "Apache Server"],
+      correct: 2,
+      explanation: "NetBeans es un entorno de desarrollo (IDE) orientado a edición y programación."
+    },
+    {
+      id: 920,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué elemento permite establecer reglas de acceso en Apache?",
+      options: ["config.json", ".env", "server.conf", ".htaccess"],
+      correct: 3,
+      explanation: "El archivo `.htaccess` permite aplicar reglas de acceso y configuración por directorio en Apache."
+    },
+    {
+      id: 921,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué elemento forma parte del lado cliente en una aplicación web?",
+      options: ["JavaScript", "PHP", "Apache", "MySQL"],
+      correct: 0,
+      explanation: "JavaScript se ejecuta en el navegador (cliente), mientras PHP/Apache/MySQL operan en el servidor."
         "Porque lo exige la normativa fiscal",
         "Para instalar software automáticamente",
         "Para garantizar la trazabilidad y facilitar mantenimiento",
