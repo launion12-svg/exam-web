@@ -11470,11 +11470,6 @@ const ExamSimulator = () => {
       explanation: "HTTPS protege la comunicación mediante TLS (históricamente SSL) y certificados digitales."
     },
     {
-      id: 905,
-    },// =========================
-    // IAW (Implantación de Aplicaciones Web)
-    // =========================
-    {
       id: 662,
       subject: "IAW",
       unit: "UT1",
@@ -11552,7 +11547,7 @@ const ExamSimulator = () => {
       subject: "IAW",
       unit: "UT1",
       question: "Cuál es el objetivo principal de un entorno de desarrollo web",
-      options: [
+      options: [        
         "Mostrar interfaces gráficas al usuario final",
         "Publicar sitios web automáticamente",
         "Ejecutar código directamente en producción",
@@ -11922,6 +11917,13 @@ const ExamSimulator = () => {
       ],
       correct: 0,
       explanation: "Un backup incremental almacena solo cambios desde la última copia, reduciendo tiempo y espacio de respaldo."
+    }, // <--- AQUÍ TERMINA LA 941
+    {  // <--- AQUÍ EMPIEZA LA NUEVA (Dale un ID nuevo si quieres, por ejemplo 942)
+      id: 942, 
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Por qué es importante documentar una instalación web?",
+      options: [
         "Porque lo exige la normativa fiscal",
         "Para instalar software automáticamente",
         "Para garantizar la trazabilidad y facilitar mantenimiento",
