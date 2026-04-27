@@ -13683,6 +13683,922 @@ const ExamSimulator = () => {
       correct: 2,
       explanation: "Un script es idempotente si al ejecutarlo una segunda vez, detecta que el trabajo ya está hecho y no produce cambios duplicados o errores."
     },
+      {
+      id: 2061, // P1
+      subject: "ASO",
+      unit: "UT4",
+      question: "¿Qué patrón operativo evita almacenar secretos en repositorios?",
+      options: [
+        "Claves codificadas en base64",
+        "Uso exclusivo de SSH",
+        "Uso de Vault con inyección dinámica",
+        "Variables en texto plano"
+      ],
+      correct: 2,
+      explanation: "Sistemas como HashiCorp Vault permiten que las aplicaciones obtengan secretos en tiempo de ejecución, evitando que se guarden en Git o en el código."
+    },
+    {
+      id: 2062, // P2
+      subject: "ASO",
+      unit: "UT4",
+      question: "¿Qué debe incluir un runbook?",
+      options: [
+        "Pasos reproducibles y criterios de verificación",
+        "Cambios sin registro",
+        "Contraseñas en texto claro",
+        "Opiniones personales"
+      ],
+      correct: 0,
+      explanation: "Un runbook es una guía técnica que permite que una operación se realice de forma idéntica y segura cada vez, verificando cada paso."
+    },
+    {
+      id: 2063, // P3
+      subject: "ASO",
+      unit: "UT4",
+      question: "¿Qué herramienta permite registro detallado de I/O en sesiones?",
+      options: ["scp", "tlog", "dnf", "curl"],
+      correct: 1,
+      explanation: "tlog es una herramienta de auditoría que graba todo lo que ocurre en una sesión de terminal (lo que el usuario escribe y ve)."
+    },
+    {
+      id: 2064, // P4
+      subject: "ASO",
+      unit: "UT4",
+      question: "¿Qué define el principio de idempotencia?",
+      options: [
+        "No requiere repositorio Git",
+        "No requiere configuración previa",
+        "Cada ejecución puede producir efectos distintos",
+        "La ejecución repetida produce el mismo estado"
+      ],
+      correct: 3,
+      explanation: "Un proceso es idempotente si al ejecutarlo varias veces el resultado final es siempre el mismo, sin generar errores o cambios duplicados."
+    },
+    {
+      id: 2065, // P5
+      subject: "ASO",
+      unit: "UT4",
+      question: "¿Qué función cumple OCSP en criptografía operativa?",
+      options: [
+        "Crear VPNs",
+        "Generar claves privadas",
+        "Gestionar estados de revocación",
+        "Firmar playbooks"
+      ],
+      correct: 2,
+      explanation: "OCSP permite verificar en tiempo real si un certificado digital ha sido revocado por la autoridad certificadora antes de confiar en él."
+    },
+    {
+      id: 2066, // P6
+      subject: "ASO",
+      unit: "UT4",
+      question: "¿Qué se recomienda para VPNs seguras?",
+      options: [
+        "Uso de split-tunnel sin controles",
+        "Aceptar cualquier certificado",
+        "No registrar actividad",
+        "Forzar DNS interno y cifrados robustos"
+      ],
+      correct: 3,
+      explanation: "Garantizar el uso de DNS corporativo y algoritmos de cifrado fuertes asegura que la comunicación remota sea privada y segura."
+    },
+    {
+      id: 2067, // P7
+      subject: "ASO",
+      unit: "UT4",
+      question: "¿Qué función tiene HSM/KMS?",
+      options: [
+        "Reemplazar SIEM",
+        "Gestionar roles en AWX",
+        "Almacenar claves de forma segura",
+        "Transmitir video en sesiones remotas"
+      ],
+      correct: 2,
+      explanation: "Los módulos de seguridad de hardware (HSM) y servicios de gestión de claves (KMS) protegen el ciclo de vida de las claves criptográficas."
+    },
+    {
+      id: 2068, // P8
+      subject: "ASO",
+      unit: "UT4",
+      question: "¿Qué elemento es fundamental en una arquitectura de bastion host?",
+      options: [
+        "Acceso root por contraseña",
+        "Deshabilitar MFA",
+        "Session recording obligatorio",
+        "Permitir túneles sin control"
+      ],
+      correct: 2,
+      explanation: "Grabar las sesiones en el bastión es vital para auditar qué cambios realizaron los administradores en la infraestructura interna."
+    },
+    {
+      id: 2069, // P9
+      subject: "ASO",
+      unit: "UT4",
+      question: "¿Qué herramienta proporciona reporting de compliance en Puppet?",
+      options: ["Git", "PuppetDB", "SSH", "Nmap"],
+      correct: 1,
+      explanation: "PuppetDB recopila y almacena los datos generados por los agentes, permitiendo consultar el cumplimiento de las políticas en toda la flota."
+    },
+    {
+      id: 2070, // P10
+      subject: "ASO",
+      unit: "UT4",
+      question: "¿Qué componente garantiza la integridad de logs de sesiones?",
+      options: ["WinRM", "Cron jobs", "X11Forwarding", "Hashing y firma de artefactos"],
+      correct: 3,
+      explanation: "Mediante firmas digitales y hashes se asegura que los archivos de log no han sido alterados después de su creación."
+    },
+    {
+      id: 2071, // P11
+      subject: "ASO",
+      unit: "UT4",
+      question: "¿Qué elemento es clave en un despliegue canary?",
+      options: [
+        "Promover sin verificación",
+        "Monitorización de métricas antes de avanzar",
+        "Deshabilitar health checks",
+        "Exponer toda la flota a la vez"
+      ],
+      correct: 1,
+      explanation: "Se despliega la actualización en un pequeño grupo de servidores y se monitorizan errores antes de lanzarla al resto de la infraestructura."
+    },
+    {
+      id: 2072, // P12
+      subject: "ASO",
+      unit: "UT4",
+      question: "¿Qué métrica ayuda a detectar drift en CM?",
+      options: [
+        "Tiempo de arranque del servidor",
+        "Número de usuarios conectados",
+        "Tasa de cambios inesperados por run",
+        "Uso de CPU"
+      ],
+      correct: 2,
+      explanation: "El 'drift' es la desviación de la configuración real respecto al código; se detecta cuando Ansible/Puppet tienen que hacer muchos cambios manuales."
+    },
+    {
+      id: 2073, // P13
+      subject: "ASO",
+      unit: "UT4",
+      question: "¿Qué riesgo existe en WireGuard si AllowedIPs está mal configurado?",
+      options: [
+        "No se podrá levantar la interfaz",
+        "Un peer puede reclamar rutas indebidas",
+        "Se pierde la clave privada",
+        "No funciona el DNS"
+      ],
+      correct: 1,
+      explanation: "Si permites IPs incorrectas en un peer, este podría interceptar tráfico destinado a otros servidores o suplantar identidades."
+    },
+    {
+      id: 2074, // P14
+      subject: "ASO",
+      unit: "UT4",
+      question: "¿Cuál es una medida de hardening típica en SSH?",
+      options: [
+        "Habilitar PasswordAuthentication",
+        "Usar algoritmos modernos como chacha20-poly1305",
+        "Permitir AllowTcpForwarding siempre",
+        "Usar RSA 1024"
+      ],
+      correct: 1,
+      explanation: "Utilizar algoritmos modernos y autenticados (AEAD) protege el túnel SSH contra ataques criptográficos avanzados."
+    },
+    {
+      id: 2075, // P15
+      subject: "ASO",
+      unit: "UT4",
+      question: "¿Qué ventaja ofrece Puppet respecto a Ansible?",
+      options: [
+        "Pull automático y reporting continuo",
+        "Menor necesidad de agente",
+        "Orquestación ad-hoc más simple",
+        "No requiere certificado"
+      ],
+      correct: 0,
+      explanation: "Puppet utiliza agentes que revisan y mantienen la configuración de forma autónoma y constante, generando informes de estado."
+    },
+    {
+      id: 2076, // P16
+      subject: "ASO",
+      unit: "UT4",
+      question: "¿Qué característica distingue a los servicios orientados a sesión?",
+      options: [
+        "No permiten registro de actividades",
+        "Son completamente idempotentes",
+        "No requieren autenticación",
+        "Permitir interacción directa y continua"
+      ],
+      correct: 3,
+      explanation: "Servicios como SSH o RDP mantienen una conexión abierta para un flujo bidireccional entre administrador y sistema."
+    },
+    {
+      id: 2077, // P17
+      subject: "ASO",
+      unit: "UT4",
+      question: "¿Cuál es un ejemplo de mala práctica en bastion hosts?",
+      options: [
+        "Session recording activo",
+        "Integración con SIEM",
+        "Permitir acceso directo root",
+        "TrustedUserCAKeys configurado"
+      ],
+      correct: 2,
+      explanation: "El acceso root debe estar deshabilitado; el administrador debe entrar con su cuenta personal y escalar privilegios con sudo."
+    },
+    {
+      id: 2078, // P18
+      subject: "ASO",
+      unit: "UT4",
+      question: "¿Qué ventaja principal ofrece un modelo agentless como Ansible?",
+      options: [
+        "Reporting nativo avanzado",
+        "No requiere agentes instalados",
+        "Remediación continua sin programación",
+        "Mayor resiliencia en redes inestables"
+      ],
+      correct: 1,
+      explanation: "Ansible solo necesita SSH y Python, lo que facilita el despliegue rápido sin gestionar software adicional en los clientes."
+    },
+    {
+      id: 2079, // P19
+      subject: "ASO",
+      unit: "UT4",
+      question: "¿Cuál es un riesgo de sesiones orientadas a interacción?",
+      options: [
+        "Siempre cifran el tráfico",
+        "Son siempre idempotentes",
+        "Pueden introducir cambios no reproducibles",
+        "No requieren auditoría"
+      ],
+      correct: 2,
+      explanation: "Los cambios manuales hechos en una sesión que no se reflejan en el código de automatización crean 'servidores copo de nieve' imposibles de clonar."
+    },
+    {
+      id: 2080, // P20
+      subject: "ASO",
+      unit: "UT4",
+      question: "¿Qué práctica reduce la exposición de credenciales privilegiadas?",
+      options: [
+        "Sesiones sin MFA",
+        "Claves compartidas entre equipos",
+        "Permisos permanentes",
+        "JIT con certificados de corta duración"
+      ],
+      correct: 3,
+      explanation: "La administración Just-In-Time (JIT) otorga privilegios solo durante el tiempo necesario para realizar la tarea, minimizando riesgos."
+    },
+      {
+      id: 2081, // P1
+      subject: "ASO",
+      unit: "UT5",
+      question: "¿Cuál es la función principal de un servicio de directorio?",
+      options: [
+        "Actuar como repositorio centralizado de identidades y políticas",
+        "Administrar únicamente contraseñas",
+        "Sustituir al DNS en redes empresariales",
+        "Gestionar logs del sistema"
+      ],
+      correct: 0,
+      explanation: "Un servicio de directorio (como LDAP o AD) centraliza la gestión de usuarios, grupos y recursos, permitiendo una administración eficiente de permisos y políticas en toda la red."
+    },
+    {
+      id: 2082, // P2
+      subject: "ASO",
+      unit: "UT5",
+      question: "¿Qué comando permite realizar búsquedas en OpenLDAP?",
+      options: ["slapindex", "ldapdelete", "ldapsearch", "ldapmodify"],
+      correct: 2,
+      explanation: "ldapsearch es la utilidad principal para consultar entradas en el árbol de directorio aplicando filtros y especificando la base de búsqueda."
+    },
+    {
+      id: 2083, // P3
+      subject: "ASO",
+      unit: "UT5",
+      question: "¿Qué comando permite comprobar la identidad con la que se ejecuta un bind LDAP?",
+      options: ["ldapsearch", "ldapwhoami", "ldapmodify", "slapcat"],
+      correct: 1,
+      explanation: "ldapwhoami se utiliza para verificar qué identidad (DN) está reconociendo el servidor tras realizar el proceso de autenticación o bind."
+    },
+    {
+      id: 2084, // P4
+      subject: "ASO",
+      unit: "UT5",
+      question: "¿Qué herramienta usa macOS para integrarse con Active Directory?",
+      options: ["sssd", "dsconfigad", "nsswitch", "samba-tool"],
+      correct: 1,
+      explanation: "dsconfigad es la utilidad de línea de comandos en macOS específica para configurar y gestionar la vinculación del equipo con un dominio de Active Directory."
+    },
+    {
+      id: 2085, // P5
+      subject: "ASO",
+      unit: "UT5",
+      question: "¿Qué comando PowerShell permite unir un equipo Windows a un dominio AD?",
+      options: ["Connect-AD", "Join-ADGroup", "Add-Computer", "Register-Domain"],
+      correct: 2,
+      explanation: "Add-Computer es el cmdlet de PowerShell diseñado para unir el equipo local a un dominio o grupo de trabajo, requiriendo un reinicio posterior."
+    },
+    {
+      id: 2086, // P6
+      subject: "ASO",
+      unit: "UT5",
+      question: "¿Qué mecanismo permite registrar cambios realizados en OpenLDAP?",
+      options: ["sssd cache", "slappasswd", "overlay auditlog", "ppolicy"],
+      correct: 2,
+      explanation: "El overlay auditlog permite generar un registro de auditoría en formato LDIF con todas las modificaciones realizadas sobre la base de datos del directorio."
+    },
+    {
+      id: 2087, // P7
+      subject: "ASO",
+      unit: "UT5",
+      question: "¿Qué herramienta permite exportar toda la base de datos LDAP a un archivo LDIF?",
+      options: ["ldapsearch", "slappasswd", "ldapwhoami", "slapcat"],
+      correct: 3,
+      explanation: "slapcat es una utilidad que lee directamente los archivos de la base de datos (en frío) y genera una exportación completa en formato de texto LDIF."
+    },
+    {
+      id: 2088, // P8
+      subject: "ASO",
+      unit: "UT5",
+      question: "¿Qué parámetro debe configurarse para asegurar comunicación cifrada en OpenLDAP?",
+      options: ["olcAuditlogSuccess", "olcOverlay", "olcTLSCertificateFile", "olcDbIndex"],
+      correct: 2,
+      explanation: "olcTLSCertificateFile define la ruta al certificado del servidor necesario para establecer conexiones seguras mediante TLS/SSL."
+    },
+    {
+      id: 2089, // P9
+      subject: "ASO",
+      unit: "UT5",
+      question: "¿Qué elemento se recomienda documentar siempre en una implantación de directorio?",
+      options: [
+        "Dirección MAC de los equipos clientes",
+        "Logs de red",
+        "Estructura del árbol LDAP",
+        "Archivo swap"
+      ],
+      correct: 2,
+      explanation: "Documentar el DIT (Directory Information Tree) es crítico para entender la jerarquía de Unidades Organizativas, grupos y usuarios de la organización."
+    },
+    {
+      id: 2090, // P10
+      subject: "ASO",
+      unit: "UT5",
+      question: "¿Qué protocolo permite implementar Single Sign-On (SSO) integrado con el directorio?",
+      options: ["FTP", "DNSSEC", "SSH", "Kerberos"],
+      correct: 3,
+      explanation: "Kerberos es el protocolo de autenticación por excelencia en servicios de directorio que permite el inicio de sesión único mediante el uso de tickets."
+    },
+    {
+      id: 2091, // P11
+      subject: "ASO",
+      unit: "UT5",
+      question: "¿Qué componente define qué atributos y objectClasses pueden existir en el directorio?",
+      options: ["Esquema", "ACLs", "LDIF", "Bind DN"],
+      correct: 0,
+      explanation: "El esquema (schema) es el conjunto de reglas que determina la estructura de los datos, definiendo qué atributos son obligatorios o permitidos para cada objeto."
+    },
+    {
+      id: 2092, // P12
+      subject: "ASO",
+      unit: "UT5",
+      question: "¿Qué práctica es esencial para garantizar continuidad operativa?",
+      options: [
+        "Permitir cualquier cambio sin control de versiones",
+        "No realizar backups",
+        "Documentar estructura, esquema y procedimientos",
+        "Crear usuarios manualmente siempre"
+      ],
+      correct: 2,
+      explanation: "La documentación técnica detallada permite que otros administradores puedan mantener el sistema y facilita la recuperación ante desastres."
+    },
+    {
+      id: 2093, // P13
+      subject: "ASO",
+      unit: "UT5",
+      question: "¿Qué tipo de grupo en LDAP suele incluir memberUid?",
+      options: ["posixGroup", "groupOfNames", "inetOrgPerson", "shadowAccount"],
+      correct: 0,
+      explanation: "La objectClass posixGroup se utiliza para la compatibilidad con sistemas Unix/Linux y utiliza el atributo memberUid para listar los nombres de usuario."
+    },
+    {
+      id: 2094, // P14
+      subject: "ASO",
+      unit: "UT5",
+      question: "¿Cuál es una buena práctica al configurar cuentas de servicio (Bind DN)?",
+      options: [
+        "Permitir acceso anónimo",
+        "Utilizar permisos mínimos necesarios",
+        "Dar permisos de administrador total",
+        "Evitar el uso de TLS"
+      ],
+      correct: 1,
+      explanation: "Siguiendo el principio de mínimo privilegio, las cuentas de servicio solo deben tener permiso de lectura sobre las ramas necesarias para su función."
+    },
+    {
+      id: 2095, // P15
+      subject: "ASO",
+      unit: "UT5",
+      question: "¿Qué opción en SSSD fuerza el uso de certificados TLS?",
+      options: ["cache_credentials", "ldap_tls_reqcert", "enumerate", "id_provider"],
+      correct: 1,
+      explanation: "ldap_tls_reqcert define el nivel de exigencia de SSSD respecto al certificado del servidor LDAP para validar la conexión segura."
+    },
+    {
+      id: 2096, // P16
+      subject: "ASO",
+      unit: "UT5",
+      question: "¿Qué comando permite restaurar datos desde un archivo LDIF?",
+      options: ["sssdctl", "ldapdelete", "ldapmodify", "slapadd"],
+      correct: 3,
+      explanation: "slapadd es la herramienta de bajo nivel que permite insertar entradas masivamente en la base de datos de OpenLDAP desde un archivo LDIF."
+    },
+    {
+      id: 2097, // P17
+      subject: "ASO",
+      unit: "UT5",
+      question: "¿Qué comando permite generar contraseñas cifradas para LDAP?",
+      options: ["slappasswd", "slapindex", "ldapadd", "ldapsearch"],
+      correct: 0,
+      explanation: "slappasswd genera un hash (como SSHA) de una contraseña para que pueda ser almacenada de forma segura en el atributo userPassword."
+    },
+    {
+      id: 2098, // P18
+      subject: "ASO",
+      unit: "UT5",
+      question: "¿Qué archivo contiene entradas LDIF para crear usuarios en OpenLDAP?",
+      options: ["tls.ldif", "audit.log", "/etc/sssd/sssd.conf", "add-user.ldif"],
+      correct: 3,
+      explanation: "Los archivos .ldif se utilizan para describir cambios o nuevas entradas en el directorio; add-user.ldif es un nombre descriptivo para la creación de usuarios."
+    },
+    {
+      id: 2099, // P19
+      subject: "ASO",
+      unit: "UT5",
+      question: "¿Qué identifica de forma única a cada entrada en un servicio LDAP?",
+      options: ["CN=config", "ObjectClass", "Distinguished Name (DN)", "UID Number"],
+      correct: 2,
+      explanation: "El DN es la 'ruta completa' de una entrada en el árbol (ej: uid=user,ou=users,dc=empresa,dc=com) y es único para cada objeto."
+    },
+    {
+      id: 2100, // P20
+      subject: "ASO",
+      unit: "UT5",
+      question: "¿Qué filtro LDAP buscaría todos los usuarios activos con objectClass posixAccount?",
+      options: [
+        "(cn=*)",
+        "(uidNumber>=1000)",
+        "(&(objectClass=posixAccount)(accountStatus=active))",
+        "(objectClass=groupOfNames)"
+      ],
+      correct: 2,
+      explanation: "Los filtros LDAP usan notación polaca inversa; el operador '&' indica que deben cumplirse ambas condiciones simultáneamente."
+    },
+      Aquí tienes el código para la UT6: Servidores de impresión e integración con la red de la asignatura ASO. Con este bloque completamos las 120 preguntas (20 por unidad) de la asignatura.
+
+He configurado los IDs del 2101 al 2120 para mantener la correlación con los bloques anteriores.
+
+JavaScript
+    // ========================================================
+    // ASO (Administración de Sistemas Operativos) - UT6
+    // ========================================================
+    {
+      id: 2101, // P1
+      subject: "ASO",
+      unit: "UT6",
+      question: "¿Cuál es la función principal de un servidor de impresión en entornos corporativos?",
+      options: [
+        "Sustituir al servidor DNS",
+        "Centralizar la gestión de impresoras y trabajos de impresión",
+        "Eliminar la necesidad de autenticación",
+        "Aumentar la velocidad de red"
+      ],
+      correct: 1,
+      explanation: "Un servidor de impresión permite gestionar desde un único punto las colas, los controladores, los permisos de acceso y la contabilidad de los trabajos de impresión."
+    },
+    {
+      id: 2102, // P2
+      subject: "ASO",
+      unit: "UT6",
+      question: "¿Qué comando en Linux permite listar impresoras configuradas en CUPS?",
+      options: ["cancel -a", "lsusb", "lpadmin", "lpstat -p"],
+      correct: 3,
+      explanation: "El comando lpstat con el modificador -p muestra el estado de las impresoras y si están aceptando trabajos en ese momento."
+    },
+    {
+      id: 2103, // P3
+      subject: "ASO",
+      unit: "UT6",
+      question: "¿Qué protocolo utiliza Windows para compartir impresoras en red?",
+      options: ["SMB/CIFS", "ICMP", "FTP", "SSH"],
+      correct: 0,
+      explanation: "Windows utiliza el protocolo SMB (Server Message Block) para compartir tanto archivos como impresoras en una red local."
+    },
+    {
+      id: 2104, // P4
+      subject: "ASO",
+      unit: "UT6",
+      question: "¿Qué se recomienda documentar en un servidor de impresión?",
+      options: [
+        "La marca de la impresora únicamente",
+        "Solo la IP del servidor",
+        "Contraseñas en texto claro",
+        "Arquitectura, permisos, colas, políticas y backups"
+      ],
+      correct: 3,
+      explanation: "Una documentación técnica completa es vital para el mantenimiento, permitiendo conocer cómo se distribuyen los recursos y cómo recuperar el servicio ante fallos."
+    },
+    {
+      id: 2105, // P5
+      subject: "ASO",
+      unit: "UT6",
+      question: "¿Cuál es el puerto asociado al protocolo JetDirect (RAW)?",
+      options: ["631", "515", "9100", "8443"],
+      correct: 2,
+      explanation: "El puerto 9100 es el estándar para el protocolo RAW/JetDirect, que envía los datos de impresión directamente a la controladora de la impresora sin colas intermedias en el dispositivo."
+    },
+    {
+      id: 2106, // P6
+      subject: "ASO",
+      unit: "UT6",
+      question: "¿En qué puerto trabaja tradicionalmente LPD?",
+      options: ["515", "9100", "445", "631"],
+      correct: 0,
+      explanation: "LPD (Line Printer Daemon) es un protocolo clásico de impresión en red que utiliza el puerto TCP 515."
+    },
+    {
+      id: 2107, // P7
+      subject: "ASO",
+      unit: "UT6",
+      question: "¿Qué sistema operativo utiliza CUPS como base de impresión?",
+      options: ["macOS y Linux", "Android", "FreeBSD únicamente", "Windows"],
+      correct: 0,
+      explanation: "CUPS (Common Unix Printing System) es el estándar de impresión para sistemas basados en Unix, incluyendo casi todas las distribuciones Linux y macOS."
+    },
+    {
+      id: 2108, // P8
+      subject: "ASO",
+      unit: "UT6",
+      question: "¿Qué servicio debe reiniciarse en Windows cuando existen errores en las colas de impresión?",
+      options: ["dhcp", "spooler", "firewall", "dns"],
+      correct: 1,
+      explanation: "El servicio 'Print Spooler' gestiona el almacenamiento temporal de los trabajos; reiniciarlo suele limpiar colas bloqueadas o corruptas."
+    },
+    {
+      id: 2109, // P9
+      subject: "ASO",
+      unit: "UT6",
+      question: "¿Dónde se configuran los permisos de impresión en CUPS?",
+      options: [
+        "/var/log/cups/error.log",
+        "/etc/shadow",
+        "/etc/cups/cupsd.conf",
+        "/usr/share/cups/drivers"
+      ],
+      correct: 2,
+      explanation: "El archivo cupsd.conf contiene las directivas de configuración del demonio de CUPS, incluyendo las restricciones de acceso por IP o usuario."
+    },
+    {
+      id: 2110, // P10
+      subject: "ASO",
+      unit: "UT6",
+      question: "¿Qué protocolo permite impresión desde dispositivos móviles Apple sin drivers?",
+      options: ["AirPrint", "JetDirect", "SMBv1", "IPsecPrint"],
+      correct: 0,
+      explanation: "AirPrint es una tecnología de Apple que permite imprimir de forma inalámbrica a impresoras compatibles sin necesidad de instalar controladores específicos."
+    },
+    {
+      id: 2111, // P11
+      subject: "ASO",
+      unit: "UT6",
+      question: "¿Qué archivo configura la conexión LDAP para CUPS?",
+      options: [
+        "/etc/cups/printers.conf",
+        "/etc/cups/users.conf",
+        "/var/lib/ldap/config",
+        "/etc/cups/ldap.conf"
+      ],
+      correct: 3,
+      explanation: "En entornos integrados con directorios activos, ldap.conf dentro de CUPS define cómo buscar los usuarios y grupos para validar los permisos de impresión."
+    },
+    {
+      id: 2112, // P12
+      subject: "ASO",
+      unit: "UT6",
+      question: "¿Qué comando permite unir un servidor Linux a un dominio Active Directory?",
+      options: ["join-ad", "realmd join", "ldap-add", "cups-ad-connect"],
+      correct: 1,
+      explanation: "realmd es la herramienta moderna y simplificada en Linux para unir el sistema a un dominio AD o FreeIPA de forma automática."
+    },
+    {
+      id: 2113, // P13
+      subject: "ASO",
+      unit: "UT6",
+      question: "¿Qué arquitectura utilizan los sistemas de impresión en red?",
+      options: ["Broadcast masivo", "Cliente-servidor", "Anillo token", "Peer-to-peer"],
+      correct: 1,
+      explanation: "Los clientes envían sus trabajos a un servidor central que los encola y los distribuye a las impresoras físicas correspondientes."
+    },
+    {
+      id: 2114, // P14
+      subject: "ASO",
+      unit: "UT6",
+      question: "¿Qué comando de PowerShell instala el rol de servidor de impresión en Windows Server?",
+      options: [
+        "Enable-PrintServer",
+        "Add-Printer",
+        "New-PrinterRole",
+        "Install-WindowsFeature Print-Services -IncludeManagementTools"
+      ],
+      correct: 3,
+      explanation: "Install-WindowsFeature es el comando para gestionar roles y características; 'Print-Services' activa las capacidades de servidor de impresión."
+    },
+    {
+      id: 2115, // P15
+      subject: "ASO",
+      unit: "UT6",
+      question: "¿Qué protocolo moderno de impresión utiliza HTTP/HTTPS y soporta cifrado TLS?",
+      options: ["SMB/CIFS", "JetDirect", "LPD", "IPP"],
+      correct: 3,
+      explanation: "IPP (Internet Printing Protocol) utiliza la infraestructura web para permitir la impresión local y remota de forma segura y estandarizada."
+    },
+    {
+      id: 2116, // P16
+      subject: "ASO",
+      unit: "UT6",
+      question: "¿Qué comando en macOS permite unir el sistema a un dominio AD?",
+      options: ["ad-connect", "dsconfigad", "adjoin", "mac-join"],
+      correct: 1,
+      explanation: "dsconfigad es la herramienta específica de Apple para configurar el acceso al directorio activo desde el terminal."
+    },
+    {
+      id: 2117, // P17
+      subject: "ASO",
+      unit: "UT6",
+      question: "¿Qué herramienta permite integrar permisos de Active Directory en servidores Windows?",
+      options: ["Add-PrinterPermission", "enable-ad", "lpadmin", "Set-ADGroup"],
+      correct: 0,
+      explanation: "Add-PrinterPermission permite asignar permisos específicos de impresión (Imprimir, Administrar documentos) a usuarios y grupos del dominio."
+    },
+    {
+      id: 2118, // P18
+      subject: "ASO",
+      unit: "UT6",
+      question: "¿Qué comando permite cancelar un trabajo específico en Linux?",
+      options: ["cancel <job-id>", "stopjob", "print-del", "rm -rf /print"],
+      correct: 0,
+      explanation: "El comando cancel, seguido del ID que proporciona el servidor de impresión, detiene la ejecución de ese trabajo concreto."
+    },
+    {
+      id: 2119, // P19
+      subject: "ASO",
+      unit: "UT6",
+      question: "¿Qué servicio de Linux debe reiniciarse tras cambios en autenticación LDAP/AD?",
+      options: ["sshd", "dhclient", "ntp", "sssd"],
+      correct: 3,
+      explanation: "SSSD (System Security Services Daemon) gestiona la caché y la conexión con el servidor de identidades; debe reiniciarse para aplicar cambios en la integración."
+    },
+    {
+      id: 2120, // P20
+      subject: "ASO",
+      unit: "UT6",
+      question: "¿Qué permite una impresora lógica?",
+      options: [
+        "Sustituir automáticamente drivers",
+        "Convertir una impresora USB en red",
+        "Agrupar impresoras físicas bajo una misma cola lógica",
+        "Deshabilitar permisos"
+      ],
+      correct: 2,
+      explanation: "Una impresora lógica es la cola que ve el usuario; puede apuntar a un grupo de impresoras físicas (pooling) para repartir la carga."
+    },
+        ¡Vamos con la UT7: Guiones de administración y automatización de servicios! Esta es la unidad donde todo cobra sentido, uniendo Bash, PowerShell y otros lenguajes para que el sistema trabaje por ti.
+
+He configurado los IDs del 2121 al 2140. Al añadir este bloque, tu simulador de ASO alcanzará las 140 preguntas.
+
+JavaScript
+    // ========================================================
+    // ASO (Administración de Sistemas Operativos) - UT7
+    // ========================================================
+    {
+      id: 2121, // P1
+      subject: "ASO",
+      unit: "UT7",
+      question: "¿Cuál el objetivo principal del uso de lenguajes de scripting en la administración de sistemas?",
+      options: [
+        "Sustituir por completo al sistema operativo",
+        "Automatizar tareas repetitivas y reducir errores humanos",
+        "Incrementar el consumo de recursos",
+        "Mejorar la interfaz gráfica del sistema"
+      ],
+      correct: 1,
+      explanation: "El scripting permite ejecutar secuencias de comandos complejas de forma automática, garantizando que las tareas de mantenimiento sean rápidas y precisas."
+    },
+    {
+      id: 2122, // P2
+      subject: "ASO",
+      unit: "UT7",
+      question: "¿Qué característica destaca principalmente en Bash?",
+      options: [
+        "Uso exclusivo en Windows",
+        "Dependencia de .NET",
+        "Integración con utilidades Unix",
+        "Orientación a objetos"
+      ],
+      correct: 2,
+      explanation: "Bash (Bourne Again SHell) brilla por su capacidad para encadenar pequeñas herramientas potentes de Unix (como grep, awk y sed) mediante tuberías."
+    },
+    {
+      id: 2123, // P3
+      subject: "ASO",
+      unit: "UT7",
+      question: "¿Qué paradigma distingue principalmente a PowerShell de Bash?",
+      options: [
+        "Procesamiento de texto",
+        "Ejecución secuencial",
+        "Programación funcional",
+        "Orientación a objetos"
+      ],
+      correct: 3,
+      explanation: "A diferencia de Bash, que pasa texto entre comandos, PowerShell pasa objetos .NET, lo que permite acceder a propiedades sin necesidad de filtrar texto manualmente."
+    },
+    {
+      id: 2124, // P4
+      subject: "ASO",
+      unit: "UT7",
+      question: "¿Qué herramienta se utiliza en Bash para buscar texto en archivos?",
+      options: ["awk", "cut", "grep", "sed"],
+      correct: 2,
+      explanation: "grep (Global Regular Expression Print) es la utilidad estándar en sistemas Unix/Linux para buscar patrones de texto dentro de archivos o salidas de comandos."
+    },
+    {
+      id: 2125, // P5
+      subject: "ASO",
+      unit: "UT7",
+      question: "¿Qué elemento permite encapsular tareas reutilizables dentro de un script?",
+      options: ["Funciones", "Variables", "Comentarios", "Arrays"],
+      correct: 0,
+      explanation: "Las funciones permiten agrupar bloques de código bajo un nombre, evitando la duplicación y facilitando la mantenibilidad del script."
+    },
+    {
+      id: 2126, // P6
+      subject: "ASO",
+      unit: "UT7",
+      question: "¿Cuál de las siguientes es una estructura condicional válida en Bash?",
+      options: ["switch", "select-if", "case", "choose"],
+      correct: 2,
+      explanation: "La estructura 'case' en Bash permite comparar una variable con múltiples patrones de forma más limpia que usar muchos 'if-else'."
+    },
+    {
+      id: 2127, // P7
+      subject: "ASO",
+      unit: "UT7",
+      question: "¿Qué estructura permite repetir acciones mientras se cumpla una condición en Bash?",
+      options: ["if", "while", "for", "case"],
+      correct: 1,
+      explanation: "El bucle 'while' ejecuta el código de su interior de forma repetida mientras la condición evaluada sea verdadera."
+    },
+    {
+      id: 2128, // P8
+      subject: "ASO",
+      unit: "UT7",
+      question: "¿Qué estructura se utiliza en PowerShell para el manejo de errores?",
+      options: ["switch", "if / else", "try / catch / finally", "for"],
+      correct: 2,
+      explanation: "PowerShell adopta el modelo de excepciones de .NET, utilizando bloques try/catch para capturar errores y 'finally' para ejecutar código de limpieza."
+    },
+    {
+      id: 2129, // P9
+      subject: "ASO",
+      unit: "UT7",
+      question: "PowerShell se basa técnicamente en:",
+      options: [".NET", "Python", "Java", "GNU"],
+      correct: 0,
+      explanation: "PowerShell está construido sobre el framework .NET, lo que le da acceso a todas las librerías del sistema y la capacidad de manejar objetos complejos."
+    },
+    {
+      id: 2130, // P10
+      subject: "ASO",
+      unit: "UT7",
+      question: "¿Qué herramienta analiza scripts Bash y detecta errores y malas prácticas?",
+      options: ["grep", "ShellCheck", "cron", "awk"],
+      correct: 1,
+      explanation: "ShellCheck es una herramienta de análisis estático fundamental para evitar errores comunes de sintaxis y seguridad en guiones de Bash."
+    },
+    {
+      id: 2131, // P11
+      subject: "ASO",
+      unit: "UT7",
+      question: "¿Qué lenguaje se destaca en la UT por su uso en automatización avanzada y APIs?",
+      options: ["Ruby", "Python", "Perl", "Groovy"],
+      correct: 1,
+      explanation: "Python es ampliamente utilizado en administración avanzada debido a su legibilidad y la enorme cantidad de módulos para interactuar con APIs y servicios cloud."
+    },
+    {
+      id: 2132, // P12
+      subject: "ASO",
+      unit: "UT7",
+      question: "¿Qué lenguaje se utiliza habitualmente en Jenkins para automatización CI/CD?",
+      options: ["Groovy", "Ruby", "Bash", "Perl"],
+      correct: 0,
+      explanation: "Groovy es el lenguaje utilizado para escribir Jenkinsfiles, permitiendo definir pipelines complejos como código."
+    },
+    {
+      id: 2133, // P13
+      subject: "ASO",
+      unit: "UT7",
+      question: "El diseño de scripts modulares mejora principalmente:",
+      options: [
+        "El consumo de memoria",
+        "La compatibilidad hardware",
+        "La mantenibilidad y reutilización del código",
+        "El rendimiento gráfico"
+      ],
+      correct: 2,
+      explanation: "Dividir un script en módulos o funciones pequeñas permite reutilizar piezas en otros proyectos y facilita encontrar errores."
+    },
+    {
+      id: 2134, // P14
+      subject: "ASO",
+      unit: "UT7",
+      question: "¿Qué cmdlet permite listar los servicios en PowerShell?",
+      options: ["Get-Service", "Get-Process", "Register-ScheduledTask", "Get-LocalUser"],
+      correct: 0,
+      explanation: "Get-Service devuelve objetos que representan los servicios instalados, permitiendo filtrar por estado o nombre de forma nativa."
+    },
+    {
+      id: 2135, // P15
+      subject: "ASO",
+      unit: "UT7",
+      question: "¿Qué opción permite depurar un script Bash mostrando cada comando ejecutado?",
+      options: ["bash -x", "set -e", "trap", "shellcheck"],
+      correct: 0,
+      explanation: "El modo de ejecución 'bash -x' (o set -x) imprime cada comando antes de ejecutarlo, mostrando el valor real de las variables."
+    },
+    {
+      id: 2136, // P16
+      subject: "ASO",
+      unit: "UT7",
+      question: "¿Qué utilidad permite programar tareas periódicas en sistemas Linux?",
+      options: ["systemctl", "df", "ps", "cron"],
+      correct: 3,
+      explanation: "cron es el demonio del sistema que ejecuta comandos o scripts automáticamente en tiempos, fechas o intervalos específicos."
+    },
+    {
+      id: 2137, // P17
+      subject: "ASO",
+      unit: "UT7",
+      question: "¿Qué característica debe cumplir un proyecto integrador de scripting según la UT?",
+      options: [
+        "Ser monolítico",
+        "Usar un único sistema operativo",
+        "Ser modular y escalable",
+        "No incluir documentación"
+      ],
+      correct: 2,
+      explanation: "Un buen proyecto de automatización debe ser capaz de crecer (escalable) y estar dividido en partes lógicas (modular) para facilitar su gestión."
+    },
+    {
+      id: 2138, // P18
+      subject: "ASO",
+      unit: "UT7",
+      question: "En entornos heterogéneos, el dominio de varios lenguajes de scripting es importante porque:",
+      options: [
+        "Permite usar un único sistema operativo",
+        "Elimina la necesidad de documentación",
+        "Reduce el número de servidores necesarios",
+        "Garantiza coherencia y eficiencia entre diferentes sistemas operativos"
+      ],
+      correct: 3,
+      explanation: "Conocer Bash y PowerShell permite al administrador automatizar flotas mixtas de servidores Windows y Linux manteniendo la misma lógica operativa."
+    },
+    {
+      id: 2139, // P19
+      subject: "ASO",
+      unit: "UT7",
+      question: "¿Qué criterio NO se menciona en la UT para elegir un lenguaje de scripting?",
+      options: [
+        "Preferencias personales del administrador",
+        "Complejidad de la tarea",
+        "Sistema operativo",
+        "Infraestructura existente"
+      ],
+      correct: 0,
+      explanation: "La elección debe basarse en requisitos técnicos y de entorno, no en gustos personales, para asegurar que el equipo pueda mantener el código a largo plazo."
+    },
+    {
+      id: 2140, // P20
+      subject: "ASO",
+      unit: "UT7",
+      question: "En el script Bash de ejemplo, ¿qué valor se compara con el umbral definido?",
+      options: [
+        "Tamaño total del disco",
+        "Número de procesos",
+        "Espacio libre",
+        "Porcentaje de uso del disco"
+      ],
+      correct: 3,
+      explanation: "Habitualmente los scripts de monitoreo comparan el porcentaje de uso (ej: 90%) para lanzar alertas de 'poco espacio en disco' antes de que el sistema falle."
+    },
   ];
 
   // =========================
