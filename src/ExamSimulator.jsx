@@ -10563,6 +10563,221 @@ const ExamSimulator = () => {
       options: ["DTD y Schematron", "XML y JSON", "HTML y CSS", "XSD y XSLT"],
       correct: 2,
       explanation: "HTML define la estructura del contenido web y CSS define su presentación visual (colores, tipografía, diseño y disposición)."
+    },
+    {
+      id: 822,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué indica la declaración <!DOCTYPE html> en un documento HTML5?",
+      options: [
+        "Que el documento usa CSS3",
+        "Que el documento está escrito en HTML5",
+        "Que el documento está comprimido",
+        "Que el documento incluye JavaScript"
+      ],
+      correct: 1,
+      explanation: "La declaración <!DOCTYPE html> informa al navegador de que el documento sigue el estándar HTML5 y evita modos de compatibilidad antiguos."
+    },
+    {
+      id: 823,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Cuál es la principal diferencia entre HTML y XHTML?",
+      options: [
+        "HTML es incompatible con navegadores modernos",
+        "HTML requiere etiquetas cerradas siempre",
+        "XHTML es más estricto y sigue las reglas de XML",
+        "XHTML no necesita DOCTYPE"
+      ],
+      correct: 2,
+      explanation: "XHTML aplica reglas estrictas de XML (etiquetas bien cerradas, anidamiento correcto y sintaxis más rigurosa) frente a la mayor tolerancia de HTML."
+    },
+    {
+      id: 824,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué atributo define el idioma del documento HTML?",
+      options: ["lang", "type", "charset", "dir"],
+      correct: 0,
+      explanation: "El atributo lang, normalmente en la etiqueta <html>, indica el idioma principal del contenido y mejora accesibilidad y SEO."
+    },
+    {
+      id: 825,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué etiqueta se usa para definir un enlace en HTML?",
+      options: ["<link>", "<a>", "<href>", "<connect>"],
+      correct: 1,
+      explanation: "La etiqueta <a> (anchor) crea hipervínculos mediante el atributo href con la URL de destino."
+    },
+    {
+      id: 826,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué etiqueta sirve para insertar una imagen?",
+      options: ["<pic>", "<image>", "<src>", "<img>"],
+      correct: 3,
+      explanation: "La etiqueta <img> inserta imágenes en HTML y utiliza atributos como src para la ruta y alt para texto alternativo."
+    },
+    {
+      id: 827,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué elemento HTML agrupa contenido temático?",
+      options: ["<footer>", "<meta>", "<section>", "<div>"],
+      correct: 2,
+      explanation: "<section> representa una sección temática del documento con contenido relacionado, normalmente con encabezado."
+    },
+    {
+      id: 828,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué lenguaje se usa para definir la presentación visual de un documento HTML?",
+      options: ["CSS", "JSON", "PHP", "XML"],
+      correct: 0,
+      explanation: "CSS (Cascading Style Sheets) define estilos visuales como colores, tipografías, espaciados y diseño de la interfaz."
+    },
+    {
+      id: 829,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Cuál es la sintaxis correcta de un comentario en CSS?",
+      options: ["# comentario", "// comentario", "<!-- comentario -->", "/* comentario */"],
+      correct: 3,
+      explanation: "En CSS los comentarios se escriben entre /* y */, no con // ni con sintaxis HTML."
+    },
+    {
+      id: 830,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué propiedad CSS controla el color del texto?",
+      options: ["foreground", "color", "font-color", "text-color"],
+      correct: 1,
+      explanation: "La propiedad color establece el color del texto de un elemento en CSS."
+    },
+    {
+      id: 831,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué modelo de diseño CSS se usa para crear layouts flexibles en una sola dirección?",
+      options: ["Grid", "Float", "Flexbox", "Table"],
+      correct: 2,
+      explanation: "Flexbox está pensado para distribuir elementos en un eje principal (fila o columna) de forma flexible."
+    },
+    {
+      id: 832,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué framework CSS utiliza un sistema de 12 columnas y componentes predefinidos?",
+      options: ["Tailwind", "Bootstrap", "Bulma", "Foundation"],
+      correct: 1,
+      explanation: "Bootstrap popularizó la rejilla de 12 columnas y ofrece numerosos componentes reutilizables de interfaz."
+    },
+    {
+      id: 833,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué formato de sindicación utiliza una estructura XML con etiquetas <channel> y <item>?",
+      options: ["JSON", "SOAP", "Atom", "RSS"],
+      correct: 3,
+      explanation: "RSS estructura el canal con <channel> y cada entrada mediante elementos <item>."
+    },
+    {
+      id: 834,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué formato de fecha utiliza Atom para las actualizaciones?",
+      options: ["ISO 8601", "RFC 822", "DD/MM/YYYY", "Unix timestamp"],
+      correct: 0,
+      explanation: "Atom usa fechas en formato ISO 8601 (por ejemplo, 2026-04-27T15:30:00Z) para representar instantes temporales."
+    },
+    {
+      id: 835,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué etiqueta identifica de forma única una entrada en un feed RSS?",
+      options: ["<unique>", "<id>", "<ref>", "<guid>"],
+      correct: 3,
+      explanation: "El elemento <guid> en RSS proporciona un identificador único para cada entrada del feed."
+    },
+    {
+      id: 836,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué herramienta del W3C permite validar la estructura de un canal RSS?",
+      options: ["Feed Validation Service", "HTML Validator", "CSS Linter", "Lighthouse"],
+      correct: 0,
+      explanation: "El Feed Validation Service permite comprobar la validez sintáctica y estructural de feeds RSS/Atom."
+    },
+    {
+      id: 837,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué propiedad CSS define el espacio interno entre el contenido y el borde?",
+      options: ["margin", "border", "spacing", "padding"],
+      correct: 3,
+      explanation: "padding define el espacio interior del elemento, entre el contenido y su borde."
+    },
+    {
+      id: 838,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué atributo de la etiqueta <img> mejora la accesibilidad describiendo la imagen?",
+      options: ["title", "label", "src", "alt"],
+      correct: 3,
+      explanation: "El atributo alt aporta una descripción textual alternativa de la imagen para lectores de pantalla o cuando no puede cargarse."
+    },
+    {
+      id: 839,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué formato de sindicación permite mayor flexibilidad y extensibilidad que RSS?",
+      options: ["XML", "JSON", "HTML", "Atom"],
+      correct: 3,
+      explanation: "Atom define un modelo más uniforme y extensible que RSS para sindicación de contenidos."
+    },
+    {
+      id: 840,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué metaetiqueta se usa para definir la codificación de caracteres UTF-8?",
+      options: [
+        "<meta charset=\"UTF-8\">",
+        "<meta encoding=\"UTF-8\">",
+        "<meta type=\"UTF-8\">",
+        "<meta lang=\"UTF-8\">"
+      ],
+      correct: 0,
+      explanation: "La forma estándar en HTML5 es <meta charset=\"UTF-8\"> para declarar la codificación de caracteres del documento."
+    },
+    {
+      id: 841,
+      subject: "LMSGI",
+      unit: "UT2",
+      source: "new",
+      question: "¿Qué propiedad CSS controla la disposición de elementos en filas y columnas bidimensionales?",
+      options: ["Display", "Float", "Grid", "Flexbox"],
+      correct: 2,
+      explanation: "CSS Grid está diseñado para maquetación bidimensional (filas y columnas), a diferencia de Flexbox que se centra en un solo eje."
     },// =========================
     // IAW (Implantación de Aplicaciones Web)
     // =========================
