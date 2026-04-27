@@ -12170,6 +12170,832 @@ const ExamSimulator = () => {
       correct: 1,
       explanation: "Los 'Must-Use plugins' (mu-plugins) se cargan siempre antes que los plugins normales y no pueden desactivarse a través del panel administrativo."
     },
+      {
+      id: 962, // (Nº 1)
+      subject: "IAW",
+      unit: "UT4",
+      question: "La ofimática web permite trabajar con documentos:",
+      options: [
+        "Directamente desde el navegador sin instalar programas locales",
+        "Sin conexión a Internet en todo momento",
+        "Solo en redes locales cerradas",
+        "Solo mediante aplicaciones de escritorio"
+      ],
+      correct: 0,
+      explanation: "La principal ventaja es que el procesamiento se realiza en el servidor y la interfaz es el navegador, eliminando la necesidad de software local pesado."
+    },
+    {
+      id: 963, // (Nº 2)
+      subject: "IAW",
+      unit: "UT4",
+      question: "El modelo SaaS se caracteriza por:",
+      options: [
+        "No permitir la escalabilidad del servicio",
+        "Ofrecer software gestionado por el proveedor y accesible por Internet",
+        "Requerir infraestructura física propia",
+        "Instalar el software en cada equipo local del usuario"
+      ],
+      correct: 1,
+      explanation: "Software as a Service (SaaS) entrega aplicaciones a través de la web, donde el proveedor se encarga del mantenimiento, actualizaciones y seguridad."
+    },
+    {
+      id: 964, // (Nº 3)
+      subject: "IAW",
+      unit: "UT4",
+      question: "En una implantación de ofimática web, el técnico ASIX-CIBER debe:",
+      options: [
+        "Desarrollar hardware físico para los servidores",
+        "Evitar el uso de servicios en la nube",
+        "Configurar usuarios, permisos y políticas de seguridad",
+        "Limitar el uso de cifrado y autenticación"
+      ],
+      correct: 2,
+      explanation: "El rol técnico se desplaza del mantenimiento físico a la gestión lógica: identidades, acceso condicional y cumplimiento de políticas de seguridad."
+    },
+    {
+      id: 965, // (Nº 4)
+      subject: "IAW",
+      unit: "UT4",
+      question: "El principal beneficio técnico del modelo de ofimática web es:",
+      options: [
+        "Dependencia total del hardware del usuario",
+        "Falta de integración con otros servicios",
+        "Mayor consumo de recursos locales",
+        "Acceso ubicuo y colaboración en tiempo real"
+      ],
+      correct: 3,
+      explanation: "Permite que múltiples usuarios editen un mismo archivo simultáneamente desde cualquier lugar con conexión, facilitando el trabajo colaborativo."
+    },
+    {
+      id: 966, // (Nº 5)
+      subject: "IAW",
+      unit: "UT4",
+      question: "El principal inconveniente de la ofimática web es:",
+      options: [
+        "La posibilidad de editar sin permisos",
+        "La dependencia de la conexión a Internet",
+        "La falta de almacenamiento en la nube",
+        "La imposibilidad de compartir archivos"
+      ],
+      correct: 1,
+      explanation: "Aunque existen modos 'offline', la funcionalidad completa y la sincronización dependen críticamente de la disponibilidad de red."
+    },
+    {
+      id: 967, // (Nº 6)
+      subject: "IAW",
+      unit: "UT4",
+      question: "El protocolo utilizado habitualmente para la autenticación centralizada en entornos web es:",
+      options: [
+        "SMTP",
+        "SNMP",
+        "SAML",
+        "FTP"
+      ],
+      correct: 2,
+      explanation: "SAML (Security Assertion Markup Language) permite el Single Sign-On (SSO), intercambiando datos de autenticación y autorización entre proveedores de identidad."
+    },
+    {
+      id: 968, // (Nº 7)
+      subject: "IAW",
+      unit: "UT4",
+      question: "El principio de mínimo privilegio implica que:",
+      options: [
+        "Se eliminan las políticas de acceso",
+        "Todos los usuarios tienen acceso a todos los recursos",
+        "Se desactivan los roles administrativos",
+        "Cada usuario solo tiene los permisos estrictamente necesarios"
+      ],
+      correct: 3,
+      explanation: "Es una medida de seguridad crítica que reduce la superficie de ataque limitando los permisos al mínimo necesario para desempeñar una función."
+    },
+    {
+      id: 969, // (Nº 8)
+      subject: "IAW",
+      unit: "UT4",
+      question: "¿Qué factor es fundamental en una política de autenticación segura?",
+      options: [
+        "Usar la misma contraseña en todos los servicios",
+        "Implementar MFA (autenticación multifactor)",
+        "Compartir credenciales entre usuarios",
+        "Deshabilitar el control de contraseñas"
+      ],
+      correct: 1,
+      explanation: "El MFA añade capas adicionales (algo que sé, algo que tengo, algo que soy) dificultando enormemente el acceso no autorizado."
+    },
+    {
+      id: 970, // (Nº 9)
+      subject: "IAW",
+      unit: "UT4",
+      question: "Un grupo de usuarios en una suite ofimática web se utiliza para:",
+      options: [
+        "Impedir el acceso a los documentos compartidos",
+        "Sustituir las políticas de seguridad del dominio",
+        "Aislar a los usuarios sin comunicación entre ellos",
+        "Asignar permisos o compartir recursos de manera colectiva"
+      ],
+      correct: 3,
+      explanation: "La gestión por grupos simplifica la administración, permitiendo aplicar cambios de permisos a cientos de usuarios de una sola vez."
+    },
+    {
+      id: 971, // (Nº 10)
+      subject: "IAW",
+      unit: "UT4",
+      question: "El sistema DLP tiene como finalidad:",
+      options: [
+        "Compartir automáticamente documentos públicos",
+        "Desactivar el cifrado en la nube",
+        "Comprimir los archivos para ahorrar espacio",
+        "Evitar la fuga o pérdida de información sensible"
+      ],
+      correct: 3,
+      explanation: "Data Loss Prevention (DLP) detecta e impide que información sensible (como DNI o tarjetas) salga de la organización de forma no autorizada."
+    },
+    {
+      id: 972, // (Nº 11)
+      subject: "IAW",
+      unit: "UT4",
+      question: "El cifrado en tránsito protege los datos:",
+      options: [
+        "Durante la copia de seguridad local",
+        "Únicamente en dispositivos móviles",
+        "Solo cuando están almacenados en la nube",
+        "Mientras viajan entre el cliente y el servidor"
+      ],
+      correct: 3,
+      explanation: "Se implementa mediante protocolos como TLS (HTTPS) para evitar ataques de tipo Man-in-the-Middle durante el transporte."
+    },
+    {
+      id: 973, // (Nº 12)
+      subject: "IAW",
+      unit: "UT4",
+      question: "El cifrado en reposo protege los datos:",
+      options: [
+        "Solo mediante contraseña del usuario",
+        "Únicamente si se almacenan en local",
+        "Solo durante la transmisión de archivos",
+        "Mientras se almacenan en los servidores del proveedor"
+      ],
+      correct: 3,
+      explanation: "Protege los archivos almacenados en los discos del servidor, asegurando que si los discos fueran robados, la información sería ilegible."
+    },
+    {
+      id: 974, // (Nº 13)
+      subject: "IAW",
+      unit: "UT4",
+      question: "La gestión de versiones en documentos colaborativos permite:",
+      options: [
+        "Evitar el trabajo simultáneo entre usuarios",
+        "Limitar el acceso a los administradores",
+        "Borrar todas las revisiones automáticamente",
+        "Restaurar cambios y conservar el historial de ediciones"
+      ],
+      correct: 3,
+      explanation: "Permite auditar quién hizo qué cambio y recuperar estados anteriores del documento en caso de error o borrado accidental."
+    },
+    {
+      id: 975, // (Nº 14)
+      subject: "IAW",
+      unit: "UT4",
+      question: "El eDiscovery permite:",
+      options: [
+        "Eliminar versiones antiguas de documentos",
+        "Localizar y conservar evidencias digitales para auditorías",
+        "Limitar la colaboración en línea",
+        "Desactivar la trazabilidad de accesos"
+      ],
+      correct: 1,
+      explanation: "Es una herramienta de cumplimiento legal para buscar en todo el tenant datos relevantes en caso de litigios o investigaciones internas."
+    },
+    {
+      id: 976, // (Nº 15)
+      subject: "IAW",
+      unit: "UT4",
+      question: "Una buena práctica de seguridad en suites web es:",
+      options: [
+        "Permitir el acceso público a todos los documentos",
+        "Revisar y revocar periódicamente permisos de aplicaciones de terceros",
+        "Compartir credenciales entre equipos",
+        "Desactivar la auditoría de accesos"
+      ],
+      correct: 1,
+      explanation: "Muchos usuarios conectan apps (OAuth) que pueden tener acceso a sus archivos; auditar estas conexiones reduce riesgos de Shadow IT."
+    },
+    {
+      id: 977, // (Nº 16)
+      subject: "IAW",
+      unit: "UT4",
+      question: "El RGPD exige que los datos personales sean:",
+      options: [
+        "Accesibles a cualquier usuario autenticado",
+        "Conservados sin límite de tiempo",
+        "Tratados de forma lícita, leal y transparente",
+        "Transferidos libremente fuera del EEE"
+      ],
+      correct: 2,
+      explanation: "El Reglamento General de Protección de Datos establece principios estrictos de privacidad, transparencia y responsabilidad sobre los datos personales."
+    },
+    {
+      id: 978, // (Nº 17)
+      subject: "IAW",
+      unit: "UT4",
+      question: "El hardening de una aplicación consiste en:",
+      options: [
+        "Incrementar la cantidad de servicios abiertos para accesibilidad",
+        "Evitar el uso de contraseñas seguras",
+        "Reducir vulnerabilidades desactivando servicios o funciones innecesarias",
+        "Eliminar el cifrado para aumentar la velocidad"
+      ],
+      correct: 2,
+      explanation: "El endurecimiento (hardening) busca cerrar cualquier puerta de entrada innecesaria (servicios, puertos, APIs) para minimizar riesgos."
+    },
+    {
+      id: 979, // (Nº 18)
+      subject: "IAW",
+      unit: "UT4",
+      question: "Una política de retención de datos define:",
+      options: [
+        "Cuánto tiempo se conservan los archivos y versiones",
+        "Qué tipo de conexión TLS se utiliza",
+        "Cuál es el tamaño máximo de los documentos",
+        "Cuántos usuarios pueden acceder simultáneamente"
+      ],
+      correct: 0,
+      explanation: "Es necesaria para cumplir con normativas legales que exigen conservar datos durante un tiempo o borrarlos tras finalizar su propósito."
+    },
+    {
+      id: 980, // (Nº 19)
+      subject: "IAW",
+      unit: "UT4",
+      question: "Un plan de respuesta ante incidentes debe incluir:",
+      options: [
+        "Eliminación inmediata de todas las cuentas",
+        "Exclusión de auditorías",
+        "Suspensión del servicio sin aviso previo",
+        "Detección, contención, erradicación, recuperación y lecciones aprendidas"
+      ],
+      correct: 3,
+      explanation: "Sigue un ciclo de vida profesional para gestionar brechas de seguridad minimizando el impacto y evitando que se repitan."
+    },
+    {
+      id: 981, // (Nº 20)
+      subject: "IAW",
+      unit: "UT4",
+      question: "En el contexto de la ofimática web, el rol del técnico ASIX-CIBER es:",
+      options: [
+        "Limitarse al uso básico de las herramientas sin gestión técnica",
+        "Desarrollar software de ofimática local",
+        "Ignorar las políticas de privacidad y auditoría",
+        "Implantar, administrar y asegurar el acceso a las aplicaciones garantizando el cumplimiento normativo"
+      ],
+      correct: 3,
+      explanation: "El técnico es el responsable de que la suite sea productiva pero, sobre todo, segura y ajustada a la legalidad vigente."
+    }
+      {
+      id: 982,
+      subject: "IAW",
+      unit: "UT5",
+      question: "¿Qué función principal cumplen los lenguajes de programación del lado del servidor?",
+      options: [
+        "Ejecutar scripts directamente en el equipo del usuario.",
+        "Sustituir los lenguajes de marcas como HTML.",
+        "Generar contenido dinámico y procesar datos antes de enviarlos al cliente.",
+        "Diseñar interfaces gráficas en el navegador."
+      ],
+      correct: 2,
+      explanation: "El servidor procesa la lógica y los datos para generar el HTML dinámico que finalmente recibe el navegador del usuario."
+    },
+    {
+      id: 993,
+      subject: "IAW",
+      unit: "UT5",
+      question: "¿Cuál de los siguientes lenguajes es de tipo servidor?",
+      options: [
+        "HTML",
+        "PHP",
+        "CSS",
+        "JavaScript"
+      ],
+      correct: 1,
+      explanation: "PHP es un lenguaje diseñado específicamente para ejecutarse en el servidor, procesando la información antes de enviarla al cliente."
+    },
+    {
+      id: 996,
+      subject: "IAW",
+      unit: "UT5",
+      question: "¿Qué componente forma parte del entorno LAMP?",
+      options: [
+        "Internet Explorer",
+        "Apache",
+        "Windows",
+        "Chrome"
+      ],
+      correct: 1,
+      explanation: "LAMP es el acrónimo de Linux, Apache (servidor web), MySQL y PHP/Perl/Python."
+    },
+    {
+      id: 984,
+      subject: "IAW",
+      unit: "UT5",
+      question: "¿Cuál es el propósito del archivo php.ini en un servidor?",
+      options: [
+        "Almacenar los contenidos HTML del portal.",
+        "Configurar el comportamiento del intérprete PHP.",
+        "Instalar bases de datos en el cliente.",
+        "Diseñar las hojas de estilo del sitio web."
+      ],
+      correct: 1,
+      explanation: "Es el archivo maestro de configuración de PHP donde se definen límites de memoria, gestión de errores y extensiones."
+    },
+    {
+      id: 986,
+      subject: "IAW",
+      unit: "UT5",
+      question: "¿Qué etiqueta permite incrustar código PHP dentro de HTML?",
+      options: [
+        "<?php ... ?>",
+        "<server> ... </server>",
+        "<script> ... </script>",
+        "<php> ... </php>"
+      ],
+      correct: 0,
+      explanation: "Las etiquetas <?php y ?> indican al motor de PHP dónde debe empezar y terminar la interpretación del código."
+    },
+    {
+      id: 989,
+      subject: "IAW",
+      unit: "UT5",
+      question: "¿Qué método de envío se utiliza preferentemente para datos confidenciales en un formulario?",
+      options: [
+        "POST",
+        "GET",
+        "MAILTO",
+        "SEND"
+      ],
+      correct: 0,
+      explanation: "POST es preferible para datos sensibles porque los envía en el cuerpo de la petición y no quedan expuestos en la URL ni en el historial del navegador."
+    },
+    {
+      id: 991,
+      subject: "IAW",
+      unit: "UT5",
+      question: "¿Qué variable superglobal de PHP recibe los datos enviados mediante método POST?",
+      options: [
+        "$_POST",
+        "$_DATA",
+        "$_GET",
+        "$_FORM"
+      ],
+      correct: 0,
+      explanation: "$_POST es el array global que recolecta los valores de los formularios enviados mediante dicho método."
+    },
+    {
+      id: 985,
+      subject: "IAW",
+      unit: "UT5",
+      question: "¿Qué estructura condicional en PHP permite ejecutar un bloque alternativo si la condición no se cumple?",
+      options: [
+        "if...else",
+        "switch",
+        "foreach",
+        "do...while"
+      ],
+      correct: 0,
+      explanation: "La estructura if...else bifurca el código permitiendo una acción para el cumplimiento de la condición y otra para su incumplimiento."
+    },
+    {
+      id: 990,
+      subject: "IAW",
+      unit: "UT5",
+      question: "¿Qué operador se utiliza para concatenar cadenas de texto en PHP?",
+      options: [
+        ":",
+        "+",
+        ".",
+        "&"
+      ],
+      correct: 2,
+      explanation: "A diferencia de otros lenguajes que usan el signo suma, PHP utiliza exclusivamente el punto (.) para unir cadenas."
+    },
+    {
+      id: 983,
+      subject: "IAW",
+      unit: "UT5",
+      question: "¿Cuál es la sintaxis correcta para definir una constante en PHP?",
+      options: [
+        "define('NOMBRE', 'valor');",
+        "static('NOMBRE', 'valor');",
+        "const('NOMBRE') = 'valor';",
+        "constant NOMBRE = 'valor';"
+      ],
+      correct: 0,
+      explanation: "La función define() declara una constante global. Las constantes no llevan el signo '$' y no pueden ser modificadas."
+    },
+    {
+      id: 992,
+      subject: "IAW",
+      unit: "UT5",
+      question: "¿Qué función de PHP se utiliza para convertir caracteres especiales en entidades HTML seguras?",
+      options: [
+        "secure_text()",
+        "htmlspecialchars()",
+        "escape_html()",
+        "htmlentities()"
+      ],
+      correct: 1,
+      explanation: "Esta función previene ataques XSS convirtiendo caracteres como '<' en '&lt;', evitando que el navegador ejecute código inyectado."
+    },
+    {
+      id: 1001,
+      subject: "IAW",
+      unit: "UT5",
+      question: "¿Qué parámetro de configuración en php.ini define el tiempo máximo de vida de una sesión?",
+      options: [
+        "session.gc_maxlifetime",
+        "session.cookie_time",
+        "session.max_time",
+        "session.limit_time"
+      ],
+      correct: 0,
+      explanation: "session.gc_maxlifetime marca el tiempo en segundos antes de que los datos de la sesión se consideren caducados."
+    },
+    {
+      id: 987,
+      subject: "IAW",
+      unit: "UT5",
+      question: "¿Qué comando inicia una sesión en PHP?",
+      options: [
+        "session_start();",
+        "start_session();",
+        "begin_session();",
+        "init_session();"
+      ],
+      correct: 0,
+      explanation: "session_start() debe invocarse antes de cualquier salida HTML para poder trabajar con variables de sesión."
+    },
+    {
+      id: 994,
+      subject: "IAW",
+      unit: "UT5",
+      question: "¿Qué función destruye una sesión existente y elimina sus variables?",
+      options: [
+        "session_destroy();",
+        "close_session();",
+        "end_session();",
+        "stop_session();"
+      ],
+      correct: 0,
+      explanation: "session_destroy() finaliza la sesión actual y elimina toda la información almacenada en el servidor asociada a ella."
+    },
+    {
+      id: 997,
+      subject: "IAW",
+      unit: "UT5",
+      question: "¿Qué técnica permite identificar a un usuario durante toda su navegación por la aplicación?",
+      options: [
+        "Uso de sesiones",
+        "Almacenamiento en CSS",
+        "Inserción de JavaScript",
+        "Validación con HTML"
+      ],
+      correct: 0,
+      explanation: "Las sesiones permiten mantener el estado del usuario de una página a otra, algo que el protocolo HTTP por sí solo no permite."
+    },
+    {
+      id: 998,
+      subject: "IAW",
+      unit: "UT5",
+      question: "¿Qué tipo de vulnerabilidad permite la inserción de código malicioso en un campo de formulario?",
+      options: [
+        "DoS",
+        "Cross-Site Scripting (XSS)",
+        "DNS Spoofing",
+        "Phishing"
+      ],
+      correct: 1,
+      explanation: "El XSS se produce cuando se inyecta código (normalmente JavaScript) que se ejecuta en el navegador de los usuarios que visualizan el contenido."
+    },
+    {
+      id: 995,
+      subject: "IAW",
+      unit: "UT5",
+      question: "¿Qué función de PHP se utiliza para crear un hash seguro de contraseña?",
+      options: [
+        "make_hash()",
+        "md5()",
+        "encrypt_pass()",
+        "password_hash()"
+      ],
+      correct: 3,
+      explanation: "password_hash() genera un hash irreversible y con sal (salt) automático, siendo la forma más segura de guardar contraseñas hoy día."
+    },
+    {
+      id: 988,
+      subject: "IAW",
+      unit: "UT5",
+      question: "¿Qué modelo de seguridad organiza los permisos según el rol del usuario?",
+      options: [
+        "RBAC (Role-Based Access Control)",
+        "DAC (Discretionary Access Control)",
+        "MAC (Mandatory Access Control)",
+        "ACL (Access Control List)"
+      ],
+      correct: 0,
+      explanation: "RBAC permite gestionar permisos de forma jerárquica y eficiente agrupando a los usuarios en roles con capacidades definidas."
+    },
+    {
+      id: 999,
+      subject: "IAW",
+      unit: "UT5",
+      question: "¿Qué medida ayuda a evitar la fijación de sesión (session fixation)?",
+      options: [
+        "Deshabilitar las cookies del navegador.",
+        "Guardar el ID de sesión en texto plano.",
+        "Usar el mismo ID para todos los usuarios.",
+        "Regenerar el ID de sesión tras la autenticación."
+      ],
+      correct: 3,
+      explanation: "Cambiar el ID de sesión tras el login garantiza que un atacante no pueda usar un ID pre-asignado para robar la sesión."
+    },
+    {
+      id: 1000,
+      subject: "IAW",
+      unit: "UT5",
+      question: "¿Qué protocolo debe emplearse siempre para enviar credenciales de usuario de forma segura?",
+      options: [
+        "HTTP",
+        "POP3",
+        "FTP",
+        "HTTPS"
+      ],
+      correct: 3,
+      explanation: "HTTPS utiliza TLS para cifrar la conexión extremo a extremo, impidiendo que las contraseñas sean capturadas en tránsito."
+    }
+{
+      id: 1002, // (Nº 1)
+      subject: "IAW",
+      unit: "UT6",
+      question: "¿Qué función cumple una base de datos en una aplicación web?",
+      options: [
+        "Administrar el servidor web",
+        "Diseñar la interfaz de usuario",
+        "Almacenar y organizar información de manera estructurada",
+        "Ejecutar código JavaScript"
+      ],
+      correct: 2,
+      explanation: "La base de datos es el pilar de persistencia, permitiendo que la información se mantenga guardada y consultable más allá de la sesión actual."
+    },
+    {
+      id: 1003, // (Nº 2)
+      subject: "IAW",
+      unit: "UT6",
+      question: "¿Qué comando SQL se utiliza para crear una base de datos?",
+      options: [
+        "CREATE DATABASE",
+        "NEW DATABASE",
+        "GENERATE DATABASE",
+        "INSERT DATABASE"
+      ],
+      correct: 0,
+      explanation: "La sentencia estándar de SQL para la creación de un nuevo contenedor de tablas es CREATE DATABASE seguido del nombre deseado."
+    },
+    {
+      id: 1004, // (Nº 3)
+      subject: "IAW",
+      unit: "UT6",
+      question: "¿Qué extensión de PHP se recomienda para conectar de forma segura a bases de datos MySQL?",
+      options: [
+        "ODBC antiguo",
+        "JSON PHP API",
+        "MySQL_connect()",
+        "PDO (PHP Data Objects)"
+      ],
+      correct: 3,
+      explanation: "PDO es la interfaz recomendada hoy día por ser orientada a objetos, segura (permite consultas preparadas) y compatible con múltiples tipos de bases de datos."
+    },
+    {
+      id: 1005, // (Nº 5)
+      subject: "IAW",
+      unit: "UT6",
+      question: "¿Qué instrucción permite recuperar datos almacenados en una tabla?",
+      options: [
+        "INSERT",
+        "SELECT",
+        "UPDATE",
+        "DELETE"
+      ],
+      correct: 1,
+      explanation: "SELECT es la operación de consulta (DML) básica para extraer registros específicos o totales de una base de datos."
+    },
+    {
+      id: 1006, // (Nº 6)
+      subject: "IAW",
+      unit: "UT6",
+      question: "¿Qué método HTTP se utiliza preferentemente para enviar datos de formularios sensibles?",
+      options: [
+        "DELETE",
+        "GET",
+        "PUT",
+        "POST"
+      ],
+      correct: 3,
+      explanation: "POST incluye los datos en el cuerpo del mensaje, evitando que aparezcan en la URL, lo cual es fundamental para la seguridad de las credenciales."
+    },
+    {
+      id: 1007, // (Nº 7)
+      subject: "IAW",
+      unit: "UT6",
+      question: "¿Qué mecanismo evita ataques de inyección SQL al separar datos y consultas?",
+      options: [
+        "Consultas preparadas",
+        "Variables globales",
+        "Filtros HTML",
+        "Comandos concatenados"
+      ],
+      correct: 0,
+      explanation: "Las consultas preparadas (Prepared Statements) envían la plantilla de la consulta y los datos por separado, impidiendo que un atacante inyecte código malicioso."
+    },
+    {
+      id: 1008, // (Nº 8)
+      subject: "IAW",
+      unit: "UT6",
+      question: "¿Qué función en PHP se usa para cifrar contraseñas antes de guardarlas?",
+      options: [
+        "crypt_old()",
+        "sha1()",
+        "password_hash()",
+        "md5()"
+      ],
+      correct: 2,
+      explanation: "password_hash() es la función estándar que aplica algoritmos criptográficos fuertes con sal (salt) aleatoria por defecto."
+    },
+    {
+      id: 1009, // (Nº 9)
+      subject: "IAW",
+      unit: "UT6",
+      question: "¿Qué elemento identifica de forma única cada registro de una tabla?",
+      options: [
+        "Columna temporal",
+        "Índice de búsqueda",
+        "Clave primaria",
+        "Clave externa"
+      ],
+      correct: 2,
+      explanation: "La clave primaria (Primary Key) garantiza que no existan dos filas idénticas y permite referenciar registros de forma unívoca."
+    },
+    {
+      id: 1010, // (Nº 10)
+      subject: "IAW",
+      unit: "UT6",
+      question: "¿Qué instrucción SQL se emplea para modificar un registro existente?",
+      options: [
+        "MODIFY",
+        "CHANGE",
+        "ALTER",
+        "UPDATE"
+      ],
+      correct: 3,
+      explanation: "UPDATE se utiliza para cambiar los valores de las columnas en registros que ya han sido insertados previamente en la tabla."
+    },
+    {
+      id: 1011, // (Nº 11)
+      subject: "IAW",
+      unit: "UT6",
+      question: "¿Qué comando permite eliminar definitivamente un registro de una tabla?",
+      options: [
+        "REMOVE",
+        "DELETE",
+        "DROP",
+        "ERASE"
+      ],
+      correct: 1,
+      explanation: "DELETE elimina las filas de una tabla. Debe usarse con precaución y normalmente acompañado de una cláusula WHERE para no borrarlo todo."
+    },
+    {
+      id: 1012, // (Nº 12)
+      subject: "IAW",
+      unit: "UT6",
+      question: "¿Qué sentencia PHP permite capturar y gestionar errores en la ejecución del código?",
+      options: [
+        "if/else",
+        "do/while",
+        "foreach",
+        "try/catch"
+      ],
+      correct: 3,
+      explanation: "El bloque try/catch permite intentar una operación (como conectar a la DB) y capturar cualquier excepción que ocurra sin que la aplicación se detenga abruptamente."
+    },
+    {
+      id: 1013, // (Nº 13)
+      subject: "IAW",
+      unit: "UT6",
+      question: "¿Qué tipo de archivo se recomienda para centralizar la conexión a la base de datos en una aplicación PHP?",
+      options: [
+        "data.json",
+        "config.html",
+        "conexion.php",
+        "usuario.ini"
+      ],
+      correct: 2,
+      explanation: "Centralizar la conexión en un archivo como conexion.php facilita el mantenimiento: si cambias la contraseña de la DB, solo tienes que editar un archivo."
+    },
+    {
+      id: 1014, // (Nº 14)
+      subject: "IAW",
+      unit: "UT6",
+      question: "¿Qué función tiene la clave foránea (FOREIGN KEY) en una base de datos relacional?",
+      options: [
+        "Crear copias de seguridad",
+        "Cifrar datos sensibles",
+        "Vincular registros entre tablas",
+        "Validar tipos de datos"
+      ],
+      correct: 2,
+      explanation: "La clave foránea establece una relación entre una columna de una tabla y la clave primaria de otra, manteniendo la integridad referencial."
+    },
+    {
+      id: 1015, // (Nº 15)
+      subject: "IAW",
+      unit: "UT6",
+      question: "¿Qué configuración debe aplicarse en un entorno de producción para evitar mostrar errores al usuario?",
+      options: [
+        "display_errors = On",
+        "error_reporting = E_ALL",
+        "display_errors = Off",
+        "log_errors = Off"
+      ],
+      correct: 2,
+      explanation: "En producción, display_errors debe estar en Off por seguridad; mostrar errores podría revelar rutas de archivos o credenciales a posibles atacantes."
+    },
+    {
+      id: 1016, // (Nº 16)
+      subject: "IAW",
+      unit: "UT6",
+      question: "¿Qué prueba permite evaluar el rendimiento de una consulta SQL?",
+      options: [
+        "VERIFY",
+        "TEST QUERY",
+        "DESCRIBE",
+        "EXPLAIN"
+      ],
+      correct: 3,
+      explanation: "La sentencia EXPLAIN analiza cómo MySQL ejecutaría la consulta, permitiendo ver si se están usando índices o si la consulta es lenta."
+    },
+    {
+      id: 1017, // (Nº 17)
+      subject: "IAW",
+      unit: "UT6",
+      question: "¿Qué herramienta permite simular múltiples usuarios accediendo a un sitio web para medir rendimiento?",
+      options: [
+        "Netcat",
+        "GitLab Runner",
+        "phpMyAdmin",
+        "Apache JMeter"
+      ],
+      correct: 3,
+      explanation: "JMeter es una herramienta de pruebas de carga que permite estresar el servidor simulando concurrencia masiva de usuarios."
+    },
+    {
+      id: 1018, // (Nº 18)
+      subject: "IAW",
+      unit: "UT6",
+      question: "¿Qué principio establece que cada usuario debe tener solo los permisos necesarios para su función?",
+      options: [
+        "Principio de acceso completo",
+        "Principio de redundancia",
+        "Principio de tolerancia",
+        "Principio de mínimo privilegio"
+      ],
+      correct: 3,
+      explanation: "Aplicar el mínimo privilegio en la DB significa que el usuario de la web no debería poder borrar tablas (DROP), solo leer, insertar o actualizar (SELECT, INSERT, UPDATE)."
+    },
+    {
+      id: 1019, // (Nº 19)
+      subject: "IAW",
+      unit: "UT6",
+      question: "¿Qué archivo de configuración de PHP permite activar el registro de errores?",
+      options: [
+        "config.php",
+        "php.ini",
+        ".htaccess",
+        "settings.json"
+      ],
+      correct: 1,
+      explanation: "En el php.ini se activan directivas como log_errors y se especifica la ruta del archivo donde se guardarán los fallos detectados."
+    },
+    {
+      id: 1020, // (Nº 20)
+      subject: "IAW",
+      unit: "UT6",
+      question: "¿Qué comando de MySQL se utiliza para realizar una copia de seguridad de una base de datos?",
+      options: [
+        "mysqldump",
+        "exportdb",
+        "save sql",
+        "backup database"
+      ],
+      correct: 0,
+      explanation: "mysqldump es la utilidad de consola que genera un volcado (dump) del contenido y estructura de la base de datos en un archivo .sql."
+    }
   ];
 
   // =========================
