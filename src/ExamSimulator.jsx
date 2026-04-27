@@ -92,7 +92,9 @@ const pickWeightedByUnit = (pool, total = 30, curve = 1.6) => {
 const SUBJECTS = {
   ISO: "Implantación de Sistemas Operativos",
   REDES: "Planificación y Administración de Redes",
-  IPE1: "Itinerario Personal para la Empleabilidad I",
+  IAW: "Implantación de Aplicaciones Web",
+  ASO: "Administración de Sistemas Operativos",
+  LMSGI: "Lenguajes de Marcas y Sistemas de Gestión de Información",
   BBDD: "Bases de Datos", // <--- Añadimos esta línea
 };
 
@@ -10311,6 +10313,1582 @@ const ExamSimulator = () => {
       ],
       correct: 1,
       explanation: "Los Virtual Hosts de Apache permiten configurar múltiples sitios web en un mismo servidor, diferenciándolos por nombre de dominio, IP o puerto."
+    },
+    {
+      id: 802,
+      subject: "LMSGI",
+      unit: "UT1",
+      question: "¿Qué caracteriza a un lenguaje de marcas?",
+      options: [
+        "Se utiliza solo para cálculos numéricos.",
+        "Describe cómo ejecutar operaciones.",
+        "Define estructura y significado del contenido mediante etiquetas.",
+        "Es un lenguaje de programación imperativo."
+      ],
+      correct: 2,
+      explanation: "Un lenguaje de marcas utiliza etiquetas para estructurar y describir datos o contenido, separando la información de su presentación y facilitando el intercambio entre sistemas."
+    },
+    {
+      id: 803,
+      subject: "LMSGI",
+      unit: "UT1",
+      question: "¿Cuál fue el antecesor histórico del XML y HTML?",
+      options: ["CSS", "JSON", "YAML", "SGML"],
+      correct: 3,
+      explanation: "SGML (Standard Generalized Markup Language) es el metalinguaje del que derivan tanto HTML como XML."
+    },
+    {
+      id: 804,
+      subject: "LMSGI",
+      unit: "UT1",
+      question: "¿Qué lenguaje se utiliza principalmente para estructurar páginas web?",
+      options: ["JSON", "HTML", "XML", "CSV"],
+      correct: 1,
+      explanation: "HTML es el lenguaje estándar para estructurar el contenido de las páginas web (encabezados, párrafos, enlaces, formularios, etc.)."
+    },
+    {
+      id: 805,
+      subject: "LMSGI",
+      unit: "UT1",
+      question: "¿Qué significa que un documento XML esté \"bien formado\"?",
+      options: [
+        "Cumple las reglas de un esquema XSD.",
+        "Está validado con Schematron.",
+        "Tiene etiquetas correctamente anidadas y cerradas.",
+        "Contiene datos numéricos válidos."
+      ],
+      correct: 2,
+      explanation: "Un XML bien formado respeta la sintaxis básica: un único elemento raíz, etiquetas cerradas y anidamiento correcto."
+    },
+    {
+      id: 806,
+      subject: "LMSGI",
+      unit: "UT1",
+      question: "¿Cuál de los siguientes NO es un lenguaje de marcas?",
+      options: ["XML", "HTML", "XSD", "Python"],
+      correct: 3,
+      explanation: "Python es un lenguaje de programación de propósito general, mientras que XML, HTML y XSD pertenecen al ámbito de marcado y definición de estructuras."
+    },
+    {
+      id: 807,
+      subject: "LMSGI",
+      unit: "UT1",
+      question: "¿Qué herramienta se utiliza para transformar XML en otros formatos?",
+      options: ["XPath", "XSLT", "JSON", "XSD"],
+      correct: 1,
+      explanation: "XSLT está diseñado para transformar documentos XML en otros XML, HTML, texto plano u otros formatos de salida."
+    },
+    {
+      id: 808,
+      subject: "LMSGI",
+      unit: "UT1",
+      question: "¿Qué papel cumplen los espacios de nombres (namespaces) en XML?",
+      options: [
+        "Evitan colisiones entre vocabularios distintos.",
+        "Controlan el tamaño del archivo.",
+        "Limitan el número de etiquetas por documento.",
+        "Permiten definir estilos visuales."
+      ],
+      correct: 0,
+      explanation: "Los namespaces permiten diferenciar etiquetas con el mismo nombre local cuando provienen de vocabularios XML distintos."
+    },
+    {
+      id: 809,
+      subject: "LMSGI",
+      unit: "UT1",
+      question: "¿Qué elemento XML sirve como raíz del documento?",
+      options: [
+        "El encabezado XML",
+        "Un único elemento contenedor de todos los demás",
+        "El esquema XSD",
+        "El primer comentario"
+      ],
+      correct: 1,
+      explanation: "Todo documento XML debe tener exactamente un elemento raíz que contenga al resto de nodos del documento."
+    },
+    {
+      id: 810,
+      subject: "LMSGI",
+      unit: "UT1",
+      question: "¿Qué extensión tienen normalmente los esquemas XML?",
+      options: [".html", ".json", ".xsd", ".css"],
+      correct: 2,
+      explanation: "Los esquemas XML se almacenan habitualmente con extensión .xsd, porque se escriben en XML Schema Definition."
+    },
+    {
+      id: 811,
+      subject: "LMSGI",
+      unit: "UT1",
+      question: "¿Cuál es la diferencia principal entre HTML y XML?",
+      options: [
+        "HTML permite errores; XML exige corrección total.",
+        "XML solo se usa en navegadores.",
+        "HTML es binario; XML es textual.",
+        "XML no usa etiquetas."
+      ],
+      correct: 0,
+      explanation: "HTML es más tolerante a errores de sintaxis en navegadores, mientras que XML exige documentos estrictamente bien formados para ser procesados."
+    },
+    {
+      id: 812,
+      subject: "LMSGI",
+      unit: "UT1",
+      question: "¿Qué lenguaje define reglas de validación por condiciones lógicas en XML?",
+      options: ["CSS", "Schematron", "DTD", "XSD"],
+      correct: 1,
+      explanation: "Schematron permite expresar reglas lógicas (assert/report) sobre nodos XML mediante patrones y expresiones XPath."
+    },
+    {
+      id: 813,
+      subject: "LMSGI",
+      unit: "UT1",
+      question: "¿Cuál de las siguientes herramientas es un editor profesional XML?",
+      options: ["Oxygen XML Editor", "Excel", "Notepad clásico", "Paint"],
+      correct: 0,
+      explanation: "Oxygen XML Editor es una herramienta profesional para editar, validar y transformar XML con soporte avanzado de estándares."
+    },
+    {
+      id: 814,
+      subject: "LMSGI",
+      unit: "UT1",
+      question: "¿Qué característica distingue a un documento XML válido?",
+      options: [
+        "Está en formato binario.",
+        "Cumple las reglas definidas en su esquema.",
+        "Contiene solo datos numéricos.",
+        "No incluye namespaces."
+      ],
+      correct: 1,
+      explanation: "Un XML válido, además de estar bien formado, cumple las restricciones de su DTD/XSD (estructura, tipos de datos y cardinalidad)."
+    },
+    {
+      id: 815,
+      subject: "LMSGI",
+      unit: "UT1",
+      question: "¿Qué lenguaje permite seleccionar nodos dentro de un documento XML?",
+      options: ["XSLT", "CSS", "XQuery", "XPath"],
+      correct: 3,
+      explanation: "XPath es el lenguaje de rutas usado para localizar y seleccionar nodos de un documento XML."
+    },
+    {
+      id: 816,
+      subject: "LMSGI",
+      unit: "UT1",
+      question: "¿Qué representa la etiqueta <!DOCTYPE html>?",
+      options: [
+        "Un comentario de autoría.",
+        "Una declaración de codificación XML.",
+        "La definición del tipo de documento HTML.",
+        "Un espacio de nombres por defecto."
+      ],
+      correct: 2,
+      explanation: "La declaración <!DOCTYPE html> indica al navegador que el documento usa HTML5 y activa el modo de renderizado estándar."
+    },
+    {
+      id: 817,
+      subject: "LMSGI",
+      unit: "UT1",
+      question: "¿Cuál de las siguientes opciones describe mejor JSON frente a XML?",
+      options: [
+        "No admite jerarquía.",
+        "Es más ligero y orientado a APIs.",
+        "Solo se usa en impresión.",
+        "Es más pesado pero más formal."
+      ],
+      correct: 1,
+      explanation: "JSON suele ser más compacto y es muy usado en APIs REST por su sencillez para serializar estructuras de datos."
+    },
+    {
+      id: 818,
+      subject: "LMSGI",
+      unit: "UT1",
+      question: "¿Qué función cumple la validación en XML?",
+      options: [
+        "Asignar estilos visuales.",
+        "Verificar estructura y tipos de datos.",
+        "Traducirlo a JSON.",
+        "Comprimir el documento."
+      ],
+      correct: 1,
+      explanation: "Validar un XML permite comprobar que su estructura, orden de elementos y tipos de dato cumplen un esquema definido."
+    },
+    {
+      id: 819,
+      subject: "LMSGI",
+      unit: "UT1",
+      question: "¿Qué es un atributo en XML?",
+      options: [
+        "Un elemento hijo con contenido textual.",
+        "Una etiqueta de cierre.",
+        "Un comentario del autor.",
+        "Una metainformación del elemento en forma clave-valor."
+      ],
+      correct: 3,
+      explanation: "Un atributo añade metadatos a un elemento mediante pares nombre=\"valor\" dentro de su etiqueta de apertura."
+    },
+    {
+      id: 820,
+      subject: "LMSGI",
+      unit: "UT1",
+      question: "¿Qué editor gratuito puede configurarse con plugins XML en entornos docentes?",
+      options: ["XMLSpy", "Oxygen XML Editor", "VS Code", "Dreamweaver"],
+      correct: 2,
+      explanation: "VS Code es gratuito y puede ampliarse con extensiones para XML, validación, formateo y soporte de esquemas."
+    },
+    {
+      id: 821,
+      subject: "LMSGI",
+      unit: "UT1",
+      question: "¿Cuál de los siguientes pares de lenguajes se usan juntos para publicar y dar estilo a contenidos web?",
+      options: ["DTD y Schematron", "XML y JSON", "HTML y CSS", "XSD y XSLT"],
+      correct: 2,
+      explanation: "HTML define la estructura del contenido web y CSS define su presentación visual (colores, tipografía, diseño y disposición)."
+    },
+    {
+      id: 822,
+      subject: "LMSGI",
+      unit: "UT2",
+      question: "¿Qué indica la declaración <!DOCTYPE html> en un documento HTML5?",
+      options: [
+        "Que el documento usa CSS3",
+        "Que el documento está escrito en HTML5",
+        "Que el documento está comprimido",
+        "Que el documento incluye JavaScript"
+      ],
+      correct: 1,
+      explanation: "La declaración <!DOCTYPE html> informa al navegador de que el documento sigue el estándar HTML5 y evita modos de compatibilidad antiguos."
+    },
+    {
+      id: 823,
+      subject: "LMSGI",
+      unit: "UT2",
+      question: "¿Cuál es la principal diferencia entre HTML y XHTML?",
+      options: [
+        "HTML es incompatible con navegadores modernos",
+        "HTML requiere etiquetas cerradas siempre",
+        "XHTML es más estricto y sigue las reglas de XML",
+        "XHTML no necesita DOCTYPE"
+      ],
+      correct: 2,
+      explanation: "XHTML aplica reglas estrictas de XML (etiquetas bien cerradas, anidamiento correcto y sintaxis más rigurosa) frente a la mayor tolerancia de HTML."
+    },
+    {
+      id: 824,
+      subject: "LMSGI",
+      unit: "UT2",
+      question: "¿Qué atributo define el idioma del documento HTML?",
+      options: ["lang", "type", "charset", "dir"],
+      correct: 0,
+      explanation: "El atributo lang, normalmente en la etiqueta <html>, indica el idioma principal del contenido y mejora accesibilidad y SEO."
+    },
+    {
+      id: 825,
+      subject: "LMSGI",
+      unit: "UT2",
+      question: "¿Qué etiqueta se usa para definir un enlace en HTML?",
+      options: ["<link>", "<a>", "<href>", "<connect>"],
+      correct: 1,
+      explanation: "La etiqueta <a> (anchor) crea hipervínculos mediante el atributo href con la URL de destino."
+    },
+    {
+      id: 826,
+      subject: "LMSGI",
+      unit: "UT2",
+      question: "¿Qué etiqueta sirve para insertar una imagen?",
+      options: ["<pic>", "<image>", "<src>", "<img>"],
+      correct: 3,
+      explanation: "La etiqueta <img> inserta imágenes en HTML y utiliza atributos como src para la ruta y alt para texto alternativo."
+    },
+    {
+      id: 827,
+      subject: "LMSGI",
+      unit: "UT2",
+      question: "¿Qué elemento HTML agrupa contenido temático?",
+      options: ["<footer>", "<meta>", "<section>", "<div>"],
+      correct: 2,
+      explanation: "<section> representa una sección temática del documento con contenido relacionado, normalmente con encabezado."
+    },
+    {
+      id: 828,
+      subject: "LMSGI",
+      unit: "UT2",
+      question: "¿Qué lenguaje se usa para definir la presentación visual de un documento HTML?",
+      options: ["CSS", "JSON", "PHP", "XML"],
+      correct: 0,
+      explanation: "CSS (Cascading Style Sheets) define estilos visuales como colores, tipografías, espaciados y diseño de la interfaz."
+    },
+    {
+      id: 829,
+      subject: "LMSGI",
+      unit: "UT2",
+      question: "¿Cuál es la sintaxis correcta de un comentario en CSS?",
+      options: ["# comentario", "// comentario", "<!-- comentario -->", "/* comentario */"],
+      correct: 3,
+      explanation: "En CSS los comentarios se escriben entre /* y */, no con // ni con sintaxis HTML."
+    },
+    {
+      id: 830,
+      subject: "LMSGI",
+      unit: "UT2",
+      question: "¿Qué propiedad CSS controla el color del texto?",
+      options: ["foreground", "color", "font-color", "text-color"],
+      correct: 1,
+      explanation: "La propiedad color establece el color del texto de un elemento en CSS."
+    },
+    {
+      id: 831,
+      subject: "LMSGI",
+      unit: "UT2",
+      question: "¿Qué modelo de diseño CSS se usa para crear layouts flexibles en una sola dirección?",
+      options: ["Grid", "Float", "Flexbox", "Table"],
+      correct: 2,
+      explanation: "Flexbox está pensado para distribuir elementos en un eje principal (fila o columna) de forma flexible."
+    },
+    {
+      id: 832,
+      subject: "LMSGI",
+      unit: "UT2",
+      question: "¿Qué framework CSS utiliza un sistema de 12 columnas y componentes predefinidos?",
+      options: ["Tailwind", "Bootstrap", "Bulma", "Foundation"],
+      correct: 1,
+      explanation: "Bootstrap popularizó la rejilla de 12 columnas y ofrece numerosos componentes reutilizables de interfaz."
+    },
+    {
+      id: 833,
+      subject: "LMSGI",
+      unit: "UT2",
+      question: "¿Qué formato de sindicación utiliza una estructura XML con etiquetas <channel> y <item>?",
+      options: ["JSON", "SOAP", "Atom", "RSS"],
+      correct: 3,
+      explanation: "RSS estructura el canal con <channel> y cada entrada mediante elementos <item>."
+    },
+    {
+      id: 834,
+      subject: "LMSGI",
+      unit: "UT2",
+      question: "¿Qué formato de fecha utiliza Atom para las actualizaciones?",
+      options: ["ISO 8601", "RFC 822", "DD/MM/YYYY", "Unix timestamp"],
+      correct: 0,
+      explanation: "Atom usa fechas en formato ISO 8601 (por ejemplo, 2026-04-27T15:30:00Z) para representar instantes temporales."
+    },
+    {
+      id: 835,
+      subject: "LMSGI",
+      unit: "UT2",
+      question: "¿Qué etiqueta identifica de forma única una entrada en un feed RSS?",
+      options: ["<unique>", "<id>", "<ref>", "<guid>"],
+      correct: 3,
+      explanation: "El elemento <guid> en RSS proporciona un identificador único para cada entrada del feed."
+    },
+    {
+      id: 836,
+      subject: "LMSGI",
+      unit: "UT2",
+      question: "¿Qué herramienta del W3C permite validar la estructura de un canal RSS?",
+      options: ["Feed Validation Service", "HTML Validator", "CSS Linter", "Lighthouse"],
+      correct: 0,
+      explanation: "El Feed Validation Service permite comprobar la validez sintáctica y estructural de feeds RSS/Atom."
+    },
+    {
+      id: 837,
+      subject: "LMSGI",
+      unit: "UT2",
+      question: "¿Qué propiedad CSS define el espacio interno entre el contenido y el borde?",
+      options: ["margin", "border", "spacing", "padding"],
+      correct: 3,
+      explanation: "padding define el espacio interior del elemento, entre el contenido y su borde."
+    },
+    {
+      id: 838,
+      subject: "LMSGI",
+      unit: "UT2",
+      question: "¿Qué atributo de la etiqueta <img> mejora la accesibilidad describiendo la imagen?",
+      options: ["title", "label", "src", "alt"],
+      correct: 3,
+      explanation: "El atributo alt aporta una descripción textual alternativa de la imagen para lectores de pantalla o cuando no puede cargarse."
+    },
+    {
+      id: 839,
+      subject: "LMSGI",
+      unit: "UT2",
+      question: "¿Qué formato de sindicación permite mayor flexibilidad y extensibilidad que RSS?",
+      options: ["XML", "JSON", "HTML", "Atom"],
+      correct: 3,
+      explanation: "Atom define un modelo más uniforme y extensible que RSS para sindicación de contenidos."
+    },
+    {
+      id: 840,
+      subject: "LMSGI",
+      unit: "UT2",
+      question: "¿Qué metaetiqueta se usa para definir la codificación de caracteres UTF-8?",
+      options: [
+        "<meta charset=\"UTF-8\">",
+        "<meta encoding=\"UTF-8\">",
+        "<meta type=\"UTF-8\">",
+        "<meta lang=\"UTF-8\">"
+      ],
+      correct: 0,
+      explanation: "La forma estándar en HTML5 es <meta charset=\"UTF-8\"> para declarar la codificación de caracteres del documento."
+    },
+    {
+      id: 841,
+      subject: "LMSGI",
+      unit: "UT2",
+      question: "¿Qué propiedad CSS controla la disposición de elementos en filas y columnas bidimensionales?",
+      options: ["Display", "Float", "Grid", "Flexbox"],
+      correct: 2,
+      explanation: "CSS Grid está diseñado para maquetación bidimensional (filas y columnas), a diferencia de Flexbox que se centra en un solo eje."
+    },
+    {
+      id: 842,
+      subject: "LMSGI",
+      unit: "UT3",
+      question: "¿Qué es una transformación XML?",
+      options: [
+        "El proceso de validar documentos XML",
+        "El proceso de eliminar etiquetas XML",
+        "El proceso de convertir un documento XML en otro formato",
+        "El proceso de encriptar datos XML"
+      ],
+      correct: 2,
+      explanation: "Una transformación XML consiste en tomar un XML de entrada y generar otro resultado (por ejemplo HTML, texto o XML) según reglas definidas."
+    },
+    {
+      id: 843,
+      subject: "LMSGI",
+      unit: "UT3",
+      question: "¿Qué lenguaje se utiliza para realizar transformaciones XML?",
+      options: ["CSS", "XSD", "XSLT", "DTD"],
+      correct: 2,
+      explanation: "XSLT es el lenguaje estándar para transformar documentos XML en otros formatos de salida."
+    },
+    {
+      id: 844,
+      subject: "LMSGI",
+      unit: "UT3",
+      question: "¿Qué significa XSLT?",
+      options: [
+        "Extensible Stylesheet Language Transformations",
+        "XML Structure Language Tool",
+        "Extended Style Layout Table",
+        "XHTML Source Language Transformation"
+      ],
+      correct: 0,
+      explanation: "XSLT significa Extensible Stylesheet Language Transformations y forma parte de la familia XSL para procesar XML."
+    },
+    {
+      id: 845,
+      subject: "LMSGI",
+      unit: "UT3",
+      question: "¿Cuál es la función principal de XPath en XSLT?",
+      options: [
+        "Traducir etiquetas XML a HTML",
+        "Crear atributos nuevos en el XML",
+        "Seleccionar nodos dentro de un documento XML",
+        "Comprimir datos XML"
+      ],
+      correct: 2,
+      explanation: "XPath se usa en XSLT para localizar y seleccionar nodos del XML sobre los que aplicar plantillas y transformaciones."
+    },
+    {
+      id: 846,
+      subject: "LMSGI",
+      unit: "UT3",
+      question: "¿Qué elemento de XSLT define una plantilla?",
+      options: ["<xsl:template>", "<xsl:case>", "<xsl:style>", "<xsl:rule>"],
+      correct: 0,
+      explanation: "El elemento <xsl:template> define una plantilla de transformación que se aplica a nodos que cumplan un patrón."
+    },
+    {
+      id: 847,
+      subject: "LMSGI",
+      unit: "UT3",
+      question: "¿Qué elemento de XSLT se utiliza para aplicar una plantilla?",
+      options: ["<xsl:apply-templates>", "<xsl:template-call>", "<xsl:for-each>", "<xsl:use-template>"],
+      correct: 0,
+      explanation: "<xsl:apply-templates> indica al procesador XSLT que aplique las plantillas correspondientes a los nodos seleccionados."
+    },
+    {
+      id: 848,
+      subject: "LMSGI",
+      unit: "UT3",
+      question: "¿Qué etiqueta XSLT se usa para iterar sobre nodos repetidos?",
+      options: ["<xsl:repeat>", "<xsl:for-each>", "<xsl:loop>", "<xsl:cycle>"],
+      correct: 1,
+      explanation: "<xsl:for-each> recorre una selección de nodos y permite generar salida para cada uno de ellos."
+    },
+    {
+      id: 849,
+      subject: "LMSGI",
+      unit: "UT3",
+      question: "¿Qué elemento XSLT permite realizar condiciones?",
+      options: ["<xsl:case>", "<xsl:when>", "<xsl:choose>", "<xsl:if>"],
+      correct: 3,
+      explanation: "<xsl:if> permite evaluar una condición y generar salida solo cuando el test es verdadero."
+    },
+    {
+      id: 850,
+      subject: "LMSGI",
+      unit: "UT3",
+      question: "¿Cuál es la función principal de DTD?",
+      options: [
+        "Definir la presentación visual de un documento XML",
+        "Definir la estructura y los elementos permitidos de un documento XML",
+        "Crear estilos CSS para XML",
+        "Transformar XML a HTML"
+      ],
+      correct: 1,
+      explanation: "DTD define qué elementos, atributos y estructura son válidos en un documento XML."
+    },
+    {
+      id: 851,
+      subject: "LMSGI",
+      unit: "UT3",
+      question: "¿Qué significa XSD?",
+      options: ["XML Structured Document", "XML Schema Definition", "Extended Schema Definition", "XHTML Style Directive"],
+      correct: 1,
+      explanation: "XSD significa XML Schema Definition, lenguaje para definir la estructura y tipos de datos de documentos XML."
+    },
+    {
+      id: 852,
+      subject: "LMSGI",
+      unit: "UT3",
+      question: "¿Qué ventaja tiene XSD sobre DTD?",
+      options: [
+        "No requiere validación",
+        "Es menos estricto en la sintaxis",
+        "Permite definir tipos de datos y restricciones",
+        "Tiene una sintaxis más simple que DTD"
+      ],
+      correct: 2,
+      explanation: "XSD permite definir tipos de dato (string, date, integer, etc.) y restricciones detalladas, algo más limitado en DTD."
+    },
+    {
+      id: 853,
+      subject: "LMSGI",
+      unit: "UT3",
+      question: "¿Qué lenguaje permite definir reglas lógicas de validación?",
+      options: ["JSON", "Schematron", "XSLT", "XMLPath"],
+      correct: 1,
+      explanation: "Schematron permite validar reglas lógicas y de negocio complejas mediante expresiones XPath."
+    },
+    {
+      id: 854,
+      subject: "LMSGI",
+      unit: "UT3",
+      question: "¿Qué etiqueta se utiliza en un esquema XSD para definir un elemento?",
+      options: ["<xs:rule>", "<xs:element>", "<xs:data>", "<xs:item>"],
+      correct: 1,
+      explanation: "En XSD, <xs:element> se usa para declarar elementos del esquema y sus propiedades."
+    },
+    {
+      id: 855,
+      subject: "LMSGI",
+      unit: "UT3",
+      question: "¿Qué atributo en XSD permite indicar el número mínimo de ocurrencias?",
+      options: ["minRepeat", "minCount", "minOccurs", "lowerBound"],
+      correct: 2,
+      explanation: "El atributo minOccurs define el número mínimo de veces que un elemento puede aparecer en el XML."
+    },
+    {
+      id: 856,
+      subject: "LMSGI",
+      unit: "UT3",
+      question: "¿Qué herramienta se usa para seleccionar nodos en XML?",
+      options: ["XPath", "CSS", "HTML", "XQuery"],
+      correct: 0,
+      explanation: "XPath es la herramienta estándar para navegar y seleccionar nodos dentro de un documento XML."
+    },
+    {
+      id: 857,
+      subject: "LMSGI",
+      unit: "UT3",
+      question: "¿Qué permite hacer Schematron además de la validación estructural?",
+      options: [
+        "Convertir XML en JSON",
+        "Comprimir documentos XML",
+        "Transformar XML en CSS",
+        "Validar reglas de negocio mediante expresiones XPath"
+      ],
+      correct: 3,
+      explanation: "Schematron permite comprobar condiciones de negocio y coherencia semántica con reglas basadas en XPath."
+    },
+    {
+      id: 858,
+      subject: "LMSGI",
+      unit: "UT3",
+      question: "¿Qué tipo de salida puede generar una transformación XSLT?",
+      options: ["Solo PDF", "Solo HTML", "HTML, texto plano o XML", "Solo JSON"],
+      correct: 2,
+      explanation: "XSLT puede producir distintos resultados como HTML para web, texto plano para informes o XML transformado."
+    },
+    {
+      id: 859,
+      subject: "LMSGI",
+      unit: "UT3",
+      question: "¿Qué atributo en XSLT permite definir el formato de salida?",
+      options: ["<xsl:template>", "<xsl:style>", "<xsl:output>", "<xsl:format>"],
+      correct: 2,
+      explanation: "En XSLT se utiliza <xsl:output> para configurar el método de salida (xml, html, text) y otras propiedades."
+    },
+    {
+      id: 860,
+      subject: "LMSGI",
+      unit: "UT3",
+      question: "¿Qué herramienta del W3C valida documentos XML contra XSD?",
+      options: ["XML Beautifier", "HTML Linter", "XSLT Transformer", "W3C XML Schema Validator"],
+      correct: 3,
+      explanation: "El validador de esquemas XML del entorno W3C permite comprobar si un XML cumple las restricciones definidas en un XSD."
+    },
+    {
+      id: 861,
+      subject: "LMSGI",
+      unit: "UT3",
+      question: "¿Qué combinación de tecnologías permite validar tanto estructura como reglas lógicas?",
+      options: ["XSD y Schematron", "DTD y CSS", "XPath y HTML", "XSLT y XQuery"],
+      correct: 0,
+      explanation: "XSD valida estructura y tipos de datos, mientras Schematron permite añadir validaciones lógicas y de negocio."
+    },
+    {
+      id: 862,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué es una base de datos nativa XML (NXD)?",
+      options: [
+        "Una base de datos relacional tradicional con soporte parcial para XML",
+        "Un formato binario de compresión de datos",
+        "Un repositorio de texto plano sin estructura",
+        "Un sistema diseñado específicamente para almacenar y consultar documentos XML"
+      ],
+      correct: 3,
+      explanation: "Una NXD está pensada para almacenar documentos XML de forma nativa y consultarlos directamente con tecnologías XML."
+    },
+    {
+      id: 863,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Cuál es la principal función de XPath?",
+      options: [
+        "Generar archivos HTML",
+        "Validar la estructura de un documento XML",
+        "Seleccionar nodos dentro de un documento XML",
+        "Transformar XML a otros formatos"
+      ],
+      correct: 2,
+      explanation: "XPath sirve para navegar por el árbol XML y seleccionar nodos mediante expresiones de ruta."
+    },
+    {
+      id: 864,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué significa XQuery?",
+      options: ["XML Query Language", "Extended Query Resource", "XML Quality Reader", "XML Quick Response"],
+      correct: 0,
+      explanation: "XQuery significa XML Query Language y se utiliza para consultar y procesar datos XML."
+    },
+    {
+      id: 865,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué estructura define el lenguaje XQuery?",
+      options: [
+        "LOOP-IF-END",
+        "TRY-CATCH",
+        "SELECT-FROM-WHERE",
+        "FLWOR (For, Let, Where, Order, Return)"
+      ],
+      correct: 3,
+      explanation: "La estructura FLWOR es el patrón principal de consulta en XQuery para iterar, filtrar, ordenar y devolver resultados."
+    },
+    {
+      id: 866,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Cuál es el propósito de la serialización XML?",
+      options: [
+        "Convertir documentos XML en una secuencia de bytes para almacenamiento o transmisión",
+        "Cifrar datos XML",
+        "Validar la sintaxis de un documento XML",
+        "Transformar XML a JSON"
+      ],
+      correct: 0,
+      explanation: "La serialización convierte la estructura XML en un formato de salida apto para guardar o transmitir."
+    },
+    {
+      id: 867,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué tipo de lenguaje es XPath?",
+      options: [
+        "Un lenguaje de programación imperativo",
+        "Un lenguaje de consulta para navegar por estructuras XML",
+        "Un lenguaje de marcado",
+        "Un lenguaje de validación de esquemas"
+      ],
+      correct: 1,
+      explanation: "XPath es un lenguaje de consulta/navegación para localizar nodos en documentos XML."
+    },
+    {
+      id: 868,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué hace la cláusula WHERE en una consulta FLWOR?",
+      options: [
+        "Devuelve los datos transformados",
+        "Define el orden de los resultados",
+        "Filtra los resultados según una condición",
+        "Crea variables locales"
+      ],
+      correct: 2,
+      explanation: "WHERE aplica condiciones lógicas para filtrar qué elementos pasan al resultado final."
+    },
+    {
+      id: 869,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué ventaja ofrecen las bases de datos nativas XML frente a las relacionales?",
+      options: [
+        "Permiten solo lectura de datos",
+        "Almacenan y consultan XML directamente sin necesidad de conversión",
+        "Utilizan menor espacio en disco",
+        "No requieren índices ni esquemas"
+      ],
+      correct: 1,
+      explanation: "Las NXD evitan el mapeo XML-tablas y trabajan directamente con la estructura jerárquica de XML."
+    },
+    {
+      id: 870,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué extensión de SQL permite combinar datos XML y relacionales?",
+      options: ["XSD/SQL", "XML/DB", "SQL/XML", "SQL/JSON"],
+      correct: 2,
+      explanation: "SQL/XML integra operaciones SQL con funciones para manipular y consultar datos XML."
+    },
+    {
+      id: 871,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué representa el término FLWOR en XQuery?",
+      options: [
+        "Fetch, Loop, Write, Output, Read",
+        "Format, Label, Work, Organize, Return",
+        "File, Load, Write, Output, Result",
+        "For, Let, Where, Order, Return"
+      ],
+      correct: 3,
+      explanation: "FLWOR son las cláusulas For, Let, Where, Order by y Return, base de muchas consultas XQuery."
+    },
+    {
+      id: 872,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué función tiene la cláusula RETURN en una consulta XQuery?",
+      options: [
+        "Determina el orden de salida",
+        "Devuelve el resultado final de la consulta",
+        "Define una variable temporal",
+        "Especifica la condición de filtrado"
+      ],
+      correct: 1,
+      explanation: "RETURN construye y devuelve el resultado final que la consulta XQuery produce."
+    },
+    {
+      id: 873,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué herramienta permite indexar documentos XML para acelerar consultas?",
+      options: [
+        "Un editor de texto",
+        "El motor de base de datos nativa XML",
+        "Un compilador SQL",
+        "Un transformador XSLT"
+      ],
+      correct: 1,
+      explanation: "El propio motor de base de datos XML gestiona índices para mejorar tiempos de búsqueda y recuperación."
+    },
+    {
+      id: 874,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué es la conversión XML-relacional?",
+      options: [
+        "El proceso de transformar HTML a XML",
+        "El proceso de mapear estructuras XML en tablas de una base de datos relacional",
+        "El proceso de cifrar datos XML",
+        "La validación de esquemas XML"
+      ],
+      correct: 1,
+      explanation: "La conversión XML-relacional consiste en mapear nodos y atributos XML a tablas, columnas y relaciones."
+    },
+    {
+      id: 875,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué lenguaje se utiliza para seleccionar nodos dentro de un documento XML?",
+      options: ["SQL", "JSONPath", "XPath", "XSL-FO"],
+      correct: 2,
+      explanation: "XPath es el lenguaje estándar para seleccionar nodos y atributos de documentos XML."
+    },
+    {
+      id: 876,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué caracteriza a la serialización binaria de XML?",
+      options: [
+        "Permite editar XML con cualquier editor de texto",
+        "Genera documentos XML legibles por humanos",
+        "Requiere validación con DTD",
+        "Representa datos XML en formato compacto y eficiente"
+      ],
+      correct: 3,
+      explanation: "La serialización binaria prioriza compactación y rendimiento, sacrificando la legibilidad directa humana."
+    },
+    {
+      id: 877,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué función cumple la indexación en bases de datos XML?",
+      options: [
+        "Reducir el tamaño de los documentos",
+        "Aumentar el nivel de seguridad",
+        "Convertir XML a texto plano",
+        "Mejorar la velocidad de búsqueda y recuperación de datos"
+      ],
+      correct: 3,
+      explanation: "Los índices aceleran la localización de nodos y mejoran el rendimiento de las consultas."
+    },
+    {
+      id: 878,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué operador de XPath selecciona todos los descendientes de un nodo?",
+      options: [".", "/", "@", "//"],
+      correct: 3,
+      explanation: "El operador // en XPath busca nodos descendientes en cualquier nivel bajo el contexto actual."
+    },
+    {
+      id: 879,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué función tiene la cláusula ORDER BY en XQuery?",
+      options: [
+        "Ordenar los resultados de una consulta",
+        "Validar un esquema XSD",
+        "Filtrar los nodos XML por nombre",
+        "Crear nuevas etiquetas XML"
+      ],
+      correct: 0,
+      explanation: "ORDER BY establece el criterio de ordenación de los resultados antes de devolverlos."
+    },
+    {
+      id: 880,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué formato de almacenamiento permite mayor interoperabilidad entre sistemas?",
+      options: ["CSV", "XML", "BIN", "PDF"],
+      correct: 1,
+      explanation: "XML es un formato estándar, autodescriptivo y ampliamente soportado para intercambio entre sistemas heterogéneos."
+    },
+    {
+      id: 881,
+      subject: "LMSGI",
+      unit: "UT4",
+      question: "¿Qué permite realizar SQL/XML?",
+      options: [
+        "Transformar XML en CSS",
+        "Consultas híbridas que combinan SQL y XPath/XQuery",
+        "Validar documentos XML en bases relacionales",
+        "Convertir datos JSON a XML"
+      ],
+      correct: 1,
+      explanation: "SQL/XML permite integrar datos XML y relacionales en consultas híbridas dentro del ecosistema SQL."
+    },
+    {
+      id: 882,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué diferencia principal existe entre una base de datos nativa XML y una relacional con soporte XML?",
+      options: [
+        "La relacional tiene mejor rendimiento en consultas jerárquicas.",
+        "La nativa almacena documentos XML completos, mientras que la relacional los fragmenta en tablas.",
+        "La nativa no soporta XPath ni XQuery.",
+        "Ambas almacenan datos XML del mismo modo."
+      ],
+      correct: 1,
+      explanation: "Las bases nativas XML almacenan documentos completos y preservan su estructura jerárquica; en relacionales suele hacerse un mapeo a tablas."
+    },
+    {
+      id: 883,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué lenguajes se utilizan principalmente para realizar consultas en bases de datos XML?",
+      options: ["SQL y JSONPath", "REST y SOAP", "XSLT y DTD", "XPath y XQuery"],
+      correct: 3,
+      explanation: "XPath y XQuery son los lenguajes estándar para navegar y consultar datos en documentos y bases XML."
+    },
+    {
+      id: 884,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Cuál es el propósito de la serialización XML?",
+      options: [
+        "Convertir un documento XML en una secuencia de bytes para almacenamiento o transmisión.",
+        "Cifrar datos XML sensibles.",
+        "Validar la estructura de un documento XML.",
+        "Generar consultas XQuery."
+      ],
+      correct: 0,
+      explanation: "Serializar XML consiste en convertir su estructura en un formato de salida apto para transporte o persistencia."
+    },
+    {
+      id: 885,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué técnica mejora el rendimiento de las consultas en bases de datos XML?",
+      options: [
+        "Indexación de caminos y valores",
+        "Eliminar etiquetas XML redundantes",
+        "Desactivar validaciones XSD",
+        "Comprimir el XML con gzip"
+      ],
+      correct: 0,
+      explanation: "Los índices sobre rutas y valores permiten localizar nodos relevantes con menos coste y acelerar las consultas."
+    },
+    {
+      id: 886,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué garantiza la gestión de transacciones en bases de datos XML?",
+      options: [
+        "La transformación automática de XML",
+        "La integridad y consistencia de los datos en operaciones concurrentes",
+        "El cifrado de los mensajes SOAP",
+        "La compresión de datos XML"
+      ],
+      correct: 1,
+      explanation: "La gestión transaccional asegura consistencia e integridad cuando múltiples operaciones o usuarios actúan a la vez."
+    },
+    {
+      id: 887,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué rol cumple XML en sistemas ERP?",
+      options: [
+        "Reemplazar completamente las bases de datos relacionales",
+        "Generar interfaces gráficas de usuario",
+        "Sustituir los esquemas SQL existentes",
+        "Facilitar la interoperabilidad entre módulos y sistemas externos mediante un formato estándar"
+      ],
+      correct: 3,
+      explanation: "XML actúa como formato común de intercambio, permitiendo que módulos ERP y sistemas externos compartan datos de forma interoperable."
+    },
+    {
+      id: 888,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué protocolo usa mensajes estructurados en formato XML con encabezado y cuerpo definidos?",
+      options: ["REST", "JSON-RPC", "SOAP", "FTP"],
+      correct: 2,
+      explanation: "SOAP define mensajes XML con estructura formal, incluyendo header y body para intercambio de información."
+    },
+    {
+      id: 889,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué estilo arquitectónico usa los métodos HTTP y puede transmitir datos en XML o JSON?",
+      options: ["RPC", "SMTP", "SOAP", "REST"],
+      correct: 3,
+      explanation: "REST se apoya en HTTP (GET, POST, PUT, DELETE, etc.) y puede usar XML o JSON como representación."
+    },
+    {
+      id: 890,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué estándar define mecanismos de seguridad como cifrado y firma digital en servicios SOAP?",
+      options: ["XMLSchema", "HTTPS", "OAuth 2.0", "WS-Security"],
+      correct: 3,
+      explanation: "WS-Security define cómo aplicar firmas, cifrado y tokens de seguridad en mensajes SOAP."
+    },
+    {
+      id: 891,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué formato es más compacto y rápido para la serialización de datos?",
+      options: ["XML", "JSON", "Protocol Buffers", "YAML"],
+      correct: 2,
+      explanation: "Protocol Buffers usa codificación binaria eficiente, normalmente más compacta y rápida que formatos textuales."
+    },
+    {
+      id: 892,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué ventaja ofrece JSON frente a XML en integraciones web?",
+      options: [
+        "Mejor manejo de datos jerárquicos complejos",
+        "Mayor soporte para validaciones de esquema",
+        "Soporte nativo para namespaces",
+        "Mayor ligereza y velocidad de procesamiento"
+      ],
+      correct: 3,
+      explanation: "JSON suele ser más ligero y rápido de parsear en entornos web, especialmente en aplicaciones JavaScript."
+    },
+    {
+      id: 893,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué formato utiliza esquemas estrictos definidos en archivos .proto?",
+      options: ["JSON", "XML", "Protocol Buffers", "XSLT"],
+      correct: 2,
+      explanation: "Protocol Buffers define estructuras en archivos .proto para generar serialización y deserialización tipada."
+    },
+    {
+      id: 894,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué herramienta permite convertir XML a JSON utilizando plantillas?",
+      options: ["SQL/XML", "XMLSpy", "XSLT 3.0", "JSON Schema"],
+      correct: 2,
+      explanation: "Con XSLT 3.0 se pueden definir plantillas de transformación para producir salidas en JSON a partir de XML."
+    },
+    {
+      id: 895,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué es un pipeline de integración?",
+      options: [
+        "Un protocolo de autenticación entre APIs",
+        "Una tabla que almacena XML comprimido",
+        "Un servicio de correo automatizado",
+        "Un flujo automatizado de tareas de validación, transformación y despliegue"
+      ],
+      correct: 3,
+      explanation: "Un pipeline encadena etapas automáticas para validar, transformar y desplegar de forma repetible y controlada."
+    },
+    {
+      id: 896,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué componente centraliza las peticiones a microservicios en una arquitectura distribuida?",
+      options: ["BaseX", "DTD", "ESB", "API Gateway"],
+      correct: 3,
+      explanation: "El API Gateway actúa como punto de entrada único, enrutando y aplicando políticas sobre peticiones a microservicios."
+    },
+    {
+      id: 897,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué permite la automatización de flujos de integración?",
+      options: [
+        "Aumentar el tamaño de los archivos XML",
+        "Evitar el uso de validaciones XSD",
+        "Reducir errores y acelerar los procesos empresariales",
+        "Sustituir protocolos REST por SOAP"
+      ],
+      correct: 2,
+      explanation: "Automatizar reduce tareas manuales repetitivas, disminuye errores humanos y mejora tiempos de ejecución."
+    },
+    {
+      id: 898,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué característica distingue a las plataformas EAI (Enterprise Application Integration)?",
+      options: [
+        "Sustituyen los sistemas ERP existentes",
+        "Facilitan la comunicación entre sistemas heterogéneos mediante transformación y orquestación de datos",
+        "Funcionan solo con datos JSON",
+        "No requieren configuración de seguridad"
+      ],
+      correct: 1,
+      explanation: "EAI integra aplicaciones heterogéneas mediante conectores, transformación de datos y orquestación de procesos."
+    },
+    {
+      id: 899,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué lenguaje se usa en la orquestación de servicios web?",
+      options: ["SQL", "BPEL", "XSD", "JSONPath"],
+      correct: 1,
+      explanation: "BPEL (Business Process Execution Language) se emplea para definir y orquestar flujos de servicios web."
+    },
+    {
+      id: 900,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué herramienta se usa para probar servicios web y validar esquemas XML?",
+      options: ["Docker", "Notepad++", "Photoshop", "SoapUI"],
+      correct: 3,
+      explanation: "SoapUI permite probar APIs/servicios web y validar peticiones y respuestas, incluyendo escenarios con XML."
+    },
+    {
+      id: 901,
+      subject: "LMSGI",
+      unit: "UT5",
+      question: "¿Qué concepto combina integración, automatización y control de calidad continuo?",
+      options: ["XML-RPC", "VPN", "UML", "CI/CD (Integración y Despliegue Continuos)"],
+      correct: 3,
+      explanation: "CI/CD integra cambios de forma continua, automatiza pruebas/despliegues y mejora la calidad del flujo de entrega."
+    },
+    // =========================
+    // IAW (Implantación de Aplicaciones Web) - UT1
+    // =========================
+    {
+      id: 902,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué comando permite acceder a la consola de MySQL en Linux?",
+      options: ["mysql -login", "connect mysql", "sudo mysql", "service mysql status"],
+      correct: 2,
+      explanation: "En Linux, `sudo mysql` permite abrir la consola del servidor MySQL/MariaDB cuando se dispone de permisos adecuados."
+    },
+    {
+      id: 903,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Cuál es la principal diferencia entre Apache y Nginx?",
+      options: [
+        "Apache es gratuito y Nginx es de pago",
+        "Nginx solo funciona en Linux",
+        "Nginx usa un modelo asíncrono de procesamiento",
+        "Apache no permite configuración modular"
+      ],
+      correct: 2,
+      explanation: "Nginx destaca por su modelo orientado a eventos y procesamiento asíncrono, eficiente en alta concurrencia."
+    },
+    {
+      id: 904,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué tipo de cifrado garantiza la seguridad en HTTPS?",
+      options: [
+        "Cifrado por sustitución",
+        "Cifrado simétrico sin clave",
+        "Cifrado con certificados SSL/TLS",
+        "Ningún tipo de cifrado"
+      ],
+      correct: 2,
+      explanation: "HTTPS protege la comunicación mediante TLS (históricamente SSL) y certificados digitales."
+    },
+    {
+      id: 905,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Cuál es el objetivo principal de un entorno de desarrollo web?",
+      options: [
+        "Probar, desarrollar y mantener aplicaciones antes de su despliegue final",
+        "Publicar sitios web automáticamente",
+        "Ejecutar código directamente en producción",
+        "Mostrar interfaces gráficas al usuario final"
+      ],
+      correct: 0,
+      explanation: "Un entorno de desarrollo permite crear y validar aplicaciones de forma segura antes de publicarlas en producción."
+    },
+    {
+      id: 906,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué archivo se utiliza para configurar parámetros de PHP?",
+      options: ["apache2.conf", ".htaccess", "config.php", "php.ini"],
+      correct: 3,
+      explanation: "`php.ini` es el archivo principal donde se ajustan directivas globales de configuración de PHP."
+    },
+    {
+      id: 907,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué extensión de archivo se asocia con scripts de PHP?",
+      options: [".html", ".db", ".py", ".php"],
+      correct: 3,
+      explanation: "Los scripts de PHP se guardan habitualmente con extensión `.php` para que el servidor los interprete."
+    },
+    {
+      id: 908,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Cuál es el comando correcto para instalar Apache en Ubuntu?",
+      options: ["sudo apt install apache2", "sudo install apache2", "apache2 install", "apt-get apache"],
+      correct: 0,
+      explanation: "En Ubuntu, Apache se instala desde repositorios con `sudo apt install apache2`."
+    },
+    {
+      id: 909,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué componente permite procesar código PHP en un servidor Apache?",
+      options: ["phpMyAdmin", "Node.js", "MySQL-server", "libapache2-mod-php"],
+      correct: 3,
+      explanation: "`libapache2-mod-php` integra PHP con Apache para ejecutar scripts del lado servidor."
+    },
+    {
+      id: 910,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué tecnología actúa del lado del servidor?",
+      options: ["JavaScript", "CSS", "PHP", "HTML"],
+      correct: 2,
+      explanation: "PHP se ejecuta en el servidor y genera la respuesta dinámica enviada al cliente."
+    },
+    {
+      id: 911,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Por qué es importante documentar un entorno de desarrollo?",
+      options: [
+        "Para poder compartirlo en redes sociales",
+        "Para garantizar la trazabilidad y facilitar mantenimiento",
+        "Porque lo exige la normativa fiscal",
+        "Para instalar software automáticamente"
+      ],
+      correct: 1,
+      explanation: "Documentar facilita reproducir el entorno, mantenerlo y transferir conocimiento dentro del equipo."
+    },
+    {
+      id: 912,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué significa localhost en un entorno de desarrollo?",
+      options: [
+        "Un proxy que enruta las conexiones externas",
+        "El equipo del usuario que ejecuta el servidor local",
+        "Un nombre de dominio reservado para producción",
+        "Un servidor remoto con acceso seguro"
+      ],
+      correct: 1,
+      explanation: "`localhost` se refiere al propio equipo local (normalmente 127.0.0.1 o ::1)."
+    },
+    {
+      id: 913,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Cuál de las siguientes opciones mejora la seguridad de una base de datos?",
+      options: [
+        "Permitir conexiones remotas anónimas",
+        "Dar permisos globales a todos los usuarios",
+        "Limitar los permisos según las necesidades",
+        "Usar el usuario root sin contraseña"
+      ],
+      correct: 2,
+      explanation: "Aplicar el principio de mínimo privilegio mejora la seguridad limitando accesos innecesarios."
+    },
+    {
+      id: 914,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué herramienta permite gestionar visualmente bases de datos en XAMPP?",
+      options: ["phpMyAdmin", "Composer", "VS Code", "Apache Control Panel"],
+      correct: 0,
+      explanation: "phpMyAdmin ofrece una interfaz web para administrar bases de datos MySQL/MariaDB."
+    },
+    {
+      id: 915,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué indica el código de estado HTTP 404?",
+      options: ["Solicitud correcta", "Recurso no encontrado", "Redirección permanente", "Error interno del servidor"],
+      correct: 1,
+      explanation: "El estado 404 indica que el recurso solicitado no ha sido encontrado en el servidor."
+    },
+    {
+      id: 916,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué protocolo se utiliza en las peticiones web entre cliente y servidor?",
+      options: ["FTP", "DNS", "HTTP", "SMTP"],
+      correct: 2,
+      explanation: "HTTP es el protocolo principal para intercambio de peticiones y respuestas web."
+    },
+    {
+      id: 917,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué herramienta NO forma parte de un paquete XAMPP?",
+      options: ["MariaDB", "PHP", "Python", "Apache"],
+      correct: 2,
+      explanation: "XAMPP incluye Apache, MariaDB y PHP, pero no Python como componente base del paquete."
+    },
+    {
+      id: 918,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Cuál es el propósito del archivo phpinfo.php?",
+      options: [
+        "Mostrar información sobre el entorno PHP",
+        "Crear una base de datos vacía",
+        "Servir como página de error 404",
+        "Generar scripts HTML automáticamente"
+      ],
+      correct: 0,
+      explanation: "Un script con `phpinfo()` muestra información de configuración y módulos disponibles de PHP."
+    },
+    {
+      id: 919,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Cuál de las siguientes herramientas se considera un editor de código?",
+      options: ["MySQL Workbench", "phpMyAdmin", "NetBeans", "Apache Server"],
+      correct: 2,
+      explanation: "NetBeans es un entorno de desarrollo (IDE) orientado a edición y programación."
+    },
+    {
+      id: 920,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué elemento permite establecer reglas de acceso en Apache?",
+      options: ["config.json", ".env", "server.conf", ".htaccess"],
+      correct: 3,
+      explanation: "El archivo `.htaccess` permite aplicar reglas de acceso y configuración por directorio en Apache."
+    },
+    {
+      id: 921,
+      subject: "IAW",
+      unit: "UT1",
+      question: "¿Qué elemento forma parte del lado cliente en una aplicación web?",
+      options: ["JavaScript", "PHP", "Apache", "MySQL"],
+      correct: 0,
+      explanation: "JavaScript se ejecuta en el navegador (cliente), mientras PHP/Apache/MySQL operan en el servidor."
+    },
+    // =========================
+    // IAW (Implantación de Aplicaciones Web) - UT2
+    // =========================
+    {
+      id: 922,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué carpeta de Joomla contiene la interfaz administrativa?",
+      options: ["/content/", "/administrator/", "/modules/", "/plugins/"],
+      correct: 1,
+      explanation: "En Joomla, la interfaz de administración se encuentra en el directorio `/administrator/`."
+    },
+    {
+      id: 923,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué tarea forma parte de las pruebas de funcionamiento antes de publicar un CMS?",
+      options: [
+        "Verificar que todos los enlaces, formularios y funcionalidades trabajan correctamente",
+        "Configurar el panel de control del proveedor de hosting",
+        "Instalar todos los plugins disponibles en el repositorio",
+        "Modificar el código fuente del núcleo del CMS"
+      ],
+      correct: 0,
+      explanation: "Antes de publicar, se debe comprobar que enlaces, formularios y funcionalidades operan correctamente para evitar fallos en producción."
+    },
+    {
+      id: 924,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué comando se usa para exportar una base de datos MySQL desde terminal Linux?",
+      options: [
+        "mysqlbackup -d basedatos -f backup.sql",
+        "mysqldump -u usuario -p basedatos > backup.sql",
+        "exportdb -u usuario basedatos",
+        "cp basedatos /backup.sql"
+      ],
+      correct: 1,
+      explanation: "`mysqldump` es la herramienta estándar para exportar bases de datos MySQL/MariaDB desde terminal."
+    },
+    {
+      id: 925,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Cuál es el propósito de un cortafuegos de aplicaciones web (WAF)?",
+      options: [
+        "Mejorar el diseño visual de la web",
+        "Filtrar y monitorizar el tráfico HTTP",
+        "Acelerar la carga del sitio",
+        "Optimizar la base de datos"
+      ],
+      correct: 1,
+      explanation: "Un WAF inspecciona y filtra tráfico HTTP/HTTPS para proteger aplicaciones web frente a ataques comunes."
+    },
+    {
+      id: 926,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué rol en WordPress tiene control total sobre el sitio web?",
+      options: ["Editor", "Autor", "Administrador", "Colaborador"],
+      correct: 2,
+      explanation: "El rol de Administrador dispone de permisos completos sobre configuración, usuarios, temas y plugins."
+    },
+    {
+      id: 927,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué documento debe elaborar el técnico tras la publicación del CMS?",
+      options: [
+        "Un informe de costes de hosting",
+        "Un contrato de licencia de software",
+        "Una memoria técnica del proyecto",
+        "Un manual de usuario básico y documentación de instalación"
+      ],
+      correct: 3,
+      explanation: "Tras publicar, es clave entregar manual de uso y documentación de instalación/mantenimiento para facilitar la operación."
+    },
+    {
+      id: 928,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué conjunto de tecnologías compone el entorno LAMP?",
+      options: [
+        "Linux, Apache, MySQL, PHP",
+        "Linux, Apache, MongoDB, Perl",
+        "Linux, Angular, MySQL, Python",
+        "Laravel, Apache, MariaDB, PostgreSQL"
+      ],
+      correct: 0,
+      explanation: "LAMP significa Linux, Apache, MySQL y PHP (o, en ocasiones, MariaDB como variante del motor SQL)."
+    },
+    {
+      id: 929,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué es un CMS o gestor de contenidos?",
+      options: [
+        "Un servidor de correo electrónico",
+        "Un software que permite crear y gestionar sitios web sin programar",
+        "Un lenguaje de programación web",
+        "Un sistema de gestión de archivos en la nube"
+      ],
+      correct: 1,
+      explanation: "Un CMS permite crear, editar y administrar contenido web con menor necesidad de programación manual."
+    },
+    {
+      id: 930,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué licencia de software garantiza las cuatro libertades básicas del software libre?",
+      options: ["MIT License", "GPL (GNU General Public License)", "Apache License 2.0", "Creative Commons"],
+      correct: 1,
+      explanation: "La GPL es una licencia copyleft que protege libertades de uso, estudio, modificación y redistribución."
+    },
+    {
+      id: 931,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Cuál de los siguientes CMS es de tipo educativo?",
+      options: ["Drupal", "Moodle", "PrestaShop", "Ghost"],
+      correct: 1,
+      explanation: "Moodle es un LMS/CMS orientado específicamente a entornos educativos y formación en línea."
+    },
+    {
+      id: 932,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué práctica mejora el rendimiento del CMS en producción?",
+      options: [
+        "Desactivar la caché del servidor",
+        "Aumentar el número de plugins",
+        "Usar imágenes en máxima resolución",
+        "Habilitar la caché y usar un CDN"
+      ],
+      correct: 3,
+      explanation: "Activar caché y CDN reduce latencia y carga del servidor, mejorando tiempos de respuesta."
+    },
+    {
+      id: 933,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué protocolo se utiliza para cifrar las comunicaciones entre cliente y servidor?",
+      options: ["FTP", "HTTP", "SSL/TLS (HTTPS)", "SMTP"],
+      correct: 2,
+      explanation: "La comunicación cifrada en web se establece mediante TLS (históricamente SSL), usado en HTTPS."
+    },
+    {
+      id: 934,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué medida de seguridad evita el acceso no autorizado mediante una verificación adicional?",
+      options: [
+        "Contraseñas de 4 dígitos",
+        "Autenticación de dos factores (2FA)",
+        "Desactivar el firewall",
+        "Eliminar los logs de acceso"
+      ],
+      correct: 1,
+      explanation: "2FA añade un segundo factor de verificación, reduciendo accesos indebidos incluso si se compromete la contraseña."
+    },
+    {
+      id: 935,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Cuál es el directorio de WordPress donde se guardan los temas instalados?",
+      options: ["/wp-content/themes/", "/themes/", "/wp-admin/themes/", "/wp-includes/themes/"],
+      correct: 0,
+      explanation: "Los temas de WordPress se almacenan en `/wp-content/themes/`."
+    },
+    {
+      id: 936,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué se debe hacer antes de actualizar un CMS?",
+      options: [
+        "Eliminar todos los usuarios del sistema",
+        "Cambiar el dominio del sitio",
+        "Realizar una copia de seguridad completa",
+        "Desinstalar el servidor web"
+      ],
+      correct: 2,
+      explanation: "Hacer backup completo antes de actualizar permite recuperar el sistema ante cualquier fallo."
+    },
+    {
+      id: 937,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Cuál es el objetivo principal de la personalización de un CMS?",
+      options: [
+        "Aumentar la complejidad del código",
+        "Adaptar el sistema a las necesidades específicas del cliente",
+        "Eliminar funcionalidades innecesarias",
+        "Reducir el número de usuarios"
+      ],
+      correct: 1,
+      explanation: "Personalizar un CMS busca ajustar funcionalidades, diseño y flujo a los requisitos del proyecto."
+    },
+    {
+      id: 938,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Cuál es la función del archivo .htaccess en un CMS?",
+      options: [
+        "Almacenar las imágenes del sitio",
+        "Configurar reglas de reescritura y seguridad en Apache",
+        "Definir la estructura de la base de datos",
+        "Establecer las credenciales del administrador"
+      ],
+      correct: 1,
+      explanation: "`.htaccess` permite aplicar reglas de reescritura, redirecciones y restricciones de acceso en Apache."
+    },
+    {
+      id: 939,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué archivo principal de WordPress contiene los datos de conexión a la base de datos?",
+      options: ["index.php", "wp-config.php", "functions.php", "style.css"],
+      correct: 1,
+      explanation: "`wp-config.php` guarda configuración clave, incluidos parámetros de conexión a base de datos."
+    },
+    {
+      id: 940,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué sistema se encarga de traducir nombres de dominio a direcciones IP?",
+      options: ["DHCP", "DNS", "FTP", "SMTP"],
+      correct: 1,
+      explanation: "DNS resuelve nombres de dominio en direcciones IP para que los clientes puedan localizar servidores."
+    },
+    {
+      id: 941,
+      subject: "IAW",
+      unit: "UT2",
+      question: "¿Qué es un backup incremental?",
+      options: [
+        "Una copia de seguridad que guarda solo los datos modificados desde el último backup",
+        "Una copia de seguridad completa de todos los datos",
+        "Un sistema de recuperación de datos borrados",
+        "Un tipo de base de datos en la nube"
+      ],
+      correct: 0,
+      explanation: "Un backup incremental almacena solo cambios desde la última copia, reduciendo tiempo y espacio de respaldo."
     },
   ];
 
