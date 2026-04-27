@@ -11433,7 +11433,7 @@ const ExamSimulator = () => {
     // IAW (Implantación de Aplicaciones Web) - UT1
     // =========================
     {
-      id: 902,
+      id: 902, // (Nº 19)
       subject: "IAW",
       unit: "UT1",
       question: "¿Qué comando permite acceder a la consola de MySQL en Linux?",
@@ -11442,7 +11442,7 @@ const ExamSimulator = () => {
       explanation: "En Linux, `sudo mysql` permite abrir la consola del servidor MySQL/MariaDB cuando se dispone de permisos adecuados."
     },
     {
-      id: 903,
+      id: 903, // (Nº 11)
       subject: "IAW",
       unit: "UT1",
       question: "¿Cuál es la principal diferencia entre Apache y Nginx?",
@@ -11456,7 +11456,7 @@ const ExamSimulator = () => {
       explanation: "Nginx destaca por su modelo orientado a eventos y procesamiento asíncrono, eficiente en alta concurrencia."
     },
     {
-      id: 904,
+      id: 904, // (Nº 17)
       subject: "IAW",
       unit: "UT1",
       question: "¿Qué tipo de cifrado garantiza la seguridad en HTTPS?",
@@ -11470,21 +11470,7 @@ const ExamSimulator = () => {
       explanation: "HTTPS protege la comunicación mediante TLS (históricamente SSL) y certificados digitales."
     },
     {
-      id: 662,
-      subject: "IAW",
-      unit: "UT1",
-      question: "¿Qué elemento forma parte del lado cliente en una aplicación web?",
-      options: [
-        "MySQL",
-        "PHP",
-        "JavaScript",
-        "Apache"
-      ],
-      correct: 2,
-      explanation: "JavaScript se ejecuta en el navegador del usuario, por lo que es parte del lado cliente. MySQL, PHP y Apache se ejecutan en el servidor."
-    },
-    {
-      id: 663,
+      id: 663, // (Nº 1)
       subject: "IAW",
       unit: "UT1",
       question: "¿Cuál es el objetivo principal de un entorno de desarrollo web?",
@@ -11498,7 +11484,7 @@ const ExamSimulator = () => {
       explanation: "Un entorno de desarrollo permite crear y validar aplicaciones de forma segura antes de publicarlas en producción."
     },
     {
-      id: 906,
+      id: 906, // (Nº 4)
       subject: "IAW",
       unit: "UT1",
       question: "¿Qué archivo se utiliza para configurar parámetros de PHP?",
@@ -11507,7 +11493,7 @@ const ExamSimulator = () => {
       explanation: "`php.ini` es el archivo principal donde se ajustan directivas globales de configuración de PHP."
     },
     {
-      id: 907,
+      id: 907, // (Nº 14)
       subject: "IAW",
       unit: "UT1",
       question: "¿Qué extensión de archivo se asocia con scripts de PHP?",
@@ -11516,7 +11502,7 @@ const ExamSimulator = () => {
       explanation: "Los scripts de PHP se guardan habitualmente con extensión `.php` para que el servidor los interprete."
     },
     {
-      id: 908,
+      id: 908, // (Nº 13)
       subject: "IAW",
       unit: "UT1",
       question: "¿Cuál es el comando correcto para instalar Apache en Ubuntu?",
@@ -11525,7 +11511,7 @@ const ExamSimulator = () => {
       explanation: "En Ubuntu, Apache se instala desde repositorios con `sudo apt install apache2`."
     },
     {
-      id: 909,
+      id: 909, // (Nº 10)
       subject: "IAW",
       unit: "UT1",
       question: "¿Qué componente permite procesar código PHP en un servidor Apache?",
@@ -11534,7 +11520,7 @@ const ExamSimulator = () => {
       explanation: "`libapache2-mod-php` integra PHP con Apache para ejecutar scripts del lado servidor."
     },
     {
-      id: 910,
+      id: 910, // (Nº 5)
       subject: "IAW",
       unit: "UT1",
       question: "¿Qué tecnología actúa del lado del servidor?",
@@ -11543,21 +11529,7 @@ const ExamSimulator = () => {
       explanation: "PHP se ejecuta en el servidor y genera la respuesta dinámica enviada al cliente."
     },
     {
-      id: 911,
-      subject: "IAW",
-      unit: "UT1",
-      question: "Cuál es el objetivo principal de un entorno de desarrollo web",
-      options: [        
-        "Mostrar interfaces gráficas al usuario final",
-        "Publicar sitios web automáticamente",
-        "Ejecutar código directamente en producción",
-        "Probar, desarrollar y mantener aplicaciones antes de su despliegue final"
-      ],
-      correct: 3,
-      explanation: "Un entorno de desarrollo web permite probar, desarrollar y mantener aplicaciones de forma controlada antes de llevarlas a producción, reduciendo riesgos y errores."
-    },
-    {
-      id: 664,
+      id: 664, // (Nº 20)
       subject: "IAW",
       unit: "UT1",
       question: "¿Por qué es importante documentar un entorno de desarrollo?",
@@ -11571,7 +11543,7 @@ const ExamSimulator = () => {
       explanation: "Documentar facilita reproducir el entorno, mantenerlo y transferir conocimiento dentro del equipo."
     },
     {
-      id: 912,
+      id: 912, // (Nº 6)
       subject: "IAW",
       unit: "UT1",
       question: "¿Qué significa localhost en un entorno de desarrollo?",
@@ -11585,7 +11557,7 @@ const ExamSimulator = () => {
       explanation: "`localhost` se refiere al propio equipo local (normalmente 127.0.0.1 o ::1)."
     },
     {
-      id: 913,
+      id: 913, // (Nº 9)
       subject: "IAW",
       unit: "UT1",
       question: "¿Cuál de las siguientes opciones mejora la seguridad de una base de datos?",
@@ -11599,7 +11571,7 @@ const ExamSimulator = () => {
       explanation: "Aplicar el principio de mínimo privilegio mejora la seguridad limitando accesos innecesarios."
     },
     {
-      id: 914,
+      id: 914, // (Nº 16)
       subject: "IAW",
       unit: "UT1",
       question: "¿Qué herramienta permite gestionar visualmente bases de datos en XAMPP?",
@@ -11608,7 +11580,7 @@ const ExamSimulator = () => {
       explanation: "phpMyAdmin ofrece una interfaz web para administrar bases de datos MySQL/MariaDB."
     },
     {
-      id: 915,
+      id: 915, // (Nº 8)
       subject: "IAW",
       unit: "UT1",
       question: "¿Qué indica el código de estado HTTP 404?",
@@ -11617,7 +11589,7 @@ const ExamSimulator = () => {
       explanation: "El estado 404 indica que el recurso solicitado no ha sido encontrado en el servidor."
     },
     {
-      id: 916,
+      id: 916, // (Nº 7)
       subject: "IAW",
       unit: "UT1",
       question: "¿Qué protocolo se utiliza en las peticiones web entre cliente y servidor?",
@@ -11626,7 +11598,7 @@ const ExamSimulator = () => {
       explanation: "HTTP es el protocolo principal para intercambio de peticiones y respuestas web."
     },
     {
-      id: 917,
+      id: 917, // (Nº 2)
       subject: "IAW",
       unit: "UT1",
       question: "¿Qué herramienta NO forma parte de un paquete XAMPP?",
@@ -11635,7 +11607,7 @@ const ExamSimulator = () => {
       explanation: "XAMPP incluye Apache, MariaDB y PHP, pero no Python como componente base del paquete."
     },
     {
-      id: 918,
+      id: 918, // (Nº 15)
       subject: "IAW",
       unit: "UT1",
       question: "¿Cuál es el propósito del archivo phpinfo.php?",
@@ -11649,7 +11621,7 @@ const ExamSimulator = () => {
       explanation: "Un script con `phpinfo()` muestra información de configuración y módulos disponibles de PHP."
     },
     {
-      id: 919,
+      id: 919, // (Nº 12)
       subject: "IAW",
       unit: "UT1",
       question: "¿Cuál de las siguientes herramientas se considera un editor de código?",
@@ -11658,7 +11630,7 @@ const ExamSimulator = () => {
       explanation: "NetBeans es un entorno de desarrollo (IDE) orientado a edición y programación."
     },
     {
-      id: 920,
+      id: 920, // (Nº 18)
       subject: "IAW",
       unit: "UT1",
       question: "¿Qué elemento permite establecer reglas de acceso en Apache?",
@@ -11667,7 +11639,7 @@ const ExamSimulator = () => {
       explanation: "El archivo `.htaccess` permite aplicar reglas de acceso y configuración por directorio en Apache."
     },
     {
-      id: 921,
+      id: 921, // (Nº 3)
       subject: "IAW",
       unit: "UT1",
       question: "¿Qué elemento forma parte del lado cliente en una aplicación web?",
@@ -11917,62 +11889,6 @@ const ExamSimulator = () => {
       ],
       correct: 0,
       explanation: "Un backup incremental almacena solo cambios desde la última copia, reduciendo tiempo y espacio de respaldo."
-    }, // <--- AQUÍ TERMINA LA 941
-    {  // <--- AQUÍ EMPIEZA LA NUEVA (Dale un ID nuevo si quieres, por ejemplo 942)
-      id: 942, 
-      subject: "IAW",
-      unit: "UT1",
-      question: "¿Por qué es importante documentar una instalación web?",
-      options: [
-        "Porque lo exige la normativa fiscal",
-        "Para instalar software automáticamente",
-        "Para garantizar la trazabilidad y facilitar mantenimiento",
-        "Para poder compartirlo en redes sociales"
-      ],
-      correct: 2,
-      explanation: "Documentar el entorno permite reproducir configuraciones, asegurar la trazabilidad y facilitar el mantenimiento y la transferencia de conocimiento."
-    },
-    {
-      id: 665,
-      subject: "IAW",
-      unit: "UT1",
-      question: "¿Qué elemento permite establecer reglas de acceso en Apache?",
-      options: [
-        "config.json",
-        ".env",
-        "server.conf",
-        ".htaccess"
-      ],
-      correct: 3,
-      explanation: "El archivo .htaccess permite definir reglas de acceso y configuración por directorio en servidores Apache."
-    },
-    {
-      id: 666,
-      subject: "IAW",
-      unit: "UT1",
-      question: "¿Qué significa localhost en un entorno de desarrollo?",
-      options: [
-        "El equipo del usuario que ejecuta el servidor local",
-        "Un servidor remoto con acceso seguro",
-        "Un nombre de dominio reservado para producción",
-        "Un proxy que enruta las conexiones externas"
-      ],
-      correct: 0,
-      explanation: "localhost hace referencia a la propia máquina (127.0.0.1), es decir, el equipo que ejecuta el servidor en local."
-    },
-    {
-      id: 667,
-      subject: "IAW",
-      unit: "UT1",
-      question: "¿Qué herramienta NO forma parte de un paquete XAMPP?",
-      options: [
-        "Python",
-        "Apache",
-        "MariaDB",
-        "PHP"
-      ],
-      correct: 0,
-      explanation: "XAMPP incluye Apache, MariaDB y PHP (entre otros), pero no incluye Python como parte del paquete base."
     },
   ];
 
